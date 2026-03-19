@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-
+import NewsletterForm from "@/components/NewsletterForm";
 export default function Home() {
   return (
     <div className="w-full">
@@ -181,20 +181,7 @@ export default function Home() {
           <span className="text-primary serif-display italic text-2xl mb-4 block">The Inner Circle</span>
           <h2 className="serif-display text-4xl md:text-5xl lg:text-6xl text-on-surface mb-8">Join the Vanguard of Thought</h2>
           <p className="font-body text-slate-400 mb-12 text-lg">Receive exclusive director's cuts, archival scans, and invitations to private screenings. No noise, just pure signal.</p>
-          <form className="flex flex-col md:flex-row gap-4 justify-center">
-            <input 
-              className="w-full md:w-96 bg-surface-container-high border-none text-on-surface font-label text-xs tracking-widest px-8 py-5 focus:ring-1 focus:ring-primary outline-none rounded-sm placeholder:text-slate-500" 
-              placeholder="ENTER YOUR EMAIL ADDRESS" 
-              type="email" 
-              required
-            />
-            <button 
-              type="button"
-              className="bg-gradient-to-br from-primary to-primary-container text-on-primary px-10 py-5 text-xs font-label font-bold tracking-[0.2em] uppercase rounded-sm hover:brightness-110 transition-all"
-            >
-              INVITE ME
-            </button>
-          </form>
+          <NewsletterForm />
         </div>
       </section>
     </div>

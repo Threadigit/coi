@@ -1,4 +1,5 @@
 import Image from "next/image";
+import NewsletterForm from "@/components/NewsletterForm";
 
 export default function About() {
   return (
@@ -127,10 +128,7 @@ export default function About() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="font-headline text-4xl mb-8 leading-tight">Witness the evolution of the future.</h2>
           <p className="font-body text-on-surface-variant mb-12 text-lg">Join 50,000+ subscribers receiving our deep-dive dossiers on the world's most critical innovations.</p>
-          <form className="flex flex-col md:flex-row gap-4 justify-center">
-            <input className="bg-surface-container border-none text-xs font-label tracking-widest px-8 py-4 w-full md:w-80 rounded-sm focus:ring-1 focus:ring-primary outline-none text-on-surface placeholder:text-slate-500" placeholder="ENTER YOUR EMAIL" type="email" />
-            <button type="button" className="bg-gradient-to-br from-primary to-primary-container text-on-primary font-label text-xs font-bold tracking-[0.2em] px-12 py-4 rounded-sm uppercase hover:scale-105 transition-transform">SUBSCRIBE</button>
-          </form>
+          <NewsletterForm />
         </div>
       </section>
     </div>

@@ -12,7 +12,7 @@ export default function Footer() {
       <div className="flex flex-wrap justify-center gap-8">
         <Link href="#" className="font-label text-[10px] uppercase tracking-widest text-slate-500 hover:text-on-surface transition-opacity duration-500 hover:underline decoration-primary underline-offset-4">Terms of Service</Link>
         <Link href="#" className="font-label text-[10px] uppercase tracking-widest text-slate-500 hover:text-on-surface transition-opacity duration-500 hover:underline decoration-primary underline-offset-4">Privacy Policy</Link>
-        <Link href="#" className="font-label text-[10px] uppercase tracking-widest text-slate-500 hover:text-on-surface transition-opacity duration-500 hover:underline decoration-primary underline-offset-4">Contact</Link>
+        <Link href="mailto:hello@chroniclesofinnovation.com" className="font-label text-[10px] uppercase tracking-widest text-slate-500 hover:text-on-surface transition-opacity duration-500 hover:underline decoration-primary underline-offset-4">Contact</Link>
         <Link href="https://www.youtube.com/@ChronicleofInnovation" target="_blank" className="font-label text-[10px] uppercase tracking-widest text-slate-500 hover:text-on-surface transition-opacity duration-500 hover:underline decoration-primary underline-offset-4">YouTube</Link>
       </div>
     </footer>

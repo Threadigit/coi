@@ -61,7 +61,7 @@ export default function Home() {
               "Innovation is not merely a sequence of <span className="italic text-primary-container">inventions</span>, but the enduring narrative of human curiosity refusing to stay silent."
             </blockquote>
             <p className="font-body text-slate-400 text-lg max-w-xl">
-              Our mission at Chronicles is to archive the sparks that ignited entire eras. We don't just show you what was built; we show you why it mattered to the soul of humanity.
+              Our mission at Chronicles of Innovation is to archive the sparks that ignited entire eras. We don't just show you what was built; we show you why it mattered to the soul of humanity.
             </p>
           </div>
         </div>

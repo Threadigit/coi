@@ -68,8 +68,8 @@ export default function About() {
                 <span className="material-symbols-outlined text-4xl text-secondary" style={{fontVariationSettings: "'FILL' 0"}}>verified</span>
                 <span className="font-label text-xs text-outline-variant">STAGE 02</span>
               </div>
-              <h4 className="font-headline text-2xl mb-4">Technical Verification</h4>
-              <p className="font-body text-on-surface-variant leading-relaxed">Our team of engineers and historians validates the feasibility and impact of the technology through rigorous peer review.</p>
+              <h4 className="font-headline text-2xl mb-4">Innovation Verification</h4>
+              <p className="font-body text-on-surface-variant leading-relaxed">Our team of researchers validates the feasibility and impact of the technology through rigorous peer review.</p>
               <div className="absolute bottom-0 left-0 w-0 h-1 bg-secondary group-hover:w-full transition-all duration-700"></div>
             </div>
             

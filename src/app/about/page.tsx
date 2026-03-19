@@ -104,15 +104,15 @@ export default function About() {
             </div>
             <div className="group">
               <div className="aspect-[3/4] overflow-hidden rounded-lg mb-6 bg-surface-container-highest relative">
-                <Image src="/isaiah.jpg" alt="Editorial Lead" fill className="object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-500" />
+                <Image src="/isaiah_matchbg.png" alt="Editorial Lead" fill className="object-cover object-top grayscale group-hover:grayscale-0 group-hover:contrast-125 group-hover:saturate-110 group-hover:brightness-110 transition-all duration-500" />
               </div>
               <span className="font-label text-[10px] text-secondary uppercase tracking-[0.2em]">The Scribe</span>
               <h4 className="font-headline text-2xl mt-2 mb-1">Isaiah Emmanuel</h4>
               <p className="font-body text-xs text-outline uppercase tracking-widest">Editorial Lead</p>
             </div>
             <div className="group">
-              <div className="aspect-[3/4] overflow-hidden rounded-lg mb-6 bg-surface-container relative flex items-center justify-center group-hover:bg-surface-container-highest transition-colors duration-500 border border-transparent group-hover:border-primary/20">
-                <span className="material-symbols-outlined text-8xl text-slate-700 group-hover:text-primary transition-colors duration-500" style={{ fontVariationSettings: "'FILL' 1" }}>person</span>
+              <div className="aspect-[3/4] overflow-hidden rounded-lg mb-6 bg-surface-container-highest relative">
+                <Image src="/john_matchbg.png" alt="Visual Director" fill className="object-cover grayscale group-hover:grayscale-0 group-hover:contrast-125 group-hover:saturate-110 group-hover:brightness-110 transition-all duration-500" />
               </div>
               <span className="font-label text-[10px] text-secondary uppercase tracking-[0.2em]">The Lens</span>
               <h4 className="font-headline text-2xl mt-2 mb-1">John Terry</h4>

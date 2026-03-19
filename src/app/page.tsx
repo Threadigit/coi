@@ -1,6 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import NewsletterForm from "@/components/NewsletterForm";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Chronicles of Innovation | Curating the Spark of Progress",
+  description: "Explore the historical sparks of human progress. From the Industrial Revolution to the Digital Era, we archive the stories that built the modern world.",
+  alternates: {
+    canonical: "/",
+  },
+};
 export default function Home() {
   return (
     <div className="w-full">

@@ -1,5 +1,14 @@
 import Image from "next/image";
 import NewsletterForm from "@/components/NewsletterForm";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Volume I: The Manifesto",
+  description: "The modern archivists of the human spirit. Learn about our verified methodology and the curators behind Chronicles of Innovation.",
+  alternates: {
+    canonical: "/about",
+  },
+};
 
 export default function About() {
   return (
@@ -100,7 +109,7 @@ export default function About() {
           <div className="grid md:grid-cols-3 gap-12">
             <div className="group">
               <div className="aspect-[3/4] overflow-hidden rounded-lg mb-6 bg-surface-container-highest relative">
-                <Image src="/avatar.png" alt="Director" fill className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+                <Image src="/avatar.png" alt="Portrait of Tolu Adetuyi, Executive Curator" fill className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
               </div>
               <span className="font-label text-[10px] text-secondary uppercase tracking-[0.2em]">The Visionary</span>
               <h4 className="font-headline text-2xl mt-2 mb-1">Tolu Adetuyi</h4>
@@ -108,7 +117,7 @@ export default function About() {
             </div>
             <div className="group">
               <div className="aspect-[3/4] overflow-hidden rounded-lg mb-6 bg-surface-container-highest relative">
-                <Image src="/isaiah_matchbg.png" alt="Editorial Lead" fill className="object-cover object-top grayscale group-hover:grayscale-0 group-hover:contrast-125 group-hover:saturate-110 group-hover:brightness-110 transition-all duration-500" />
+                <Image src="/isaiah_matchbg.png" alt="Portrait of Isaiah Emmanuel, Editorial Lead" fill className="object-cover object-top grayscale group-hover:grayscale-0 group-hover:contrast-125 group-hover:saturate-110 group-hover:brightness-110 transition-all duration-500" />
               </div>
               <span className="font-label text-[10px] text-secondary uppercase tracking-[0.2em]">The Scribe</span>
               <h4 className="font-headline text-2xl mt-2 mb-1">Isaiah Emmanuel</h4>
@@ -116,7 +125,7 @@ export default function About() {
             </div>
             <div className="group">
               <div className="aspect-[3/4] overflow-hidden rounded-lg mb-6 bg-surface-container-highest relative">
-                <Image src="/john_matchbg.png" alt="Visual Director" fill className="object-cover grayscale group-hover:grayscale-0 group-hover:contrast-125 group-hover:saturate-110 group-hover:brightness-110 transition-all duration-500" />
+                <Image src="/john_matchbg.png" alt="Portrait of John Terry, Visual Director" fill className="object-cover grayscale group-hover:grayscale-0 group-hover:contrast-125 group-hover:saturate-110 group-hover:brightness-110 transition-all duration-500" />
               </div>
               <span className="font-label text-[10px] text-secondary uppercase tracking-[0.2em]">The Lens</span>
               <h4 className="font-headline text-2xl mt-2 mb-1">John Terry</h4>

@@ -1,5 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "The Silicon Chip Documentary",
+  description: "Explore how the tyranny of numbers was conquered, shrinking entire rooms of machinery into a sliver of glass.",
+  openGraph: {
+    type: "video.movie",
+    title: "The Silicon Chip Documentary | Chronicles of Innovation",
+  },
+  alternates: {
+    canonical: "/episode/the-silicon-chip",
+  },
+};
 
 export default function SiliconChipEpisode() {
   return (

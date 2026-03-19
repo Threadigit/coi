@@ -1,6 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import { getLatestVideos } from "@/lib/youtube";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "The Archive",
+  description: "Search and explore our curated archive of human progress, spanning the Industrial, Atomic, and Digital eras.",
+  alternates: {
+    canonical: "/archive",
+  },
+};
 
 // Explicit Channel ID for Chronicles of Innovation
 const CHANNEL_ID = "UCKU6JFP0__kQ12KSgvtroLQ";

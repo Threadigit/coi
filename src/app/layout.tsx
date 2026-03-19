@@ -18,8 +18,28 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Chronicles of Innovation",
-  description: "Curating the Spark of Progress.",
+  metadataBase: new URL("https://chroniclesofinnovation.com"),
+  title: {
+    default: "Chronicles of Innovation",
+    template: "%s | Chronicles of Innovation",
+  },
+  description: "Curating the Spark of Progress. Documenting the historical innovations of humanity.",
+  keywords: ["technology", "history", "innovation", "documentary", "archive", "silicon chip", "industrial era", "atomic era", "digital era"],
+  authors: [{ name: "Chronicles of Innovation Team" }],
+  creator: "Tolu Adetuyi",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://chroniclesofinnovation.com",
+    siteName: "Chronicles of Innovation",
+    title: "Chronicles of Innovation",
+    description: "Documenting the historical sparks of human progress across the Industrial, Atomic, and Digital eras.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Chronicles of Innovation",
+    description: "Documenting the historical sparks of human progress.",
+  },
 };
 
 export default function RootLayout({

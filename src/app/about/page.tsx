@@ -39,7 +39,10 @@ export default function About() {
                 At Chronicles of Innovation, we serve as the modern archivists of the human spirit. Our purpose transcends mere reporting; we exist to deconstruct the anatomy of progress. Every monumental shift in technology, culture, and science begins with a singular spark—an idea that defies the gravity of the status quo.
               </p>
               <p>
-                We treat every story with the gravity of a historical artifact. By blending rigorous technical verification with cinematic storytelling, we create a record that doesn't just inform the present, but inspires the future. We believe that by understanding the "How" of the past, we can better navigate the "What" of tomorrow.
+                Because here is what we know to be true: human ingenuity has never belonged to one place, one century, or one kind of person. It never did. The breakthroughs that built the modern world came from everywhere. Some you already know. Many you don't. Yet.
+              </p>
+              <p>
+                We treat these stories with the gravity of a historical artifact. By blending rigorous technical verification with cinematic storytelling, we create a record that doesn't just inform the present, but inspires the future.
               </p>
             </div>
           </div>

@@ -137,7 +137,7 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 border-[20px] border-transparent group-hover:border-primary/5 transition-all duration-700"></div>
               </div>
-              <span className="text-secondary font-label uppercase tracking-[0.2em] text-[10px]">1760 – 1840</span>
+              <span className="text-secondary font-label uppercase tracking-[0.2em] text-[10px]">1760 – 1945</span>
               <h4 className="serif-display text-2xl text-on-surface mt-2 group-hover:text-primary transition-colors">Industrial</h4>
             </Link>
 
@@ -152,7 +152,7 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 border-[20px] border-transparent group-hover:border-primary/5 transition-all duration-700"></div>
               </div>
-              <span className="text-secondary font-label uppercase tracking-[0.2em] text-[10px]">1945 – 1990</span>
+              <span className="text-secondary font-label uppercase tracking-[0.2em] text-[10px]">1945 – 1991</span>
               <h4 className="serif-display text-2xl text-on-surface mt-2 group-hover:text-primary transition-colors">Atomic</h4>
             </Link>
 

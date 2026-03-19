@@ -139,7 +139,7 @@ export default function About() {
       <section className="px-6 md:px-12 py-32 border-t border-outline-variant/10">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="font-headline text-4xl mb-8 leading-tight">Witness the evolution of the future.</h2>
-          <p className="font-body text-on-surface-variant mb-12 text-lg">Join 50,000+ subscribers receiving our deep-dive dossiers on the world's most critical innovations.</p>
+          <p className="font-body text-on-surface-variant mb-12 text-lg">Be among the first inside the archive receiving our deep-dive dossiers on the world's most critical innovations.</p>
           <NewsletterForm />
         </div>
       </section>

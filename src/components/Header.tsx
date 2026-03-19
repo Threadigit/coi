@@ -21,12 +21,12 @@ export default function Header() {
   return (
     <nav className="fixed top-0 w-full z-50 bg-[#0f1419]/70 backdrop-blur-xl flex justify-between items-center px-6 md:px-12 py-6 max-w-none">
       <Link href="/" className="flex items-center gap-4 group">
-        <div className="w-10 h-10 relative overflow-hidden rounded-full border border-primary/20 group-hover:border-primary transition-colors">
+        <div className="w-10 h-10 relative overflow-hidden rounded-full transition-colors">
           <Image 
-            src="/logo.png" 
+            src="/coi_logo_transparent.png" 
             alt="Chronicles of Innovation Logo" 
             fill 
-            className="object-cover"
+            className="object-cover scale-[1.35]"
             onError={(e) => {
               e.currentTarget.style.display = 'none';
             }} 

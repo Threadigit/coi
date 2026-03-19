@@ -103,8 +103,8 @@ export default function About() {
               <p className="font-body text-xs text-outline uppercase tracking-widest">Executive Curator</p>
             </div>
             <div className="group">
-              <div className="aspect-[3/4] overflow-hidden rounded-lg mb-6 bg-surface-container relative flex items-center justify-center group-hover:bg-surface-container-highest transition-colors duration-500 border border-transparent group-hover:border-primary/20">
-                <span className="material-symbols-outlined text-8xl text-slate-700 group-hover:text-primary transition-colors duration-500" style={{ fontVariationSettings: "'FILL' 1" }}>person</span>
+              <div className="aspect-[3/4] overflow-hidden rounded-lg mb-6 bg-surface-container-highest relative">
+                <Image src="/isaiah.jpg" alt="Editorial Lead" fill className="object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-500" />
               </div>
               <span className="font-label text-[10px] text-secondary uppercase tracking-[0.2em]">The Scribe</span>
               <h4 className="font-headline text-2xl mt-2 mb-1">Isaiah Emmanuel</h4>

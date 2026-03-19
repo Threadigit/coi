@@ -11,8 +11,29 @@ export const metadata: Metadata = {
   },
 };
 export default function Home() {
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Chronicles of Innovation",
+    "url": "https://chroniclesofinnovation.com",
+    "logo": "https://chroniclesofinnovation.com/coi_logo_transparent.png",
+    "description": "Curating the Spark of Progress. Documenting the historical innovations of humanity across the Industrial, Atomic, and Digital eras.",
+    "founder": {
+      "@type": "Person",
+      "name": "Tolu Adetuyi",
+      "jobTitle": "Executive Curator"
+    },
+    "sameAs": [
+      "https://www.youtube.com/@ChronicleofInnovation"
+    ]
+  };
+
   return (
     <div className="w-full">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
       {/* Hero Section: Cinematic Steam Engine */}
       <section className="relative min-h-screen flex items-end pt-32 overflow-hidden">
         <div className="absolute inset-0 z-0">

@@ -15,8 +15,32 @@ export const metadata: Metadata = {
 };
 
 export default function SiliconChipEpisode() {
+  const videoSchema = {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "The Silicon Chip: The Foundation of Modernity",
+    "description": "A deep dive into how the tyranny of numbers was conquered, shrinking entire rooms of machinery into a sliver of glass. Explore the invention of the integrated circuit by Jack Kilby and Robert Noyce.",
+    "thumbnailUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuA2dIZrDrxsaHAfA-nWAN3maaVSNVHHkiEHaUV9jxfgT1jN4LZkneCDmpQDwLSLbaxbMyGgI3wGHu_kg_f4VWGaHYLSOGMWL5BBJ3_aHxjBuSNNcD6pqH1Id4xnL45YHygbghbUXT0XfHqE4eOotX8ZZkWFndGLxS4n_KrnS6TGsz6fyBNpNTPg_kzJx0erD_vbvo0aOaEKK5X6crGYPFHp7IfBgRokHvI5h75Fu9jSjC7-0vpR2GoW3rlM3B6OAXkX0ubG-qSJFQ",
+    "uploadDate": "2025-01-01",
+    "duration": "PT24M",
+    "contentUrl": "https://www.youtube.com/@ChronicleofInnovation",
+    "embedUrl": "https://www.youtube.com/@ChronicleofInnovation",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Chronicles of Innovation",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://chroniclesofinnovation.com/coi_logo_transparent.png"
+      }
+    }
+  };
+
   return (
     <div className="w-full">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }}
+      />
       <main className="pt-24">
         {/* Hero Section */}
         <header className="relative w-full h-[870px] overflow-hidden flex items-end px-6 md:px-12 pb-24">

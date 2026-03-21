@@ -4,8 +4,8 @@ import NewsletterForm from "@/components/NewsletterForm";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Chronicles of Innovation | Curating the Spark of Progress",
-  description: "Explore the historical sparks of human progress. From the Industrial Revolution to the Digital Era, we archive the stories that built the modern world.",
+  title: "Chronicles of Innovation | The Premium Documentary Series for Innovation Stories",
+  description: "The premium documentary series for innovation stories across the world. From the Industrial Revolution to the Digital Era, we document the groundbreaking innovations that shaped humanity.",
   alternates: {
     canonical: "/",
   },
@@ -17,7 +17,7 @@ export default function Home() {
     "name": "Chronicles of Innovation",
     "url": "https://chroniclesofinnovation.com",
     "logo": "https://chroniclesofinnovation.com/coi_logo_transparent.png",
-    "description": "Curating the Spark of Progress. Documenting the historical innovations of humanity across the Industrial, Atomic, and Digital eras.",
+    "description": "The premium documentary series for innovation stories across the world. Documenting how groundbreaking innovations shaped humanity across the Industrial, Atomic, and Digital eras.",
     "founder": {
       "@type": "Person",
       "name": "Tolu Adetuyi",

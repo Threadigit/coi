@@ -20,11 +20,11 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   metadataBase: new URL("https://chroniclesofinnovation.com"),
   title: {
-    default: "Chronicles of Innovation",
+    default: "Chronicles of Innovation | The Premium Documentary Series for Innovation Stories",
     template: "%s | Chronicles of Innovation",
   },
-  description: "Curating the Spark of Progress. Documenting the historical innovations of humanity.",
-  keywords: ["technology", "history", "innovation", "documentary", "archive", "silicon chip", "industrial era", "atomic era", "digital era"],
+  description: "The premium documentary series for innovation stories across the world. Exploring groundbreaking innovations that shaped humanity from the Industrial Revolution to the Digital Age.",
+  keywords: ["innovation", "innovation stories", "innovation in the world", "world innovation", "innovation documentary", "history of innovation", "technology innovation", "human innovation", "industrial revolution", "digital age", "chronicles of innovation", "innovation series", "documentary series"],
   authors: [{ name: "Chronicles of Innovation Team" }],
   creator: "Tolu Adetuyi",
   openGraph: {
@@ -32,13 +32,13 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://chroniclesofinnovation.com",
     siteName: "Chronicles of Innovation",
-    title: "Chronicles of Innovation",
-    description: "Documenting the historical sparks of human progress across the Industrial, Atomic, and Digital eras.",
+    title: "Chronicles of Innovation | The Premium Documentary Series for Innovation Stories",
+    description: "The premium documentary series for innovation stories across the world. Exploring the breakthroughs that shaped humanity.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Chronicles of Innovation",
-    description: "Documenting the historical sparks of human progress.",
+    title: "Chronicles of Innovation | Innovation Documentary Series",
+    description: "The premium documentary series for innovation stories across the world.",
   },
 };
 

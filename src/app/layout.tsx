@@ -25,8 +25,9 @@ export const metadata: Metadata = {
   },
   description: "The premium documentary series for innovation stories across the world. Exploring groundbreaking innovations that shaped humanity from the Industrial Revolution to the Digital Age.",
   keywords: ["innovation", "innovation stories", "innovation in the world", "world innovation", "innovation documentary", "history of innovation", "technology innovation", "human innovation", "industrial revolution", "digital age", "chronicles of innovation", "innovation series", "documentary series"],
-  authors: [{ name: "Chronicles of Innovation Team" }],
+  authors: [{ name: "Tolu Adetuyi", url: "https://chroniclesofinnovation.com/about" }],
   creator: "Tolu Adetuyi",
+  publisher: "Tolu Adetuyi",
   openGraph: {
     type: "website",
     locale: "en_US",

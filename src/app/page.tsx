@@ -16,14 +16,27 @@ export default function Home() {
     "@graph": [
       {
         "@type": "Organization",
+        "@id": "https://chroniclesofinnovation.com/#organization",
         "name": "Chronicles of Innovation",
         "url": "https://chroniclesofinnovation.com",
         "logo": "https://chroniclesofinnovation.com/coi_logo_transparent.png",
         "description": "The premium documentary series for innovation stories across the world. Documenting how groundbreaking innovations shaped humanity across the Industrial, Atomic, and Digital eras.",
+        "foundingDate": "2026",
         "founder": {
-          "@type": "Person",
-          "name": "Tolu Adetuyi",
-          "jobTitle": "Executive Curator"
+          "@id": "https://chroniclesofinnovation.com/#toluadetuyi"
+        },
+        "sameAs": [
+          "https://www.youtube.com/@ChronicleofInnovation"
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://chroniclesofinnovation.com/#toluadetuyi",
+        "name": "Tolu Adetuyi",
+        "url": "https://chroniclesofinnovation.com/about",
+        "jobTitle": "Executive Curator & Founder",
+        "worksFor": {
+          "@id": "https://chroniclesofinnovation.com/#organization"
         },
         "sameAs": [
           "https://www.youtube.com/@ChronicleofInnovation"

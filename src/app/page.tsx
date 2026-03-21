@@ -11,20 +11,48 @@ export const metadata: Metadata = {
   },
 };
 export default function Home() {
-  const organizationSchema = {
+  const structuredData = {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Chronicles of Innovation",
-    "url": "https://chroniclesofinnovation.com",
-    "logo": "https://chroniclesofinnovation.com/coi_logo_transparent.png",
-    "description": "The premium documentary series for innovation stories across the world. Documenting how groundbreaking innovations shaped humanity across the Industrial, Atomic, and Digital eras.",
-    "founder": {
-      "@type": "Person",
-      "name": "Tolu Adetuyi",
-      "jobTitle": "Executive Curator"
-    },
-    "sameAs": [
-      "https://www.youtube.com/@ChronicleofInnovation"
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "Chronicles of Innovation",
+        "url": "https://chroniclesofinnovation.com",
+        "logo": "https://chroniclesofinnovation.com/coi_logo_transparent.png",
+        "description": "The premium documentary series for innovation stories across the world. Documenting how groundbreaking innovations shaped humanity across the Industrial, Atomic, and Digital eras.",
+        "founder": {
+          "@type": "Person",
+          "name": "Tolu Adetuyi",
+          "jobTitle": "Executive Curator"
+        },
+        "sameAs": [
+          "https://www.youtube.com/@ChronicleofInnovation"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "name": "Chronicles of Innovation",
+        "url": "https://chroniclesofinnovation.com",
+        "description": "The premium documentary series for innovation stories across the world.",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://chroniclesofinnovation.com/archive?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "VideoObject",
+        "name": "The Silicon Chip: The Foundation of Modernity",
+        "description": "A deep dive into how the tyranny of numbers was conquered, shrinking entire rooms of machinery into a sliver of glass. Explore the invention of the integrated circuit.",
+        "thumbnailUrl": "https://chroniclesofinnovation.com/coi_logo_transparent.png",
+        "uploadDate": "2025-01-01",
+        "duration": "PT24M",
+        "contentUrl": "https://www.youtube.com/@ChronicleofInnovation",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Chronicles of Innovation"
+        }
+      }
     ]
   };
 
@@ -32,7 +60,7 @@ export default function Home() {
     <div className="w-full">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       {/* Hero Section: Cinematic Steam Engine */}
       <section className="relative min-h-screen flex items-end pt-32 overflow-hidden">

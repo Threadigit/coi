@@ -125,10 +125,10 @@ export default function About() {
             </div>
             <div className="group">
               <div className="aspect-[3/4] overflow-hidden rounded-lg mb-6 bg-surface-container-highest relative">
-                <Image src="/john_matchbg.png" alt="Portrait of John Terry, Visual Director" fill className="object-cover grayscale group-hover:grayscale-0 group-hover:contrast-125 group-hover:saturate-110 group-hover:brightness-110 transition-all duration-500" />
+                <Image src="/john_bassey.png" alt="Portrait of John Bassey, Visual Director" fill className="object-cover grayscale group-hover:grayscale-0 group-hover:contrast-125 group-hover:saturate-110 group-hover:brightness-110 transition-all duration-500" />
               </div>
               <span className="font-label text-[10px] text-secondary uppercase tracking-[0.2em]">The Lens</span>
-              <h4 className="font-headline text-2xl mt-2 mb-1">John Terry</h4>
+              <h4 className="font-headline text-2xl mt-2 mb-1">John Bassey</h4>
               <p className="font-body text-xs text-outline uppercase tracking-widest">Visual Director</p>
             </div>
           </div>

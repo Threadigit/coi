@@ -55,11 +55,11 @@ export default function Home() {
       },
       {
         "@type": "VideoObject",
-        "name": "The Silicon Chip: The Foundation of Modernity",
-        "description": "A deep dive into how the tyranny of numbers was conquered, shrinking entire rooms of machinery into a sliver of glass. Explore the invention of the integrated circuit.",
-        "thumbnailUrl": "https://chroniclesofinnovation.com/coi_logo_transparent.png",
-        "uploadDate": "2025-01-01",
-        "duration": "PT24M",
+        "name": "Light Bulb & Electricity: Edison vs Tesla's Hidden Battle",
+        "description": "The War of Currents was never just science — it was war. Explore how Edison's direct current empire collided with Tesla's alternating current in the battle that electrified the modern world.",
+        "thumbnailUrl": "https://chroniclesofinnovation.com/edison-machine-shop.jpg",
+        "uploadDate": "2026-06-27",
+        "duration": "PT12M",
         "contentUrl": "https://www.youtube.com/@ChronicleofInnovation",
         "publisher": {
           "@type": "Organization",
@@ -78,27 +78,28 @@ export default function Home() {
       {/* Hero Section: Cinematic Steam Engine */}
       <section className="relative min-h-screen flex items-end pt-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image 
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvxL0cVvsYT7EvdLMJm9kYpsXXCkV_3O6MPH4s-XYmWr46MUpvYmdWqvcfKYs1Err465LCphAlanJb_Bac8nVDEaYFx5j6uPI6idKUGOqQC-iDmHXR7pcGhJ12eyYy05JqGOT8YuFsIh0uCKo8huIu0huBPinP5waKksy7gx_D1OIyQbRDrGbIllt1Z3vugAYBbbyTxHFLRPDErMtD6lKFW3yX--QGWSUMYw8_biqMEnv9N-lE2Hejkbrjb83GX88Iz3ClhkaXxA"
-            alt="Macro view of a golden circuit board" 
+          <Image
+            src="/edison-machine-shop.jpg"
+            alt="Thomas Edison's machine shop, lit by early electric lamps"
             fill
-            className="object-cover opacity-60 grayscale hover:grayscale-0 transition-all duration-1000" 
+            priority
+            className="object-cover opacity-60 grayscale hover:grayscale-0 transition-all duration-1000"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent"></div>
         </div>
         <div className="relative z-10 px-6 md:px-12 pb-24 w-full max-w-7xl">
           <div className="flex flex-col md:flex-row items-baseline gap-4 mb-6">
-            <span className="text-secondary font-label uppercase tracking-[0.3em] text-xs">Era III: The Digital Revolution</span>
+            <span className="text-secondary font-label uppercase tracking-[0.3em] text-xs">Era I: The Age of Electricity</span>
             <div className="h-px w-24 bg-outline-variant/30 hidden md:block"></div>
           </div>
           <h1 className="serif-display text-5xl md:text-7xl lg:text-8xl text-on-surface leading-tight tracking-tighter max-w-4xl">
-            The Silicon Chip: <br className="hidden md:block"/><span className="text-primary italic">Foundation</span> of Modernity
+            Light Bulb & Electricity: <br className="hidden md:block"/>Edison vs Tesla&apos;s <span className="text-primary italic">Hidden Battle</span>
           </h1>
           <div className="mt-12 flex flex-col md:flex-row gap-12 items-start">
             <p className="font-body text-slate-400 max-w-md text-lg leading-relaxed">
-              A microscopic architecture that rewired the human experience. Explore how the tyranny of numbers was conquered, shrinking entire rooms of machinery into a sliver of glass.
+              The current that powers your world was decided by war. Explore the bitter rivalry between Thomas Edison and Nikola Tesla — the battle to light humanity and own the future.
             </p>
-            <Link href="/episode/the-silicon-chip" className="flex items-center gap-4 group cursor-pointer mt-4 md:mt-0">
+            <Link href="/episode/edison-vs-tesla" className="flex items-center gap-4 group cursor-pointer mt-4 md:mt-0">
               <div className="w-16 h-16 rounded-full border border-primary/40 flex items-center justify-center group-hover:bg-primary transition-all duration-500">
                 <span className="material-symbols-outlined text-primary group-hover:text-on-primary transition-colors text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>play_arrow</span>
               </div>
@@ -138,53 +139,53 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Documentary: The Silicon Chip */}
+      {/* Featured Documentary: Edison vs Tesla */}
       <section className="py-32 px-6 md:px-12 bg-surface overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
             <div>
               <span className="text-secondary font-label uppercase tracking-[0.2em] text-[10px] mb-4 block">Current Spotlight</span>
-              <h2 className="serif-display text-5xl text-on-surface">The Silicon Chip</h2>
+              <h2 className="serif-display text-5xl text-on-surface">Light Bulb & Electricity</h2>
             </div>
             <Link href="/archive" className="font-label uppercase tracking-widest text-[10px] text-primary border-b border-primary/30 pb-1 hover:border-primary transition-all">
               View Full Series
             </Link>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-            <Link href="/episode/the-silicon-chip" className="md:col-span-8 group relative overflow-hidden rounded-sm shadow-2xl block aspect-video">
-              <Image 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2dIZrDrxsaHAfA-nWAN3maaVSNVHHkiEHaUV9jxfgT1jN4LZkneCDmpQDwLSLbaxbMyGgI3wGHu_kg_f4VWGaHYLSOGMWL5BBJ3_aHxjBuSNNcD6pqH1Id4xnL45YHygbghbUXT0XfHqE4eOotX8ZZkWFndGLxS4n_KrnS6TGsz6fyBNpNTPg_kzJx0erD_vbvo0aOaEKK5X6crGYPFHp7IfBgRokHvI5h75Fu9jSjC7-0vpR2GoW3rlM3B6OAXkX0ubG-qSJFQ"
-                alt="Silicon microchip landscape" 
+            <Link href="/episode/edison-vs-tesla" className="md:col-span-8 group relative overflow-hidden rounded-sm shadow-2xl block aspect-video">
+              <Image
+                src="/edison-machine-shop.jpg"
+                alt="Thomas Edison's machine shop, lit by early electric lamps"
                 fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105" 
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 <span className="material-symbols-outlined text-primary text-6xl" style={{ fontVariationSettings: "'FILL' 1" }}>play_circle</span>
               </div>
             </Link>
-            
+
             <div className="md:col-span-4 space-y-8">
               <div>
                 <div className="bg-surface-container-highest px-3 py-1 inline-block rounded-full mb-4">
-                  <span className="text-secondary font-label uppercase text-[9px] tracking-widest">Digital Era | 1947–Present</span>
+                  <span className="text-secondary font-label uppercase text-[9px] tracking-widest">Age of Electricity | 1879–1893</span>
                 </div>
                 <p className="font-body text-slate-300 leading-relaxed">
-                  The transition from macro-machinery to micro-logic. Discover the silent architects of the modern world in this three-part deep dive.
+                  The War of Currents that lit the modern world. Discover how a clash of two geniuses — Edison and Tesla — decided how all of humanity would be powered.
                 </p>
               </div>
               <ul className="space-y-4">
                 <li className="flex items-center gap-4 group cursor-pointer">
                   <span className="text-primary serif-display italic">01.</span>
-                  <span className="text-on-surface font-body text-sm tracking-wide group-hover:text-primary transition-colors">The Transistor Birth</span>
+                  <span className="text-on-surface font-body text-sm tracking-wide group-hover:text-primary transition-colors">The Rise of Thomas Edison</span>
                 </li>
                 <li className="flex items-center gap-4 group cursor-pointer">
                   <span className="text-primary serif-display italic">02.</span>
-                  <span className="text-on-surface font-body text-sm tracking-wide group-hover:text-primary transition-colors">Moore's Unrelenting Law</span>
+                  <span className="text-on-surface font-body text-sm tracking-wide group-hover:text-primary transition-colors">The War of Currents Begins</span>
                 </li>
                 <li className="flex items-center gap-4 group cursor-pointer">
                   <span className="text-primary serif-display italic">03.</span>
-                  <span className="text-on-surface font-body text-sm tracking-wide group-hover:text-primary transition-colors">The Quantum Frontier</span>
+                  <span className="text-on-surface font-body text-sm tracking-wide group-hover:text-primary transition-colors">The World&apos;s Fair Showdown</span>
                 </li>
               </ul>
             </div>

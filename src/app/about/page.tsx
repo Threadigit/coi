@@ -11,8 +11,34 @@ export const metadata: Metadata = {
 };
 
 export default function About() {
+  const profileSchema = {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "mainEntity": {
+      "@type": "Person",
+      "@id": "https://chroniclesofinnovation.com/#toluadetuyi",
+      "name": "Tolu Adetuyi",
+      "url": "https://chroniclesofinnovation.com/about",
+      "jobTitle": "Executive Curator & Founder",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Chronicles of Innovation",
+        "url": "https://chroniclesofinnovation.com"
+      },
+      "image": "https://chroniclesofinnovation.com/avatar.png",
+      "sameAs": [
+        "https://adetuyi.com",
+        "https://www.youtube.com/@ChronicleofInnovation"
+      ]
+    }
+  };
+
   return (
     <div className="w-full">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(profileSchema) }}
+      />
       {/* Hero Section: Cinematic Asymmetry */}
       <section className="px-6 md:px-12 pt-32 mb-32 relative overflow-hidden">
         <div className="blueprint-grid-radial absolute inset-0 -z-10 opacity-40"></div>

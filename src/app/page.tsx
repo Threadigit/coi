@@ -39,6 +39,7 @@ export default function Home() {
           "@id": "https://chroniclesofinnovation.com/#organization"
         },
         "sameAs": [
+          "https://adetuyi.com",
           "https://www.youtube.com/@ChronicleofInnovation"
         ]
       },

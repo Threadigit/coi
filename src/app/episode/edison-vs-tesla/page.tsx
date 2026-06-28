@@ -2,37 +2,144 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 
+const SITE = "https://chroniclesofinnovation.com";
+const PATH = "/episode/edison-vs-tesla";
+const CHANNEL = "https://www.youtube.com/@ChronicleofInnovation";
+
+const PAGE_TITLE = "Light Bulb & Electricity: Edison vs Tesla's Hidden Battle";
+const PAGE_DESCRIPTION =
+  "Inside the War of Currents: how Thomas Edison's light bulb empire and Nikola Tesla's alternating current fought a hidden battle to decide how the world would be powered.";
+
+const KEYWORDS = [
+  "Edison vs Tesla",
+  "war of currents",
+  "who invented the light bulb",
+  "Thomas Edison",
+  "Nikola Tesla",
+  "George Westinghouse",
+  "history of electricity",
+  "AC vs DC",
+  "alternating current",
+  "direct current",
+  "light bulb invention",
+  "electricity documentary",
+  "innovation documentary",
+  "Chronicles of Innovation",
+];
+
 export const metadata: Metadata = {
-  title: "Light Bulb & Electricity Documentary | Edison vs Tesla",
-  description: "The hidden battle that electrified the world. Explore the War of Currents between Thomas Edison and Nikola Tesla — the rivalry that decided how humanity would be powered.",
-  openGraph: {
-    type: "video.movie",
-    title: "Light Bulb & Electricity: Edison vs Tesla | Chronicles of Innovation",
-  },
+  title: { absolute: "Edison vs Tesla: The War of Currents | Chronicles of Innovation" },
+  description: PAGE_DESCRIPTION,
+  keywords: KEYWORDS,
+  authors: [{ name: "Tolu Adetuyi", url: `${SITE}/about` }],
+  creator: "Tolu Adetuyi",
+  category: "Documentary",
   alternates: {
-    canonical: "/episode/edison-vs-tesla",
+    canonical: PATH,
+  },
+  openGraph: {
+    type: "video.episode",
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    url: PATH,
+    siteName: "Chronicles of Innovation",
+    locale: "en_US",
+    releaseDate: "2026-06-27",
+    series: "Chronicles of Innovation",
+    tags: KEYWORDS,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
   },
 };
 
 export default function EdisonVsTeslaEpisode() {
-  const videoSchema = {
+  const structuredData = {
     "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "name": "Light Bulb & Electricity: Edison vs Tesla's Hidden Battle",
-    "description": "The War of Currents was never just science — it was war. Discover how Thomas Edison's direct current empire collided with Nikola Tesla's alternating current, a rivalry that electrified the modern world and broke the men who waged it.",
-    "thumbnailUrl": "https://chroniclesofinnovation.com/edison-machine-shop.jpg",
-    "uploadDate": "2026-06-27",
-    "duration": "PT12M",
-    "contentUrl": "https://www.youtube.com/@ChronicleofInnovation",
-    "embedUrl": "https://www.youtube.com/@ChronicleofInnovation",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Chronicles of Innovation",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://chroniclesofinnovation.com/coi_logo_transparent.png"
-      }
-    }
+    "@graph": [
+      {
+        "@type": "VideoObject",
+        "@id": `${SITE}${PATH}#video`,
+        "name": PAGE_TITLE,
+        "alternateName": "Edison vs Tesla: The War of Currents",
+        "description": "The War of Currents was never just science — it was war. Discover how Thomas Edison's direct current empire collided with Nikola Tesla's alternating current, a rivalry that electrified the modern world and broke the men who waged it.",
+        "thumbnailUrl": [
+          `${SITE}/edison-machine-shop.jpg`,
+          `${SITE}/ep1-niagara-1893.jpg`,
+          `${SITE}/ep1-tesla-ac-1888.jpg`,
+        ],
+        "uploadDate": "2026-06-27",
+        "duration": "PT12M",
+        "contentUrl": CHANNEL,
+        "embedUrl": CHANNEL,
+        "inLanguage": "en",
+        "genre": "Documentary",
+        "isFamilyFriendly": true,
+        "keywords": KEYWORDS.join(", "),
+        "publisher": {
+          "@type": "Organization",
+          "name": "Chronicles of Innovation",
+          "url": SITE,
+          "logo": {
+            "@type": "ImageObject",
+            "url": `${SITE}/coi_logo_transparent.png`,
+          },
+        },
+        "creator": {
+          "@type": "Person",
+          "@id": `${SITE}/#toluadetuyi`,
+          "name": "Tolu Adetuyi",
+          "url": `${SITE}/about`,
+          "jobTitle": "Executive Curator & Founder",
+          "sameAs": [
+            "https://adetuyi.com",
+            "https://www.youtube.com/@ChronicleofInnovation",
+          ],
+        },
+        "isPartOf": {
+          "@type": "CreativeWorkSeries",
+          "name": "Chronicles of Innovation",
+          "url": SITE,
+        },
+        "about": [
+          {
+            "@type": "Person",
+            "name": "Thomas Edison",
+            "sameAs": "https://en.wikipedia.org/wiki/Thomas_Edison",
+          },
+          {
+            "@type": "Person",
+            "name": "Nikola Tesla",
+            "sameAs": "https://en.wikipedia.org/wiki/Nikola_Tesla",
+          },
+          {
+            "@type": "Person",
+            "name": "George Westinghouse",
+            "sameAs": "https://en.wikipedia.org/wiki/George_Westinghouse",
+          },
+          {
+            "@type": "Thing",
+            "name": "War of the currents",
+            "sameAs": "https://en.wikipedia.org/wiki/War_of_the_currents",
+          },
+        ],
+        "potentialAction": {
+          "@type": "WatchAction",
+          "target": CHANNEL,
+        },
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${SITE}${PATH}#breadcrumb`,
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": SITE },
+          { "@type": "ListItem", "position": 2, "name": "Archive", "item": `${SITE}/archive` },
+          { "@type": "ListItem", "position": 3, "name": "Edison vs Tesla", "item": `${SITE}${PATH}` },
+        ],
+      },
+    ],
   };
 
   const chapters = [
@@ -56,7 +163,7 @@ export default function EdisonVsTeslaEpisode() {
     <div className="w-full">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <main className="pt-24">
         {/* Hero Section */}

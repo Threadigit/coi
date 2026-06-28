@@ -228,10 +228,12 @@ export default function EdisonVsTeslaEpisode() {
                   Watch on YouTube
                 </button>
               </Link>
-              <button className="border border-outline-variant/40 text-secondary px-10 py-4 font-bold tracking-[0.2em] uppercase text-xs flex items-center justify-center gap-3 hover:bg-secondary/10 transition-all w-full md:w-auto">
-                <span className="material-symbols-outlined">forum</span>
-                Join the Discussion
-              </button>
+              <a href="mailto:hello@chroniclesofinnovation.com?subject=Join%20the%20Discussion%3A%20Edison%20vs%20Tesla&body=I'd%20like%20to%20join%20the%20conversation%20about%20the%20Light%20Bulb%20%26%20Electricity%20episode.">
+                <button className="border border-outline-variant/40 text-secondary px-10 py-4 font-bold tracking-[0.2em] uppercase text-xs flex items-center justify-center gap-3 hover:bg-secondary/10 transition-all w-full md:w-auto">
+                  <span className="material-symbols-outlined">forum</span>
+                  Join the Discussion
+                </button>
+              </a>
             </div>
           </div>
         </section>

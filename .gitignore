@@ -43,3 +43,6 @@ next-env.d.ts
 # design references
 /COI/
 /public/Stich design/
+
+# local tooling
+/.claude/

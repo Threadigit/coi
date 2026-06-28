@@ -60,7 +60,7 @@ export default function EdisonVsTeslaEpisode() {
       />
       <main className="pt-24">
         {/* Hero Section */}
-        <header className="relative w-full h-[870px] overflow-hidden flex items-end px-6 md:px-12 pb-32 md:pb-48">
+        <header className="relative w-full h-[600px] md:h-[870px] overflow-hidden flex items-end px-6 md:px-12 pb-24 md:pb-48">
           <div className="absolute inset-0 z-0">
             <Image
               src="/edison-machine-shop.jpg"

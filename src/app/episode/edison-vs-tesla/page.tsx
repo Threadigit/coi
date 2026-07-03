@@ -4,7 +4,13 @@ import type { Metadata } from "next";
 
 const SITE = "https://chroniclesofinnovation.com";
 const PATH = "/episode/edison-vs-tesla";
-const CHANNEL = "https://www.youtube.com/@ChronicleofInnovation";
+const VIDEO_ID = "otqgociwb3o";
+const WATCH_URL = `https://www.youtube.com/watch?v=${VIDEO_ID}`;
+const EMBED_URL = `https://www.youtube.com/embed/${VIDEO_ID}`;
+const DURATION_SECONDS = 1161; // 19:21
+const DURATION_ISO = "PT19M21S";
+const RELEASE_DATE = "2026-07-02";
+const VIDEO_NAME = "Edison vs. Tesla: The Ruthless War That Lit the World";
 
 const PAGE_TITLE = "Light Bulb & Electricity: Edison vs Tesla's Hidden Battle";
 const PAGE_DESCRIPTION =
@@ -44,9 +50,11 @@ export const metadata: Metadata = {
     url: PATH,
     siteName: "Chronicles of Innovation",
     locale: "en_US",
-    releaseDate: "2026-06-27",
+    releaseDate: RELEASE_DATE,
+    duration: DURATION_SECONDS,
     series: "Chronicles of Innovation",
     tags: KEYWORDS,
+    videos: [{ url: EMBED_URL, type: "text/html", width: 1280, height: 720 }],
   },
   twitter: {
     card: "summary_large_image",
@@ -56,24 +64,40 @@ export const metadata: Metadata = {
 };
 
 export default function EdisonVsTeslaEpisode() {
+  const chapters = [
+    { time: "00:00", start: 0, title: "The Dark Truth Behind Edison" },
+    { time: "01:15", start: 75, title: "The World Before Electricity" },
+    { time: "02:10", start: 130, title: "The Rise of Thomas Edison" },
+    { time: "03:40", start: 220, title: "The Fatal Flaw in Edison's System" },
+    { time: "04:35", start: 275, title: "The Arrival of Nikola Tesla" },
+    { time: "05:50", start: 350, title: "Genius vs Power" },
+    { time: "06:40", start: 400, title: "The Betrayal That Started It All" },
+    { time: "07:30", start: 450, title: "The War of Currents Begins" },
+    { time: "08:30", start: 510, title: "Edison's Ruthless Campaign" },
+    { time: "09:30", start: 570, title: "Tesla Fights Back With Lightning" },
+    { time: "10:20", start: 620, title: "The World's Fair Showdown" },
+    { time: "11:05", start: 665, title: "The Man Who Won… But Lost Everything" },
+    { time: "11:40", start: 700, title: "Who Really Won the War?" },
+  ];
+
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "VideoObject",
         "@id": `${SITE}${PATH}#video`,
-        "name": PAGE_TITLE,
-        "alternateName": "Edison vs Tesla: The War of Currents",
+        "name": VIDEO_NAME,
+        "alternateName": PAGE_TITLE,
         "description": "The War of Currents was never just science — it was war. Discover how Thomas Edison's direct current empire collided with Nikola Tesla's alternating current, a rivalry that electrified the modern world and broke the men who waged it.",
         "thumbnailUrl": [
+          `https://i.ytimg.com/vi/${VIDEO_ID}/maxresdefault.jpg`,
           `${SITE}/edison-machine-shop.jpg`,
           `${SITE}/ep1-niagara-1893.jpg`,
-          `${SITE}/ep1-tesla-ac-1888.jpg`,
         ],
-        "uploadDate": "2026-06-27",
-        "duration": "PT12M",
-        "contentUrl": CHANNEL,
-        "embedUrl": CHANNEL,
+        "uploadDate": RELEASE_DATE,
+        "duration": DURATION_ISO,
+        "contentUrl": WATCH_URL,
+        "embedUrl": EMBED_URL,
         "inLanguage": "en",
         "genre": "Documentary",
         "isFamilyFriendly": true,
@@ -125,9 +149,17 @@ export default function EdisonVsTeslaEpisode() {
             "sameAs": "https://en.wikipedia.org/wiki/War_of_the_currents",
           },
         ],
+        "hasPart": chapters.map((chapter, index) => ({
+          "@type": "Clip",
+          "name": chapter.title,
+          "startOffset": chapter.start,
+          "endOffset":
+            index < chapters.length - 1 ? chapters[index + 1].start : DURATION_SECONDS,
+          "url": `${WATCH_URL}&t=${chapter.start}s`,
+        })),
         "potentialAction": {
           "@type": "WatchAction",
-          "target": CHANNEL,
+          "target": WATCH_URL,
         },
       },
       {
@@ -141,23 +173,6 @@ export default function EdisonVsTeslaEpisode() {
       },
     ],
   };
-
-  const chapters = [
-    { time: "00:00", title: "The Dark Truth Behind Edison" },
-    { time: "00:32", title: "This Wasn't Science… It Was War" },
-    { time: "01:15", title: "The World Before Electricity" },
-    { time: "02:10", title: "The Rise of Thomas Edison" },
-    { time: "03:40", title: "The Fatal Flaw in Edison's System" },
-    { time: "04:35", title: "The Arrival of Nikola Tesla" },
-    { time: "05:50", title: "Genius vs Power" },
-    { time: "06:40", title: "The Betrayal That Started It All" },
-    { time: "07:30", title: "The War of Currents Begins" },
-    { time: "08:30", title: "Edison's Ruthless Campaign" },
-    { time: "09:30", title: "Tesla Fights Back With Lightning" },
-    { time: "10:20", title: "The World's Fair Showdown" },
-    { time: "11:05", title: "The Man Who Won… But Lost Everything" },
-    { time: "11:40", title: "Who Really Won the War?" },
-  ];
 
   return (
     <div className="w-full">
@@ -189,7 +204,7 @@ export default function EdisonVsTeslaEpisode() {
             <div className="flex items-center gap-8 text-slate-400">
               <div className="flex items-center gap-2">
                 <span className="material-symbols-outlined text-primary" style={{fontVariationSettings: "'FILL' 1"}}>timer</span>
-                <span className="text-xs uppercase tracking-widest font-medium">12 Minute Feature</span>
+                <span className="text-xs uppercase tracking-widest font-medium">19 Minute Feature</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="material-symbols-outlined text-primary" style={{fontVariationSettings: "'FILL' 1"}}>bolt</span>
@@ -198,6 +213,27 @@ export default function EdisonVsTeslaEpisode() {
             </div>
           </div>
         </header>
+
+        {/* Watch Section */}
+        <section className="px-6 md:px-12 py-24 bg-surface-container-lowest">
+          <div className="max-w-5xl mx-auto">
+            <div className="mb-10 text-center">
+              <span className="font-label text-xs uppercase tracking-[0.4em] text-secondary mb-4 block">The Full Documentary</span>
+              <h2 className="font-headline text-4xl md:text-5xl">Watch the <span className="text-primary italic">Feature</span></h2>
+            </div>
+            <div className="relative aspect-video overflow-hidden rounded-sm shadow-2xl border border-outline-variant/20">
+              <iframe
+                className="absolute inset-0 h-full w-full"
+                src={`${EMBED_URL}?rel=0`}
+                title={VIDEO_NAME}
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </section>
 
         {/* Narrative Section */}
         <section className="px-6 md:px-12 py-32 bg-surface">
@@ -313,10 +349,17 @@ export default function EdisonVsTeslaEpisode() {
             </div>
             <ol className="divide-y divide-outline-variant/15">
               {chapters.map((chapter, index) => (
-                <li key={chapter.time} className="flex items-center gap-6 py-5 group">
-                  <span className="font-label text-primary serif-display italic text-lg w-10 flex-shrink-0">{String(index + 1).padStart(2, "0")}</span>
-                  <span className="font-body text-on-surface text-base md:text-lg group-hover:text-primary transition-colors flex-1">{chapter.title}</span>
-                  <span className="font-label text-[10px] tracking-widest text-slate-500 uppercase tabular-nums flex-shrink-0">{chapter.time}</span>
+                <li key={chapter.time}>
+                  <a
+                    href={`${WATCH_URL}&t=${chapter.start}s`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-6 py-5 group"
+                  >
+                    <span className="font-label text-primary serif-display italic text-lg w-10 flex-shrink-0">{String(index + 1).padStart(2, "0")}</span>
+                    <span className="font-body text-on-surface text-base md:text-lg group-hover:text-primary transition-colors flex-1">{chapter.title}</span>
+                    <span className="font-label text-[10px] tracking-widest text-slate-500 uppercase tabular-nums flex-shrink-0 group-hover:text-primary transition-colors">{chapter.time}</span>
+                  </a>
                 </li>
               ))}
             </ol>
@@ -327,9 +370,9 @@ export default function EdisonVsTeslaEpisode() {
         <section className="py-40 bg-surface">
           <div className="max-w-4xl mx-auto px-6 text-center">
             <h3 className="font-headline text-5xl mb-8">Continue the Journey</h3>
-            <p className="text-slate-400 mb-12 text-lg">Experience the full documentary on our YouTube channel or engage with our community of historians and engineers.</p>
+            <p className="text-slate-400 mb-12 text-lg">Watch the full documentary on YouTube or engage with our community of historians and engineers.</p>
             <div className="flex flex-col md:flex-row justify-center gap-6">
-              <Link href="https://www.youtube.com/@ChronicleofInnovation" target="_blank">
+              <Link href={WATCH_URL} target="_blank">
                 <button className="bg-primary text-on-primary px-10 py-4 font-bold tracking-[0.2em] uppercase text-xs flex items-center justify-center gap-3 hover:opacity-90 transition-all w-full md:w-auto">
                   <span className="material-symbols-outlined">play_circle</span>
                   Watch on YouTube

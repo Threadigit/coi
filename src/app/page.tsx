@@ -56,12 +56,19 @@ export default function Home() {
       },
       {
         "@type": "VideoObject",
-        "name": "Light Bulb & Electricity: Edison vs Tesla's Hidden Battle",
+        "@id": "https://chroniclesofinnovation.com/episode/edison-vs-tesla#video",
+        "name": "Edison vs. Tesla: The Ruthless War That Lit the World",
+        "alternateName": "Light Bulb & Electricity: Edison vs Tesla's Hidden Battle",
         "description": "The War of Currents was never just science — it was war. Explore how Edison's direct current empire collided with Tesla's alternating current in the battle that electrified the modern world.",
-        "thumbnailUrl": "https://chroniclesofinnovation.com/edison-machine-shop.jpg",
-        "uploadDate": "2026-06-27",
-        "duration": "PT12M",
-        "contentUrl": "https://www.youtube.com/@ChronicleofInnovation",
+        "thumbnailUrl": [
+          "https://i.ytimg.com/vi/otqgociwb3o/maxresdefault.jpg",
+          "https://chroniclesofinnovation.com/edison-machine-shop.jpg"
+        ],
+        "uploadDate": "2026-07-02",
+        "duration": "PT19M21S",
+        "contentUrl": "https://www.youtube.com/watch?v=otqgociwb3o",
+        "embedUrl": "https://www.youtube.com/embed/otqgociwb3o",
+        "url": "https://chroniclesofinnovation.com/episode/edison-vs-tesla",
         "publisher": {
           "@type": "Organization",
           "name": "Chronicles of Innovation"

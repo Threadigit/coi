@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { getLatestVideos } from "@/lib/youtube";
+import { getLatestVideos, PAGE_SIZE } from "@/lib/youtube";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -21,18 +21,20 @@ type Props = {
 export default async function Archive({ searchParams }: Props) {
   const resolvedParams = await searchParams;
   const q = resolvedParams.q?.toLowerCase() || '';
-  const category = (resolvedParams.category as string)?.toLowerCase() || 'all';
+  // Accept either ?category= (filter chips) or ?era= (home-page era cards).
+  const category = (resolvedParams.category || resolvedParams.era)?.toLowerCase() || 'all';
 
   let videos = await getLatestVideos(CHANNEL_ID);
 
   if (q) {
     videos = videos.filter(v => v.title.toLowerCase().includes(q));
   }
-  
+
   if (category !== 'all') {
-    // As a placeholder functionality if YouTube RSS doesn't have tags, filter by the title/desc.
-    // In a real database, you'd filter by 'video.category === category'
-    videos = videos.filter(v => v.title.toLowerCase().includes(category));
+    // Match the video's editorial tags, falling back to a title keyword match.
+    videos = videos.filter(
+      v => v.categories.includes(category) || v.title.toLowerCase().includes(category)
+    );
   }
 
   const categories = [
@@ -135,13 +137,15 @@ export default async function Archive({ searchParams }: Props) {
             </div>
           )}
 
-          {/* Pagination/Load More */}
-          <div className="mt-32 flex flex-col items-center">
-            <button className="group flex flex-col items-center gap-4">
-              <span className="font-label text-[10px] tracking-[0.3em] text-slate-500 group-hover:text-primary transition-colors uppercase">Load More Archives</span>
-              <span className="material-symbols-outlined text-primary text-3xl animate-bounce">keyboard_double_arrow_down</span>
-            </button>
-          </div>
+          {/* Pagination/Load More — only when a full page was returned (more may exist) */}
+          {videos.length >= PAGE_SIZE && (
+            <div className="mt-32 flex flex-col items-center">
+              <button className="group flex flex-col items-center gap-4">
+                <span className="font-label text-[10px] tracking-[0.3em] text-slate-500 group-hover:text-primary transition-colors uppercase">Load More Archives</span>
+                <span className="material-symbols-outlined text-primary text-3xl animate-bounce">keyboard_double_arrow_down</span>
+              </button>
+            </div>
+          )}
         </section>
       </main>
     </div>

@@ -66,18 +66,18 @@ export const metadata: Metadata = {
 export default function EdisonVsTeslaEpisode() {
   const chapters = [
     { time: "00:00", start: 0, title: "The Dark Truth Behind Edison" },
-    { time: "01:15", start: 75, title: "The World Before Electricity" },
-    { time: "02:10", start: 130, title: "The Rise of Thomas Edison" },
-    { time: "03:40", start: 220, title: "The Fatal Flaw in Edison's System" },
-    { time: "04:35", start: 275, title: "The Arrival of Nikola Tesla" },
-    { time: "05:50", start: 350, title: "Genius vs Power" },
-    { time: "06:40", start: 400, title: "The Betrayal That Started It All" },
-    { time: "07:30", start: 450, title: "The War of Currents Begins" },
-    { time: "08:30", start: 510, title: "Edison's Ruthless Campaign" },
-    { time: "09:30", start: 570, title: "Tesla Fights Back With Lightning" },
-    { time: "10:20", start: 620, title: "The World's Fair Showdown" },
-    { time: "11:05", start: 665, title: "The Man Who Won… But Lost Everything" },
-    { time: "11:40", start: 700, title: "Who Really Won the War?" },
+    { time: "01:00", start: 60, title: "The World Before Electricity" },
+    { time: "01:36", start: 96, title: "The Rise of Thomas Edison" },
+    { time: "03:06", start: 186, title: "The Fatal Flaw in Edison's System" },
+    { time: "03:36", start: 216, title: "The Arrival of Nikola Tesla" },
+    { time: "04:02", start: 242, title: "Genius vs Power" },
+    { time: "05:22", start: 322, title: "The Betrayal That Started It All" },
+    { time: "05:52", start: 352, title: "The War of Currents Begins" },
+    { time: "06:40", start: 400, title: "Edison's Ruthless Campaign" },
+    { time: "09:19", start: 559, title: "Tesla Fights Back With Lightning" },
+    { time: "12:02", start: 722, title: "The World's Fair Showdown" },
+    { time: "15:35", start: 935, title: "The Man Who Won… But Lost Everything" },
+    { time: "17:14", start: 1034, title: "Who Really Won the War?" },
   ];
 
   const structuredData = {

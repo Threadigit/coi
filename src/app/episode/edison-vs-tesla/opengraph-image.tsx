@@ -137,7 +137,7 @@ export default async function Image() {
               textTransform: "uppercase",
             }}
           >
-            The War of Currents · 12-Min Feature
+            The War of Currents · 19-Min Feature
           </div>
         </div>
       </div>

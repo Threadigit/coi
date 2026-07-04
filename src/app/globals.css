@@ -80,4 +80,20 @@
   .page-transition {
     animation: fade-in 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   }
+  /* Slow cinematic zoom for the hero still; disabled for reduced-motion users. */
+  @keyframes hero-kenburns {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.08);
+    }
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .hero-kenburns {
+      transform-origin: center;
+      animation: hero-kenburns 24s ease-in-out infinite alternate;
+      will-change: transform;
+    }
+  }
 }

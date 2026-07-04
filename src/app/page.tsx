@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import NewsletterForm from "@/components/NewsletterForm";
+import HeroCinematicPreview from "@/components/HeroCinematicPreview";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -86,12 +87,10 @@ export default function Home() {
       {/* Hero Section: Cinematic Steam Engine */}
       <section className="relative min-h-screen flex items-end pt-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image
-            src="/edison-machine-shop.jpg"
+          <HeroCinematicPreview
+            videoId="otqgociwb3o"
+            image="/edison-machine-shop.jpg"
             alt="Thomas Edison's machine shop, lit by early electric lamps"
-            fill
-            priority
-            className="object-cover opacity-60 grayscale hover:grayscale-0 transition-all duration-1000"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent"></div>
         </div>

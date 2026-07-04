@@ -29,15 +29,30 @@ export default function HeroCinematicPreview({ videoId, image, alt }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const isDesktop = window.matchMedia('(min-width: 1024px)').matches;
-    const finePointer = window.matchMedia('(pointer: fine)').matches;
+    // Never override an explicit motion or data preference.
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-    const connection = (navigator as unknown as { connection?: { saveData?: boolean; effectiveType?: string } }).connection;
-    const saveData = connection?.saveData === true;
-    const slowConnection = typeof connection?.effectiveType === 'string' && /(^|\s)(slow-2g|2g)$/.test(connection.effectiveType);
+    const connection = (navigator as unknown as {
+      connection?: { saveData?: boolean; effectiveType?: string; downlink?: number };
+    }).connection;
+    if (connection?.saveData === true) return;
 
-    const allowVideo = isDesktop && finePointer && !prefersReducedMotion && !saveData && !slowConnection;
+    const effectiveType = connection?.effectiveType;
+    const isWideFinePointer =
+      window.matchMedia('(min-width: 1024px)').matches &&
+      window.matchMedia('(pointer: fine)').matches;
+
+    let allowVideo: boolean;
+    if (isWideFinePointer) {
+      // Desktop/laptop: play unless we positively detect a slow (2g) link.
+      allowVideo = effectiveType !== 'slow-2g' && effectiveType !== '2g';
+    } else {
+      // Phones/tablets: only on a confirmed fast connection. If the link can't
+      // be measured (e.g. iOS Safari has no Network Information API), fall back
+      // to the still so video is never streamed over a weak or metered link.
+      const downlink = connection?.downlink;
+      allowVideo = effectiveType === '4g' && (downlink === undefined || downlink >= 2);
+    }
     if (!allowVideo) return;
 
     const el = containerRef.current;

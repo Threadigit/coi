@@ -27,6 +27,7 @@ export default function HeroCinematicPreview({ videoId, image, alt }: Props) {
   const [mountVideo, setMountVideo] = useState(false);
   const [videoReady, setVideoReady] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
 
   useEffect(() => {
     // Never override an explicit motion or data preference.
@@ -88,13 +89,35 @@ export default function HeroCinematicPreview({ videoId, image, alt }: Props) {
     };
   }, []);
 
+  // Once the preview is mounted, pause it whenever the hero scrolls out of view
+  // and resume when it returns — so it never burns CPU/data/battery off-screen.
+  useEffect(() => {
+    if (!mountVideo) return;
+    const el = containerRef.current;
+    if (!el) return;
+
+    const command = (func: 'playVideo' | 'pauseVideo') => {
+      iframeRef.current?.contentWindow?.postMessage(
+        JSON.stringify({ event: 'command', func, args: [] }),
+        '*'
+      );
+    };
+
+    const observer = new IntersectionObserver(
+      (entries) => command(entries[0].isIntersecting ? 'playVideo' : 'pauseVideo'),
+      { threshold: 0.05 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [mountVideo]);
+
   // Start on a dark, cinematic generator-hall shot ("electricity at massive
   // scale") that blends with the dark theme and keeps the headline legible.
   const START_SECONDS = 872;
   const embedSrc =
     `https://www.youtube-nocookie.com/embed/${videoId}` +
     `?autoplay=1&mute=1&controls=0&loop=1&playlist=${videoId}` +
-    `&start=${START_SECONDS}&playsinline=1&rel=0&modestbranding=1&disablekb=1&iv_load_policy=3&fs=0&cc_load_policy=0`;
+    `&start=${START_SECONDS}&playsinline=1&rel=0&modestbranding=1&disablekb=1&iv_load_policy=3&fs=0&cc_load_policy=0&enablejsapi=1`;
 
   return (
     <div ref={containerRef} className="absolute inset-0 overflow-hidden">
@@ -110,6 +133,7 @@ export default function HeroCinematicPreview({ videoId, image, alt }: Props) {
       />
       {mountVideo && (
         <iframe
+          ref={iframeRef}
           src={embedSrc}
           title={alt}
           tabIndex={-1}

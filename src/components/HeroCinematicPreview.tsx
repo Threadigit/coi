@@ -73,10 +73,13 @@ export default function HeroCinematicPreview({ videoId, image, alt }: Props) {
     };
   }, []);
 
+  // Start on a dark, cinematic generator-hall shot ("electricity at massive
+  // scale") that blends with the dark theme and keeps the headline legible.
+  const START_SECONDS = 872;
   const embedSrc =
     `https://www.youtube-nocookie.com/embed/${videoId}` +
     `?autoplay=1&mute=1&controls=0&loop=1&playlist=${videoId}` +
-    `&playsinline=1&rel=0&modestbranding=1&disablekb=1&iv_load_policy=3&fs=0&cc_load_policy=0`;
+    `&start=${START_SECONDS}&playsinline=1&rel=0&modestbranding=1&disablekb=1&iv_load_policy=3&fs=0&cc_load_policy=0`;
 
   return (
     <div ref={containerRef} className="absolute inset-0 overflow-hidden">

@@ -3,34 +3,78 @@ import NewsletterForm from "@/components/NewsletterForm";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Volume I: The Manifesto",
-  description: "The modern archivists of the human spirit. Learn about our verified methodology and the curators behind Chronicles of Innovation.",
+  title: { absolute: "Tolu Adetuyi — Executive Curator & Founder | Chronicles of Innovation" },
+  description:
+    "Meet Tolu Adetuyi, Executive Curator and founder of Chronicles of Innovation — the premium documentary series chronicling the innovations that shaped the modern world.",
+  keywords: [
+    "Tolu Adetuyi",
+    "Tolu Adetuyi Chronicles of Innovation",
+    "Executive Curator",
+    "Chronicles of Innovation founder",
+    "innovation documentary curator",
+    "Chronicles of Innovation about",
+  ],
+  authors: [{ name: "Tolu Adetuyi", url: "https://chroniclesofinnovation.com/about" }],
+  creator: "Tolu Adetuyi",
   alternates: {
     canonical: "/about",
+  },
+  openGraph: {
+    type: "profile",
+    firstName: "Tolu",
+    lastName: "Adetuyi",
+    title: "Tolu Adetuyi — Executive Curator & Founder, Chronicles of Innovation",
+    description:
+      "Executive Curator and founder of Chronicles of Innovation, the premium documentary series on the breakthroughs that shaped the modern world.",
+    url: "/about",
+    siteName: "Chronicles of Innovation",
   },
 };
 
 export default function About() {
   const profileSchema = {
     "@context": "https://schema.org",
-    "@type": "ProfilePage",
-    "mainEntity": {
-      "@type": "Person",
-      "@id": "https://chroniclesofinnovation.com/#toluadetuyi",
-      "name": "Tolu Adetuyi",
-      "url": "https://chroniclesofinnovation.com/about",
-      "jobTitle": "Executive Curator & Founder",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Chronicles of Innovation",
-        "url": "https://chroniclesofinnovation.com"
+    "@graph": [
+      {
+        "@type": "ProfilePage",
+        "@id": "https://chroniclesofinnovation.com/about#profilepage",
+        "url": "https://chroniclesofinnovation.com/about",
+        "name": "Tolu Adetuyi — Executive Curator & Founder",
+        "mainEntity": {
+          "@type": "Person",
+          "@id": "https://chroniclesofinnovation.com/#toluadetuyi",
+          "name": "Tolu Adetuyi",
+          "url": "https://chroniclesofinnovation.com/about",
+          "jobTitle": "Executive Curator & Founder",
+          "description":
+            "Tolu Adetuyi is the Executive Curator and founder of Chronicles of Innovation, a premium documentary series chronicling the innovations that shaped the modern world.",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Chronicles of Innovation",
+            "url": "https://chroniclesofinnovation.com",
+          },
+          "image": "https://chroniclesofinnovation.com/avatar.png",
+          "knowsAbout": [
+            "History of innovation",
+            "History of science and technology",
+            "Industrial history",
+            "Documentary filmmaking",
+          ],
+          "sameAs": [
+            "https://adetuyi.com",
+            "https://www.youtube.com/@ChronicleofInnovation",
+          ],
+        },
       },
-      "image": "https://chroniclesofinnovation.com/avatar.png",
-      "sameAs": [
-        "https://adetuyi.com",
-        "https://www.youtube.com/@ChronicleofInnovation"
-      ]
-    }
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://chroniclesofinnovation.com/about#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://chroniclesofinnovation.com" },
+          { "@type": "ListItem", "position": 2, "name": "About", "item": "https://chroniclesofinnovation.com/about" },
+        ],
+      },
+    ],
   };
 
   return (

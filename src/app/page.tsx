@@ -129,10 +129,10 @@ export default function Home() {
                 className="object-cover" 
               />
             </div>
-            <div className="mt-6">
-              <div className="text-primary serif-display italic text-lg">Tolu Adetuyi</div>
+            <Link href="/about" className="mt-6 inline-block group">
+              <div className="text-primary serif-display italic text-lg group-hover:underline underline-offset-4 decoration-primary/40">Tolu Adetuyi</div>
               <div className="text-slate-500 font-label uppercase tracking-widest text-[10px]">Executive Curator</div>
-            </div>
+            </Link>
           </div>
           <div className="w-full md:w-2/3">
             <span className="text-secondary font-label uppercase tracking-[0.2em] text-[10px] mb-8 block">Philosophy of Progress</span>

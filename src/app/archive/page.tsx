@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { getLatestVideos, PAGE_SIZE } from "@/lib/youtube";
+import { episodes } from "@/lib/episodes";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -10,9 +10,6 @@ export const metadata: Metadata = {
     canonical: "/archive",
   },
 };
-
-// Explicit Channel ID for Chronicles of Innovation
-const CHANNEL_ID = "UCKU6JFP0__kQ12KSgvtroLQ";
 
 type Props = {
   searchParams: Promise<{ [key: string]: string | undefined }>
@@ -24,17 +21,19 @@ export default async function Archive({ searchParams }: Props) {
   // Accept either ?category= (filter chips) or ?era= (home-page era cards).
   const category = (resolvedParams.category || resolvedParams.era)?.toLowerCase() || 'all';
 
-  let videos = await getLatestVideos(CHANNEL_ID);
+  let items = episodes;
 
   if (q) {
-    videos = videos.filter(v => v.title.toLowerCase().includes(q));
+    items = items.filter(e =>
+      [e.title, e.blurb, ...e.keywords, ...e.categories]
+        .join(' ')
+        .toLowerCase()
+        .includes(q)
+    );
   }
 
   if (category !== 'all') {
-    // Match the video's editorial tags, falling back to a title keyword match.
-    videos = videos.filter(
-      v => v.categories.includes(category) || v.title.toLowerCase().includes(category)
-    );
+    items = items.filter(e => e.categories.includes(category));
   }
 
   const categories = [
@@ -96,7 +95,7 @@ export default async function Archive({ searchParams }: Props) {
 
         {/* Archive Grid */}
         <section className="max-w-7xl mx-auto">
-          {videos.length === 0 ? (
+          {items.length === 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
               {[1, 2, 3, 4].map((idx) => (
                 <article key={`placeholder-${idx}`} className="group cursor-pointer">
@@ -109,41 +108,32 @@ export default async function Archive({ searchParams }: Props) {
                   <div className="space-y-2">
                     <span className="font-label text-[10px] uppercase tracking-[0.2em] text-secondary">AWAITING SIGNAL</span>
                     <h3 className="serif-headline text-2xl font-bold text-slate-400">Classified</h3>
-                    <p className="font-body text-slate-500 text-sm leading-relaxed">The archive is currently decoding historical footage. Check back soon for the premiere of this documentary.</p>
+                    <p className="font-body text-slate-500 text-sm leading-relaxed">No episodes match this era yet. Check back soon for the next documentary.</p>
                   </div>
                 </article>
               ))}
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
-              {videos.map((video) => (
-                <Link href={video.link} target="_blank" key={video.id} className="group cursor-pointer block">
+              {items.map((episode) => (
+                <Link href={episode.href} key={episode.slug} className="group cursor-pointer block">
                   <div className="relative aspect-[16/9] overflow-hidden bg-surface-container-low mb-4">
-                    <Image 
-                      src={video.thumbnail}
-                      alt={video.title} 
+                    <Image
+                      src={episode.thumbnail}
+                      alt={episode.title}
                       fill
-                      className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" 
+                      className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-60"></div>
                   </div>
                   <div className="space-y-2">
                     <span className="font-label text-[10px] uppercase tracking-[0.2em] text-secondary">ARCHIVE</span>
-                    <h3 className="serif-headline text-2xl font-bold group-hover:text-primary transition-colors line-clamp-2">{video.title}</h3>
-                    <p className="font-body text-slate-500 text-xs">Published: {new Date(video.publishedAt).toLocaleDateString()}</p>
+                    <h3 className="serif-headline text-2xl font-bold group-hover:text-primary transition-colors line-clamp-2">{episode.title}</h3>
+                    <p className="font-body text-slate-400 text-sm leading-relaxed line-clamp-2">{episode.blurb}</p>
+                    <p className="font-body text-slate-500 text-xs">Published: {new Date(episode.publishedAt).toLocaleDateString()}</p>
                   </div>
                 </Link>
               ))}
-            </div>
-          )}
-
-          {/* Pagination/Load More — only when a full page was returned (more may exist) */}
-          {videos.length >= PAGE_SIZE && (
-            <div className="mt-32 flex flex-col items-center">
-              <button className="group flex flex-col items-center gap-4">
-                <span className="font-label text-[10px] tracking-[0.3em] text-slate-500 group-hover:text-primary transition-colors uppercase">Load More Archives</span>
-                <span className="material-symbols-outlined text-primary text-3xl animate-bounce">keyboard_double_arrow_down</span>
-              </button>
             </div>
           )}
         </section>

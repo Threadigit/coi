@@ -211,6 +211,11 @@ export default function EdisonVsTeslaEpisode() {
                 <span className="text-xs uppercase tracking-widest font-medium">The War of Currents</span>
               </div>
             </div>
+            <div className="mt-6">
+              <Link href="/about" className="font-label text-[10px] uppercase tracking-widest text-slate-500 hover:text-primary transition-colors">
+                Curated by <span className="text-secondary">Tolu Adetuyi</span>
+              </Link>
+            </div>
           </div>
         </header>
 

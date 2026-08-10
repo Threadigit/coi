@@ -10,6 +10,7 @@ export interface Episode {
   publishedAt: string; // ISO date
   thumbnail: string;
   categories: string[]; // archive filter / era tags
+  keywords: string[]; // extra terms the archive search should match
 }
 
 // Newest first.
@@ -24,6 +25,19 @@ export const episodes: Episode[] = [
     publishedAt: "2026-08-09",
     thumbnail: "https://i.ytimg.com/vi/zbeBT46ymp4/maxresdefault.jpg",
     categories: ["industrial", "biotech"],
+    keywords: [
+      "penicillin",
+      "alexander fleming",
+      "howard florey",
+      "ernst chain",
+      "antibiotic",
+      "antibiotics",
+      "mould",
+      "mold",
+      "petri dish",
+      "medicine",
+      "miracle drug",
+    ],
   },
   {
     slug: "edison-vs-tesla",
@@ -35,5 +49,16 @@ export const episodes: Episode[] = [
     publishedAt: "2026-07-02",
     thumbnail: "https://i.ytimg.com/vi/otqgociwb3o/maxresdefault.jpg",
     categories: ["industrial"],
+    keywords: [
+      "edison",
+      "tesla",
+      "electricity",
+      "light bulb",
+      "war of currents",
+      "alternating current",
+      "direct current",
+      "westinghouse",
+      "power",
+    ],
   },
 ];

@@ -24,7 +24,12 @@ export default async function Archive({ searchParams }: Props) {
   let items = episodes;
 
   if (q) {
-    items = items.filter(e => e.title.toLowerCase().includes(q));
+    items = items.filter(e =>
+      [e.title, e.blurb, ...e.keywords, ...e.categories]
+        .join(' ')
+        .toLowerCase()
+        .includes(q)
+    );
   }
 
   if (category !== 'all') {

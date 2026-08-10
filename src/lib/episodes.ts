@@ -6,6 +6,8 @@ export interface Episode {
   href: string;
   videoId: string;
   title: string;
+  innovation: string; // the actual innovation, shown as a tag (e.g. "Electricity")
+  icon: string; // Material Symbols name paired with the innovation tag
   blurb: string;
   publishedAt: string; // ISO date
   thumbnail: string;
@@ -20,6 +22,8 @@ export const episodes: Episode[] = [
     href: "/episode/penicillin",
     videoId: "zbeBT46ymp4",
     title: "The Miracle Drug That Shouldn't Exist: Penicillin",
+    innovation: "Penicillin",
+    icon: "biotech",
     blurb:
       "A contaminated petri dish, a patch of mould, and the accident that became the world's first antibiotic.",
     publishedAt: "2026-08-09",
@@ -44,6 +48,8 @@ export const episodes: Episode[] = [
     href: "/episode/edison-vs-tesla",
     videoId: "otqgociwb3o",
     title: "Edison vs. Tesla: The Ruthless War That Lit the World",
+    innovation: "Electricity",
+    icon: "bolt",
     blurb:
       "The War of Currents between Edison and Tesla that decided how the world would be powered.",
     publishedAt: "2026-07-02",

@@ -49,27 +49,23 @@ export default async function Archive({ searchParams }: Props) {
       <main className="pt-32 pb-24 px-6 md:px-12 w-full">
         {/* Hero Search Section */}
         <section className="max-w-7xl mx-auto mb-20">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
-            <div className="md:col-span-8">
-              <h1 className="serif-headline text-5xl md:text-7xl font-bold tracking-tight text-on-surface leading-tight mb-8">
-                Search the <span className="italic text-primary">Archive</span> <br/>of Progress
-              </h1>
-              <form action="/archive" className="relative group">
-                {category !== 'all' && <input type="hidden" name="category" value={category} />}
-                <input 
-                  name="q"
-                  defaultValue={q}
-                  className="w-full bg-surface-container-low border-b border-outline-variant/30 py-6 px-4 text-2xl font-body placeholder:text-slate-700 focus:outline-none focus:border-primary transition-all duration-500 text-on-surface" 
-                  placeholder="Explore historical breakthroughs..." 
-                  type="search" 
-                />
-                <button type="submit" className="absolute right-4 top-1/2 -translate-y-1/2 bg-transparent border-none cursor-pointer p-0">
-                  <span className="material-symbols-outlined text-primary text-4xl">manage_search</span>
-                </button>
-              </form>
-            </div>
-          </div>
-          
+          <h1 className="serif-headline text-5xl md:text-7xl font-bold tracking-tight text-on-surface leading-tight mb-10 max-w-3xl">
+            Search the <span className="italic text-primary">Archive</span> of Progress
+          </h1>
+          <form action="/archive" className="relative group w-full">
+            {category !== 'all' && <input type="hidden" name="category" value={category} />}
+            <input
+              name="q"
+              defaultValue={q}
+              className="w-full bg-surface-container-low border-b border-outline-variant/30 py-6 px-4 pr-16 text-2xl font-body placeholder:text-slate-700 focus:outline-none focus:border-primary transition-all duration-500 text-on-surface"
+              placeholder="Explore historical breakthroughs..."
+              type="search"
+            />
+            <button type="submit" className="absolute right-4 top-1/2 -translate-y-1/2 bg-transparent border-none cursor-pointer p-0">
+              <span className="material-symbols-outlined text-primary text-4xl">manage_search</span>
+            </button>
+          </form>
+
           {/* Filter Chips */}
           <div className="flex flex-wrap gap-3 mt-12">
             {categories.map((cat) => {
@@ -125,6 +121,10 @@ export default async function Archive({ searchParams }: Props) {
                       className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-60"></div>
+                    <div className="absolute top-3 left-3 z-10 flex items-center gap-1.5 bg-surface/80 backdrop-blur-sm border border-outline-variant/30 px-3 py-1.5 rounded-full">
+                      <span className="material-symbols-outlined text-primary text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>{episode.icon}</span>
+                      <span className="font-label text-[10px] uppercase tracking-widest font-bold text-on-surface">{episode.innovation}</span>
+                    </div>
                   </div>
                   <div className="space-y-2">
                     <span className="font-label text-[10px] uppercase tracking-[0.2em] text-secondary">ARCHIVE</span>

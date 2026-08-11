@@ -27,7 +27,10 @@ export default function Home() {
           "@id": "https://chroniclesofinnovation.com/#toluadetuyi"
         },
         "sameAs": [
-          "https://www.youtube.com/@ChronicleofInnovation"
+          "https://www.youtube.com/@ChronicleofInnovation",
+          "https://www.facebook.com/Chronicleofinnovation/",
+          "https://www.instagram.com/chronicleofinnovation",
+          "https://www.threads.com/@chronicleofinnovation"
         ]
       },
       {

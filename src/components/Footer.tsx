@@ -13,7 +13,10 @@ export default function Footer() {
         <Link href="/terms" className="font-label text-[10px] uppercase tracking-widest text-slate-500 hover:text-on-surface transition-opacity duration-500 hover:underline decoration-primary underline-offset-4">Terms of Service</Link>
         <Link href="/privacy" className="font-label text-[10px] uppercase tracking-widest text-slate-500 hover:text-on-surface transition-opacity duration-500 hover:underline decoration-primary underline-offset-4">Privacy Policy</Link>
         <Link href="mailto:hello@chroniclesofinnovation.com" className="font-label text-[10px] uppercase tracking-widest text-slate-500 hover:text-on-surface transition-opacity duration-500 hover:underline decoration-primary underline-offset-4">Contact</Link>
-        <Link href="https://www.youtube.com/@ChronicleofInnovation" target="_blank" className="font-label text-[10px] uppercase tracking-widest text-slate-500 hover:text-on-surface transition-opacity duration-500 hover:underline decoration-primary underline-offset-4">YouTube</Link>
+        <Link href="https://www.youtube.com/@ChronicleofInnovation" target="_blank" rel="noopener noreferrer" className="font-label text-[10px] uppercase tracking-widest text-slate-500 hover:text-on-surface transition-opacity duration-500 hover:underline decoration-primary underline-offset-4">YouTube</Link>
+        <Link href="https://www.instagram.com/chronicleofinnovation" target="_blank" rel="noopener noreferrer" className="font-label text-[10px] uppercase tracking-widest text-slate-500 hover:text-on-surface transition-opacity duration-500 hover:underline decoration-primary underline-offset-4">Instagram</Link>
+        <Link href="https://www.facebook.com/Chronicleofinnovation/" target="_blank" rel="noopener noreferrer" className="font-label text-[10px] uppercase tracking-widest text-slate-500 hover:text-on-surface transition-opacity duration-500 hover:underline decoration-primary underline-offset-4">Facebook</Link>
+        <Link href="https://www.threads.com/@chronicleofinnovation" target="_blank" rel="noopener noreferrer" className="font-label text-[10px] uppercase tracking-widest text-slate-500 hover:text-on-surface transition-opacity duration-500 hover:underline decoration-primary underline-offset-4">Threads</Link>
       </div>
     </footer>
   );

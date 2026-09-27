@@ -44,8 +44,31 @@ export default async function Archive({ searchParams }: Props) {
     { label: 'BIOTECH', value: 'biotech' },
   ];
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": "https://chroniclesofinnovation.com/archive#collection",
+    "url": "https://chroniclesofinnovation.com/archive",
+    "name": "The Archive — Chronicles of Innovation",
+    "description": "Search and explore our curated archive of human progress, spanning the Industrial, Atomic, and Digital eras.",
+    "isPartOf": { "@id": "https://chroniclesofinnovation.com/#series" },
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": episodes.map((episode, index) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "url": `https://chroniclesofinnovation.com${episode.href}`,
+        "name": episode.title,
+      })),
+    },
+  };
+
   return (
     <div className="w-full">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <main className="pt-32 pb-24 px-6 md:px-12 w-full">
         {/* Hero Search Section */}
         <section className="max-w-7xl mx-auto mb-20">

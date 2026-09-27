@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import NewsletterForm from "@/components/NewsletterForm";
 import HeroCinematicPreview from "@/components/HeroCinematicPreview";
+import { episodes } from "@/lib/episodes";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -61,24 +62,24 @@ export default function Home() {
         }
       },
       {
-        "@type": "VideoObject",
-        "@id": "https://chroniclesofinnovation.com/episode/edison-vs-tesla#video",
-        "name": "Edison vs. Tesla: The Ruthless War That Lit the World",
-        "alternateName": "Light Bulb & Electricity: Edison vs Tesla's Hidden Battle",
-        "description": "The War of Currents was never just science — it was war. Explore how Edison's direct current empire collided with Tesla's alternating current in the battle that electrified the modern world.",
-        "thumbnailUrl": [
-          "https://i.ytimg.com/vi/otqgociwb3o/maxresdefault.jpg",
-          "https://chroniclesofinnovation.com/edison-machine-shop.jpg"
-        ],
-        "uploadDate": "2026-07-02",
-        "duration": "PT19M21S",
-        "contentUrl": "https://www.youtube.com/watch?v=otqgociwb3o",
-        "embedUrl": "https://www.youtube.com/embed/otqgociwb3o",
-        "url": "https://chroniclesofinnovation.com/episode/edison-vs-tesla",
-        "publisher": {
-          "@type": "Organization",
-          "name": "Chronicles of Innovation"
-        }
+        "@type": "CreativeWorkSeries",
+        "@id": "https://chroniclesofinnovation.com/#series",
+        "name": "Chronicles of Innovation",
+        "url": "https://chroniclesofinnovation.com",
+        "description": "A premium documentary series exploring the people, ideas, experiments, failures and breakthroughs that changed the world.",
+        "publisher": { "@id": "https://chroniclesofinnovation.com/#organization" },
+        "author": { "@id": "https://chroniclesofinnovation.com/#toluadetuyi" }
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://chroniclesofinnovation.com/#episodes",
+        "name": "Chronicles of Innovation — Episodes",
+        "itemListElement": episodes.map((episode, index) => ({
+          "@type": "ListItem",
+          "position": index + 1,
+          "url": `https://chroniclesofinnovation.com${episode.href}`,
+          "name": episode.title
+        }))
       }
     ]
   };

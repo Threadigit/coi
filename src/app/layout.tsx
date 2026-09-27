@@ -40,6 +40,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Chronicles of Innovation | Innovation Documentary Series",
     description: "The premium documentary series for innovation stories across the world.",
+    creator: "@AdetuyiTolu",
   },
 };
 

@@ -18,6 +18,31 @@ export interface Episode {
 // Newest first.
 export const episodes: Episode[] = [
   {
+    slug: "wright-brothers",
+    href: "/episode/wright-brothers",
+    videoId: "mhE_0kARZmU",
+    title: "How Two Bicycle Mechanics Taught The World To Fly",
+    innovation: "Flight",
+    icon: "flight",
+    blurb:
+      "Two bicycle mechanics from Dayton solved the problem of controlled flight — and launched the aerial age at Kitty Hawk.",
+    publishedAt: "2026-09-26",
+    thumbnail: "https://i.ytimg.com/vi/mhE_0kARZmU/maxresdefault.jpg",
+    categories: ["industrial"],
+    keywords: [
+      "wright brothers",
+      "airplane",
+      "aviation",
+      "flight",
+      "kitty hawk",
+      "orville wright",
+      "wilbur wright",
+      "wright flyer",
+      "otto lilienthal",
+      "first flight",
+    ],
+  },
+  {
     slug: "penicillin",
     href: "/episode/penicillin",
     videoId: "zbeBT46ymp4",

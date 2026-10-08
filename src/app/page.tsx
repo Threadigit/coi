@@ -152,13 +152,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Documentary: Edison vs Tesla */}
+      {/* Featured Documentary: The Wright Brothers */}
       <section className="py-32 px-6 md:px-12 bg-surface overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
             <div>
               <span className="text-secondary font-label uppercase tracking-[0.2em] text-[10px] mb-4 block">Current Spotlight</span>
-              <h2 className="serif-display text-5xl text-on-surface">Light Bulb & Electricity</h2>
+              <h2 className="serif-display text-5xl text-on-surface">The Wright Brothers</h2>
             </div>
             <Link href="/archive" className="font-label uppercase tracking-widest text-[10px] text-primary border-b border-primary/30 pb-1 hover:border-primary transition-all">
               View Full Series
@@ -166,10 +166,10 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-            <Link href="/episode/edison-vs-tesla" className="md:col-span-8 group relative overflow-hidden rounded-sm shadow-2xl block aspect-video">
+            <Link href="/episode/wright-brothers" className="md:col-span-8 group relative overflow-hidden rounded-sm shadow-2xl block aspect-video">
               <Image
-                src="/edison-machine-shop.jpg"
-                alt="Thomas Edison's machine shop, lit by early electric lamps"
+                src="/wright-hero.jpg"
+                alt="The Wright Flyer lifting off at Kitty Hawk on December 17, 1903"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
@@ -181,24 +181,24 @@ export default function Home() {
             <div className="md:col-span-4 space-y-8">
               <div>
                 <div className="bg-surface-container-highest px-3 py-1 inline-block rounded-full mb-4">
-                  <span className="text-secondary font-label uppercase text-[9px] tracking-widest">Age of Electricity | 1879–1893</span>
+                  <span className="text-secondary font-label uppercase text-[9px] tracking-widest">The Birth of Flight | 1899–1927</span>
                 </div>
                 <p className="font-body text-slate-300 leading-relaxed">
-                  The War of Currents that lit the modern world. Discover how a clash of two geniuses — Edison and Tesla — decided how all of humanity would be powered.
+                  How two bicycle mechanics from Dayton solved the problem of controlled flight — and, in twelve seconds at Kitty Hawk, ended millennia of earthbound history.
                 </p>
               </div>
               <ul className="space-y-4">
                 <li className="flex items-center gap-4 group cursor-pointer">
                   <span className="text-primary serif-display italic">01.</span>
-                  <span className="text-on-surface font-body text-sm tracking-wide group-hover:text-primary transition-colors">The Rise of Thomas Edison</span>
+                  <span className="text-on-surface font-body text-sm tracking-wide group-hover:text-primary transition-colors">The Problem of Control</span>
                 </li>
                 <li className="flex items-center gap-4 group cursor-pointer">
                   <span className="text-primary serif-display italic">02.</span>
-                  <span className="text-on-surface font-body text-sm tracking-wide group-hover:text-primary transition-colors">The War of Currents Begins</span>
+                  <span className="text-on-surface font-body text-sm tracking-wide group-hover:text-primary transition-colors">Twelve Seconds at Kitty Hawk</span>
                 </li>
                 <li className="flex items-center gap-4 group cursor-pointer">
                   <span className="text-primary serif-display italic">03.</span>
-                  <span className="text-on-surface font-body text-sm tracking-wide group-hover:text-primary transition-colors">The World&apos;s Fair Showdown</span>
+                  <span className="text-on-surface font-body text-sm tracking-wide group-hover:text-primary transition-colors">The World Takes Flight</span>
                 </li>
               </ul>
             </div>

@@ -117,7 +117,7 @@ export default function About() {
             </p>
             <div className="font-headline text-xl leading-loose text-on-surface/80 space-y-8">
               <p>
-                At Chronicles of Innovation, we serve as the modern archivists of the human spirit. Our purpose transcends mere reporting; we exist to deconstruct the anatomy of progress. Every monumental shift in technology, culture, and science begins with a singular spark—an idea that defies the gravity of the status quo.
+                At Chronicles of Innovation, we serve as the modern archivists of the human spirit, so the next generation knows what it is capable of. Our purpose transcends mere reporting; we exist to deconstruct the anatomy of progress. Every monumental shift in technology, culture, and science begins with a singular spark—an idea that defies the gravity of the status quo.
               </p>
               <p>
                 Because here is what we know to be true: human ingenuity has never belonged to one place, one century, or one kind of person. It never did. The breakthroughs that built the modern world came from everywhere. Some you already know. Many you don't. Yet.

@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import NewsletterForm from "@/components/NewsletterForm";
 import HeroCinematicPreview from "@/components/HeroCinematicPreview";
+import InnovationTimeline from "@/components/InnovationTimeline";
 import { episodes } from "@/lib/episodes";
 import type { Metadata } from "next";
 
@@ -207,56 +208,20 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Collection Highlights: Eras */}
-      <section className="py-32 px-6 md:px-12 bg-surface-container-low">
-        <div className="max-w-7xl mx-auto">
-          <h3 className="serif-display text-4xl text-on-surface mb-16 text-center">Collection Eras</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Industrial */}
-            <Link href="/archive?era=industrial" className="group cursor-pointer block">
-              <div className="aspect-[4/5] overflow-hidden rounded-sm mb-6 bg-surface-container relative">
-                <Image 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKU84qGHWlJKxF2sPfP3wAqb1VV4rNIJ3XeBLtvD7Wwwm7I0_eMPF-5LD4LfCimSXbhD3rmqXs0pvBHaK6nQxMwpSws0v0eBrzLMgzcJLI2xsG0jCxqgPIYfGL6jSihZTAf10JHzZD3CeuDSlPwqLShvT5nfo5qmbP-e1FvFgONGOmAP11Pp3jQjJqG-MCYrsxUqOXr_Saz-5fvqmlY1JPifyA3PP_pAtRxS4bCpSI9KfY2usLMCgFhIdW_eZCtt1TCSRETAXPCQ"
-                  alt="Industrial cogwheels" 
-                  fill
-                  className="object-cover grayscale opacity-50 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700" 
-                />
-                <div className="absolute inset-0 border-[20px] border-transparent group-hover:border-primary/5 transition-all duration-700"></div>
-              </div>
-              <span className="text-secondary font-label uppercase tracking-[0.2em] text-[10px]">1760 – 1945</span>
-              <h4 className="serif-display text-2xl text-on-surface mt-2 group-hover:text-primary transition-colors">Industrial</h4>
-            </Link>
-
-            {/* Atomic */}
-            <Link href="/archive?era=atomic" className="group cursor-pointer block">
-              <div className="aspect-[4/5] overflow-hidden rounded-sm mb-6 bg-surface-container relative">
-                <Image 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfHbtx5YZudPtXp21YT6Tgi-BidR3j65-4rJWcIeCBsZb3hcpQ0NljP30-Pj-q6CLNyrPmsyy1V3qBavV82Zs__eqwb41qYyQHsDWPv-pZ0Ac7oOIPy-JRsmUNy2CkLu6av7znlKlwyN0Lclfmux1m6n-sOmLZpqgbj0clsRelcByxkuMK8soKtEW9Pxd4MjpAHokhlTCQEaJxyvJ-jsvNGAAiCEXcri5I9bJiSvmv_z6M-oZDze0XlG5-b2FJocfDPNeZc40BWg"
-                  alt="Atomic control room" 
-                  fill
-                  className="object-cover grayscale opacity-50 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700" 
-                />
-                <div className="absolute inset-0 border-[20px] border-transparent group-hover:border-primary/5 transition-all duration-700"></div>
-              </div>
-              <span className="text-secondary font-label uppercase tracking-[0.2em] text-[10px]">1945 – 1991</span>
-              <h4 className="serif-display text-2xl text-on-surface mt-2 group-hover:text-primary transition-colors">Atomic</h4>
-            </Link>
-
-            {/* Digital */}
-            <Link href="/archive?era=digital" className="group cursor-pointer block">
-              <div className="aspect-[4/5] overflow-hidden rounded-sm mb-6 bg-surface-container relative">
-                <Image 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAw5UFef-njQqu2vs4Q0MrlGvo5UiZgko7lvbPUOnKRjJaowZCMyj5aYGn6BEi4htPcmTyFyv47JuCW9MAJAS0DdWlAvm9qHLY8wcTWpR5XUGpa9jpmkTGpX6To-UI0C5v6RJ0AqMQeqxu6RRRFk__wR7r97TsQt4ak0cSX7SvQodonIiYUsEAjcX2a0ZAO8smLlrAHthQFi03N-aWQbgYSKq8hexndVnlvN8CU-2R4Q714lkSR2fzgpICd3SeWscqK0ESWVGjiZA"
-                  alt="Data stream" 
-                  fill
-                  className="object-cover grayscale opacity-50 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700" 
-                />
-                <div className="absolute inset-0 border-[20px] border-transparent group-hover:border-primary/5 transition-all duration-700"></div>
-              </div>
-              <span className="text-secondary font-label uppercase tracking-[0.2em] text-[10px]">1991 – Present</span>
-              <h4 className="serif-display text-2xl text-on-surface mt-2 group-hover:text-primary transition-colors">Digital</h4>
+      {/* The Chronicle: Innovation Timeline */}
+      <section className="py-32 px-6 md:px-12 bg-surface-container-low relative overflow-hidden">
+        <div className="absolute inset-0 blueprint-grid pointer-events-none opacity-10"></div>
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-6">
+            <div>
+              <span className="text-secondary font-label uppercase tracking-[0.2em] text-[10px] mb-4 block">The Chronicle</span>
+              <h3 className="serif-display text-4xl md:text-6xl text-on-surface leading-tight">A Timeline of <span className="italic text-primary">Innovation</span></h3>
+            </div>
+            <Link href="/timeline" className="font-label uppercase tracking-widest text-[10px] text-primary border-b border-primary/30 pb-1 hover:border-primary transition-all whitespace-nowrap">
+              Open Full Chronicle
             </Link>
           </div>
+          <InnovationTimeline />
         </div>
       </section>
 

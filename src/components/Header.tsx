@@ -37,6 +37,7 @@ export default function Header() {
       
       <div className="hidden md:flex items-center gap-10">
         <Link href="/" className={getLinkClass('/')}>Home</Link>
+        <Link href="/timeline" className={getLinkClass('/timeline')}>Chronicle</Link>
         <Link href="/archive" className={getLinkClass('/archive')}>Archive</Link>
         <Link href="/about" className={getLinkClass('/about')}>About</Link>
       </div>
@@ -72,6 +73,7 @@ export default function Header() {
       {isMobileMenuOpen && (
         <div className="absolute top-full left-0 w-full bg-[#0f1419]/95 backdrop-blur-3xl border-t border-primary/20 flex flex-col items-center py-8 gap-8 md:hidden shadow-2xl h-screen">
           <Link href="/" className={getLinkClass('/')} onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
+          <Link href="/timeline" className={getLinkClass('/timeline')} onClick={() => setIsMobileMenuOpen(false)}>Chronicle</Link>
           <Link href="/archive" className={getLinkClass('/archive')} onClick={() => setIsMobileMenuOpen(false)}>Archive</Link>
           <Link href="/about" className={getLinkClass('/about')} onClick={() => setIsMobileMenuOpen(false)}>About</Link>
           

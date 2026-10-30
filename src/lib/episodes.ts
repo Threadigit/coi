@@ -1,5 +1,7 @@
 // Curated source of truth for published episodes that have a dedicated page.
-// The archive lists these and links to the on-site episode pages (not YouTube).
+// The archive, homepage, timeline, and sitemap are all generated from this.
+
+export type EraId = "industrial" | "atomic" | "digital";
 
 export interface Episode {
   slug: string;
@@ -9,11 +11,21 @@ export interface Episode {
   innovation: string; // the actual innovation, shown as a tag (e.g. "Electricity")
   icon: string; // Material Symbols name paired with the innovation tag
   blurb: string;
+  year: number; // the defining year of the innovation (not the publish date)
+  era: EraId; // chronological era, for the timeline
+  heroImage: string; // local cinematic image (used by the timeline + spotlight)
   publishedAt: string; // ISO date
   thumbnail: string;
   categories: string[]; // archive filter / era tags
   keywords: string[]; // extra terms the archive search should match
 }
+
+// The eras of the chronicle, in order.
+export const eras: { id: EraId; label: string; range: string }[] = [
+  { id: "industrial", label: "The Industrial Age", range: "1760 – 1945" },
+  { id: "atomic", label: "The Atomic Age", range: "1945 – 1991" },
+  { id: "digital", label: "The Digital Age", range: "1991 – Present" },
+];
 
 // Newest first.
 export const episodes: Episode[] = [
@@ -26,6 +38,9 @@ export const episodes: Episode[] = [
     icon: "inventory_2",
     blurb:
       "A trucker named Malcom McLean turned a simple steel box into the invention that rewired global trade and built the modern economy.",
+    year: 1956,
+    era: "atomic",
+    heroImage: "/container-hero.jpg",
     publishedAt: "2026-10-30",
     thumbnail: "https://i.ytimg.com/vi/xprFFq5yy1k/maxresdefault.jpg",
     categories: ["industrial"],
@@ -51,6 +66,9 @@ export const episodes: Episode[] = [
     icon: "flight",
     blurb:
       "Two bicycle mechanics from Dayton solved the problem of controlled flight — and launched the aerial age at Kitty Hawk.",
+    year: 1903,
+    era: "industrial",
+    heroImage: "/wright-hero.jpg",
     publishedAt: "2026-09-26",
     thumbnail: "https://i.ytimg.com/vi/mhE_0kARZmU/maxresdefault.jpg",
     categories: ["industrial"],
@@ -76,6 +94,9 @@ export const episodes: Episode[] = [
     icon: "biotech",
     blurb:
       "A contaminated petri dish, a patch of mould, and the accident that became the world's first antibiotic.",
+    year: 1928,
+    era: "industrial",
+    heroImage: "/pen-hero.jpg",
     publishedAt: "2026-08-09",
     thumbnail: "https://i.ytimg.com/vi/zbeBT46ymp4/maxresdefault.jpg",
     categories: ["industrial", "biotech"],
@@ -102,6 +123,9 @@ export const episodes: Episode[] = [
     icon: "bolt",
     blurb:
       "The War of Currents between Edison and Tesla that decided how the world would be powered.",
+    year: 1879,
+    era: "industrial",
+    heroImage: "/edison-machine-shop.jpg",
     publishedAt: "2026-07-02",
     thumbnail: "https://i.ytimg.com/vi/otqgociwb3o/maxresdefault.jpg",
     categories: ["industrial"],
@@ -118,3 +142,16 @@ export const episodes: Episode[] = [
     ],
   },
 ];
+
+// Episodes grouped by era (era order preserved), each era's episodes sorted
+// chronologically by year. Eras with no episodes are omitted.
+export function episodesByEra() {
+  return eras
+    .map((era) => ({
+      ...era,
+      items: episodes
+        .filter((e) => e.era === era.id)
+        .sort((a, b) => a.year - b.year),
+    }))
+    .filter((group) => group.items.length > 0);
+}

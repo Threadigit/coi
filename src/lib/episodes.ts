@@ -18,6 +18,31 @@ export interface Episode {
 // Newest first.
 export const episodes: Episode[] = [
   {
+    slug: "shipping-container",
+    href: "/episode/shipping-container",
+    videoId: "xprFFq5yy1k",
+    title: "How a Simple Box Changed Global Trade: The Shipping Container",
+    innovation: "Shipping Container",
+    icon: "inventory_2",
+    blurb:
+      "A trucker named Malcom McLean turned a simple steel box into the invention that rewired global trade and built the modern economy.",
+    publishedAt: "2026-10-30",
+    thumbnail: "https://i.ytimg.com/vi/xprFFq5yy1k/maxresdefault.jpg",
+    categories: ["industrial"],
+    keywords: [
+      "shipping container",
+      "malcom mclean",
+      "containerization",
+      "global trade",
+      "ideal x",
+      "keith tantlinger",
+      "supply chain",
+      "container ship",
+      "maritime",
+      "logistics",
+    ],
+  },
+  {
     slug: "wright-brothers",
     href: "/episode/wright-brothers",
     videoId: "mhE_0kARZmU",

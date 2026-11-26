@@ -15,7 +15,7 @@ const VIDEO_NAME = "How Two Bicycle Mechanics Taught The World To Fly";
 
 const PAGE_TITLE = "The Wright Brothers: The Invention of Flight";
 const PAGE_DESCRIPTION =
-  "How two bicycle mechanics from Dayton, Ohio solved the problem of controlled flight — the Wright brothers' road to Kitty Hawk in 1903 and the aerial age they launched.";
+  "How two bicycle mechanics from Dayton, Ohio solved the problem of controlled flight, the Wright brothers' road to Kitty Hawk in 1903 and the aerial age they launched.";
 
 const KEYWORDS = [
   "Wright brothers",
@@ -73,7 +73,7 @@ export default function WrightBrothersEpisode() {
         "@id": `${SITE}${PATH}#video`,
         "name": VIDEO_NAME,
         "alternateName": PAGE_TITLE,
-        "description": "For thousands of years humanity accepted the limits of the sky. Then two bicycle mechanics from Dayton, Ohio asked a different question — not how to lift a machine, but how to control it. This is the story of the Wright brothers, the twelve seconds at Kitty Hawk in 1903, and the aerial age they set in motion.",
+        "description": "For thousands of years humanity accepted the limits of the sky. Then two bicycle mechanics from Dayton, Ohio asked a different question, not how to lift a machine, but how to control it. This is the story of the Wright brothers, the twelve seconds at Kitty Hawk in 1903, and the aerial age they set in motion.",
         "thumbnailUrl": [
           `https://i.ytimg.com/vi/${VIDEO_ID}/maxresdefault.jpg`,
           `${SITE}/wright-hero.jpg`,
@@ -239,10 +239,10 @@ export default function WrightBrothersEpisode() {
             </div>
             <div className="w-full md:w-2/3" data-reveal style={{ ["--d" as string]: 1 }}>
               <p className="drop-cap font-body text-lg md:text-xl text-on-surface/75 leading-[1.7] mb-8">
-                They had no university degrees, no government laboratory, and no team of professional scientists — only a bicycle shop in Dayton, Ohio, a hand-built engine, and a problem that had defeated generations of inventors. While rivals poured money into ever more powerful engines, Wilbur and Orville Wright became convinced that the real obstacle to flight was not power but control. A pilot, they reasoned, had to be able to balance and steer a machine in three dimensions, the way a cyclist balances a bicycle.
+                They had no university degrees, no government laboratory, and no team of professional scientists, only a bicycle shop in Dayton, Ohio, a hand-built engine, and a problem that had defeated generations of inventors. While rivals poured money into ever more powerful engines, Wilbur and Orville Wright became convinced that the real obstacle to flight was not power but control. A pilot, they reasoned, had to be able to balance and steer a machine in three dimensions, the way a cyclist balances a bicycle.
               </p>
               <p className="font-body text-lg md:text-xl text-on-surface/75 leading-[1.7]">
-                So they built their own wind tunnel, corrected the flawed data the field had relied on, and tested glider after glider on the windswept dunes of Kitty Hawk. On December 17, 1903, that patient engineering paid off: the Wright Flyer became the first powered, heavier-than-air machine to achieve controlled flight — twelve seconds that ended millennia of earthbound history. Within a generation their invention would cross the Atlantic, transform in war, carry passengers across the world, and, a century later, send a fragment of the original Flyer to the surface of Mars.
+                So they built their own wind tunnel, corrected the flawed data the field had relied on, and tested glider after glider on the windswept dunes of Kitty Hawk. On December 17, 1903, that patient engineering paid off: the Wright Flyer became the first powered, heavier-than-air machine to achieve controlled flight, twelve seconds that ended millennia of earthbound history. Within a generation their invention would cross the Atlantic, transform in war, carry passengers across the world, and, a century later, send a fragment of the original Flyer to the surface of Mars.
               </p>
             </div>
           </div>
@@ -260,7 +260,7 @@ export default function WrightBrothersEpisode() {
                 <div className="w-full md:w-1/2">
                   <span className="font-headline italic text-primary text-6xl md:text-8xl tracking-[-0.04em] mb-4 block">1902</span>
                   <h4 className="font-headline text-3xl md:text-4xl tracking-[-0.025em] mb-5">The Glider Years</h4>
-                  <p className="text-on-surface/60 text-lg leading-relaxed">After a homemade wind tunnel rewrote the science of lift, the brothers made hundreds of glides at Kitty Hawk — perfecting the three-axis control system, wing-warping, and rudder that would make true flight possible.</p>
+                  <p className="text-on-surface/60 text-lg leading-relaxed">After a homemade wind tunnel rewrote the science of lift, the brothers made hundreds of glides at Kitty Hawk, perfecting the three-axis control system, wing-warping, and rudder that would make true flight possible.</p>
                 </div>
               </div>
 
@@ -271,7 +271,7 @@ export default function WrightBrothersEpisode() {
                 <div className="w-full md:w-1/2 text-right">
                   <span className="font-headline italic text-secondary text-6xl md:text-8xl tracking-[-0.04em] mb-4 block">1903</span>
                   <h4 className="font-headline text-3xl md:text-4xl tracking-[-0.025em] mb-5">Twelve Seconds at Kitty Hawk</h4>
-                  <p className="text-on-surface/60 text-lg leading-relaxed">On December 17, with Orville at the controls and Wilbur running alongside, the Flyer rose from its rail and travelled 120 feet in twelve seconds — the first powered, controlled, sustained flight of a heavier-than-air machine.</p>
+                  <p className="text-on-surface/60 text-lg leading-relaxed">On December 17, with Orville at the controls and Wilbur running alongside, the Flyer rose from its rail and travelled 120 feet in twelve seconds, the first powered, controlled, sustained flight of a heavier-than-air machine.</p>
                 </div>
               </div>
 
@@ -282,7 +282,7 @@ export default function WrightBrothersEpisode() {
                 <div className="w-full md:w-1/2">
                   <span className="font-headline italic text-primary text-6xl md:text-8xl tracking-[-0.04em] mb-4 block">1908–09</span>
                   <h4 className="font-headline text-3xl md:text-4xl tracking-[-0.025em] mb-5">Proving It to the World</h4>
-                  <p className="text-on-surface/60 text-lg leading-relaxed">Public demonstrations in France and military trials at Fort Myer silenced the doubters. The aerial age had begun — and the airplane would soon reshape travel, warfare, and humanity&apos;s sense of what was possible.</p>
+                  <p className="text-on-surface/60 text-lg leading-relaxed">Public demonstrations in France and military trials at Fort Myer silenced the doubters. The aerial age had begun, and the airplane would soon reshape travel, warfare, and humanity&apos;s sense of what was possible.</p>
                 </div>
               </div>
             </div>
@@ -304,7 +304,7 @@ export default function WrightBrothersEpisode() {
                 <div>
                   <h5 className="font-headline text-2xl tracking-[-0.02em] text-primary mb-2">Wilbur Wright</h5>
                   <p className="eyebrow !text-on-surface/50 !text-[10px] mb-4">The Strategist</p>
-                  <p className="text-on-surface/60 text-[15px] leading-relaxed">The elder brother and driving intellect, who framed flight as a problem of control and led the theoretical work — then carried the Flyer to Europe and made the world believe.</p>
+                  <p className="text-on-surface/60 text-[15px] leading-relaxed">The elder brother and driving intellect, who framed flight as a problem of control and led the theoretical work, then carried the Flyer to Europe and made the world believe.</p>
                 </div>
               </div>
 
@@ -326,7 +326,7 @@ export default function WrightBrothersEpisode() {
                 <div>
                   <h5 className="font-headline text-2xl tracking-[-0.02em] text-primary mb-2">Otto Lilienthal</h5>
                   <p className="eyebrow !text-on-surface/50 !text-[10px] mb-4">The Glider Pioneer</p>
-                  <p className="text-on-surface/60 text-[15px] leading-relaxed">The German &ldquo;flying man&rdquo; whose gliding experiments — and fatal 1896 crash — inspired the Wrights and proved that mastering control, not just lift, was the key to flight.</p>
+                  <p className="text-on-surface/60 text-[15px] leading-relaxed">The German &ldquo;flying man&rdquo; whose gliding experiments, and fatal 1896 crash, inspired the Wrights and proved that mastering control, not just lift, was the key to flight.</p>
                 </div>
               </div>
             </div>

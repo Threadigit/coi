@@ -65,7 +65,7 @@ export const episodes: Episode[] = [
     innovation: "Flight",
     icon: "flight",
     blurb:
-      "Two bicycle mechanics from Dayton solved the problem of controlled flight — and launched the aerial age at Kitty Hawk.",
+      "Two bicycle mechanics from Dayton solved the problem of controlled flight, and launched the aerial age at Kitty Hawk.",
     year: 1903,
     era: "industrial",
     heroImage: "/wright-hero.jpg",

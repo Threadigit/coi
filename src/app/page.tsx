@@ -76,7 +76,7 @@ export default function Home() {
       {
         "@type": "ItemList",
         "@id": "https://chroniclesofinnovation.com/#episodes",
-        "name": "Chronicles of Innovation — Episodes",
+        "name": "Chronicles of Innovation: Episodes",
         "itemListElement": episodes.map((episode, index) => ({
           "@type": "ListItem",
           "position": index + 1,
@@ -120,7 +120,7 @@ export default function Home() {
             className="rise mt-8 max-w-xl text-lg md:text-xl leading-relaxed text-on-surface/70"
             style={{ ['--d' as string]: 2 }}
           >
-            The current that powers your world was decided by war. Explore the bitter rivalry between Thomas Edison and Nikola Tesla — the battle to light humanity and own the future.
+            The current that powers your world was decided by war. Explore the bitter rivalry between Thomas Edison and Nikola Tesla, the battle to light humanity and own the future.
           </p>
           <div className="rise mt-10 flex flex-wrap items-center gap-4" style={{ ['--d' as string]: 3 }}>
             <Link href="/episode/edison-vs-tesla" className="btn btn-primary !px-8 !py-4 !text-[14px]">
@@ -226,7 +226,7 @@ export default function Home() {
               </div>
               <div className="absolute inset-x-0 bottom-0 p-6 md:p-12 grid lg:grid-cols-[1.2fr_1fr] gap-8 items-end">
                 <p className="text-on-surface/85 text-lg md:text-xl leading-relaxed max-w-xl">
-                  How a North Carolina trucker turned a simple steel box into the shipping container — the deceptively plain invention that rewired global trade and built the modern economy.
+                  How a North Carolina trucker turned a simple steel box into the shipping container, the deceptively plain invention that rewired global trade and built the modern economy.
                 </p>
                 <ul className="space-y-0 glass rounded-3xl divide-y divide-white/[0.08] overflow-hidden self-end">
                   {['The Voyage of the Ideal X', 'The Battle for the Standard', 'The World in a Box'].map((t, i) => (

@@ -5,9 +5,9 @@ import { episodesByEra } from "@/lib/episodes";
 const SITE = "https://chroniclesofinnovation.com";
 
 export const metadata: Metadata = {
-  title: "The Chronicle — A Timeline of Innovation",
+  title: "The Chronicle: A Timeline of Innovation",
   description:
-    "A journey through the breakthroughs that built the modern world — electricity, flight, penicillin, the shipping container and more, plotted across the Industrial, Atomic, and Digital ages.",
+    "A journey through the breakthroughs that built the modern world: electricity, flight, penicillin, the shipping container and more, plotted across the Industrial, Atomic, and Digital ages.",
   keywords: [
     "timeline of innovation",
     "history of innovation",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/timeline" },
   openGraph: {
     type: "website",
-    title: "The Chronicle — A Timeline of Innovation",
+    title: "The Chronicle: A Timeline of Innovation",
     description:
       "A journey through the breakthroughs that built the modern world, across the Industrial, Atomic, and Digital ages.",
     url: "/timeline",
@@ -40,7 +40,7 @@ export default function TimelinePage() {
         "@type": "CollectionPage",
         "@id": `${SITE}/timeline#page`,
         "url": `${SITE}/timeline`,
-        "name": "The Chronicle — A Timeline of Innovation",
+        "name": "The Chronicle: A Timeline of Innovation",
         "description":
           "A journey through the breakthroughs that built the modern world, across the Industrial, Atomic, and Digital ages.",
         "isPartOf": { "@id": `${SITE}/#series` },
@@ -50,7 +50,7 @@ export default function TimelinePage() {
             "@type": "ListItem",
             "position": index + 1,
             "url": `${SITE}${e.href}`,
-            "name": `${e.year} — ${e.innovation}`,
+            "name": `${e.year}: ${e.innovation}`,
           })),
         },
       },
@@ -81,7 +81,7 @@ export default function TimelinePage() {
             A Timeline of <span className="italic text-gradient-gold pr-2">Innovation</span>
           </h1>
           <p className="rise text-on-surface/60 text-lg md:text-2xl leading-relaxed max-w-2xl mt-10" style={{ ['--d' as string]: 2 }}>
-            Every breakthrough has a place in time. Follow the thread of human ingenuity — from the first current to the box that moved the world — across the ages that built the modern era.
+            Every breakthrough has a place in time. Follow the thread of human ingenuity, from the first current to the box that moved the world, across the ages that built the modern era.
           </p>
         </section>
 

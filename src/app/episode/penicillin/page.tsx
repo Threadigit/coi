@@ -73,7 +73,7 @@ export default function PenicillinEpisode() {
         "@id": `${SITE}${PATH}#video`,
         "name": VIDEO_NAME,
         "alternateName": PAGE_TITLE,
-        "description": "A dirty petri dish, a patch of mould, and an accident that changed medicine forever. The story of how Alexander Fleming's 1928 discovery — ignored for a decade — was transformed by Oxford scientists and American industry into penicillin, the antibiotic that saved millions.",
+        "description": "A dirty petri dish, a patch of mould, and an accident that changed medicine forever. The story of how Alexander Fleming's 1928 discovery, ignored for a decade, was transformed by Oxford scientists and American industry into penicillin, the antibiotic that saved millions.",
         "thumbnailUrl": [
           `https://i.ytimg.com/vi/${VIDEO_ID}/maxresdefault.jpg`,
           `${SITE}/pen-hero.jpg`,
@@ -239,10 +239,10 @@ export default function PenicillinEpisode() {
             </div>
             <div className="w-full md:w-2/3" data-reveal style={{ ["--d" as string]: 1 }}>
               <p className="drop-cap font-body text-lg md:text-xl text-on-surface/75 leading-[1.7] mb-8">
-                In September 1928, the Scottish bacteriologist Alexander Fleming returned from holiday to a cluttered London laboratory and a stack of forgotten culture dishes. One had been colonised by a stray blue-green mould — and in a clear ring around it, the staphylococcus bacteria had simply vanished. Where others would have washed the dish out, Fleming paused. That contaminated plate held the first clue to penicillin, the substance the mould was quietly producing.
+                In September 1928, the Scottish bacteriologist Alexander Fleming returned from holiday to a cluttered London laboratory and a stack of forgotten culture dishes. One had been colonised by a stray blue-green mould, and in a clear ring around it, the staphylococcus bacteria had simply vanished. Where others would have washed the dish out, Fleming paused. That contaminated plate held the first clue to penicillin, the substance the mould was quietly producing.
               </p>
               <p className="font-body text-lg md:text-xl text-on-surface/75 leading-[1.7]">
-                But Fleming could not purify it, and his 1929 paper was largely ignored for more than a decade. It took a second act — Howard Florey, Ernst Chain, and the quietly brilliant Norman Heatley at Oxford — to turn a laboratory curiosity into a medicine, and American scientists and manufacturers to make it by the ton. Within a few years, penicillin was saving wounded soldiers in the Second World War, opening the age of antibiotics and rewriting what medicine could promise.
+                But Fleming could not purify it, and his 1929 paper was largely ignored for more than a decade. It took a second act, Howard Florey, Ernst Chain, and the quietly brilliant Norman Heatley at Oxford, to turn a laboratory curiosity into a medicine, and American scientists and manufacturers to make it by the ton. Within a few years, penicillin was saving wounded soldiers in the Second World War, opening the age of antibiotics and rewriting what medicine could promise.
               </p>
             </div>
           </div>
@@ -260,7 +260,7 @@ export default function PenicillinEpisode() {
                 <div className="w-full md:w-1/2">
                   <span className="font-headline italic text-primary text-6xl md:text-8xl tracking-[-0.04em] mb-4 block">1928</span>
                   <h4 className="font-headline text-3xl md:text-4xl tracking-[-0.025em] mb-5">The Contaminated Dish</h4>
-                  <p className="text-on-surface/60 text-lg leading-relaxed">A patch of <span className="italic">Penicillium notatum</span> drifted onto a discarded culture plate and killed the bacteria around it. Fleming noticed what almost anyone else would have thrown away — the accident at the heart of modern medicine.</p>
+                  <p className="text-on-surface/60 text-lg leading-relaxed">A patch of <span className="italic">Penicillium notatum</span> drifted onto a discarded culture plate and killed the bacteria around it. Fleming noticed what almost anyone else would have thrown away, the accident at the heart of modern medicine.</p>
                 </div>
               </div>
 
@@ -304,7 +304,7 @@ export default function PenicillinEpisode() {
                 <div>
                   <h5 className="font-headline text-2xl tracking-[-0.02em] text-primary mb-2">Alexander Fleming</h5>
                   <p className="eyebrow !text-on-surface/50 !text-[10px] mb-4">The Accidental Discoverer</p>
-                  <p className="text-on-surface/60 text-[15px] leading-relaxed">The bacteriologist whose sharp eye turned a contaminated dish into a discovery. He named penicillin but could never make it in a usable form — a problem that would wait a decade for its answer.</p>
+                  <p className="text-on-surface/60 text-[15px] leading-relaxed">The bacteriologist whose sharp eye turned a contaminated dish into a discovery. He named penicillin but could never make it in a usable form, a problem that would wait a decade for its answer.</p>
                 </div>
               </div>
 

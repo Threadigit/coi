@@ -3,7 +3,7 @@ import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 
 export const alt =
-  "The Wright Brothers: The Invention of Flight — Chronicles of Innovation";
+  "The Wright Brothers: The Invention of Flight, Chronicles of Innovation";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 

@@ -3,7 +3,7 @@ import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 
 export const alt =
-  "Chronicles of Innovation — the premium documentary series on the innovations that shaped the modern world";
+  "Chronicles of Innovation, the premium documentary series on the innovations that shaped the modern world";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 

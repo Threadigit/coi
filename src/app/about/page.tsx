@@ -3,9 +3,9 @@ import NewsletterForm from "@/components/NewsletterForm";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: { absolute: "Tolu Adetuyi — Executive Curator & Founder | Chronicles of Innovation" },
+  title: { absolute: "Tolu Adetuyi, Executive Curator & Founder | Chronicles of Innovation" },
   description:
-    "Meet Tolu Adetuyi, Executive Curator and founder of Chronicles of Innovation — the premium documentary series chronicling the innovations that shaped the modern world.",
+    "Meet Tolu Adetuyi, Executive Curator and founder of Chronicles of Innovation, the premium documentary series chronicling the innovations that shaped the modern world.",
   keywords: [
     "Tolu Adetuyi",
     "Tolu Adetuyi Chronicles of Innovation",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     type: "profile",
     firstName: "Tolu",
     lastName: "Adetuyi",
-    title: "Tolu Adetuyi — Executive Curator & Founder, Chronicles of Innovation",
+    title: "Tolu Adetuyi, Executive Curator & Founder, Chronicles of Innovation",
     description:
       "Executive Curator and founder of Chronicles of Innovation, the premium documentary series on the breakthroughs that shaped the modern world.",
     url: "/about",
@@ -39,7 +39,7 @@ export default function About() {
         "@type": "ProfilePage",
         "@id": "https://chroniclesofinnovation.com/about#profilepage",
         "url": "https://chroniclesofinnovation.com/about",
-        "name": "Tolu Adetuyi — Executive Curator & Founder",
+        "name": "Tolu Adetuyi, Executive Curator & Founder",
         "mainEntity": {
           "@type": "Person",
           "@id": "https://chroniclesofinnovation.com/#toluadetuyi",
@@ -109,7 +109,7 @@ export default function About() {
       <section className="px-6 md:px-12 mb-32 md:mb-44">
         <div className="max-w-[1400px] mx-auto grid md:grid-cols-12 gap-10 md:gap-16" data-reveal>
           <div className="md:col-span-4">
-            <h2 className="eyebrow !text-primary mb-5">01 — Our Mission</h2>
+            <h2 className="eyebrow !text-primary mb-5">01. Our Mission</h2>
             <div className="hairline w-full"></div>
           </div>
           <div className="md:col-span-8">
@@ -118,7 +118,7 @@ export default function About() {
             </p>
             <div className="font-headline text-xl leading-[1.8] text-on-surface/70 space-y-8">
               <p>
-                At Chronicles of Innovation, we serve as the modern archivists of the human spirit, so the next generation knows what it is capable of. Our purpose transcends mere reporting; we exist to deconstruct the anatomy of progress. Every monumental shift in technology, culture, and science begins with a singular spark—an idea that defies the gravity of the status quo.
+                At Chronicles of Innovation, we serve as the modern archivists of the human spirit, so the next generation knows what it is capable of. Our purpose transcends mere reporting; we exist to deconstruct the anatomy of progress. Every monumental shift in technology, culture, and science begins with a singular spark, an idea that defies the gravity of the status quo.
               </p>
               <p>
                 Because here is what we know to be true: human ingenuity has never belonged to one place, one century, or one kind of person. It never did. The breakthroughs that built the modern world came from everywhere. Some you already know. Many you don't. Yet.

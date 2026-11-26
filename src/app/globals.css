@@ -149,6 +149,19 @@
     display: none;
   }
   /* Film grain, as a quiet texture over cinematic imagery. */
+  /* Cinema: vignette + grain over hero imagery. */
+  .cinema::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background:
+      radial-gradient(120% 90% at 50% 40%, transparent 45%, rgba(5, 8, 11, 0.55) 100%),
+      linear-gradient(180deg, rgba(251, 203, 126, 0.05), rgba(146, 204, 255, 0.04));
+    mix-blend-mode: normal;
+  }
+  .cinema::after,
   .grain::after {
     content: "";
     position: absolute;

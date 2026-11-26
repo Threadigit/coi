@@ -176,7 +176,7 @@ export default function WrightBrothersEpisode() {
           </div>
           <div className="lb-bar lb-top" aria-hidden="true"></div>
           <div className="lb-bar lb-bot" aria-hidden="true"></div>
-          <div className="relative z-10 w-full max-w-[1500px] mx-auto">
+          <div className="relative z-10 w-full max-w-[1600px] mx-auto">
           <div className="max-w-5xl">
             <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mb-6">
               <span className="kicker">Episode 003</span>
@@ -230,14 +230,14 @@ export default function WrightBrothersEpisode() {
 
         {/* Narrative Section */}
         <section className="px-5 md:px-12 py-20 md:py-32 bg-surface">
-          <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-24">
+          <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row gap-24">
             <div className="w-full md:w-1/3" data-reveal>
               <h2 className="eyebrow mb-6">The Genesis</h2>
               <p className="font-headline text-2xl text-on-surface-variant leading-relaxed italic">
                 &ldquo;Everyone else was chasing lift and horsepower. The Wrights asked the question no one could answer: once you are in the air, how do you stay in control?&rdquo;
               </p>
             </div>
-            <div className="w-full md:w-2/3" data-reveal style={{ ["--d" as string]: 1 }}>
+            <div className="w-full md:w-2/3 max-w-3xl" data-reveal style={{ ["--d" as string]: 1 }}>
               <p className="drop-cap font-body text-lg md:text-xl text-on-surface/75 leading-[1.7] mb-8">
                 They had no university degrees, no government laboratory, and no team of professional scientists, only a bicycle shop in Dayton, Ohio, a hand-built engine, and a problem that had defeated generations of inventors. While rivals poured money into ever more powerful engines, Wilbur and Orville Wright became convinced that the real obstacle to flight was not power but control. A pilot, they reasoned, had to be able to balance and steer a machine in three dimensions, the way a cyclist balances a bicycle.
               </p>
@@ -260,7 +260,7 @@ export default function WrightBrothersEpisode() {
             </div>
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/20"></div>
             <div className="absolute inset-0 scrim-side"></div>
-            <div className="relative z-10 w-full max-w-[1500px] mx-auto px-5 md:px-12 pb-14 md:pb-24 pt-28" data-reveal>
+            <div className="relative z-10 w-full max-w-[1600px] mx-auto px-5 md:px-12 pb-14 md:pb-24 pt-28" data-reveal>
               <span className="font-headline italic text-primary text-7xl md:text-[9rem] leading-none tracking-[-0.04em] block mb-4 md:mb-6">1902</span>
               <h4 className="title-card text-3xl md:text-6xl mb-5 md:mb-6 max-w-3xl">The Glider Years</h4>
               <p className="text-on-surface/80 text-base md:text-xl leading-relaxed max-w-xl">After a homemade wind tunnel rewrote the science of lift, the brothers made hundreds of glides at Kitty Hawk, perfecting the three-axis control system, wing-warping, and rudder that would make true flight possible.</p>
@@ -272,7 +272,7 @@ export default function WrightBrothersEpisode() {
             </div>
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/20"></div>
             <div className="absolute inset-0 scrim-side"></div>
-            <div className="relative z-10 w-full max-w-[1500px] mx-auto px-5 md:px-12 pb-14 md:pb-24 pt-28" data-reveal>
+            <div className="relative z-10 w-full max-w-[1600px] mx-auto px-5 md:px-12 pb-14 md:pb-24 pt-28" data-reveal>
               <span className="font-headline italic text-primary text-7xl md:text-[9rem] leading-none tracking-[-0.04em] block mb-4 md:mb-6">1903</span>
               <h4 className="title-card text-3xl md:text-6xl mb-5 md:mb-6 max-w-3xl">Twelve Seconds at Kitty Hawk</h4>
               <p className="text-on-surface/80 text-base md:text-xl leading-relaxed max-w-xl">On December 17, with Orville at the controls and Wilbur running alongside, the Flyer rose from its rail and travelled 120 feet in twelve seconds, the first powered, controlled, sustained flight of a heavier-than-air machine.</p>
@@ -284,7 +284,7 @@ export default function WrightBrothersEpisode() {
             </div>
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/20"></div>
             <div className="absolute inset-0 scrim-side"></div>
-            <div className="relative z-10 w-full max-w-[1500px] mx-auto px-5 md:px-12 pb-14 md:pb-24 pt-28" data-reveal>
+            <div className="relative z-10 w-full max-w-[1600px] mx-auto px-5 md:px-12 pb-14 md:pb-24 pt-28" data-reveal>
               <span className="font-headline italic text-primary text-7xl md:text-[9rem] leading-none tracking-[-0.04em] block mb-4 md:mb-6">1908–09</span>
               <h4 className="title-card text-3xl md:text-6xl mb-5 md:mb-6 max-w-3xl">Proving It to the World</h4>
               <p className="text-on-surface/80 text-base md:text-xl leading-relaxed max-w-xl">Public demonstrations in France and military trials at Fort Myer silenced the doubters. The aerial age had begun, and the airplane would soon reshape travel, warfare, and humanity&apos;s sense of what was possible.</p>
@@ -294,7 +294,7 @@ export default function WrightBrothersEpisode() {
 
         {/* The Cast */}
         <section className="px-5 md:px-12 py-20 md:py-32 bg-[#05070a]">
-          <div className="max-w-[1500px] mx-auto">
+          <div className="max-w-[1600px] mx-auto">
             <div className="mb-12 md:mb-16 text-center" data-reveal>
               <div className="kicker mb-5">Featuring</div>
               <h3 className="title-card text-4xl md:text-6xl">The Pioneers</h3>

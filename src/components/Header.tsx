@@ -89,7 +89,7 @@ export default function Header() {
               <Link
                 href={l.href}
                 aria-current={isActive(l.href) ? 'page' : undefined}
-                className={`relative block py-2 text-[12px] font-medium uppercase tracking-[0.16em] transition-colors duration-300 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-left after:bg-primary after:transition-transform after:duration-500 ${
+                className={`relative block py-3 text-[12px] font-medium uppercase tracking-[0.16em] transition-colors duration-300 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-left after:bg-primary after:transition-transform after:duration-500 ${
                   isActive(l.href)
                     ? 'text-on-surface after:scale-x-100'
                     : 'text-on-surface/60 hover:text-on-surface after:scale-x-0 hover:after:scale-x-100'
@@ -116,7 +116,7 @@ export default function Header() {
             href={SUBSCRIBE_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-primary !min-h-0 !py-3 !px-5 !text-[11px]"
+            className="btn btn-primary !min-h-[2.75rem] !py-2.5 !px-5 !text-[11px]"
           >
             Subscribe
           </Link>

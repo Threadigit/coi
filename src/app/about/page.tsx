@@ -86,15 +86,15 @@ export default function About() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(profileSchema) }}
       />
       {/* Hero Section: Cinematic Asymmetry */}
-      <section className="px-5 md:px-12 pt-32 md:pt-48 mb-24 md:mb-44 relative overflow-hidden">
+      <section className="px-5 md:px-12 pt-32 md:pt-48 pb-10 md:pb-16 mb-16 md:mb-32 relative overflow-hidden">
         <div className="absolute inset-x-0 top-0 h-[40rem] spotlight-gold pointer-events-none" aria-hidden="true"></div>
         <div className="blueprint-grid-radial absolute inset-0 -z-10 opacity-60"></div>
-        <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row items-end gap-12 lg:gap-16">
-          <div className="md:w-1/2 lg:w-5/12">
+        <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row items-end gap-12 lg:gap-16">
+          <div className="md:w-1/2 min-w-0">
             <p className="kicker rise mb-8">Volume I: The Manifesto</p>
-            <h1 className="rise title-card text-[2.6rem] md:text-7xl lg:text-[6rem] text-on-surface" style={{ ["--d" as string]: 1 }}>Documenting the <span className="italic text-primary pr-2">Sparks</span> of Human Progress</h1>
+            <h1 className="rise title-card text-[2.6rem] md:text-[clamp(2.4rem,5.2vw,5.5rem)] text-on-surface" style={{ ["--d" as string]: 1 }}>Documenting the <span className="italic text-primary pr-2">Sparks</span> of Human Progress</h1>
           </div>
-          <div className="md:w-1/2 lg:w-7/12 h-[340px] md:h-[560px] overflow-hidden rounded-sm md:rounded-sm ring-1 ring-white/10  bg-surface-container-low relative w-full">
+          <div className="md:w-1/2 h-[340px] md:h-[560px] overflow-hidden rounded-sm md:rounded-sm ring-1 ring-white/10  bg-surface-container-low relative w-full">
             <Image 
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKj3IxWHcvVkLbHXjkValIk3MmQyXm9SLL_Du7D8CEDtXlnRrZZ19sgUzR-IpI0ACm1PGQ7zTt02I9AFcGXmVbwjL1ebBG2YKFTZR7JNDDevUe5bHxY_TKFYXmyuX8IIjIg9yXDhbSOMElLPEmTE4SNR0xTD8eSZ7edobORptS6OP4LUvXtHuu-8AGW3BDQM1GxGHl-hzufeCGl5RdRx6Xy3w2fSSI3izkIJtkvte5Qb0kAV7Hdck8PcKdb2rRg2pe_0Fyihjcrw" 
               alt="Data particles" 
@@ -107,12 +107,12 @@ export default function About() {
 
       {/* Our Mission */}
       <section className="px-5 md:px-12 mb-24 md:mb-44">
-        <div className="max-w-[1400px] mx-auto grid md:grid-cols-12 gap-10 md:gap-16" data-reveal>
+        <div className="max-w-[1600px] mx-auto grid md:grid-cols-12 gap-10 md:gap-16" data-reveal>
           <div className="md:col-span-4">
             <h2 className="eyebrow !text-primary mb-5">01. Our Mission</h2>
             <div className="hairline w-full"></div>
           </div>
-          <div className="md:col-span-8">
+          <div className="md:col-span-8 max-w-3xl">
             <p className="font-headline text-[1.6rem] md:text-5xl italic leading-[1.25] tracking-[-0.025em] text-on-surface mb-12">
               Innovation is not a destination, but a sequence of whispers, failures, and sudden illuminations. 
             </p>
@@ -133,7 +133,7 @@ export default function About() {
 
       {/* The Research Process */}
       <section className="px-5 md:px-12 py-20 md:py-40 bg-surface-container-low mb-24 md:mb-44">
-        <div className="max-w-[1400px] mx-auto" data-reveal>
+        <div className="max-w-[1600px] mx-auto" data-reveal>
           <div className="mb-20 text-center">
             <h2 className="eyebrow mb-5">Methodology</h2>
             <h3 className="font-headline text-4xl md:text-7xl tracking-[-0.035em]">The Research Process</h3>
@@ -171,7 +171,7 @@ export default function About() {
 
       {/* The Minds Behind */}
       <section className="px-5 md:px-12 mb-24 md:mb-44">
-        <div className="max-w-[1400px] mx-auto" data-reveal>
+        <div className="max-w-[1600px] mx-auto" data-reveal>
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8">
             <h2 className="font-headline text-5xl md:text-6xl tracking-[-0.035em] max-w-md leading-[1.05]">The Minds Behind the Archive</h2>
             <p className="eyebrow !text-on-surface/50 pb-2">Curators of Human Potential</p>

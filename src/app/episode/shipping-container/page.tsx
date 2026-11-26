@@ -176,7 +176,7 @@ export default function ShippingContainerEpisode() {
           </div>
           <div className="lb-bar lb-top" aria-hidden="true"></div>
           <div className="lb-bar lb-bot" aria-hidden="true"></div>
-          <div className="relative z-10 w-full max-w-[1500px] mx-auto">
+          <div className="relative z-10 w-full max-w-[1600px] mx-auto">
           <div className="max-w-5xl">
             <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mb-6">
               <span className="kicker">Episode 004</span>
@@ -230,14 +230,14 @@ export default function ShippingContainerEpisode() {
 
         {/* Narrative Section */}
         <section className="px-5 md:px-12 py-20 md:py-32 bg-surface">
-          <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-24">
+          <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row gap-24">
             <div className="w-full md:w-1/3" data-reveal>
               <h2 className="eyebrow mb-6">The Genesis</h2>
               <p className="font-headline text-2xl text-on-surface-variant leading-relaxed italic">
                 &ldquo;It was not a new engine or a new material. It was a box, and it quietly rebuilt the entire economy of the planet.&rdquo;
               </p>
             </div>
-            <div className="w-full md:w-2/3" data-reveal style={{ ["--d" as string]: 1 }}>
+            <div className="w-full md:w-2/3 max-w-3xl" data-reveal style={{ ["--d" as string]: 1 }}>
               <p className="drop-cap font-body text-lg md:text-xl text-on-surface/75 leading-[1.7] mb-8">
                 Before the container, moving goods across an ocean was slow, costly, and chaotic. Cargo was loaded piece by piece by armies of dockworkers, and a ship could spend more time sitting in port being filled and emptied than it spent at sea. In 1937, a young North Carolina trucker named Malcom McLean sat for hours waiting to unload his cargo onto a ship and wondered why the whole trailer could not simply be lifted aboard. Decades later, he set out to prove it could.
               </p>
@@ -260,7 +260,7 @@ export default function ShippingContainerEpisode() {
             </div>
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/20"></div>
             <div className="absolute inset-0 scrim-side"></div>
-            <div className="relative z-10 w-full max-w-[1500px] mx-auto px-5 md:px-12 pb-14 md:pb-24 pt-28" data-reveal>
+            <div className="relative z-10 w-full max-w-[1600px] mx-auto px-5 md:px-12 pb-14 md:pb-24 pt-28" data-reveal>
               <span className="font-headline italic text-primary text-7xl md:text-[9rem] leading-none tracking-[-0.04em] block mb-4 md:mb-6">1956</span>
               <h4 className="title-card text-3xl md:text-6xl mb-5 md:mb-6 max-w-3xl">The Voyage of the Ideal X</h4>
               <p className="text-on-surface/80 text-base md:text-xl leading-relaxed max-w-xl">On April 26, McLean&apos;s converted T2 tanker carried fifty-eight containers from Newark to Houston. It cost a fraction of loading loose cargo by hand, the first voyage of the container age.</p>
@@ -272,7 +272,7 @@ export default function ShippingContainerEpisode() {
             </div>
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/20"></div>
             <div className="absolute inset-0 scrim-side"></div>
-            <div className="relative z-10 w-full max-w-[1500px] mx-auto px-5 md:px-12 pb-14 md:pb-24 pt-28" data-reveal>
+            <div className="relative z-10 w-full max-w-[1600px] mx-auto px-5 md:px-12 pb-14 md:pb-24 pt-28" data-reveal>
               <span className="font-headline italic text-primary text-7xl md:text-[9rem] leading-none tracking-[-0.04em] block mb-4 md:mb-6">1960s</span>
               <h4 className="title-card text-3xl md:text-6xl mb-5 md:mb-6 max-w-3xl">The Battle for the Standard</h4>
               <p className="text-on-surface/80 text-base md:text-xl leading-relaxed max-w-xl">A box is only useful if every ship, crane, and truck in the world agrees on its size. Tantlinger&apos;s corner castings and twistlocks, released patent-free, became the global ISO standard that let any container stack anywhere.</p>
@@ -284,7 +284,7 @@ export default function ShippingContainerEpisode() {
             </div>
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/20"></div>
             <div className="absolute inset-0 scrim-side"></div>
-            <div className="relative z-10 w-full max-w-[1500px] mx-auto px-5 md:px-12 pb-14 md:pb-24 pt-28" data-reveal>
+            <div className="relative z-10 w-full max-w-[1600px] mx-auto px-5 md:px-12 pb-14 md:pb-24 pt-28" data-reveal>
               <span className="font-headline italic text-primary text-7xl md:text-[9rem] leading-none tracking-[-0.04em] block mb-4 md:mb-6">Today</span>
               <h4 className="title-card text-3xl md:text-6xl mb-5 md:mb-6 max-w-3xl">The World in a Box</h4>
               <p className="text-on-surface/80 text-base md:text-xl leading-relaxed max-w-xl">Containerisation gutted the cost of moving goods, emptied the old docks, and stitched together the factories of Asia with the shelves of the West, building the global supply chain the modern world now runs on.</p>
@@ -294,7 +294,7 @@ export default function ShippingContainerEpisode() {
 
         {/* The Cast */}
         <section className="px-5 md:px-12 py-20 md:py-32 bg-[#05070a]">
-          <div className="max-w-[1500px] mx-auto">
+          <div className="max-w-[1600px] mx-auto">
             <div className="mb-12 md:mb-16 text-center" data-reveal>
               <div className="kicker mb-5">Featuring</div>
               <h3 className="title-card text-4xl md:text-6xl">The Pioneers</h3>

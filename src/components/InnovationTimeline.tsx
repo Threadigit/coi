@@ -47,7 +47,7 @@ export default function InnovationTimeline() {
   }, []);
 
   return (
-    <div ref={wrapRef} className="relative max-w-3xl mx-auto">
+    <div ref={wrapRef} className="relative max-w-4xl">
       {/* Rail: faint base line + gold progress fill */}
       <div className="absolute top-2 bottom-2 left-[22px] md:left-[30px] w-[2px] rounded-full bg-white/[0.08]" aria-hidden="true" />
       <div

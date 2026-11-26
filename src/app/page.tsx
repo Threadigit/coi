@@ -110,7 +110,7 @@ export default function Home() {
         </div>
         <div className="lb-bar lb-top" aria-hidden="true" />
         <div className="lb-bar lb-bot" aria-hidden="true" />
-        <div className="relative z-10 w-full mx-auto max-w-[1500px] px-5 md:px-12 pt-40 pb-[max(2.25rem,env(safe-area-inset-bottom))] md:pb-24 text-center md:text-left">
+        <div className="relative z-10 w-full mx-auto max-w-[1600px] px-5 md:px-12 pt-40 pb-[max(2.25rem,env(safe-area-inset-bottom))] md:pb-24 text-center md:text-left">
           <div className="rise kicker mb-6 md:mb-8" style={{ ['--d' as string]: 0 }}>Era I: The Age of Electricity</div>
           <h1
             className="rise title-card text-[2.3rem] sm:text-6xl md:text-7xl lg:text-[5.4rem] text-on-surface max-w-6xl mx-auto md:mx-0"
@@ -188,7 +188,7 @@ export default function Home() {
           </div>
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/75 to-black/35 lg:via-black/45 lg:to-black/30" />
           <div className="absolute inset-0 scrim-side" />
-          <div className="relative z-10 w-full max-w-[1500px] mx-auto px-5 md:px-12 pb-14 md:pb-24 pt-32">
+          <div className="relative z-10 w-full max-w-[1600px] mx-auto px-5 md:px-12 pb-14 md:pb-24 pt-32">
             <div className="kicker mb-6" data-reveal>Current Spotlight</div>
             <div className="grid lg:grid-cols-[1.4fr_1fr] gap-10 lg:gap-24 items-end">
               <div data-reveal style={{ ['--d' as string]: 1 }}>

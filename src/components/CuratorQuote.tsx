@@ -48,7 +48,7 @@ export default function CuratorQuote() {
 
   return (
     <section ref={ref} className="scene relative bg-[#05070a] px-5 md:px-12 py-16 md:py-28 lg:py-32" aria-label="Philosophy of Progress">
-      <div className="mx-auto grid max-w-[1400px] items-center gap-10 md:grid-cols-[minmax(0,17rem)_1fr] md:gap-12 lg:grid-cols-[minmax(0,26rem)_1fr] lg:gap-24">
+      <div className="mx-auto grid max-w-[1600px] items-center gap-10 md:grid-cols-[minmax(0,17rem)_1fr] md:gap-12 lg:grid-cols-[minmax(0,26rem)_1fr] lg:gap-24">
         {/* Portrait, drawn in from the bottom */}
         <Link href="/about" className="group relative block w-full max-w-[26rem] justify-self-center md:justify-self-start" aria-label="Tolu Adetuyi, Executive Curator">
           <div

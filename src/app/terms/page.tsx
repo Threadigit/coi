@@ -7,7 +7,7 @@ export default function TermsOfService() {
 
   return (
     <div className="w-full pt-40 md:pt-48 px-6 md:px-12 max-w-3xl mx-auto mb-40">
-      <button onClick={() => router.back()} className="link-arrow !text-on-surface/60 hover:!text-primary mb-12">
+      <button onClick={() => router.back()} className="link-arrow !text-on-surface/60 hover:!text-primary mb-10 -ml-1 px-1 py-3">
         <span className="material-symbols-outlined text-sm">arrow_back</span>
         Go Back
       </button>

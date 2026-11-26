@@ -161,7 +161,7 @@ export default function PenicillinEpisode() {
       />
       <main className="pt-24">
         {/* Hero Section */}
-        <header className="relative isolate w-full grain min-h-[92svh] md:min-h-[100svh] overflow-hidden flex items-end px-5 md:px-12 pb-[max(2.5rem,env(safe-area-inset-bottom))] md:pb-28 pt-32 md:pt-40">
+        <header className="relative isolate w-full cinema min-h-[92svh] md:min-h-[100svh] overflow-hidden flex items-end px-5 md:px-12 pb-[max(2.5rem,env(safe-area-inset-bottom))] md:pb-28 pt-32 md:pt-40">
           <div className="absolute inset-0 z-0">
             <Image
               src="/pen-hero.jpg"

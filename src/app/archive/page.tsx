@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import EpisodeCard from "@/components/EpisodeCard";
-import SectionIndex from "@/components/SectionIndex";
 import { episodes, eras } from "@/lib/episodes";
 import type { Metadata } from "next";
 
@@ -77,7 +76,7 @@ export default async function Archive({ searchParams }: Props) {
 
         {/* Hero Search Section */}
         <section className="relative max-w-[1400px] mx-auto mb-16 md:mb-24">
-          <SectionIndex n="000" label="The Archive" className="rise mb-10 md:mb-14" />
+          <div className="eyebrow rise mb-10 md:mb-14">The Archive</div>
           <h1
             className="rise serif-headline text-[2.6rem] md:text-7xl lg:text-8xl tracking-[-0.035em] text-on-surface leading-[1.04] mb-8 md:mb-12 max-w-4xl"
             style={{ ['--d' as string]: 1 }}
@@ -128,7 +127,7 @@ export default async function Archive({ searchParams }: Props) {
 
         {/* Archive Grid */}
         <section className="relative max-w-[1400px] mx-auto">
-          <SectionIndex n="001" label={`All Episodes · ${items.length}`} className="mb-8 md:mb-10" />
+          <div className="eyebrow mb-8 md:mb-10">{`All Episodes · ${items.length}`}</div>
           {items.length === 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
               {[1, 2, 3, 4].map((idx) => (

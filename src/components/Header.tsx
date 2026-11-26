@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Search, Menu, X } from 'lucide-react';
 import Image from 'next/image';
-import { episodes } from '@/lib/episodes';
 
 const links = [
   { href: '/', label: 'Home' },
@@ -123,22 +122,6 @@ export default function Header() {
           </button>
         </div>
       </nav>
-
-      {/* "Watch the latest" strip, tucked under the bar until you scroll */}
-      <Link
-        href={episodes[0].href}
-        tabIndex={scrolled ? -1 : 0}
-        aria-hidden={scrolled}
-        className={`pointer-events-auto mx-auto mt-2 hidden w-[21rem] items-center gap-3 rounded-2xl glass-strong p-1.5 pr-4 transition-all duration-500 ease-[var(--ease-spring)] md:flex ${
-          scrolled || menuOpen ? 'pointer-events-none -translate-y-3 opacity-0' : 'opacity-100'
-        }`}
-      >
-        <span className="relative block h-9 w-16 shrink-0 overflow-hidden rounded-lg">
-          <Image src={episodes[0].heroImage} alt="" fill sizes="64px" className="object-cover" />
-        </span>
-        <span className="font-mono-label flex-1 text-[11px] font-medium uppercase tracking-[0.14em] text-on-surface">Watch the latest</span>
-        <span className="material-symbols-outlined text-on-surface/70" style={{ fontSize: 18 }}>arrow_forward</span>
-      </Link>
 
       {/* Mobile sheet */}
       <div

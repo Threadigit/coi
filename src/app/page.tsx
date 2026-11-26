@@ -4,7 +4,6 @@ import NewsletterForm from "@/components/NewsletterForm";
 import HeroCinematicPreview from "@/components/HeroCinematicPreview";
 import Shelf from "@/components/Shelf";
 import EpisodeCard from "@/components/EpisodeCard";
-import SectionIndex from "@/components/SectionIndex";
 import HeroIndex from "@/components/HeroIndex";
 import { episodes, eras } from "@/lib/episodes";
 import type { Metadata } from "next";
@@ -98,8 +97,8 @@ export default function Home() {
       />
 
       {/* Hero: full-bleed cinematic feature */}
-      <section className="grain relative isolate flex min-h-[100svh] items-end overflow-hidden pt-28 md:pt-32">
-        <div className="absolute inset-0 z-0">
+      <section className="cinema relative isolate flex min-h-[100svh] items-end overflow-hidden pt-40 md:pt-32">
+        <div className="absolute inset-0">
           <HeroCinematicPreview
             videoId="otqgociwb3o"
             image="/edison-machine-shop.jpg"
@@ -107,26 +106,26 @@ export default function Home() {
           />
           <div className="absolute inset-0 scrim-side" />
           <div className="absolute inset-x-0 top-0 h-40 scrim-top" />
-          <div className="absolute inset-x-0 bottom-0 h-[70%] scrim-bottom" />
+          <div className="absolute inset-x-0 bottom-0 h-[88%] md:h-[70%] scrim-bottom" />
         </div>
-        <div className="relative z-10 w-full max-w-[1400px] mx-auto px-5 md:px-12 pb-[max(2.5rem,env(safe-area-inset-bottom))] md:pb-36 lg:grid lg:grid-cols-[1fr_auto] lg:items-end lg:gap-16">
+        <div className="relative z-10 w-full max-w-[1400px] mx-auto px-5 md:px-12 pb-[max(1.75rem,env(safe-area-inset-bottom))] md:pb-36 lg:grid lg:grid-cols-[1fr_auto] lg:items-end lg:gap-16">
           <div>
-          <div className="rise flex items-center gap-4 mb-7" style={{ ['--d' as string]: 0 }}>
+          <div className="rise flex items-center gap-4 mb-5 md:mb-7" style={{ ['--d' as string]: 0 }}>
             <span className="glass rounded-full px-4 py-1.5 eyebrow !text-secondary">Era I: The Age of Electricity</span>
           </div>
           <h1
-            className="rise serif-display text-[2.4rem] sm:text-6xl md:text-7xl lg:text-[5.25rem] text-on-surface leading-[1.02] tracking-[-0.035em] max-w-5xl"
+            className="rise serif-display text-[2.15rem] sm:text-6xl md:text-7xl lg:text-[5.25rem] text-on-surface leading-[1.02] tracking-[-0.035em] max-w-5xl"
             style={{ ['--d' as string]: 1 }}
           >
             Light Bulb &amp; Electricity: <br className="hidden md:block" />Edison vs Tesla&apos;s <span className="text-gradient-gold italic pr-2">Hidden Battle</span>
           </h1>
           <p
-            className="rise mt-6 md:mt-8 max-w-xl text-base md:text-xl leading-relaxed text-on-surface/75"
+            className="rise mt-5 md:mt-8 max-w-xl text-[15px] md:text-xl leading-relaxed text-on-surface/75"
             style={{ ['--d' as string]: 2 }}
           >
             The current that powers your world was decided by war. Explore the bitter rivalry between Thomas Edison and Nikola Tesla, the battle to light humanity and own the future.
           </p>
-          <div className="rise mt-8 md:mt-10 flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-3 md:gap-4" style={{ ['--d' as string]: 3 }}>
+          <div className="rise mt-6 md:mt-10 flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-3 md:gap-4" style={{ ['--d' as string]: 3 }}>
             <Link href="/episode/edison-vs-tesla" className="btn btn-primary !px-8 !py-4 !text-[14px] w-full sm:w-auto">
               <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1", fontSize: 22 }}>play_arrow</span>
               Watch Feature Documentary
@@ -148,7 +147,7 @@ export default function Home() {
       {/* The Series shelf */}
       <section className="relative z-10 pt-14 md:pt-20 pb-8 md:pb-12 px-5 md:px-12">
         <div className="max-w-[1400px] mx-auto">
-          <SectionIndex n="001" label="The Series" className="mb-8 md:mb-10" />
+          <div className="eyebrow mb-8 md:mb-10">Chronicles of Innovation</div>
           <div className="flex items-end justify-between mb-8" data-reveal>
             <div>
               <h2 className="serif-display text-3xl md:text-5xl tracking-[-0.025em] text-on-surface">The <span className="italic text-primary">Series</span></h2>
@@ -172,7 +171,7 @@ export default function Home() {
       <section className="relative py-20 md:py-40 px-5 md:px-12 overflow-hidden">
         <div className="absolute inset-0 spotlight-gold pointer-events-none" aria-hidden="true" />
         <div className="max-w-[1400px] mx-auto relative z-10">
-          <SectionIndex n="002" label="Philosophy of Progress" className="mb-12 md:mb-16" />
+          <div className="eyebrow mb-12 md:mb-16">Philosophy of Progress</div>
           <div className="flex flex-col md:flex-row gap-12 md:gap-24 items-center">
           <div className="w-full md:w-[34%] max-w-sm" data-reveal>
             <div className="aspect-[3/4] overflow-hidden rounded-[2rem] ring-1 ring-white/10 shadow-[0_40px_100px_-30px_rgba(0,0,0,0.9)] relative group">
@@ -205,7 +204,7 @@ export default function Home() {
       {/* Current Spotlight: The Shipping Container */}
       <section className="relative px-5 md:px-12 py-10 md:py-16">
         <div className="max-w-[1400px] mx-auto">
-          <SectionIndex n="003" label="Current Spotlight" className="mb-8 md:mb-10" />
+          <div className="eyebrow mb-8 md:mb-10">Current Spotlight</div>
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 md:mb-10 gap-5" data-reveal>
             <div>
               <h2 className="serif-display text-[2.4rem] md:text-6xl tracking-[-0.03em] text-on-surface leading-[1.05]">The Shipping Container</h2>
@@ -269,7 +268,6 @@ export default function Home() {
 
       {/* Newsletter Signup */}
       <section className="px-5 md:px-12 pt-20 md:pt-32 pb-10">
-        <div className="max-w-5xl mx-auto"><SectionIndex n="004" label="The Inner Circle" className="mb-8" /></div>
         <div
           className="relative max-w-5xl mx-auto overflow-hidden rounded-[2rem] md:rounded-[2.75rem] glass px-5 py-16 md:px-20 md:py-28 text-center"
           data-reveal

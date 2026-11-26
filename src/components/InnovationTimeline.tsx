@@ -60,7 +60,7 @@ export default function InnovationTimeline() {
       {groups.map((group) => (
         <section key={group.id} className="relative">
           {/* Era divider */}
-          <div className="relative pl-16 md:pl-24 mt-20 first:mt-0 mb-14" data-reveal>
+          <div className="relative pl-14 md:pl-24 mt-20 first:mt-0 mb-14" data-reveal>
             <div className="absolute left-[22px] md:left-[30px] top-1 -translate-x-1/2 w-5 h-5 rounded-full bg-surface border-2 border-primary/60 shadow-[0_0_0_6px_var(--color-surface),0_0_24px_var(--gold-glow)]" aria-hidden="true" />
             <span className="eyebrow block mb-3">{group.range}</span>
             <h3 className="serif-display text-3xl md:text-5xl tracking-[-0.03em] text-on-surface">{group.label}</h3>
@@ -68,7 +68,7 @@ export default function InnovationTimeline() {
 
           {/* Episodes in this era */}
           {group.items.map((e) => (
-            <div key={e.slug} className="relative pl-16 md:pl-24 mb-16 md:mb-20" data-reveal>
+            <div key={e.slug} className="relative pl-14 md:pl-24 mb-16 md:mb-20" data-reveal>
               {/* Node */}
               <div className="absolute left-[22px] md:left-[30px] top-2 -translate-x-1/2 z-10" aria-hidden="true">
                 <div className="w-11 h-11 rounded-full glass flex items-center justify-center shadow-[0_0_0_6px_var(--color-surface)] transition-transform duration-500 group-hover/card:scale-110 group-hover/card:border-primary/50">
@@ -110,7 +110,7 @@ export default function InnovationTimeline() {
       ))}
 
       {/* The story continues */}
-      <div className="relative pl-16 md:pl-24 mt-20" data-reveal>
+      <div className="relative pl-14 md:pl-24 mt-20" data-reveal>
         <div className="absolute left-[22px] md:left-[30px] top-1 -translate-x-1/2 w-5 h-5 rounded-full border-2 border-dashed border-primary/40 animate-pulse" aria-hidden="true" />
         <span className="eyebrow block mb-3">The Chronicle Continues</span>
         <h3 className="serif-display text-2xl md:text-3xl text-on-surface/70 italic max-w-xl tracking-[-0.02em]">

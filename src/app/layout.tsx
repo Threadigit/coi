@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Noto_Serif, Inter } from "next/font/google";
+import { Noto_Serif, Inter, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -11,6 +11,12 @@ const notoSerif = Noto_Serif({
   variable: "--font-noto-serif",
 });
 
+const geistMono = Geist_Mono({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-geist-mono",
+});
+
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
@@ -19,6 +25,7 @@ const inter = Inter({
 
 export const viewport: Viewport = {
   themeColor: "#0f1419",
+  viewportFit: "cover",
   colorScheme: "dark",
 };
 
@@ -59,7 +66,7 @@ export default function RootLayout({
       <head>
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
       </head>
-      <body className={`${notoSerif.variable} ${inter.variable} antialiased min-h-screen flex flex-col`}>
+      <body className={`${notoSerif.variable} ${inter.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}>
         <Header />
         <main className="flex-1">
           {children}

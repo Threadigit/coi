@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Search, Menu, X } from 'lucide-react';
 import Image from 'next/image';
+import { episodes } from '@/lib/episodes';
 
 const links = [
   { href: '/', label: 'Home' },
@@ -49,7 +50,7 @@ export default function Header() {
     pathname === path || (path === '/archive' && pathname.startsWith('/episode'));
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 px-3 md:px-8 pt-3 md:pt-5 pointer-events-none">
+    <header className="fixed inset-x-0 top-0 z-50 px-3 md:px-8 pt-[max(0.75rem,env(safe-area-inset-top))] md:pt-5 pointer-events-none">
       <nav
         aria-label="Primary"
         className={`pointer-events-auto mx-auto flex max-w-[1400px] items-center justify-between rounded-full py-2 pl-3 pr-2 md:pl-4 transition-[background,box-shadow,border-color,backdrop-filter] duration-500 ${
@@ -68,7 +69,7 @@ export default function Header() {
               className="object-cover scale-[1.35]"
             />
           </span>
-          <span className="font-headline italic text-[1.35rem] leading-none text-primary hidden sm:block tracking-[-0.01em]">
+          <span className="font-headline italic text-[1.35rem] leading-none text-primary hidden lg:block tracking-[-0.01em]">
             Chronicles of Innovation
           </span>
         </Link>
@@ -123,6 +124,22 @@ export default function Header() {
         </div>
       </nav>
 
+      {/* "Watch the latest" strip, tucked under the bar until you scroll */}
+      <Link
+        href={episodes[0].href}
+        tabIndex={scrolled ? -1 : 0}
+        aria-hidden={scrolled}
+        className={`pointer-events-auto mx-auto mt-2 hidden w-[21rem] items-center gap-3 rounded-2xl glass-strong p-1.5 pr-4 transition-all duration-500 ease-[var(--ease-spring)] md:flex ${
+          scrolled || menuOpen ? 'pointer-events-none -translate-y-3 opacity-0' : 'opacity-100'
+        }`}
+      >
+        <span className="relative block h-9 w-16 shrink-0 overflow-hidden rounded-lg">
+          <Image src={episodes[0].heroImage} alt="" fill sizes="64px" className="object-cover" />
+        </span>
+        <span className="font-mono-label flex-1 text-[11px] font-medium uppercase tracking-[0.14em] text-on-surface">Watch the latest</span>
+        <span className="material-symbols-outlined text-on-surface/70" style={{ fontSize: 18 }}>arrow_forward</span>
+      </Link>
+
       {/* Mobile sheet */}
       <div
         id="mobile-menu"
@@ -153,7 +170,7 @@ export default function Header() {
             type="search"
             aria-label="Search the archive"
             placeholder="Search the archive"
-            className="h-12 w-full rounded-full bg-white/[0.08] pl-11 pr-4 text-[15px] text-on-surface outline-none ring-1 ring-white/10 placeholder:text-on-surface/40 focus:ring-primary/50"
+            className="h-12 w-full rounded-full bg-white/[0.08] pl-11 pr-4 text-base text-on-surface outline-none ring-1 ring-white/10 placeholder:text-on-surface/40 focus:ring-primary/50"
           />
         </form>
       </div>

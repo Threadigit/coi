@@ -39,13 +39,13 @@ export default function Footer() {
   return (
     <footer className="relative mt-24 border-t border-white/[0.07] bg-surface-container-lowest">
       <div className="hairline absolute inset-x-0 top-0" aria-hidden="true" />
-      <div className="mx-auto max-w-7xl px-6 md:px-12 pt-16 pb-10">
+      <div className="mx-auto max-w-7xl px-6 md:px-12 pt-14 pb-[max(2.5rem,env(safe-area-inset-bottom))]">
         <div className="flex flex-col gap-12 md:flex-row md:items-start md:justify-between">
           <div className="max-w-sm">
             <div className="font-headline italic text-primary text-2xl tracking-[-0.01em]">Chronicles of Innovation</div>
           </div>
 
-          <nav aria-label="Footer" className="grid grid-cols-2 gap-x-16 gap-y-3 text-[13px]">
+          <nav aria-label="Footer" className="grid grid-cols-2 gap-x-12 md:gap-x-16 gap-y-4 text-[14px]">
             {nav.map((l) => (
               <Link key={l.href} href={l.href} className="text-on-surface/60 transition-colors hover:text-on-surface">{l.label}</Link>
             ))}
@@ -62,7 +62,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={social.name}
-                className="grid h-10 w-10 place-items-center rounded-full bg-white/[0.05] text-on-surface/60 ring-1 ring-white/[0.07] transition-all duration-500 hover:bg-primary hover:text-on-primary hover:scale-110"
+                className="grid h-11 w-11 place-items-center rounded-full bg-white/[0.05] text-on-surface/60 ring-1 ring-white/[0.07] transition-all duration-500 hover:bg-primary hover:text-on-primary hover:scale-110"
               >
                 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className="h-[18px] w-[18px]">
                   <path d={social.path} />

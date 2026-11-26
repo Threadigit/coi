@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import type { Episode } from '@/lib/episodes';
+import { eras, type Episode } from '@/lib/episodes';
 
 const fill = { fontVariationSettings: "'FILL' 1" } as const;
 
@@ -42,9 +42,12 @@ export default function EpisodeCard({
         {!image && <span className="absolute bottom-3 left-4 font-headline italic text-3xl text-white/90 drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)]">{episode.year}</span>}
       </div>
       <div className="mt-5 space-y-2 px-1">
-        <span className="eyebrow !text-[10px]">{eyebrow}</span>
+        <div className="eyebrow !text-[10px] flex items-center justify-between gap-4">
+          <span>{eyebrow}</span>
+          <span className="!text-on-surface/45 truncate">{eras.find((e) => e.id === episode.era)?.label}</span>
+        </div>
         <h3 className="font-headline text-[1.4rem] leading-snug tracking-[-0.01em] text-on-surface transition-colors duration-300 group-hover:text-primary line-clamp-2">{episode.title}</h3>
-        <p className="text-sm leading-relaxed text-on-surface/55 line-clamp-2">{episode.blurb}</p>
+        <p className="text-[15px] leading-relaxed text-on-surface/55 line-clamp-2">{episode.blurb}</p>
         {showDate && (
           <p className="text-xs text-on-surface/40">Published: {new Date(episode.publishedAt).toLocaleDateString()}</p>
         )}

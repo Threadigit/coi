@@ -75,32 +75,32 @@ export default async function Archive({ searchParams }: Props) {
         <div className="blueprint-grid-radial absolute inset-x-0 top-0 h-[32rem] opacity-60 pointer-events-none" aria-hidden="true" />
 
         {/* Hero Search Section */}
-        <section className="relative max-w-[1400px] mx-auto mb-16 md:mb-24">
+        <section className="relative max-w-[1600px] mx-auto mb-14 md:mb-20">
           <div className="eyebrow rise mb-10 md:mb-14">The Archive</div>
           <h1
             className="rise serif-headline text-[2.6rem] md:text-7xl lg:text-8xl tracking-[-0.035em] text-on-surface leading-[1.04] mb-8 md:mb-12 max-w-4xl"
             style={{ ['--d' as string]: 1 }}
           >
-            Search the <span className="italic text-gradient-gold pr-2">Archive</span> of Progress
+            Search the <span className="italic text-primary pr-2">Archive</span> of Progress
           </h1>
           <form action="/archive" role="search" className="rise relative w-full max-w-3xl" style={{ ['--d' as string]: 2 }}>
             {category !== 'all' && <input type="hidden" name="category" value={category} />}
-            <span className="material-symbols-outlined pointer-events-none absolute left-5 md:left-6 top-1/2 -translate-y-1/2 text-on-surface/50">search</span>
+            <span className="material-symbols-outlined pointer-events-none absolute left-0 top-1/2 -translate-y-1/2 text-on-surface/50">search</span>
             <input
               name="q"
               defaultValue={q}
               aria-label="Search the archive"
-              className="h-14 md:h-16 w-full rounded-full glass pl-14 md:pl-16 pr-28 md:pr-32 text-base md:text-xl placeholder:text-on-surface/40 focus:outline-none focus:border-primary/50 focus:shadow-[0_0_0_4px_rgba(251,203,126,0.12)] transition-all duration-500 text-on-surface"
+              className="h-14 md:h-16 w-full border-b border-white/30 bg-transparent pl-10 md:pl-12 pr-32 text-base md:text-2xl placeholder:text-on-surface/40 focus:outline-none focus:border-primary transition-colors duration-500 text-on-surface"
               placeholder="Explore historical breakthroughs..."
               type="search"
             />
-            <button type="submit" className="btn btn-primary absolute right-2 top-1/2 -translate-y-1/2 !py-3 !px-6">
+            <button type="submit" className="btn btn-primary absolute right-0 top-1/2 -translate-y-1/2 !min-h-0 !py-3 !px-6">
               Search
             </button>
           </form>
 
           {/* Filter Chips */}
-          <div className="rise no-scrollbar -mx-5 px-5 md:mx-0 md:px-0 flex md:flex-wrap gap-2.5 mt-8 md:mt-10 overflow-x-auto" style={{ ['--d' as string]: 3 }}>
+          <div className="rise no-scrollbar -mx-5 px-5 md:mx-0 md:px-0 flex md:flex-wrap gap-x-8 gap-y-3 mt-8 md:mt-12 overflow-x-auto border-b border-white/[0.12]" style={{ ['--d' as string]: 3 }}>
             {categories.map((cat) => {
               const isActive = category === cat.value;
               const count = cat.value === 'all' ? episodes.length : episodes.filter((e) => e.categories.includes(cat.value)).length;
@@ -111,10 +111,10 @@ export default async function Archive({ searchParams }: Props) {
                   key={cat.value}
                   href={href}
                   aria-current={isActive ? 'true' : undefined}
-                  className={`shrink-0 whitespace-nowrap rounded-full px-5 py-3 text-[13px] font-medium transition-all duration-300 ${
+                  className={`shrink-0 whitespace-nowrap pb-4 -mb-px border-b-2 text-[12px] font-medium uppercase tracking-[0.14em] transition-colors duration-300 ${
                     isActive
-                      ? "bg-on-surface text-surface font-semibold shadow-[0_8px_30px_-10px_rgba(255,255,255,0.5)]"
-                      : "bg-white/[0.07] text-on-surface/70 ring-1 ring-white/[0.08] hover:bg-white/[0.13] hover:text-on-surface"
+                      ? "border-primary text-on-surface"
+                      : "border-transparent text-on-surface/55 hover:text-on-surface"
                   }`}
                 >
                   {cat.label}
@@ -126,13 +126,13 @@ export default async function Archive({ searchParams }: Props) {
         </section>
 
         {/* Archive Grid */}
-        <section className="relative max-w-[1400px] mx-auto">
-          <div className="eyebrow mb-8 md:mb-10">{`All Episodes · ${items.length}`}</div>
+        <section className="relative max-w-[1600px] mx-auto">
+          <div className="eyebrow border-t border-white/[0.14] pt-6 mb-10">{`All Episodes · ${items.length}`}</div>
           {items.length === 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
               {[1, 2, 3, 4].map((idx) => (
                 <article key={`placeholder-${idx}`} className="group" data-reveal style={{ ['--d' as string]: idx % 3 }}>
-                  <div className="relative aspect-video overflow-hidden rounded-[1.375rem] card-glass flex items-center justify-center flex-col mb-5">
+                  <div className="relative aspect-video overflow-hidden rounded-sm card-glass flex items-center justify-center flex-col mb-5">
                     <span className="material-symbols-outlined text-primary text-4xl mb-4 opacity-50">satellite_alt</span>
                     <p className="text-xs tracking-[0.18em] text-on-surface/45 uppercase">Incoming Transmission</p>
                   </div>
@@ -150,7 +150,7 @@ export default async function Archive({ searchParams }: Props) {
               <Link
                 href={items[0].href}
                 data-reveal
-                className="group relative block overflow-hidden rounded-[2rem] md:rounded-[2.5rem] ring-1 ring-white/10 shadow-[0_50px_120px_-40px_rgba(0,0,0,1)] mb-16 md:mb-24"
+                className="group relative block overflow-hidden mb-16 md:mb-24"
               >
                 <div className="relative aspect-[4/5] sm:aspect-[16/10] lg:aspect-[21/9] min-h-[28rem] lg:min-h-0">
                   <Image
@@ -158,20 +158,19 @@ export default async function Archive({ searchParams }: Props) {
                     alt={items[0].title}
                     fill
                     priority
-                    sizes="(max-width: 1400px) 100vw, 1400px"
-                    className="object-cover saturate-[.8] transition-transform duration-[1400ms] ease-[var(--ease-spring)] group-hover:scale-[1.05]"
+                    sizes="(max-width: 1600px) 100vw, 1600px"
+                    className="object-cover saturate-[.85] transition-transform duration-[1800ms] ease-[var(--ease-spring)] group-hover:scale-[1.03]"
                   />
                   <div className="absolute inset-0 scrim-side" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/15 to-transparent" />
-                  <div className="absolute left-5 top-5 md:left-8 md:top-8 flex items-center gap-2 glass rounded-full px-4 py-1.5">
-                    <span className="material-symbols-outlined text-primary" style={{ fontVariationSettings: "'FILL' 1", fontSize: 16 }}>{items[0].icon}</span>
-                    <span className="eyebrow !text-[10px] !text-on-surface">{items[0].innovation} &middot; {items[0].year} &middot; {eras.find((e) => e.id === items[0].era)?.label}</span>
-                  </div>
-                  <div className="absolute inset-x-0 bottom-0 p-5 md:p-12 max-w-3xl">
-                    <span className="eyebrow !text-primary block mb-4">Latest in the Archive</span>
-                    <h2 className="serif-headline text-[1.75rem] md:text-5xl lg:text-6xl tracking-[-0.03em] leading-[1.08] text-on-surface mb-5">{items[0].title}</h2>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/15 to-transparent" />
+                  <div className="absolute inset-x-0 bottom-0 p-5 md:p-12 max-w-4xl">
+                    <div className="flex items-center gap-4 mb-5">
+                      <span className="h-px w-10 bg-primary" aria-hidden="true" />
+                      <span className="eyebrow !text-on-surface/80">Latest in the Archive &middot; {items[0].innovation} &middot; {items[0].year}</span>
+                    </div>
+                    <h2 className="serif-headline text-[1.9rem] md:text-5xl lg:text-6xl tracking-[-0.03em] leading-[1.06] text-on-surface mb-5">{items[0].title}</h2>
                     <p className="hidden sm:block text-on-surface/70 text-lg leading-relaxed mb-8 max-w-2xl line-clamp-2">{items[0].blurb}</p>
-                    <span className="btn btn-primary !px-7 !py-3.5">
+                    <span className="btn btn-primary">
                       <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1", fontSize: 20 }}>play_arrow</span>
                       Watch Now
                     </span>

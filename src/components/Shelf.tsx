@@ -46,7 +46,7 @@ export default function Shelf({
   };
 
   const paddle =
-    'hidden md:grid absolute top-[38%] z-20 h-12 w-12 -translate-y-1/2 place-items-center rounded-full glass text-on-surface transition-all duration-500 hover:scale-110 hover:bg-white/20';
+    'hidden md:grid absolute top-[38%] z-20 h-12 w-12 -translate-y-1/2 place-items-center rounded-sm glass text-on-surface transition-colors duration-300 hover:bg-white/15';
 
   return (
     <div className="relative group/shelf" role="region" aria-label={label}>
@@ -55,7 +55,7 @@ export default function Shelf({
       </div>
       <div className="mt-8 flex items-center justify-center gap-2 md:hidden" aria-hidden="true">
         {Array.from({ length: count }).map((_, i) => (
-          <span key={i} className={`h-1.5 rounded-full transition-all duration-500 ${i === index ? 'w-6 bg-on-surface' : 'w-1.5 bg-white/25'}`} />
+          <span key={i} className={`h-[2px] transition-all duration-500 ${i === index ? 'w-8 bg-on-surface' : 'w-4 bg-white/25'}`} />
         ))}
       </div>
       <button

@@ -92,9 +92,9 @@ export default function About() {
         <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row items-end gap-12 lg:gap-16">
           <div className="md:w-1/2 lg:w-5/12">
             <p className="eyebrow rise mb-8">Volume I: The Manifesto</p>
-            <h1 className="rise font-headline text-[2.6rem] md:text-7xl lg:text-[5.5rem] leading-[1.05] tracking-[-0.035em] text-on-surface" style={{ ["--d" as string]: 1 }}>Documenting the <span className="italic text-gradient-gold pr-2">Sparks</span> of Human Progress</h1>
+            <h1 className="rise font-headline text-[2.6rem] md:text-7xl lg:text-[5.5rem] leading-[1.05] tracking-[-0.035em] text-on-surface" style={{ ["--d" as string]: 1 }}>Documenting the <span className="italic text-primary pr-2">Sparks</span> of Human Progress</h1>
           </div>
-          <div className="md:w-1/2 lg:w-7/12 h-[340px] md:h-[560px] overflow-hidden rounded-[2rem] md:rounded-[2.5rem] ring-1 ring-white/10 shadow-[0_50px_120px_-40px_rgba(0,0,0,1)] bg-surface-container-low relative w-full">
+          <div className="md:w-1/2 lg:w-7/12 h-[340px] md:h-[560px] overflow-hidden rounded-sm md:rounded-sm ring-1 ring-white/10  bg-surface-container-low relative w-full">
             <Image 
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKj3IxWHcvVkLbHXjkValIk3MmQyXm9SLL_Du7D8CEDtXlnRrZZ19sgUzR-IpI0ACm1PGQ7zTt02I9AFcGXmVbwjL1ebBG2YKFTZR7JNDDevUe5bHxY_TKFYXmyuX8IIjIg9yXDhbSOMElLPEmTE4SNR0xTD8eSZ7edobORptS6OP4LUvXtHuu-8AGW3BDQM1GxGHl-hzufeCGl5RdRx6Xy3w2fSSI3izkIJtkvte5Qb0kAV7Hdck8PcKdb2rRg2pe_0Fyihjcrw" 
               alt="Data particles" 
@@ -139,7 +139,7 @@ export default function About() {
             <h3 className="font-headline text-4xl md:text-7xl tracking-[-0.035em]">The Research Process</h3>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="group p-10 card-glass rounded-[2rem] relative overflow-hidden">
+            <div className="group p-10 card-glass rounded-sm relative overflow-hidden">
               <div className="mb-12 flex justify-between items-start">
                 <span className="material-symbols-outlined text-4xl text-primary" style={{fontVariationSettings: "'FILL' 0"}}>archive</span>
                 <span className="font-label text-[11px] tracking-[0.18em] text-on-surface/40">STAGE 01</span>
@@ -148,7 +148,7 @@ export default function About() {
               <p className="text-on-surface/60 text-[17px] leading-relaxed">We dig through blueprints, early patents, and forgotten journals to find the raw DNA of an invention.</p>
             </div>
             
-            <div className="group p-10 card-glass rounded-[2rem] relative overflow-hidden">
+            <div className="group p-10 card-glass rounded-sm relative overflow-hidden">
               <div className="mb-12 flex justify-between items-start">
                 <span className="material-symbols-outlined text-4xl text-secondary" style={{fontVariationSettings: "'FILL' 0"}}>verified</span>
                 <span className="font-label text-[11px] tracking-[0.18em] text-on-surface/40">STAGE 02</span>
@@ -157,7 +157,7 @@ export default function About() {
               <p className="text-on-surface/60 text-[17px] leading-relaxed">Our team of researchers validates the feasibility and impact of the technology through rigorous peer review.</p>
             </div>
             
-            <div className="group p-10 card-glass rounded-[2rem] relative overflow-hidden">
+            <div className="group p-10 card-glass rounded-sm relative overflow-hidden">
               <div className="mb-12 flex justify-between items-start">
                 <span className="material-symbols-outlined text-4xl text-primary" style={{fontVariationSettings: "'FILL' 0"}}>movie</span>
                 <span className="font-label text-[11px] tracking-[0.18em] text-on-surface/40">STAGE 03</span>
@@ -178,7 +178,7 @@ export default function About() {
           </div>
           <div className="grid md:grid-cols-3 gap-12">
             <div className="group">
-              <div className="aspect-[3/4] overflow-hidden rounded-[1.75rem] mb-6 bg-surface-container-highest relative ring-1 ring-white/10 shadow-[0_40px_90px_-40px_rgba(0,0,0,1)]">
+              <div className="aspect-[3/4] overflow-hidden rounded-sm mb-6 bg-surface-container-highest relative ring-1 ring-white/10 ">
                 <Image src="/avatar.png" alt="Portrait of Tolu Adetuyi, Executive Curator" fill className="object-cover saturate-[.5] group-hover:saturate-100 group-hover:scale-105 transition-all duration-[900ms] ease-[var(--ease-spring)]" />
               </div>
               <span className="eyebrow !text-[10px]">The Visionary</span>
@@ -186,7 +186,7 @@ export default function About() {
               <p className="text-sm text-on-surface/50">Executive Curator</p>
             </div>
             <div className="group">
-              <div className="aspect-[3/4] overflow-hidden rounded-[1.75rem] mb-6 bg-surface-container-highest relative ring-1 ring-white/10 shadow-[0_40px_90px_-40px_rgba(0,0,0,1)]">
+              <div className="aspect-[3/4] overflow-hidden rounded-sm mb-6 bg-surface-container-highest relative ring-1 ring-white/10 ">
                 <Image src="/isaiah_matchbg.png" alt="Portrait of Isaiah Emmanuel, Editorial Lead" fill className="object-cover object-top saturate-[.5] group-hover:saturate-100 group-hover:scale-105 transition-all duration-[900ms] ease-[var(--ease-spring)]" />
               </div>
               <span className="eyebrow !text-[10px]">The Scribe</span>
@@ -194,7 +194,7 @@ export default function About() {
               <p className="text-sm text-on-surface/50">Editorial Lead</p>
             </div>
             <div className="group">
-              <div className="aspect-[3/4] overflow-hidden rounded-[1.75rem] mb-6 bg-surface-container-highest relative ring-1 ring-white/10 shadow-[0_40px_90px_-40px_rgba(0,0,0,1)]">
+              <div className="aspect-[3/4] overflow-hidden rounded-sm mb-6 bg-surface-container-highest relative ring-1 ring-white/10 ">
                 <Image src="/john_bassey.png" alt="Portrait of John Bassey, Visual Director" fill className="object-cover saturate-[.5] group-hover:saturate-100 group-hover:scale-105 transition-all duration-[900ms] ease-[var(--ease-spring)]" />
               </div>
               <span className="eyebrow !text-[10px]">The Lens</span>

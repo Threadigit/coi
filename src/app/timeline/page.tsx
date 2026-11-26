@@ -78,7 +78,7 @@ export default function TimelinePage() {
         <section className="relative max-w-[1400px] mx-auto mb-24 md:mb-36">
           <span className="eyebrow rise block mb-8" style={{ ['--d' as string]: 0 }}>The Chronicle</span>
           <h1 className="rise serif-headline text-[2.7rem] md:text-7xl lg:text-[7rem] tracking-[-0.04em] text-on-surface leading-[1] max-w-5xl" style={{ ['--d' as string]: 1 }}>
-            A Timeline of <span className="italic text-gradient-gold pr-2">Innovation</span>
+            A Timeline of <span className="italic text-primary pr-2">Innovation</span>
           </h1>
           <p className="rise text-on-surface/60 text-base md:text-2xl leading-relaxed max-w-2xl mt-10" style={{ ['--d' as string]: 2 }}>
             Every breakthrough has a place in time. Follow the thread of human ingenuity, from the first current to the box that moved the world, across the ages that built the modern era.

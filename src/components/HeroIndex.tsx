@@ -22,7 +22,7 @@ export default function HeroIndex({ episodes }: { episodes: Episode[] }) {
 
   return (
     <ol
-      className="hidden lg:block w-full max-w-[30rem]"
+      className="hidden lg:block w-full max-w-[28rem]"
       aria-label="Episodes"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}

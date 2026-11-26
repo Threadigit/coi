@@ -62,7 +62,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={social.name}
-                className="grid h-11 w-11 place-items-center rounded-full bg-white/[0.05] text-on-surface/60 ring-1 ring-white/[0.07] transition-all duration-500 hover:bg-primary hover:text-on-primary hover:scale-110"
+                className="grid h-11 w-11 place-items-center rounded-sm bg-white/[0.05] text-on-surface/60 ring-1 ring-white/[0.07] transition-all duration-500 hover:bg-primary hover:text-on-primary hover:scale-110"
               >
                 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className="h-[18px] w-[18px]">
                   <path d={social.path} />

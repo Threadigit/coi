@@ -186,6 +186,15 @@ export default function Home() {
         ]}
         highlight={['inventions']}
         kicker="Philosophy of Progress"
+        attribution={
+          <Link href="/about" className="group inline-flex items-center gap-5">
+            <span className="h-px w-12 bg-primary" aria-hidden="true" />
+            <span>
+              <span className="block text-primary serif-display italic text-2xl md:text-3xl transition-colors group-hover:text-[#ffe0a8]">Tolu Adetuyi</span>
+              <span className="kicker !tracking-[0.3em] !text-on-surface/60 mt-1.5 block">Executive Curator</span>
+            </span>
+          </Link>
+        }
         aside={
           <Link href="/about" className="group block">
             <div className="relative h-[64svh] max-h-[40rem] aspect-[3/4] overflow-hidden bg-surface-container">

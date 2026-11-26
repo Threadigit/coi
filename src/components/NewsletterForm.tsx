@@ -32,7 +32,7 @@ export default function NewsletterForm() {
 
   if (status === 'success' || status === 'already_subscribed') {
     return (
-      <div className="flex flex-col items-start justify-center py-2">
+      <div className="flex flex-col items-center justify-center py-2 text-center">
         <div className="mb-5">
           <span className="material-symbols-outlined text-primary text-3xl font-light">
             {status === 'already_subscribed' ? 'verified_user' : 'check_circle'}
@@ -57,7 +57,7 @@ export default function NewsletterForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="relative flex w-full max-w-xl flex-col gap-3 sm:flex-row sm:items-stretch sm:gap-0 mb-6">
+    <form onSubmit={handleSubmit} className="relative mx-auto flex w-full max-w-xl flex-col gap-3 sm:flex-row sm:items-stretch sm:gap-0 mb-6">
       <label htmlFor="newsletter-email" className="sr-only">Email address</label>
       <input
         id="newsletter-email"

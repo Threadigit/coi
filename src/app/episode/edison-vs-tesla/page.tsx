@@ -200,7 +200,7 @@ export default function EdisonVsTeslaEpisode() {
           </div>
           <div className="lb-bar lb-top" aria-hidden="true"></div>
           <div className="lb-bar lb-bot" aria-hidden="true"></div>
-          <div className="relative z-10 w-full max-w-[1500px] mx-auto">
+          <div className="relative z-10 w-full max-w-[1600px] mx-auto">
           <div className="max-w-5xl">
             <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mb-6">
               <span className="kicker">Episode 001</span>
@@ -254,14 +254,14 @@ export default function EdisonVsTeslaEpisode() {
 
         {/* Narrative Section */}
         <section className="px-5 md:px-12 py-20 md:py-32 bg-surface">
-          <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-24">
+          <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row gap-24">
             <div className="w-full md:w-1/3" data-reveal>
               <h2 className="eyebrow mb-6">The Genesis</h2>
               <p className="font-headline text-2xl text-on-surface-variant leading-relaxed italic">
                 &ldquo;This wasn&apos;t a contest of ideas. It was a war for the right to power the world, and only one current could win.&rdquo;
               </p>
             </div>
-            <div className="w-full md:w-2/3" data-reveal style={{ ["--d" as string]: 1 }}>
+            <div className="w-full md:w-2/3 max-w-3xl" data-reveal style={{ ["--d" as string]: 1 }}>
               <p className="drop-cap font-body text-lg md:text-xl text-on-surface/75 leading-[1.7] mb-8">
                 For all of human history, when the sun went down, the world went dark. Then, in 1879, Thomas Edison perfected the incandescent light bulb and set out to do something no one had attempted: to wire entire cities and sell electricity itself. His system ran on direct current, reliable over a few blocks, but fatally limited. DC could not travel far without bleeding away, demanding a power station on nearly every corner.
               </p>
@@ -284,7 +284,7 @@ export default function EdisonVsTeslaEpisode() {
             </div>
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/20"></div>
             <div className="absolute inset-0 scrim-side"></div>
-            <div className="relative z-10 w-full max-w-[1500px] mx-auto px-5 md:px-12 pb-14 md:pb-24 pt-28" data-reveal>
+            <div className="relative z-10 w-full max-w-[1600px] mx-auto px-5 md:px-12 pb-14 md:pb-24 pt-28" data-reveal>
               <span className="font-headline italic text-primary text-7xl md:text-[9rem] leading-none tracking-[-0.04em] block mb-4 md:mb-6">1879</span>
               <h4 className="title-card text-3xl md:text-6xl mb-5 md:mb-6 max-w-3xl">The Lamp That Banished Night</h4>
               <p className="text-on-surface/80 text-base md:text-xl leading-relaxed max-w-xl">Edison&apos;s carbon-filament bulb finally burned long enough to be practical. It was not the first electric light, but it was the first anyone could sell, the cornerstone of an empire built on direct current.</p>
@@ -296,7 +296,7 @@ export default function EdisonVsTeslaEpisode() {
             </div>
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/20"></div>
             <div className="absolute inset-0 scrim-side"></div>
-            <div className="relative z-10 w-full max-w-[1500px] mx-auto px-5 md:px-12 pb-14 md:pb-24 pt-28" data-reveal>
+            <div className="relative z-10 w-full max-w-[1600px] mx-auto px-5 md:px-12 pb-14 md:pb-24 pt-28" data-reveal>
               <span className="font-headline italic text-primary text-7xl md:text-[9rem] leading-none tracking-[-0.04em] block mb-4 md:mb-6">1888</span>
               <h4 className="title-card text-3xl md:text-6xl mb-5 md:mb-6 max-w-3xl">The Polyphase System</h4>
               <p className="text-on-surface/80 text-base md:text-xl leading-relaxed max-w-xl">Tesla&apos;s alternating-current motor and polyphase patents proved electricity could travel hundreds of miles at high voltage. Westinghouse bought the rights, and the War of Currents turned existential for Edison.</p>
@@ -308,7 +308,7 @@ export default function EdisonVsTeslaEpisode() {
             </div>
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/20"></div>
             <div className="absolute inset-0 scrim-side"></div>
-            <div className="relative z-10 w-full max-w-[1500px] mx-auto px-5 md:px-12 pb-14 md:pb-24 pt-28" data-reveal>
+            <div className="relative z-10 w-full max-w-[1600px] mx-auto px-5 md:px-12 pb-14 md:pb-24 pt-28" data-reveal>
               <span className="font-headline italic text-primary text-7xl md:text-[9rem] leading-none tracking-[-0.04em] block mb-4 md:mb-6">1893</span>
               <h4 className="title-card text-3xl md:text-6xl mb-5 md:mb-6 max-w-3xl">The World&apos;s Fair Showdown</h4>
               <p className="text-on-surface/80 text-base md:text-xl leading-relaxed max-w-xl">Westinghouse and Tesla lit the Chicago World&apos;s Columbian Exposition with AC, dazzling 27 million visitors. Within two years their current would harness Niagara Falls, settling the war for good.</p>
@@ -318,7 +318,7 @@ export default function EdisonVsTeslaEpisode() {
 
         {/* The Cast */}
         <section className="px-5 md:px-12 py-20 md:py-32 bg-[#05070a]">
-          <div className="max-w-[1500px] mx-auto">
+          <div className="max-w-[1600px] mx-auto">
             <div className="mb-12 md:mb-16 text-center" data-reveal>
               <div className="kicker mb-5">Featuring</div>
               <h3 className="title-card text-4xl md:text-6xl">The Combatants</h3>

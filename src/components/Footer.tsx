@@ -39,19 +39,19 @@ export default function Footer() {
   return (
     <footer className="relative mt-24 border-t border-white/[0.07] bg-surface-container-lowest">
       <div className="hairline absolute inset-x-0 top-0" aria-hidden="true" />
-      <div className="mx-auto max-w-7xl px-6 md:px-12 pt-14 pb-[max(2.5rem,env(safe-area-inset-bottom))]">
+      <div className="mx-auto max-w-[1600px] px-5 md:px-12 pt-14 pb-[max(2.5rem,env(safe-area-inset-bottom))]">
         <div className="flex flex-col gap-12 md:flex-row md:items-start md:justify-between">
           <div className="max-w-sm">
             <div className="font-headline italic text-primary text-2xl tracking-[-0.01em]">Chronicles of Innovation</div>
           </div>
 
-          <nav aria-label="Footer" className="grid grid-cols-2 gap-x-12 md:gap-x-16 gap-y-4 text-[14px]">
+          <nav aria-label="Footer" className="grid grid-cols-2 gap-x-12 md:gap-x-16 gap-y-2 text-[14px]">
             {nav.map((l) => (
-              <Link key={l.href} href={l.href} className="text-on-surface/60 transition-colors hover:text-on-surface">{l.label}</Link>
+              <Link key={l.href} href={l.href} className="py-1 text-on-surface/60 transition-colors hover:text-on-surface">{l.label}</Link>
             ))}
-            <Link href="/terms" className="text-on-surface/60 transition-colors hover:text-on-surface">Terms of Service</Link>
-            <Link href="/privacy" className="text-on-surface/60 transition-colors hover:text-on-surface">Privacy Policy</Link>
-            <Link href="mailto:hello@chroniclesofinnovation.com" className="text-on-surface/60 transition-colors hover:text-on-surface">Contact</Link>
+            <Link href="/terms" className="py-1 text-on-surface/60 transition-colors hover:text-on-surface">Terms of Service</Link>
+            <Link href="/privacy" className="py-1 text-on-surface/60 transition-colors hover:text-on-surface">Privacy Policy</Link>
+            <Link href="mailto:hello@chroniclesofinnovation.com" className="py-1 text-on-surface/60 transition-colors hover:text-on-surface">Contact</Link>
           </nav>
 
           <div className="flex items-center gap-2">

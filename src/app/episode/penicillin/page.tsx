@@ -176,7 +176,7 @@ export default function PenicillinEpisode() {
           </div>
           <div className="lb-bar lb-top" aria-hidden="true"></div>
           <div className="lb-bar lb-bot" aria-hidden="true"></div>
-          <div className="relative z-10 w-full max-w-[1500px] mx-auto">
+          <div className="relative z-10 w-full max-w-[1600px] mx-auto">
           <div className="max-w-5xl">
             <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mb-6">
               <span className="kicker">Episode 002</span>
@@ -230,14 +230,14 @@ export default function PenicillinEpisode() {
 
         {/* Narrative Section */}
         <section className="px-5 md:px-12 py-20 md:py-32 bg-surface">
-          <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-24">
+          <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row gap-24">
             <div className="w-full md:w-1/3" data-reveal>
               <h2 className="eyebrow mb-6">The Genesis</h2>
               <p className="font-headline text-2xl text-on-surface-variant leading-relaxed italic">
                 &ldquo;A dirty petri dish. A patch of mould. And an accident that would go on to save more lives than any invention in history.&rdquo;
               </p>
             </div>
-            <div className="w-full md:w-2/3" data-reveal style={{ ["--d" as string]: 1 }}>
+            <div className="w-full md:w-2/3 max-w-3xl" data-reveal style={{ ["--d" as string]: 1 }}>
               <p className="drop-cap font-body text-lg md:text-xl text-on-surface/75 leading-[1.7] mb-8">
                 In September 1928, the Scottish bacteriologist Alexander Fleming returned from holiday to a cluttered London laboratory and a stack of forgotten culture dishes. One had been colonised by a stray blue-green mould, and in a clear ring around it, the staphylococcus bacteria had simply vanished. Where others would have washed the dish out, Fleming paused. That contaminated plate held the first clue to penicillin, the substance the mould was quietly producing.
               </p>
@@ -260,7 +260,7 @@ export default function PenicillinEpisode() {
             </div>
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/20"></div>
             <div className="absolute inset-0 scrim-side"></div>
-            <div className="relative z-10 w-full max-w-[1500px] mx-auto px-5 md:px-12 pb-14 md:pb-24 pt-28" data-reveal>
+            <div className="relative z-10 w-full max-w-[1600px] mx-auto px-5 md:px-12 pb-14 md:pb-24 pt-28" data-reveal>
               <span className="font-headline italic text-primary text-7xl md:text-[9rem] leading-none tracking-[-0.04em] block mb-4 md:mb-6">1928</span>
               <h4 className="title-card text-3xl md:text-6xl mb-5 md:mb-6 max-w-3xl">The Contaminated Dish</h4>
               <p className="text-on-surface/80 text-base md:text-xl leading-relaxed max-w-xl">A patch of <span className="italic">Penicillium notatum</span> drifted onto a discarded culture plate and killed the bacteria around it. Fleming noticed what almost anyone else would have thrown away, the accident at the heart of modern medicine.</p>
@@ -272,7 +272,7 @@ export default function PenicillinEpisode() {
             </div>
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/20"></div>
             <div className="absolute inset-0 scrim-side"></div>
-            <div className="relative z-10 w-full max-w-[1500px] mx-auto px-5 md:px-12 pb-14 md:pb-24 pt-28" data-reveal>
+            <div className="relative z-10 w-full max-w-[1600px] mx-auto px-5 md:px-12 pb-14 md:pb-24 pt-28" data-reveal>
               <span className="font-headline italic text-primary text-7xl md:text-[9rem] leading-none tracking-[-0.04em] block mb-4 md:mb-6">1929</span>
               <h4 className="title-card text-3xl md:text-6xl mb-5 md:mb-6 max-w-3xl">The Discovery No One Wanted</h4>
               <p className="text-on-surface/80 text-base md:text-xl leading-relaxed max-w-xl">Fleming published his findings, but without a way to purify the fragile compound, penicillin was dismissed as a curiosity. For more than ten years, the most important antibacterial agent ever found sat unused in the scientific literature.</p>
@@ -284,7 +284,7 @@ export default function PenicillinEpisode() {
             </div>
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/20"></div>
             <div className="absolute inset-0 scrim-side"></div>
-            <div className="relative z-10 w-full max-w-[1500px] mx-auto px-5 md:px-12 pb-14 md:pb-24 pt-28" data-reveal>
+            <div className="relative z-10 w-full max-w-[1600px] mx-auto px-5 md:px-12 pb-14 md:pb-24 pt-28" data-reveal>
               <span className="font-headline italic text-primary text-7xl md:text-[9rem] leading-none tracking-[-0.04em] block mb-4 md:mb-6">1944</span>
               <h4 className="title-card text-3xl md:text-6xl mb-5 md:mb-6 max-w-3xl">The War Machine</h4>
               <p className="text-on-surface/80 text-base md:text-xl leading-relaxed max-w-xl">Oxford proved it could cure, and American industry proved it could scale. Glass flasks gave way to deep-tank fermentation, production times collapsed from weeks to days, and penicillin reached the front lines in time for D-Day.</p>
@@ -294,7 +294,7 @@ export default function PenicillinEpisode() {
 
         {/* The Cast */}
         <section className="px-5 md:px-12 py-20 md:py-32 bg-[#05070a]">
-          <div className="max-w-[1500px] mx-auto">
+          <div className="max-w-[1600px] mx-auto">
             <div className="mb-12 md:mb-16 text-center" data-reveal>
               <div className="kicker mb-5">Featuring</div>
               <h3 className="title-card text-4xl md:text-6xl">The Pioneers</h3>

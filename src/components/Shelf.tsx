@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { Children, useCallback, useEffect, useRef, useState } from 'react';
 
 /**
  * A horizontally scrolling, snap-aligned row ("shelf") with glass paddle
@@ -15,15 +15,17 @@ export default function Shelf({
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const [edge, setEdge] = useState({ start: true, end: false });
+  const [index, setIndex] = useState(0);
+  const count = Children.count(children);
 
   const measure = useCallback(() => {
     const el = ref.current;
     if (!el) return;
-    setEdge({
-      start: el.scrollLeft <= 4,
-      end: el.scrollLeft + el.clientWidth >= el.scrollWidth - 4,
-    });
-  }, []);
+    const atEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 4;
+    setEdge({ start: el.scrollLeft <= 4, end: atEnd });
+    const max = el.scrollWidth - el.clientWidth;
+    setIndex(max > 0 ? Math.round((el.scrollLeft / max) * (count - 1)) : 0);
+  }, [count]);
 
   useEffect(() => {
     const el = ref.current;
@@ -48,8 +50,13 @@ export default function Shelf({
 
   return (
     <div className="relative group/shelf" role="region" aria-label={label}>
-      <div ref={ref} onScroll={measure} className="shelf -mx-6 px-6 md:-mx-12 md:px-12 scroll-pl-6 md:scroll-pl-12" tabIndex={-1}>
+      <div ref={ref} onScroll={measure} className="shelf -mx-5 px-5 md:-mx-12 md:px-12 scroll-pl-5 md:scroll-pl-12" tabIndex={-1}>
         {children}
+      </div>
+      <div className="mt-8 flex items-center justify-center gap-2 md:hidden" aria-hidden="true">
+        {Array.from({ length: count }).map((_, i) => (
+          <span key={i} className={`h-1.5 rounded-full transition-all duration-500 ${i === index ? 'w-6 bg-on-surface' : 'w-1.5 bg-white/25'}`} />
+        ))}
       </div>
       <button
         type="button"

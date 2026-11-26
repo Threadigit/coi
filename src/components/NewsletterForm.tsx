@@ -57,11 +57,11 @@ export default function NewsletterForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="relative mx-auto flex w-full max-w-xl flex-col gap-3 sm:flex-row sm:items-center sm:rounded-full sm:bg-white/[0.07] sm:p-1.5 sm:ring-1 sm:ring-white/10 sm:focus-within:ring-primary/50 transition-shadow">
+    <form onSubmit={handleSubmit} className="relative mx-auto mb-6 flex w-full max-w-xl flex-col gap-3 sm:flex-row sm:items-center sm:rounded-full sm:bg-white/[0.07] sm:p-1.5 sm:ring-1 sm:ring-white/10 sm:focus-within:ring-primary/50 transition-shadow">
       <label htmlFor="newsletter-email" className="sr-only">Email address</label>
       <input
         id="newsletter-email"
-        className="h-14 w-full flex-1 rounded-full bg-white/[0.07] px-7 text-[15px] text-on-surface outline-none ring-1 ring-white/10 placeholder:text-on-surface/40 transition-shadow focus:ring-primary/50 disabled:opacity-50 sm:h-12 sm:bg-transparent sm:ring-0 sm:focus:ring-0"
+        className="h-14 w-full min-w-0 sm:flex-1 rounded-full bg-white/[0.07] px-6 sm:px-7 text-base text-on-surface outline-none ring-1 ring-white/10 placeholder:text-on-surface/40 transition-shadow focus:ring-primary/50 disabled:opacity-50 sm:h-12 sm:bg-transparent sm:ring-0 sm:focus:ring-0"
         placeholder="Enter your email address"
         type="email"
         autoComplete="email"
@@ -73,7 +73,7 @@ export default function NewsletterForm() {
       <button
         type="submit"
         disabled={status === 'loading'}
-        className="btn btn-primary h-14 sm:h-12 !px-8 disabled:opacity-50 min-w-[9rem]"
+        className="btn btn-primary h-14 w-full sm:w-auto sm:h-12 !px-8 disabled:opacity-50 sm:min-w-[9rem]"
       >
         {status === 'loading' ? (
           <span className="material-symbols-outlined animate-spin text-on-primary">sync</span>
@@ -82,7 +82,7 @@ export default function NewsletterForm() {
         )}
       </button>
       {status === 'error' && (
-        <span role="alert" className="text-red-400 text-xs absolute -bottom-7 inset-x-0 text-center">{errorMessage}</span>
+        <span role="alert" className="text-red-400 text-xs absolute inset-x-0 text-center top-full mt-3">{errorMessage}</span>
       )}
     </form>
   );

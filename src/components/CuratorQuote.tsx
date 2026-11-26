@@ -66,7 +66,11 @@ export default function CuratorQuote() {
               className="object-cover object-top saturate-[.85] transition-[transform,filter] duration-[2200ms] ease-[var(--ease-spring)] group-hover:saturate-100"
               style={{ transform: lit ? 'scale(1)' : 'scale(1.18)' }}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent" />
+            <div className="absolute inset-x-0 bottom-0 p-5 md:p-6">
+              <span className="block text-primary serif-display italic text-2xl">Tolu Adetuyi</span>
+              <span className="kicker !tracking-[0.3em] !text-on-surface/70 mt-1.5 block">Executive Curator</span>
+            </div>
           </div>
         </Link>
 
@@ -91,28 +95,12 @@ export default function CuratorQuote() {
             </span>
           </p>
 
-          <div
-            className="mt-7 md:mt-9 flex items-center gap-5"
-            style={{
-              opacity: lit ? 1 : 0,
-              transform: lit ? 'none' : 'translateY(10px)',
-              transition: 'opacity 0.9s ease, transform 0.9s ease',
-              transitionDelay: lit ? `${signatureDelay}ms` : '0ms',
-            }}
-          >
-            <span className="h-px w-10 md:w-14 bg-primary" aria-hidden="true" />
-            <span>
-              <span className="block text-primary serif-display italic text-xl md:text-2xl">Tolu Adetuyi</span>
-              <span className="kicker !tracking-[0.3em] !text-on-surface/60 mt-1 block">Executive Curator</span>
-            </span>
-          </div>
-
           <p
-            className="mt-8 md:mt-10 max-w-xl text-on-surface/65 text-[15px] md:text-lg leading-relaxed"
+            className="mt-7 md:mt-9 max-w-xl text-on-surface/65 text-[15px] md:text-lg leading-relaxed"
             style={{
               opacity: lit ? 1 : 0,
               transition: 'opacity 1s ease',
-              transitionDelay: lit ? `${signatureDelay + 350}ms` : '0ms',
+              transitionDelay: lit ? `${signatureDelay}ms` : '0ms',
             }}
           >
             Our mission at Chronicles of Innovation is to archive the sparks that ignited entire eras. We don&apos;t just show you what was built; we show you why it mattered to the soul of humanity.

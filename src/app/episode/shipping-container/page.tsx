@@ -293,33 +293,31 @@ export default function ShippingContainerEpisode() {
         </section>
 
         {/* The Cast */}
-        <section className="px-5 md:px-12 py-24 md:py-40 bg-[#05070a]">
+        <section className="px-5 md:px-12 py-20 md:py-32 bg-[#05070a]">
           <div className="max-w-[1500px] mx-auto">
-            <div className="mb-16 md:mb-24 text-center" data-reveal>
+            <div className="mb-12 md:mb-16 text-center" data-reveal>
               <div className="kicker mb-5">Featuring</div>
-              <h3 className="title-card text-4xl md:text-7xl">The Pioneers</h3>
+              <h3 className="title-card text-4xl md:text-6xl">The Pioneers</h3>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 max-w-4xl mx-auto gap-14 md:gap-12">
-              <div className="group" data-reveal>
-                <div className="relative aspect-[4/5] overflow-hidden bg-surface-container-high">
-                  <Image src="/ep4-mclean.jpg" alt="Malcom McLean" fill sizes="(max-width: 768px) 90vw, 33vw" className="object-cover saturate-[.35] transition-all duration-[1400ms] ease-[var(--ease-spring)] group-hover:saturate-100 group-hover:scale-[1.04]" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+            <div className="grid grid-cols-1 md:grid-cols-2 max-w-4xl gap-10 md:gap-x-12 md:gap-y-12 mx-auto">
+              <div className="group flex items-start gap-5" data-reveal>
+                <div className="relative h-28 w-28 md:h-32 md:w-32 shrink-0 overflow-hidden bg-surface-container-high">
+                  <Image src="/ep4-mclean.jpg" alt="Malcom McLean" fill sizes="128px" className="object-cover saturate-[.4] transition-all duration-[900ms] group-hover:saturate-100" />
                 </div>
-                <div className="mt-6 text-center">
-                  <h5 className="title-card text-2xl md:text-3xl text-primary mb-2">Malcom McLean</h5>
-                  <p className="kicker !tracking-[0.3em] mb-4">The Visionary</p>
-                  <p className="text-on-surface/60 text-[15px] leading-relaxed max-w-sm mx-auto">The trucker-turned-shipping-magnate who refused to accept that loading a ship had to be slow. He risked his fortune to prove that a standard box, not the cargo inside it, was the thing worth moving.</p>
+                <div className="min-w-0">
+                  <h5 className="title-card text-xl md:text-2xl text-primary mb-1.5">Malcom McLean</h5>
+                  <p className="kicker !tracking-[0.25em] !text-[10px] mb-3">The Visionary</p>
+                  <p className="text-on-surface/60 text-[14px] leading-relaxed">The trucker-turned-shipping-magnate who refused to accept that loading a ship had to be slow. He risked his fortune to prove that a standard box, not the cargo inside it, was the thing worth moving.</p>
                 </div>
               </div>
-              <div className="group" data-reveal>
-                <div className="relative aspect-[4/5] overflow-hidden bg-surface-container-high">
-                  <Image src="/ep4-tantlinger.jpg" alt="Keith Tantlinger" fill sizes="(max-width: 768px) 90vw, 33vw" className="object-cover saturate-[.35] transition-all duration-[1400ms] ease-[var(--ease-spring)] group-hover:saturate-100 group-hover:scale-[1.04]" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+              <div className="group flex items-start gap-5" data-reveal>
+                <div className="relative h-28 w-28 md:h-32 md:w-32 shrink-0 overflow-hidden bg-surface-container-high">
+                  <Image src="/ep4-tantlinger.jpg" alt="Keith Tantlinger" fill sizes="128px" className="object-cover saturate-[.4] transition-all duration-[900ms] group-hover:saturate-100" />
                 </div>
-                <div className="mt-6 text-center">
-                  <h5 className="title-card text-2xl md:text-3xl text-primary mb-2">Keith Tantlinger</h5>
-                  <p className="kicker !tracking-[0.3em] mb-4">The Engineer</p>
-                  <p className="text-on-surface/60 text-[15px] leading-relaxed max-w-sm mx-auto">The engineer who solved the hard part: the corner castings and twistlocks that let containers lock together, stack high, and lift fast. His employer gave the patents away so the whole world could adopt them.</p>
+                <div className="min-w-0">
+                  <h5 className="title-card text-xl md:text-2xl text-primary mb-1.5">Keith Tantlinger</h5>
+                  <p className="kicker !tracking-[0.25em] !text-[10px] mb-3">The Engineer</p>
+                  <p className="text-on-surface/60 text-[14px] leading-relaxed">The engineer who solved the hard part: the corner castings and twistlocks that let containers lock together, stack high, and lift fast. His employer gave the patents away so the whole world could adopt them.</p>
                 </div>
               </div>
             </div>

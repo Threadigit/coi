@@ -293,44 +293,41 @@ export default function WrightBrothersEpisode() {
         </section>
 
         {/* The Cast */}
-        <section className="px-5 md:px-12 py-24 md:py-40 bg-[#05070a]">
+        <section className="px-5 md:px-12 py-20 md:py-32 bg-[#05070a]">
           <div className="max-w-[1500px] mx-auto">
-            <div className="mb-16 md:mb-24 text-center" data-reveal>
+            <div className="mb-12 md:mb-16 text-center" data-reveal>
               <div className="kicker mb-5">Featuring</div>
-              <h3 className="title-card text-4xl md:text-7xl">The Pioneers</h3>
+              <h3 className="title-card text-4xl md:text-6xl">The Pioneers</h3>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-14 md:gap-12">
-              <div className="group" data-reveal>
-                <div className="relative aspect-[4/5] overflow-hidden bg-surface-container-high">
-                  <Image src="/ep3-wilbur.jpg" alt="Wilbur Wright" fill sizes="(max-width: 768px) 90vw, 33vw" className="object-cover saturate-[.35] transition-all duration-[1400ms] ease-[var(--ease-spring)] group-hover:saturate-100 group-hover:scale-[1.04]" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-x-12 md:gap-y-12 mx-auto">
+              <div className="group flex items-start gap-5" data-reveal>
+                <div className="relative h-28 w-28 md:h-32 md:w-32 shrink-0 overflow-hidden bg-surface-container-high">
+                  <Image src="/ep3-wilbur.jpg" alt="Wilbur Wright" fill sizes="128px" className="object-cover saturate-[.4] transition-all duration-[900ms] group-hover:saturate-100" />
                 </div>
-                <div className="mt-6 text-center">
-                  <h5 className="title-card text-2xl md:text-3xl text-primary mb-2">Wilbur Wright</h5>
-                  <p className="kicker !tracking-[0.3em] mb-4">The Strategist</p>
-                  <p className="text-on-surface/60 text-[15px] leading-relaxed max-w-sm mx-auto">The elder brother and driving intellect, who framed flight as a problem of control and led the theoretical work, then carried the Flyer to Europe and made the world believe.</p>
-                </div>
-              </div>
-              <div className="group" data-reveal>
-                <div className="relative aspect-[4/5] overflow-hidden bg-surface-container-high">
-                  <Image src="/ep3-orville.jpg" alt="Orville Wright" fill sizes="(max-width: 768px) 90vw, 33vw" className="object-cover saturate-[.35] transition-all duration-[1400ms] ease-[var(--ease-spring)] group-hover:saturate-100 group-hover:scale-[1.04]" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-                </div>
-                <div className="mt-6 text-center">
-                  <h5 className="title-card text-2xl md:text-3xl text-primary mb-2">Orville Wright</h5>
-                  <p className="kicker !tracking-[0.3em] mb-4">The Builder</p>
-                  <p className="text-on-surface/60 text-[15px] leading-relaxed max-w-sm mx-auto">The hands-on engineer and mechanic who piloted the first flight at Kitty Hawk, and who lived long enough to see aircraft break the sound barrier.</p>
+                <div className="min-w-0">
+                  <h5 className="title-card text-xl md:text-2xl text-primary mb-1.5">Wilbur Wright</h5>
+                  <p className="kicker !tracking-[0.25em] !text-[10px] mb-3">The Strategist</p>
+                  <p className="text-on-surface/60 text-[14px] leading-relaxed">The elder brother and driving intellect, who framed flight as a problem of control and led the theoretical work, then carried the Flyer to Europe and made the world believe.</p>
                 </div>
               </div>
-              <div className="group" data-reveal>
-                <div className="relative aspect-[4/5] overflow-hidden bg-surface-container-high">
-                  <Image src="/ep3-lilienthal.jpg" alt="Otto Lilienthal" fill sizes="(max-width: 768px) 90vw, 33vw" className="object-cover saturate-[.35] transition-all duration-[1400ms] ease-[var(--ease-spring)] group-hover:saturate-100 group-hover:scale-[1.04]" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+              <div className="group flex items-start gap-5" data-reveal>
+                <div className="relative h-28 w-28 md:h-32 md:w-32 shrink-0 overflow-hidden bg-surface-container-high">
+                  <Image src="/ep3-orville.jpg" alt="Orville Wright" fill sizes="128px" className="object-cover saturate-[.4] transition-all duration-[900ms] group-hover:saturate-100" />
                 </div>
-                <div className="mt-6 text-center">
-                  <h5 className="title-card text-2xl md:text-3xl text-primary mb-2">Otto Lilienthal</h5>
-                  <p className="kicker !tracking-[0.3em] mb-4">The Glider Pioneer</p>
-                  <p className="text-on-surface/60 text-[15px] leading-relaxed max-w-sm mx-auto">The German &ldquo;flying man&rdquo; whose gliding experiments, and fatal 1896 crash, inspired the Wrights and proved that mastering control, not just lift, was the key to flight.</p>
+                <div className="min-w-0">
+                  <h5 className="title-card text-xl md:text-2xl text-primary mb-1.5">Orville Wright</h5>
+                  <p className="kicker !tracking-[0.25em] !text-[10px] mb-3">The Builder</p>
+                  <p className="text-on-surface/60 text-[14px] leading-relaxed">The hands-on engineer and mechanic who piloted the first flight at Kitty Hawk, and who lived long enough to see aircraft break the sound barrier.</p>
+                </div>
+              </div>
+              <div className="group flex items-start gap-5" data-reveal>
+                <div className="relative h-28 w-28 md:h-32 md:w-32 shrink-0 overflow-hidden bg-surface-container-high">
+                  <Image src="/ep3-lilienthal.jpg" alt="Otto Lilienthal" fill sizes="128px" className="object-cover saturate-[.4] transition-all duration-[900ms] group-hover:saturate-100" />
+                </div>
+                <div className="min-w-0">
+                  <h5 className="title-card text-xl md:text-2xl text-primary mb-1.5">Otto Lilienthal</h5>
+                  <p className="kicker !tracking-[0.25em] !text-[10px] mb-3">The Glider Pioneer</p>
+                  <p className="text-on-surface/60 text-[14px] leading-relaxed">The German &ldquo;flying man&rdquo; whose gliding experiments, and fatal 1896 crash, inspired the Wrights and proved that mastering control, not just lift, was the key to flight.</p>
                 </div>
               </div>
             </div>

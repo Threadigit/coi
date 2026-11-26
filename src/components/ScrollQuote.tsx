@@ -12,24 +12,33 @@ export default function ScrollQuote({
   highlight = [],
   kicker,
   aside,
+  attribution,
   children,
 }: {
   words: string[];
   highlight?: string[];
   kicker?: string;
   aside?: React.ReactNode;
+  attribution?: React.ReactNode;
   children?: React.ReactNode;
 }) {
   const sceneRef = useRef<HTMLDivElement>(null);
   const refs = useRef<(HTMLSpanElement | null)[]>([]);
+  const attrRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const scene = sceneRef.current;
     if (!scene) return;
-    const set = (n: number) =>
+    const set = (n: number) => {
       refs.current.forEach((el, i) => {
         if (el) el.style.opacity = i < n ? '1' : '0.16';
       });
+      if (attrRef.current) {
+        const done = n >= words.length;
+        attrRef.current.style.opacity = done ? '1' : '0.25';
+        attrRef.current.style.transform = done ? 'none' : 'translateY(8px)';
+      }
+    };
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       set(words.length);
       return;
@@ -78,6 +87,15 @@ export default function ScrollQuote({
               ))}
             </span>
           </p>
+          {attribution && (
+            <div
+              ref={attrRef}
+              className="mt-8 md:mt-10"
+              style={{ opacity: 0.25, transform: 'translateY(8px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}
+            >
+              {attribution}
+            </div>
+          )}
           {children}
           </div>
         </div>

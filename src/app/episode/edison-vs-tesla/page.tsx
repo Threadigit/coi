@@ -88,7 +88,7 @@ export default function EdisonVsTeslaEpisode() {
         "@id": `${SITE}${PATH}#video`,
         "name": VIDEO_NAME,
         "alternateName": PAGE_TITLE,
-        "description": "The War of Currents was never just science — it was war. Discover how Thomas Edison's direct current empire collided with Nikola Tesla's alternating current, a rivalry that electrified the modern world and broke the men who waged it.",
+        "description": "The War of Currents was never just science, it was war. Discover how Thomas Edison's direct current empire collided with Nikola Tesla's alternating current, a rivalry that electrified the modern world and broke the men who waged it.",
         "thumbnailUrl": [
           `https://i.ytimg.com/vi/${VIDEO_ID}/maxresdefault.jpg`,
           `${SITE}/edison-machine-shop.jpg`,
@@ -258,15 +258,15 @@ export default function EdisonVsTeslaEpisode() {
             <div className="w-full md:w-1/3" data-reveal>
               <h2 className="eyebrow mb-6">The Genesis</h2>
               <p className="font-headline text-2xl text-on-surface-variant leading-relaxed italic">
-                &ldquo;This wasn&apos;t a contest of ideas. It was a war for the right to power the world — and only one current could win.&rdquo;
+                &ldquo;This wasn&apos;t a contest of ideas. It was a war for the right to power the world, and only one current could win.&rdquo;
               </p>
             </div>
             <div className="w-full md:w-2/3" data-reveal style={{ ["--d" as string]: 1 }}>
               <p className="drop-cap font-body text-lg md:text-xl text-on-surface/75 leading-[1.7] mb-8">
-                For all of human history, when the sun went down, the world went dark. Then, in 1879, Thomas Edison perfected the incandescent light bulb and set out to do something no one had attempted: to wire entire cities and sell electricity itself. His system ran on direct current — reliable over a few blocks, but fatally limited. DC could not travel far without bleeding away, demanding a power station on nearly every corner.
+                For all of human history, when the sun went down, the world went dark. Then, in 1879, Thomas Edison perfected the incandescent light bulb and set out to do something no one had attempted: to wire entire cities and sell electricity itself. His system ran on direct current, reliable over a few blocks, but fatally limited. DC could not travel far without bleeding away, demanding a power station on nearly every corner.
               </p>
               <p className="font-body text-lg md:text-xl text-on-surface/75 leading-[1.7]">
-                Into that flaw walked Nikola Tesla, a Serbian immigrant with a head full of alternating-current machines Edison dismissed. When Tesla&apos;s vision collided with Edison&apos;s empire — and George Westinghouse&apos;s capital — it ignited the War of Currents: a brutal campaign of public demonstrations, propaganda, and electrocutions that would decide how humanity would be powered for the next century. One man would win the war. The other would win the future.
+                Into that flaw walked Nikola Tesla, a Serbian immigrant with a head full of alternating-current machines Edison dismissed. When Tesla&apos;s vision collided with Edison&apos;s empire, and George Westinghouse&apos;s capital, it ignited the War of Currents: a brutal campaign of public demonstrations, propaganda, and electrocutions that would decide how humanity would be powered for the next century. One man would win the war. The other would win the future.
               </p>
             </div>
           </div>
@@ -284,7 +284,7 @@ export default function EdisonVsTeslaEpisode() {
                 <div className="w-full md:w-1/2">
                   <span className="font-headline italic text-primary text-6xl md:text-8xl tracking-[-0.04em] mb-4 block">1879</span>
                   <h4 className="font-headline text-3xl md:text-4xl tracking-[-0.025em] mb-5">The Lamp That Banished Night</h4>
-                  <p className="text-on-surface/60 text-lg leading-relaxed">Edison&apos;s carbon-filament bulb finally burned long enough to be practical. It was not the first electric light, but it was the first anyone could sell — the cornerstone of an empire built on direct current.</p>
+                  <p className="text-on-surface/60 text-lg leading-relaxed">Edison&apos;s carbon-filament bulb finally burned long enough to be practical. It was not the first electric light, but it was the first anyone could sell, the cornerstone of an empire built on direct current.</p>
                 </div>
               </div>
 
@@ -295,7 +295,7 @@ export default function EdisonVsTeslaEpisode() {
                 <div className="w-full md:w-1/2 text-right">
                   <span className="font-headline italic text-secondary text-6xl md:text-8xl tracking-[-0.04em] mb-4 block">1888</span>
                   <h4 className="font-headline text-3xl md:text-4xl tracking-[-0.025em] mb-5">The Polyphase System</h4>
-                  <p className="text-on-surface/60 text-lg leading-relaxed">Tesla&apos;s alternating-current motor and polyphase patents proved electricity could travel hundreds of miles at high voltage. Westinghouse bought the rights — and the War of Currents turned existential for Edison.</p>
+                  <p className="text-on-surface/60 text-lg leading-relaxed">Tesla&apos;s alternating-current motor and polyphase patents proved electricity could travel hundreds of miles at high voltage. Westinghouse bought the rights, and the War of Currents turned existential for Edison.</p>
                 </div>
               </div>
 
@@ -306,7 +306,7 @@ export default function EdisonVsTeslaEpisode() {
                 <div className="w-full md:w-1/2">
                   <span className="font-headline italic text-primary text-6xl md:text-8xl tracking-[-0.04em] mb-4 block">1893</span>
                   <h4 className="font-headline text-3xl md:text-4xl tracking-[-0.025em] mb-5">The World&apos;s Fair Showdown</h4>
-                  <p className="text-on-surface/60 text-lg leading-relaxed">Westinghouse and Tesla lit the Chicago World&apos;s Columbian Exposition with AC, dazzling 27 million visitors. Within two years their current would harness Niagara Falls — settling the war for good.</p>
+                  <p className="text-on-surface/60 text-lg leading-relaxed">Westinghouse and Tesla lit the Chicago World&apos;s Columbian Exposition with AC, dazzling 27 million visitors. Within two years their current would harness Niagara Falls, settling the war for good.</p>
                 </div>
               </div>
             </div>

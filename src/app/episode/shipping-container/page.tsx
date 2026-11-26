@@ -15,7 +15,7 @@ const VIDEO_NAME = "How a Simple Box Changed Global Trade: The Shipping Containe
 
 const PAGE_TITLE = "The Shipping Container: The Box That Changed Global Trade";
 const PAGE_DESCRIPTION =
-  "How a North Carolina trucker named Malcom McLean turned a simple steel box into the shipping container — the invention that rewired global trade and built the modern economy.";
+  "How a North Carolina trucker named Malcom McLean turned a simple steel box into the shipping container, the invention that rewired global trade and built the modern economy.";
 
 const KEYWORDS = [
   "shipping container",
@@ -72,7 +72,7 @@ export default function ShippingContainerEpisode() {
         "@id": `${SITE}${PATH}#video`,
         "name": VIDEO_NAME,
         "alternateName": PAGE_TITLE,
-        "description": "A single steel box changed the way the world does business. The story of how Malcom McLean, a trucker from North Carolina, and engineer Keith Tantlinger turned the shipping container from a simple idea into the system that rewired global trade — from the first voyage of the Ideal X in 1956 to the modern global supply chain.",
+        "description": "A single steel box changed the way the world does business. The story of how Malcom McLean, a trucker from North Carolina, and engineer Keith Tantlinger turned the shipping container from a simple idea into the system that rewired global trade, from the first voyage of the Ideal X in 1956 to the modern global supply chain.",
         "thumbnailUrl": [
           `https://i.ytimg.com/vi/${VIDEO_ID}/maxresdefault.jpg`,
           `${SITE}/container-hero.jpg`,
@@ -234,7 +234,7 @@ export default function ShippingContainerEpisode() {
             <div className="w-full md:w-1/3" data-reveal>
               <h2 className="eyebrow mb-6">The Genesis</h2>
               <p className="font-headline text-2xl text-on-surface-variant leading-relaxed italic">
-                &ldquo;It was not a new engine or a new material. It was a box — and it quietly rebuilt the entire economy of the planet.&rdquo;
+                &ldquo;It was not a new engine or a new material. It was a box, and it quietly rebuilt the entire economy of the planet.&rdquo;
               </p>
             </div>
             <div className="w-full md:w-2/3" data-reveal style={{ ["--d" as string]: 1 }}>
@@ -242,7 +242,7 @@ export default function ShippingContainerEpisode() {
                 Before the container, moving goods across an ocean was slow, costly, and chaotic. Cargo was loaded piece by piece by armies of dockworkers, and a ship could spend more time sitting in port being filled and emptied than it spent at sea. In 1937, a young North Carolina trucker named Malcom McLean sat for hours waiting to unload his cargo onto a ship and wondered why the whole trailer could not simply be lifted aboard. Decades later, he set out to prove it could.
               </p>
               <p className="font-body text-lg md:text-xl text-on-surface/75 leading-[1.7]">
-                Working with the engineer Keith Tantlinger, McLean turned that idea into a standardised steel box that could move seamlessly between truck, train, and ship. On April 26, 1956, his converted tanker, the Ideal X, carried fifty-eight containers from Newark to Houston — and the economics of global trade began to change forever. Shipping costs collapsed, Asian factories were wired to Western shelves, and the modern supply chain was born. But the revolution had a human cost: the great dock labour forces that had loaded ships for centuries all but vanished.
+                Working with the engineer Keith Tantlinger, McLean turned that idea into a standardised steel box that could move seamlessly between truck, train, and ship. On April 26, 1956, his converted tanker, the Ideal X, carried fifty-eight containers from Newark to Houston, and the economics of global trade began to change forever. Shipping costs collapsed, Asian factories were wired to Western shelves, and the modern supply chain was born. But the revolution had a human cost: the great dock labour forces that had loaded ships for centuries all but vanished.
               </p>
             </div>
           </div>
@@ -260,7 +260,7 @@ export default function ShippingContainerEpisode() {
                 <div className="w-full md:w-1/2">
                   <span className="font-headline italic text-primary text-6xl md:text-8xl tracking-[-0.04em] mb-4 block">1956</span>
                   <h4 className="font-headline text-3xl md:text-4xl tracking-[-0.025em] mb-5">The Voyage of the Ideal X</h4>
-                  <p className="text-on-surface/60 text-lg leading-relaxed">On April 26, McLean&apos;s converted T2 tanker carried fifty-eight containers from Newark to Houston. It cost a fraction of loading loose cargo by hand — the first voyage of the container age.</p>
+                  <p className="text-on-surface/60 text-lg leading-relaxed">On April 26, McLean&apos;s converted T2 tanker carried fifty-eight containers from Newark to Houston. It cost a fraction of loading loose cargo by hand, the first voyage of the container age.</p>
                 </div>
               </div>
 
@@ -271,7 +271,7 @@ export default function ShippingContainerEpisode() {
                 <div className="w-full md:w-1/2 text-right">
                   <span className="font-headline italic text-secondary text-6xl md:text-8xl tracking-[-0.04em] mb-4 block">1960s</span>
                   <h4 className="font-headline text-3xl md:text-4xl tracking-[-0.025em] mb-5">The Battle for the Standard</h4>
-                  <p className="text-on-surface/60 text-lg leading-relaxed">A box is only useful if every ship, crane, and truck in the world agrees on its size. Tantlinger&apos;s corner castings and twistlocks — released patent-free — became the global ISO standard that let any container stack anywhere.</p>
+                  <p className="text-on-surface/60 text-lg leading-relaxed">A box is only useful if every ship, crane, and truck in the world agrees on its size. Tantlinger&apos;s corner castings and twistlocks, released patent-free, became the global ISO standard that let any container stack anywhere.</p>
                 </div>
               </div>
 
@@ -282,7 +282,7 @@ export default function ShippingContainerEpisode() {
                 <div className="w-full md:w-1/2">
                   <span className="font-headline italic text-primary text-6xl md:text-8xl tracking-[-0.04em] mb-4 block">Today</span>
                   <h4 className="font-headline text-3xl md:text-4xl tracking-[-0.025em] mb-5">The World in a Box</h4>
-                  <p className="text-on-surface/60 text-lg leading-relaxed">Containerisation gutted the cost of moving goods, emptied the old docks, and stitched together the factories of Asia with the shelves of the West — building the global supply chain the modern world now runs on.</p>
+                  <p className="text-on-surface/60 text-lg leading-relaxed">Containerisation gutted the cost of moving goods, emptied the old docks, and stitched together the factories of Asia with the shelves of the West, building the global supply chain the modern world now runs on.</p>
                 </div>
               </div>
             </div>

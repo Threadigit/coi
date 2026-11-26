@@ -22,7 +22,7 @@ export default function TermsOfService() {
         <p>By accessing the Chronicles of Innovation website, you acknowledge that you have read, understood, and agree to be legally bound by these Terms. If you do not agree to these Terms, please do not use our website or subscribe to our materials.</p>
         
         <h2 className="font-headline text-3xl tracking-[-0.02em] text-on-surface mt-16 mb-5">2. Intellectual Property & Copyright</h2>
-        <p>All content presented on this website—including but not limited to documentaries, articles, text, graphics, logos, images, and cinematic designs—is the exclusive property of Chronicles of Innovation or its content creators, and is protected by international copyright laws.</p>
+        <p>All content presented on this website, including but not limited to documentaries, articles, text, graphics, logos, images, and cinematic designs, is the exclusive property of Chronicles of Innovation or its content creators, and is protected by international copyright laws.</p>
         <ul className="list-disc pl-6 space-y-2 text-on-surface/60">
           <li>You may not reproduce, distribute, fundamentally modify, or commercially exploit our original content without explicit written permission.</li>
           <li>You may share links to our public articles, YouTube videos, and website pages provided appropriate credit is explicitly given to Chronicles of Innovation.</li>

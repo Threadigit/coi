@@ -50,7 +50,7 @@ export default async function Archive({ searchParams }: Props) {
     "@type": "CollectionPage",
     "@id": "https://chroniclesofinnovation.com/archive#collection",
     "url": "https://chroniclesofinnovation.com/archive",
-    "name": "The Archive — Chronicles of Innovation",
+    "name": "The Archive | Chronicles of Innovation",
     "description": "Search and explore our curated archive of human progress, spanning the Industrial, Atomic, and Digital eras.",
     "isPartOf": { "@id": "https://chroniclesofinnovation.com/#series" },
     "mainEntity": {

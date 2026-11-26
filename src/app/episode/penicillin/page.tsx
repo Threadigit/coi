@@ -170,18 +170,19 @@ export default function PenicillinEpisode() {
               priority
               className="object-cover object-top opacity-50"
             />
-            <div className="absolute inset-0 scrim-side"></div>
-            <div className="absolute inset-x-0 top-0 h-40 scrim-top"></div>
+            <div className="absolute inset-0 bg-black/20"></div>
+            <div className="absolute inset-x-0 top-0 h-44 scrim-top"></div>
             <div className="absolute inset-x-0 bottom-0 h-[75%] scrim-bottom"></div>
           </div>
-          <div className="relative z-10 w-full max-w-[1400px] mx-auto">
+          <div className="lb-bar lb-top" aria-hidden="true"></div>
+          <div className="lb-bar lb-bot" aria-hidden="true"></div>
+          <div className="relative z-10 w-full max-w-[1500px] mx-auto">
           <div className="max-w-5xl">
             <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mb-6">
-              <span className="h-px w-10 bg-primary" aria-hidden="true"></span>
-              <span className="eyebrow !text-on-surface/85">Episode 002</span>
-              <span className="eyebrow !text-on-surface/55">1928 - 1945</span>
+              <span className="kicker">Episode 002</span>
+              <span className="kicker !text-on-surface/50">1928 - 1945</span>
             </div>
-            <h1 className="font-headline text-[2.3rem] sm:text-6xl md:text-7xl lg:text-[5.25rem] leading-[1.05] text-on-surface tracking-[-0.035em] mb-7 md:mb-10">
+            <h1 className="title-card text-[2.3rem] sm:text-6xl md:text-7xl lg:text-[6rem] text-on-surface mb-7 md:mb-10">
               Penicillin: <br/><span className="text-primary italic pr-2">The Accident That Changed Medicine</span>
             </h1>
             <div className="flex flex-wrap items-center gap-x-8 gap-y-3 border-t border-white/[0.2] pt-5 text-on-surface/85 max-w-2xl">
@@ -209,9 +210,9 @@ export default function PenicillinEpisode() {
 
         {/* Watch Section: full-width theatre */}
         <section id="watch" className="relative scroll-mt-0 bg-black">
-          <div className="max-w-[1600px] mx-auto px-5 md:px-12 pt-16 md:pt-24 pb-8 md:pb-10 border-0" data-reveal>
-            <span className="eyebrow mb-4 block">The Full Documentary</span>
-            <h2 className="font-headline text-4xl md:text-6xl tracking-[-0.03em]">Watch the <span className="text-primary italic pr-1">Feature</span></h2>
+          <div className="max-w-[1600px] mx-auto px-5 md:px-12 pt-20 md:pt-32 pb-10 md:pb-14 text-center" data-reveal>
+            <span className="kicker mb-5 block">The Full Documentary</span>
+            <h2 className="title-card text-4xl md:text-7xl">Watch the <span className="text-primary italic pr-1">Feature</span></h2>
           </div>
           <div className="relative mx-auto aspect-video w-full max-h-[calc(100svh-5rem)] bg-black">
             <iframe
@@ -247,85 +248,89 @@ export default function PenicillinEpisode() {
           </div>
         </section>
 
-        {/* Historical Milestones */}
-        <section className="py-20 md:py-32 bg-surface-container-low px-5 md:px-12">
-          <div className="max-w-7xl mx-auto">
-            <h3 className="font-headline text-[2rem] md:text-6xl tracking-[-0.03em] mb-14 md:mb-28 text-center">Historical <span className="text-primary italic pr-1">Milestones</span></h3>
-            <div className="space-y-28 md:space-y-44">
-              <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16 group" data-reveal>
-                <div className="w-full md:w-1/2 overflow-hidden bg-surface relative aspect-video rounded-sm md:rounded-sm ring-1 ring-white/10 ">
-                  <Image src="/ep2-mould-1928.jpg" alt="A sample of Alexander Fleming's original penicillin mould" fill className="saturate-[.5] hover:saturate-100 hover:scale-[1.04] transition-all duration-[900ms] ease-[var(--ease-spring)] object-cover" />
-                </div>
-                <div className="w-full md:w-1/2">
-                  <span className="font-headline italic text-primary text-5xl md:text-8xl tracking-[-0.04em] mb-4 block">1928</span>
-                  <h4 className="font-headline text-3xl md:text-4xl tracking-[-0.025em] mb-5">The Contaminated Dish</h4>
-                  <p className="text-on-surface/60 text-lg leading-relaxed">A patch of <span className="italic">Penicillium notatum</span> drifted onto a discarded culture plate and killed the bacteria around it. Fleming noticed what almost anyone else would have thrown away, the accident at the heart of modern medicine.</p>
-                </div>
-              </div>
-
-              <div className="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-16 group" data-reveal>
-                <div className="w-full md:w-1/2 overflow-hidden bg-surface relative aspect-video rounded-sm md:rounded-sm ring-1 ring-white/10 ">
-                  <Image src="/ep2-fleming-color.jpg" alt="Alexander Fleming at his laboratory bench" fill className="saturate-[.5] hover:saturate-100 hover:scale-[1.04] transition-all duration-[900ms] ease-[var(--ease-spring)] object-cover object-top" />
-                </div>
-                <div className="w-full md:w-1/2 md:text-right">
-                  <span className="font-headline italic text-secondary text-5xl md:text-8xl tracking-[-0.04em] mb-4 block">1929</span>
-                  <h4 className="font-headline text-3xl md:text-4xl tracking-[-0.025em] mb-5">The Discovery No One Wanted</h4>
-                  <p className="text-on-surface/60 text-lg leading-relaxed">Fleming published his findings, but without a way to purify the fragile compound, penicillin was dismissed as a curiosity. For more than ten years, the most important antibacterial agent ever found sat unused in the scientific literature.</p>
-                </div>
-              </div>
-
-              <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16 group" data-reveal>
-                <div className="w-full md:w-1/2 overflow-hidden bg-surface relative aspect-video rounded-sm md:rounded-sm ring-1 ring-white/10 ">
-                  <Image src="/ep2-about.jpg" alt="A wartime advertisement describing the mass production of penicillin" fill className="saturate-[.5] hover:saturate-100 hover:scale-[1.04] transition-all duration-[900ms] ease-[var(--ease-spring)] object-cover object-top" />
-                </div>
-                <div className="w-full md:w-1/2">
-                  <span className="font-headline italic text-primary text-5xl md:text-8xl tracking-[-0.04em] mb-4 block">1944</span>
-                  <h4 className="font-headline text-3xl md:text-4xl tracking-[-0.025em] mb-5">The War Machine</h4>
-                  <p className="text-on-surface/60 text-lg leading-relaxed">Oxford proved it could cure, and American industry proved it could scale. Glass flasks gave way to deep-tank fermentation, production times collapsed from weeks to days, and penicillin reached the front lines in time for D-Day.</p>
-                </div>
-              </div>
+        {/* Historical Milestones: one scene each */}
+        <section className="bg-[#05070a]">
+          <div className="px-5 md:px-12 py-20 md:py-32 text-center" data-reveal>
+            <div className="kicker mb-5">The Story in Three Scenes</div>
+            <h3 className="title-card text-4xl md:text-7xl">Historical <span className="text-primary italic pr-1">Milestones</span></h3>
+          </div>
+          <div className="scene relative flex min-h-[85svh] md:min-h-[100svh] items-end ">
+            <div className="absolute inset-0 overflow-hidden">
+              <Image src="/ep2-mould-1928.jpg" alt="A sample of Alexander Fleming's original penicillin mould" fill sizes="100vw" className="parallax object-cover saturate-[.8]" />
+            </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/20"></div>
+            <div className="absolute inset-0 scrim-side"></div>
+            <div className="relative z-10 w-full max-w-[1500px] mx-auto px-5 md:px-12 pb-14 md:pb-24 pt-28" data-reveal>
+              <span className="font-headline italic text-primary text-7xl md:text-[9rem] leading-none tracking-[-0.04em] block mb-4 md:mb-6">1928</span>
+              <h4 className="title-card text-3xl md:text-6xl mb-5 md:mb-6 max-w-3xl">The Contaminated Dish</h4>
+              <p className="text-on-surface/80 text-base md:text-xl leading-relaxed max-w-xl">A patch of <span className="italic">Penicillium notatum</span> drifted onto a discarded culture plate and killed the bacteria around it. Fleming noticed what almost anyone else would have thrown away, the accident at the heart of modern medicine.</p>
+            </div>
+          </div>
+          <div className="scene relative flex min-h-[85svh] md:min-h-[100svh] items-end ">
+            <div className="absolute inset-0 overflow-hidden">
+              <Image src="/ep2-fleming-color.jpg" alt="Alexander Fleming at his laboratory bench" fill sizes="100vw" className="parallax object-cover saturate-[.8]" />
+            </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/20"></div>
+            <div className="absolute inset-0 scrim-side"></div>
+            <div className="relative z-10 w-full max-w-[1500px] mx-auto px-5 md:px-12 pb-14 md:pb-24 pt-28" data-reveal>
+              <span className="font-headline italic text-primary text-7xl md:text-[9rem] leading-none tracking-[-0.04em] block mb-4 md:mb-6">1929</span>
+              <h4 className="title-card text-3xl md:text-6xl mb-5 md:mb-6 max-w-3xl">The Discovery No One Wanted</h4>
+              <p className="text-on-surface/80 text-base md:text-xl leading-relaxed max-w-xl">Fleming published his findings, but without a way to purify the fragile compound, penicillin was dismissed as a curiosity. For more than ten years, the most important antibacterial agent ever found sat unused in the scientific literature.</p>
+            </div>
+          </div>
+          <div className="scene relative flex min-h-[85svh] md:min-h-[100svh] items-end ">
+            <div className="absolute inset-0 overflow-hidden">
+              <Image src="/ep2-about.jpg" alt="A wartime advertisement describing the mass production of penicillin" fill sizes="100vw" className="parallax object-cover saturate-[.8]" />
+            </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/20"></div>
+            <div className="absolute inset-0 scrim-side"></div>
+            <div className="relative z-10 w-full max-w-[1500px] mx-auto px-5 md:px-12 pb-14 md:pb-24 pt-28" data-reveal>
+              <span className="font-headline italic text-primary text-7xl md:text-[9rem] leading-none tracking-[-0.04em] block mb-4 md:mb-6">1944</span>
+              <h4 className="title-card text-3xl md:text-6xl mb-5 md:mb-6 max-w-3xl">The War Machine</h4>
+              <p className="text-on-surface/80 text-base md:text-xl leading-relaxed max-w-xl">Oxford proved it could cure, and American industry proved it could scale. Glass flasks gave way to deep-tank fermentation, production times collapsed from weeks to days, and penicillin reached the front lines in time for D-Day.</p>
             </div>
           </div>
         </section>
 
-        {/* The Pioneers */}
-        <section className="px-5 md:px-12 py-20 md:py-32 bg-surface">
-          <div className="max-w-7xl mx-auto">
-            <div className="mb-20">
-              <h3 className="font-headline text-4xl md:text-6xl tracking-[-0.03em] mb-4">The Pioneers</h3>
-              <div className="h-[3px] w-16 rounded-sm bg-gradient-to-r from-primary to-transparent"></div>
+        {/* The Cast */}
+        <section className="px-5 md:px-12 py-24 md:py-40 bg-[#05070a]">
+          <div className="max-w-[1500px] mx-auto">
+            <div className="mb-16 md:mb-24 text-center" data-reveal>
+              <div className="kicker mb-5">Featuring</div>
+              <h3 className="title-card text-4xl md:text-7xl">The Pioneers</h3>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-              <div className="card-glass rounded-sm p-8 md:p-10 flex flex-col gap-8" data-reveal>
-                <div className="w-32 h-32 relative flex-shrink-0 bg-surface-container-high rounded-sm overflow-hidden saturate-[.6] ring-1 ring-white/10">
-                  <Image src="/ep2-fleming.jpg" alt="Alexander Fleming" fill className="object-cover" />
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-14 md:gap-12">
+              <div className="group" data-reveal>
+                <div className="relative aspect-[4/5] overflow-hidden bg-surface-container-high">
+                  <Image src="/ep2-fleming.jpg" alt="Alexander Fleming" fill sizes="(max-width: 768px) 90vw, 33vw" className="object-cover saturate-[.35] transition-all duration-[1400ms] ease-[var(--ease-spring)] group-hover:saturate-100 group-hover:scale-[1.04]" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
                 </div>
-                <div>
-                  <h5 className="font-headline text-2xl tracking-[-0.02em] text-primary mb-2">Alexander Fleming</h5>
-                  <p className="eyebrow !text-on-surface/50 !text-[10px] mb-4">The Accidental Discoverer</p>
-                  <p className="text-on-surface/60 text-[15px] leading-relaxed">The bacteriologist whose sharp eye turned a contaminated dish into a discovery. He named penicillin but could never make it in a usable form, a problem that would wait a decade for its answer.</p>
-                </div>
-              </div>
-
-              <div className="card-glass rounded-sm p-8 md:p-10 flex flex-col gap-8" data-reveal>
-                <div className="w-32 h-32 relative flex-shrink-0 bg-surface-container-high rounded-sm overflow-hidden saturate-[.6] ring-1 ring-white/10">
-                  <Image src="/ep2-florey.jpg" alt="Howard Florey" fill className="object-cover" />
-                </div>
-                <div>
-                  <h5 className="font-headline text-2xl tracking-[-0.02em] text-primary mb-2">Howard Florey</h5>
-                  <p className="eyebrow !text-on-surface/50 !text-[10px] mb-4">The Man Who Made It Real</p>
-                  <p className="text-on-surface/60 text-[15px] leading-relaxed">The Oxford pathologist who led the team that rescued penicillin from obscurity, proved it could cure in patients, and drove the effort to produce it at scale.</p>
+                <div className="mt-6 text-center">
+                  <h5 className="title-card text-2xl md:text-3xl text-primary mb-2">Alexander Fleming</h5>
+                  <p className="kicker !tracking-[0.3em] mb-4">The Accidental Discoverer</p>
+                  <p className="text-on-surface/60 text-[15px] leading-relaxed max-w-sm mx-auto">The bacteriologist whose sharp eye turned a contaminated dish into a discovery. He named penicillin but could never make it in a usable form, a problem that would wait a decade for its answer.</p>
                 </div>
               </div>
-
-              <div className="card-glass rounded-sm p-8 md:p-10 flex flex-col gap-8" data-reveal>
-                <div className="w-32 h-32 relative flex-shrink-0 bg-surface-container-high rounded-sm overflow-hidden saturate-[.6] ring-1 ring-white/10">
-                  <Image src="/ep2-chain.jpg" alt="Ernst Chain" fill className="object-cover" />
+              <div className="group" data-reveal>
+                <div className="relative aspect-[4/5] overflow-hidden bg-surface-container-high">
+                  <Image src="/ep2-florey.jpg" alt="Howard Florey" fill sizes="(max-width: 768px) 90vw, 33vw" className="object-cover saturate-[.35] transition-all duration-[1400ms] ease-[var(--ease-spring)] group-hover:saturate-100 group-hover:scale-[1.04]" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
                 </div>
-                <div>
-                  <h5 className="font-headline text-2xl tracking-[-0.02em] text-primary mb-2">Ernst Chain</h5>
-                  <p className="eyebrow !text-on-surface/50 !text-[10px] mb-4">The Chemist</p>
-                  <p className="text-on-surface/60 text-[15px] leading-relaxed">The biochemist who cracked the problem of isolating and stabilising penicillin. He shared the 1945 Nobel Prize in Medicine with Fleming and Florey for the breakthrough.</p>
+                <div className="mt-6 text-center">
+                  <h5 className="title-card text-2xl md:text-3xl text-primary mb-2">Howard Florey</h5>
+                  <p className="kicker !tracking-[0.3em] mb-4">The Man Who Made It Real</p>
+                  <p className="text-on-surface/60 text-[15px] leading-relaxed max-w-sm mx-auto">The Oxford pathologist who led the team that rescued penicillin from obscurity, proved it could cure in patients, and drove the effort to produce it at scale.</p>
+                </div>
+              </div>
+              <div className="group" data-reveal>
+                <div className="relative aspect-[4/5] overflow-hidden bg-surface-container-high">
+                  <Image src="/ep2-chain.jpg" alt="Ernst Chain" fill sizes="(max-width: 768px) 90vw, 33vw" className="object-cover saturate-[.35] transition-all duration-[1400ms] ease-[var(--ease-spring)] group-hover:saturate-100 group-hover:scale-[1.04]" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                </div>
+                <div className="mt-6 text-center">
+                  <h5 className="title-card text-2xl md:text-3xl text-primary mb-2">Ernst Chain</h5>
+                  <p className="kicker !tracking-[0.3em] mb-4">The Chemist</p>
+                  <p className="text-on-surface/60 text-[15px] leading-relaxed max-w-sm mx-auto">The biochemist who cracked the problem of isolating and stabilising penicillin. He shared the 1945 Nobel Prize in Medicine with Fleming and Florey for the breakthrough.</p>
                 </div>
               </div>
             </div>

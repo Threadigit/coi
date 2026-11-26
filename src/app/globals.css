@@ -295,6 +295,73 @@
   }
 
 
+
+  /* ── Cinematic scenes ────────────────────────────────────────────────── */
+  .scene {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background: #05070a;
+  }
+  .kicker {
+    font-family: var(--font-inter), system-ui, sans-serif;
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: 0.42em;
+    text-transform: uppercase;
+    color: rgba(222, 227, 234, 0.75);
+  }
+  .title-card {
+    font-family: var(--font-noto-serif), Georgia, serif;
+    letter-spacing: -0.03em;
+    line-height: 1.02;
+    text-wrap: balance;
+  }
+  /* Letterbox bars that retract when a hero opens. */
+  .lb-bar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 0;
+    background: #000;
+    z-index: 30;
+    pointer-events: none;
+  }
+  .lb-top { top: 0; }
+  .lb-bot { bottom: 0; }
+  /* Scroll-linked parallax (progressive enhancement). */
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      @keyframes scene-parallax {
+        from { transform: translate3d(0, -7%, 0) scale(1.14); }
+        to { transform: translate3d(0, 7%, 0) scale(1.14); }
+      }
+      .parallax {
+        animation: scene-parallax linear both;
+        animation-timeline: view();
+        animation-range: cover 0% cover 100%;
+        will-change: transform;
+      }
+    }
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    @keyframes letterbox-open {
+      from { height: 13svh; }
+      to { height: 0; }
+    }
+    .lb-bar {
+      height: 13svh;
+      animation: letterbox-open 2.2s cubic-bezier(0.76, 0, 0.24, 1) 0.5s forwards;
+    }
+    @keyframes scroll-cue {
+      0% { transform: scaleY(0); transform-origin: top; }
+      50% { transform: scaleY(1); transform-origin: top; }
+      51% { transform-origin: bottom; }
+      100% { transform: scaleY(0); transform-origin: bottom; }
+    }
+    .scroll-cue { animation: scroll-cue 2.6s cubic-bezier(0.65, 0, 0.35, 1) infinite; }
+  }
+
   .drop-cap::first-letter {
     float: left;
     font-size: 5.5rem;

@@ -76,9 +76,9 @@ export default async function Archive({ searchParams }: Props) {
 
         {/* Hero Search Section */}
         <section className="relative max-w-[1600px] mx-auto mb-14 md:mb-20">
-          <div className="eyebrow rise mb-10 md:mb-14">The Archive</div>
+          <div className="kicker rise mb-8 md:mb-10">The Archive</div>
           <h1
-            className="rise serif-headline text-[2.6rem] md:text-7xl lg:text-8xl tracking-[-0.035em] text-on-surface leading-[1.04] mb-8 md:mb-12 max-w-4xl"
+            className="rise title-card text-[2.6rem] md:text-7xl lg:text-[6.5rem] text-on-surface mb-8 md:mb-12 max-w-5xl"
             style={{ ['--d' as string]: 1 }}
           >
             Search the <span className="italic text-primary pr-2">Archive</span> of Progress
@@ -150,9 +150,9 @@ export default async function Archive({ searchParams }: Props) {
               <Link
                 href={items[0].href}
                 data-reveal
-                className="group relative block overflow-hidden mb-16 md:mb-24"
+                className="group relative block overflow-hidden mb-16 md:mb-24 -mx-5 md:-mx-12"
               >
-                <div className="relative aspect-[4/5] sm:aspect-[16/10] lg:aspect-[21/9] min-h-[28rem] lg:min-h-0">
+                <div className="relative aspect-[4/5] sm:aspect-[16/10] lg:aspect-auto lg:min-h-[86svh]">
                   <Image
                     src={items[0].thumbnail}
                     alt={items[0].title}
@@ -163,12 +163,12 @@ export default async function Archive({ searchParams }: Props) {
                   />
                   <div className="absolute inset-0 scrim-side" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/15 to-transparent" />
-                  <div className="absolute inset-x-0 bottom-0 p-5 md:p-12 max-w-4xl">
+                  <div className="absolute inset-x-0 bottom-0 p-5 md:p-14 max-w-5xl">
                     <div className="flex items-center gap-4 mb-5">
                       <span className="h-px w-10 bg-primary" aria-hidden="true" />
                       <span className="eyebrow !text-on-surface/80">Latest in the Archive &middot; {items[0].innovation} &middot; {items[0].year}</span>
                     </div>
-                    <h2 className="serif-headline text-[1.9rem] md:text-5xl lg:text-6xl tracking-[-0.03em] leading-[1.06] text-on-surface mb-5">{items[0].title}</h2>
+                    <h2 className="title-card text-[1.9rem] md:text-6xl lg:text-7xl text-on-surface mb-5">{items[0].title}</h2>
                     <p className="hidden sm:block text-on-surface/70 text-lg leading-relaxed mb-8 max-w-2xl line-clamp-2">{items[0].blurb}</p>
                     <span className="btn btn-primary">
                       <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1", fontSize: 20 }}>play_arrow</span>

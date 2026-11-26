@@ -21,10 +21,17 @@ export default function Header() {
   // navigation (links, back button) closes it without an effect.
   const [menuPath, setMenuPath] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
   const menuOpen = menuPath === pathname;
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
+    let last = window.scrollY;
+    const onScroll = () => {
+      const y = window.scrollY;
+      setScrolled(y > 24);
+      setHidden(y > last && y > 240);
+      last = y;
+    };
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
@@ -50,7 +57,7 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-[background,border-color] duration-500 ${
+      className={`fixed inset-x-0 top-0 z-50 transition-[background,border-color,transform] duration-500 ${hidden && !menuOpen ? '-translate-y-full' : 'translate-y-0'} ${
         scrolled || menuOpen
           ? 'bg-[#0f1419]/90 backdrop-blur-md border-b border-white/10'
           : 'bg-gradient-to-b from-black/60 to-transparent border-b border-transparent'

@@ -91,8 +91,8 @@ export default function About() {
         <div className="blueprint-grid-radial absolute inset-0 -z-10 opacity-60"></div>
         <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row items-end gap-12 lg:gap-16">
           <div className="md:w-1/2 lg:w-5/12">
-            <p className="eyebrow rise mb-8">Volume I: The Manifesto</p>
-            <h1 className="rise font-headline text-[2.6rem] md:text-7xl lg:text-[5.5rem] leading-[1.05] tracking-[-0.035em] text-on-surface" style={{ ["--d" as string]: 1 }}>Documenting the <span className="italic text-primary pr-2">Sparks</span> of Human Progress</h1>
+            <p className="kicker rise mb-8">Volume I: The Manifesto</p>
+            <h1 className="rise title-card text-[2.6rem] md:text-7xl lg:text-[6rem] text-on-surface" style={{ ["--d" as string]: 1 }}>Documenting the <span className="italic text-primary pr-2">Sparks</span> of Human Progress</h1>
           </div>
           <div className="md:w-1/2 lg:w-7/12 h-[340px] md:h-[560px] overflow-hidden rounded-sm md:rounded-sm ring-1 ring-white/10  bg-surface-container-low relative w-full">
             <Image 

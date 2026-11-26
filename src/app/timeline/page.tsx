@@ -76,8 +76,8 @@ export default function TimelinePage() {
         <div className="blueprint-grid-radial absolute inset-x-0 top-0 h-[34rem] opacity-60 pointer-events-none" aria-hidden="true" />
         {/* Intro */}
         <section className="relative max-w-[1400px] mx-auto mb-24 md:mb-36">
-          <span className="eyebrow rise block mb-8" style={{ ['--d' as string]: 0 }}>The Chronicle</span>
-          <h1 className="rise serif-headline text-[2.7rem] md:text-7xl lg:text-[7rem] tracking-[-0.04em] text-on-surface leading-[1] max-w-5xl" style={{ ['--d' as string]: 1 }}>
+          <span className="kicker rise block mb-8" style={{ ['--d' as string]: 0 }}>The Chronicle</span>
+          <h1 className="rise title-card text-[2.7rem] md:text-7xl lg:text-[7rem] text-on-surface max-w-5xl" style={{ ['--d' as string]: 1 }}>
             A Timeline of <span className="italic text-primary pr-2">Innovation</span>
           </h1>
           <p className="rise text-on-surface/60 text-base md:text-2xl leading-relaxed max-w-2xl mt-10" style={{ ['--d' as string]: 2 }}>

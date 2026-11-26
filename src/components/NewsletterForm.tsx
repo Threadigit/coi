@@ -32,8 +32,8 @@ export default function NewsletterForm() {
 
   if (status === 'success' || status === 'already_subscribed') {
     return (
-      <div className="flex flex-col items-center justify-center py-6 animate-in fade-in duration-700">
-        <div className="w-16 h-16 rounded-full bg-primary/10 ring-1 ring-primary/30 flex items-center justify-center mb-6">
+      <div className="flex flex-col items-start justify-center py-2">
+        <div className="mb-5">
           <span className="material-symbols-outlined text-primary text-3xl font-light">
             {status === 'already_subscribed' ? 'verified_user' : 'check_circle'}
           </span>
@@ -48,7 +48,7 @@ export default function NewsletterForm() {
         </p>
         <button 
           onClick={() => setStatus('idle')}
-          className="mt-8 text-xs text-on-surface/45 hover:text-primary transition-colors"
+          className="mt-6 eyebrow !text-on-surface/50 hover:!text-primary transition-colors"
         >
           {status === 'already_subscribed' ? 'Subscribe a different email' : 'Subscribe another'}
         </button>
@@ -57,11 +57,11 @@ export default function NewsletterForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="relative mx-auto mb-6 flex w-full max-w-xl flex-col gap-3 sm:flex-row sm:items-center sm:rounded-full sm:bg-white/[0.07] sm:p-1.5 sm:ring-1 sm:ring-white/10 sm:focus-within:ring-primary/50 transition-shadow">
+    <form onSubmit={handleSubmit} className="relative flex w-full max-w-xl flex-col gap-3 sm:flex-row sm:items-stretch sm:gap-0 mb-6">
       <label htmlFor="newsletter-email" className="sr-only">Email address</label>
       <input
         id="newsletter-email"
-        className="h-14 w-full min-w-0 sm:flex-1 rounded-full bg-white/[0.07] px-6 sm:px-7 text-base text-on-surface outline-none ring-1 ring-white/10 placeholder:text-on-surface/40 transition-shadow focus:ring-primary/50 disabled:opacity-50 sm:h-12 sm:bg-transparent sm:ring-0 sm:focus:ring-0"
+        className="h-14 w-full min-w-0 sm:flex-1 border border-white/25 bg-transparent px-5 text-base text-on-surface outline-none placeholder:text-on-surface/45 transition-colors focus:border-primary disabled:opacity-50 sm:border-r-0"
         placeholder="Enter your email address"
         type="email"
         autoComplete="email"
@@ -73,7 +73,7 @@ export default function NewsletterForm() {
       <button
         type="submit"
         disabled={status === 'loading'}
-        className="btn btn-primary h-14 w-full sm:w-auto sm:h-12 !px-8 disabled:opacity-50 sm:min-w-[9rem]"
+        className="btn btn-primary h-14 w-full sm:w-auto !px-10 disabled:opacity-50"
       >
         {status === 'loading' ? (
           <span className="material-symbols-outlined animate-spin text-on-primary">sync</span>
@@ -82,7 +82,7 @@ export default function NewsletterForm() {
         )}
       </button>
       {status === 'error' && (
-        <span role="alert" className="text-red-400 text-xs absolute inset-x-0 text-center top-full mt-3">{errorMessage}</span>
+        <span role="alert" className="text-red-400 text-xs absolute inset-x-0 top-full mt-3">{errorMessage}</span>
       )}
     </form>
   );

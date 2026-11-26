@@ -21,10 +21,17 @@ export default function Header() {
   // navigation (links, back button) closes it without an effect.
   const [menuPath, setMenuPath] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
   const menuOpen = menuPath === pathname;
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
+    let last = window.scrollY;
+    const onScroll = () => {
+      const y = window.scrollY;
+      setScrolled(y > 24);
+      setHidden(y > last && y > 240);
+      last = y;
+    };
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
@@ -49,17 +56,19 @@ export default function Header() {
     pathname === path || (path === '/archive' && pathname.startsWith('/episode'));
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 px-3 md:px-8 pt-[max(0.75rem,env(safe-area-inset-top))] md:pt-5 pointer-events-none">
+    <header
+      className={`fixed inset-x-0 top-0 z-50 transition-[background,border-color,transform] duration-500 ${hidden && !menuOpen ? '-translate-y-full' : 'translate-y-0'} ${
+        scrolled || menuOpen
+          ? 'bg-[#0f1419]/90 backdrop-blur-md border-b border-white/10'
+          : 'bg-gradient-to-b from-black/60 to-transparent border-b border-transparent'
+      }`}
+    >
       <nav
         aria-label="Primary"
-        className={`pointer-events-auto mx-auto flex max-w-[1400px] items-center justify-between rounded-full py-2 pl-3 pr-2 md:pl-4 transition-[background,box-shadow,border-color,backdrop-filter] duration-500 ${
-          scrolled || menuOpen
-            ? 'glass-strong'
-            : 'bg-transparent border border-transparent'
-        }`}
+        className="mx-auto flex h-[4.25rem] md:h-20 max-w-[1600px] items-center justify-between gap-6 px-5 md:px-12 pt-[env(safe-area-inset-top)] box-content"
       >
-        <Link href="/" className="group flex items-center gap-3" aria-label="Chronicles of Innovation, home">
-          <span className="relative block h-10 w-10 overflow-hidden rounded-full ring-1 ring-white/15 transition-transform duration-500 group-hover:scale-105">
+        <Link href="/" className="group flex items-center gap-3.5" aria-label="Chronicles of Innovation, home">
+          <span className="relative block h-10 w-10 overflow-hidden rounded-full ring-1 ring-white/15">
             <Image
               src="/coi_logo_transparent.png"
               alt="Chronicles of Innovation Logo"
@@ -68,21 +77,21 @@ export default function Header() {
               className="object-cover scale-[1.35]"
             />
           </span>
-          <span className="font-headline italic text-[1.35rem] leading-none text-primary hidden lg:block tracking-[-0.01em]">
+          <span className="font-headline italic text-[1.35rem] leading-none text-primary hidden sm:block tracking-[-0.01em]">
             Chronicles of Innovation
           </span>
         </Link>
 
-        <ul className="hidden md:flex items-center gap-1 rounded-full bg-white/[0.06] p-1 ring-1 ring-white/[0.07]">
+        <ul className="hidden md:flex items-center gap-9 ml-auto">
           {links.map((l) => (
             <li key={l.href}>
               <Link
                 href={l.href}
                 aria-current={isActive(l.href) ? 'page' : undefined}
-                className={`block rounded-full px-5 py-2 text-[13px] font-medium tracking-[0.01em] transition-all duration-300 ${
+                className={`relative block py-2 text-[12px] font-medium uppercase tracking-[0.16em] transition-colors duration-300 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-left after:bg-primary after:transition-transform after:duration-500 ${
                   isActive(l.href)
-                    ? 'bg-white/[0.14] text-on-surface shadow-[inset_0_1px_0_rgba(255,255,255,0.12)]'
-                    : 'text-on-surface/60 hover:text-on-surface'
+                    ? 'text-on-surface after:scale-x-100'
+                    : 'text-on-surface/60 hover:text-on-surface after:scale-x-0 hover:after:scale-x-100'
                 }`}
               >
                 {l.label}
@@ -91,34 +100,34 @@ export default function Header() {
           ))}
         </ul>
 
-        <div className="flex items-center gap-2 md:gap-3">
+        <div className="flex items-center gap-3 md:gap-5">
           <form action="/archive" role="search" className="relative hidden lg:block group/search">
-            <Search aria-hidden="true" className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-on-surface/50 transition-colors group-focus-within/search:text-primary" />
+            <Search aria-hidden="true" className="pointer-events-none absolute left-0 top-1/2 h-4 w-4 -translate-y-1/2 text-on-surface/60 transition-colors group-focus-within/search:text-primary" />
             <input
               name="q"
               type="search"
               aria-label="Search the archive"
               placeholder="Search"
-              className="h-10 w-36 rounded-full bg-white/[0.07] pl-10 pr-4 text-[13px] text-on-surface outline-none ring-1 ring-white/[0.07] transition-all duration-500 placeholder:text-on-surface/40 focus:w-60 focus:bg-white/[0.1] focus:ring-primary/50"
+              className="h-10 w-28 border-b border-white/25 bg-transparent pl-7 pr-2 text-[13px] text-on-surface outline-none transition-all duration-500 placeholder:text-on-surface/50 focus:w-52 focus:border-primary"
             />
           </form>
           <Link
             href={SUBSCRIBE_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-primary !py-2.5 !px-5 !text-[12px]"
+            className="btn btn-primary !min-h-0 !py-3 !px-5 !text-[11px]"
           >
             Subscribe
           </Link>
           <button
             type="button"
-            className="md:hidden grid h-10 w-10 place-items-center rounded-full bg-white/[0.08] text-on-surface ring-1 ring-white/10 transition-colors hover:bg-white/15"
+            className="md:hidden grid h-11 w-11 place-items-center text-on-surface"
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={menuOpen}
             aria-controls="mobile-menu"
             onClick={() => setMenuPath(menuOpen ? null : pathname)}
           >
-            {menuOpen ? <X size={20} /> : <Menu size={20} />}
+            {menuOpen ? <X size={24} strokeWidth={1.5} /> : <Menu size={24} strokeWidth={1.5} />}
           </button>
         </div>
       </nav>
@@ -127,7 +136,7 @@ export default function Header() {
       <div
         id="mobile-menu"
         hidden={!menuOpen}
-        className="pointer-events-auto fixed inset-0 -z-10 md:hidden glass-strong !rounded-none !border-0 pt-28 px-8"
+        className="fixed inset-0 -z-10 md:hidden bg-[#0a0f14] pt-28 px-6"
       >
         <ul className="flex flex-col">
           {links.map((l, i) => (
@@ -147,13 +156,13 @@ export default function Header() {
           ))}
         </ul>
         <form action="/archive" role="search" className="relative mt-8">
-          <Search aria-hidden="true" className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-on-surface/50" />
+          <Search aria-hidden="true" className="pointer-events-none absolute left-0 top-1/2 h-4 w-4 -translate-y-1/2 text-on-surface/60" />
           <input
             name="q"
             type="search"
             aria-label="Search the archive"
             placeholder="Search the archive"
-            className="h-12 w-full rounded-full bg-white/[0.08] pl-11 pr-4 text-base text-on-surface outline-none ring-1 ring-white/10 placeholder:text-on-surface/40 focus:ring-primary/50"
+            className="h-12 w-full border-b border-white/25 bg-transparent pl-9 pr-4 text-base text-on-surface outline-none placeholder:text-on-surface/50 focus:border-primary"
           />
         </form>
       </div>

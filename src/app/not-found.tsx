@@ -9,7 +9,7 @@ export default function NotFound() {
       <span className="eyebrow rise block mb-8" style={{ ['--d' as string]: 0 }}>Error 404</span>
 
       <h1 className="rise font-headline text-6xl md:text-8xl lg:text-[9rem] text-on-surface mb-8 leading-[0.95] tracking-[-0.04em]" style={{ ['--d' as string]: 1 }}>
-        Record <span className="italic text-gradient-gold pr-2">Not Found</span>
+        Record <span className="italic text-primary pr-2">Not Found</span>
       </h1>
 
       <p className="rise text-on-surface/60 max-w-xl mx-auto mb-12 text-lg md:text-xl leading-relaxed" style={{ ['--d' as string]: 2 }}>

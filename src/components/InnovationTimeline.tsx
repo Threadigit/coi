@@ -52,7 +52,7 @@ export default function InnovationTimeline() {
       <div className="absolute top-2 bottom-2 left-[22px] md:left-[30px] w-[2px] rounded-full bg-white/[0.08]" aria-hidden="true" />
       <div
         ref={fillRef}
-        className="absolute top-2 left-[22px] md:left-[30px] w-[2px] rounded-full bg-gradient-to-b from-primary/0 via-primary to-primary shadow-[0_0_14px_var(--gold-glow)]"
+        className="absolute top-2 left-[22px] md:left-[30px] w-[2px] rounded-full bg-gradient-to-b from-primary/0 via-primary to-primary "
         style={{ height: 0 }}
         aria-hidden="true"
       />
@@ -61,7 +61,7 @@ export default function InnovationTimeline() {
         <section key={group.id} className="relative">
           {/* Era divider */}
           <div className="relative pl-14 md:pl-24 mt-20 first:mt-0 mb-14" data-reveal>
-            <div className="absolute left-[22px] md:left-[30px] top-1 -translate-x-1/2 w-5 h-5 rounded-full bg-surface border-2 border-primary/60 shadow-[0_0_0_6px_var(--color-surface),0_0_24px_var(--gold-glow)]" aria-hidden="true" />
+            <div className="absolute left-[22px] md:left-[30px] top-1 -translate-x-1/2 w-5 h-5 rounded-full bg-surface border-2 border-primary/60 " aria-hidden="true" />
             <span className="eyebrow block mb-3">{group.range}</span>
             <h3 className="serif-display text-3xl md:text-5xl tracking-[-0.03em] text-on-surface">{group.label}</h3>
           </div>
@@ -71,7 +71,7 @@ export default function InnovationTimeline() {
             <div key={e.slug} className="relative pl-14 md:pl-24 mb-16 md:mb-20" data-reveal>
               {/* Node */}
               <div className="absolute left-[22px] md:left-[30px] top-2 -translate-x-1/2 z-10" aria-hidden="true">
-                <div className="w-11 h-11 rounded-full glass flex items-center justify-center shadow-[0_0_0_6px_var(--color-surface)] transition-transform duration-500 group-hover/card:scale-110 group-hover/card:border-primary/50">
+                <div className="w-11 h-11 rounded-full glass flex items-center justify-center  transition-transform duration-500 group-hover/card:scale-110 group-hover/card:border-primary/50">
                   <span className="material-symbols-outlined text-primary text-xl" style={fill}>{e.icon}</span>
                 </div>
               </div>
@@ -79,7 +79,7 @@ export default function InnovationTimeline() {
               {/* Card */}
               <Link
                 href={e.href}
-                className="group/card block max-w-xl card-glass rounded-[1.75rem] overflow-hidden"
+                className="group/card block max-w-xl card-glass rounded-sm overflow-hidden"
               >
                 <div className="relative aspect-[16/9] overflow-hidden">
                   <Image
@@ -90,7 +90,7 @@ export default function InnovationTimeline() {
                     className="object-cover saturate-[.6] group-hover/card:saturate-100 transition-all duration-[900ms] ease-[var(--ease-spring)] group-hover/card:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/0 to-transparent" />
-                  <div className="absolute bottom-4 left-5 flex items-center gap-2 glass rounded-full px-3 py-1.5">
+                  <div className="absolute bottom-4 left-5 flex items-center gap-2 bg-black/55 backdrop-blur-sm px-2.5 py-1.5">
                     <span className="material-symbols-outlined text-primary text-base" style={fill}>{e.icon}</span>
                     <span className="text-[12px] font-semibold tracking-[0.02em] text-on-surface">{e.innovation}</span>
                   </div>

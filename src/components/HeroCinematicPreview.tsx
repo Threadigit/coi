@@ -165,7 +165,7 @@ export default function HeroCinematicPreview({ videoId, image, alt }: Props) {
     : '';
 
   const control =
-    'grid h-11 w-11 place-items-center rounded-full glass text-on-surface transition-all duration-500 hover:scale-110 hover:bg-white/20 active:scale-95';
+    'grid h-11 w-11 place-items-center rounded-sm glass text-on-surface transition-all duration-500 hover:scale-110 hover:bg-white/20 active:scale-95';
 
   return (
     <>

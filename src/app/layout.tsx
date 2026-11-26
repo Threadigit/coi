@@ -1,5 +1,5 @@
-import type { Metadata } from "next";
-import { Noto_Serif, Space_Grotesk } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { Noto_Serif, Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -11,11 +11,16 @@ const notoSerif = Noto_Serif({
   variable: "--font-noto-serif",
 });
 
-const spaceGrotesk = Space_Grotesk({
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-space-grotesk",
+  display: "swap",
+  variable: "--font-inter",
 });
+
+export const viewport: Viewport = {
+  themeColor: "#0f1419",
+  colorScheme: "dark",
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://chroniclesofinnovation.com"),
@@ -50,11 +55,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark scroll-smooth">
+    <html lang="en" className="dark scroll-smooth" style={{ colorScheme: "dark" }}>
       <head>
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
       </head>
-      <body className={`${notoSerif.variable} ${spaceGrotesk.variable} antialiased selection:bg-primary/30 selection:text-primary min-h-screen flex flex-col`}>
+      <body className={`${notoSerif.variable} ${inter.variable} antialiased min-h-screen flex flex-col`}>
         <Header />
         <main className="flex-1">
           {children}

@@ -184,51 +184,61 @@ export default function EdisonVsTeslaEpisode() {
       />
       <main className="pt-24">
         {/* Hero Section */}
-        <header className="relative w-full h-[600px] md:h-[870px] overflow-hidden flex items-end px-6 md:px-12 pb-24 md:pb-48">
+        <header className="relative isolate w-full min-h-[86svh] md:min-h-[100svh] overflow-hidden flex items-end px-6 md:px-12 pb-20 md:pb-28 pt-40">
           <div className="absolute inset-0 z-0">
             <Image
               src="/edison-machine-shop.jpg"
               alt="Thomas Edison's machine shop, lit by early electric lamps"
               fill
               priority
-              className="object-cover opacity-60"
+              sizes="100vw"
+              className="object-cover opacity-80 saturate-[.8] hero-kenburns"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent"></div>
+            <div className="absolute inset-0 scrim-side"></div>
+            <div className="absolute inset-x-0 top-0 h-40 scrim-top"></div>
+            <div className="absolute inset-x-0 bottom-0 h-[75%] scrim-bottom"></div>
           </div>
-          <div className="relative z-10 max-w-5xl">
+          <div className="relative z-10 w-full max-w-[1400px] mx-auto">
+          <div className="max-w-5xl">
             <div className="flex items-center gap-3 mb-6">
-              <span className="bg-surface-container-highest px-4 py-1 rounded-full text-[10px] tracking-[0.2em] uppercase font-semibold text-secondary">Episode 001</span>
-              <span className="text-slate-500 text-[10px] tracking-[0.2em] uppercase font-semibold">1879 - 1893</span>
+              <span className="glass rounded-full px-4 py-1.5 text-[10px] tracking-[0.2em] uppercase font-semibold text-secondary">Episode 001</span>
+              <span className="text-on-surface/60 text-[11px] tracking-[0.18em] uppercase font-semibold">1879 - 1893</span>
             </div>
-            <h1 className="font-headline text-5xl md:text-8xl leading-[1.1] text-on-surface tracking-tight mb-8">
-              Light Bulb & Electricity: <br/><span className="text-primary italic">Edison vs Tesla&apos;s Hidden Battle</span>
+            <h1 className="font-headline text-[2.75rem] sm:text-6xl md:text-7xl lg:text-[5.75rem] leading-[1.02] text-on-surface tracking-[-0.035em] mb-10">
+              Light Bulb & Electricity: <br/><span className="text-gradient-gold italic pr-2">Edison vs Tesla&apos;s Hidden Battle</span>
             </h1>
-            <div className="flex items-center gap-8 text-slate-400">
-              <div className="flex items-center gap-2">
-                <span className="material-symbols-outlined text-primary" style={{fontVariationSettings: "'FILL' 1"}}>timer</span>
-                <span className="text-xs uppercase tracking-widest font-medium">19 Minute Feature</span>
+            <div className="flex flex-wrap items-center gap-3 text-on-surface/85">
+              <div className="flex items-center gap-2 glass rounded-full pl-3 pr-4 py-2">
+                <span className="material-symbols-outlined text-primary !text-[20px]" style={{fontVariationSettings: "'FILL' 1"}}>timer</span>
+                <span className="text-[11px] uppercase tracking-[0.14em] font-semibold">19 Minute Feature</span>
               </div>
-              <div className="flex items-center gap-2">
-                <span className="material-symbols-outlined text-primary" style={{fontVariationSettings: "'FILL' 1"}}>bolt</span>
-                <span className="text-xs uppercase tracking-widest font-medium">The War of Currents</span>
+              <div className="flex items-center gap-2 glass rounded-full pl-3 pr-4 py-2">
+                <span className="material-symbols-outlined text-primary !text-[20px]" style={{fontVariationSettings: "'FILL' 1"}}>bolt</span>
+                <span className="text-[11px] uppercase tracking-[0.14em] font-semibold">The War of Currents</span>
               </div>
             </div>
-            <div className="mt-6">
-              <Link href="/about" className="font-label text-[10px] uppercase tracking-widest text-slate-500 hover:text-primary transition-colors">
+            <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-5">
+              <a href="#watch" className="btn btn-primary !px-8 !py-4 !text-[14px]">
+                <span className="material-symbols-outlined" style={{fontVariationSettings: "'FILL' 1", fontSize: 22}}>play_arrow</span>
+                Watch the Feature
+              </a>
+              <Link href="/about" className="font-label text-[12px] tracking-[0.04em] text-on-surface/55 hover:text-primary transition-colors">
                 Curated by <span className="text-secondary">Tolu Adetuyi</span>
               </Link>
             </div>
           </div>
+          </div>
         </header>
 
         {/* Watch Section */}
-        <section className="px-6 md:px-12 py-24 bg-surface-container-lowest">
-          <div className="max-w-5xl mx-auto">
-            <div className="mb-10 text-center">
-              <span className="font-label text-xs uppercase tracking-[0.4em] text-secondary mb-4 block">The Full Documentary</span>
-              <h2 className="font-headline text-4xl md:text-5xl">Watch the <span className="text-primary italic">Feature</span></h2>
+        <section id="watch" className="relative scroll-mt-4 px-6 md:px-12 py-28 md:py-36 bg-surface-container-lowest overflow-hidden">
+          <div className="absolute inset-0 spotlight-gold pointer-events-none" aria-hidden="true"></div>
+          <div className="relative max-w-5xl mx-auto" data-reveal>
+            <div className="mb-12 text-center">
+              <span className="eyebrow mb-4 block">The Full Documentary</span>
+              <h2 className="font-headline text-4xl md:text-6xl tracking-[-0.03em]">Watch the <span className="text-gradient-gold italic pr-1">Feature</span></h2>
             </div>
-            <div className="relative aspect-video overflow-hidden rounded-sm shadow-2xl border border-outline-variant/20">
+            <div className="relative aspect-video overflow-hidden rounded-[1.5rem] md:rounded-[2.25rem] ring-1 ring-white/12 shadow-[0_60px_140px_-40px_rgba(0,0,0,1),0_0_120px_-50px_var(--gold-glow)]">
               <iframe
                 className="absolute inset-0 h-full w-full"
                 src={`${EMBED_URL}?rel=0`}
@@ -245,17 +255,17 @@ export default function EdisonVsTeslaEpisode() {
         {/* Narrative Section */}
         <section className="px-6 md:px-12 py-32 bg-surface">
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-24">
-            <div className="w-full md:w-1/3">
-              <h2 className="font-label text-xs uppercase tracking-[0.4em] text-secondary mb-6">The Genesis</h2>
+            <div className="w-full md:w-1/3" data-reveal>
+              <h2 className="eyebrow mb-6">The Genesis</h2>
               <p className="font-headline text-2xl text-on-surface-variant leading-relaxed italic">
                 &ldquo;This wasn&apos;t a contest of ideas. It was a war for the right to power the world — and only one current could win.&rdquo;
               </p>
             </div>
-            <div className="w-full md:w-2/3">
-              <p className="drop-cap font-body text-xl text-on-surface/80 leading-relaxed mb-8">
+            <div className="w-full md:w-2/3" data-reveal style={{ ["--d" as string]: 1 }}>
+              <p className="drop-cap font-body text-lg md:text-xl text-on-surface/75 leading-[1.7] mb-8">
                 For all of human history, when the sun went down, the world went dark. Then, in 1879, Thomas Edison perfected the incandescent light bulb and set out to do something no one had attempted: to wire entire cities and sell electricity itself. His system ran on direct current — reliable over a few blocks, but fatally limited. DC could not travel far without bleeding away, demanding a power station on nearly every corner.
               </p>
-              <p className="font-body text-xl text-on-surface/80 leading-relaxed">
+              <p className="font-body text-lg md:text-xl text-on-surface/75 leading-[1.7]">
                 Into that flaw walked Nikola Tesla, a Serbian immigrant with a head full of alternating-current machines Edison dismissed. When Tesla&apos;s vision collided with Edison&apos;s empire — and George Westinghouse&apos;s capital — it ignited the War of Currents: a brutal campaign of public demonstrations, propaganda, and electrocutions that would decide how humanity would be powered for the next century. One man would win the war. The other would win the future.
               </p>
             </div>
@@ -265,38 +275,38 @@ export default function EdisonVsTeslaEpisode() {
         {/* Historical Milestones */}
         <section className="py-32 bg-surface-container-low px-6 md:px-12">
           <div className="max-w-7xl mx-auto">
-            <h3 className="font-headline text-4xl mb-24 text-center">Historical <span className="text-primary italic">Milestones</span></h3>
-            <div className="space-y-40">
-              <div className="flex flex-col md:flex-row items-center gap-12 group">
-                <div className="w-full md:w-1/2 overflow-hidden bg-surface relative aspect-video">
-                  <Image src="/ep1-bulb-1879.jpg" alt="Edison carbon filament light bulb" fill className="grayscale hover:grayscale-0 transition-all duration-700 object-cover" />
+            <h3 className="font-headline text-4xl md:text-6xl tracking-[-0.03em] mb-20 md:mb-28 text-center">Historical <span className="text-gradient-gold italic pr-1">Milestones</span></h3>
+            <div className="space-y-28 md:space-y-44">
+              <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16 group" data-reveal>
+                <div className="w-full md:w-1/2 overflow-hidden bg-surface relative aspect-video rounded-[1.75rem] md:rounded-[2.25rem] ring-1 ring-white/10 shadow-[0_40px_90px_-40px_rgba(0,0,0,1)]">
+                  <Image src="/ep1-bulb-1879.jpg" alt="Edison carbon filament light bulb" fill className="saturate-[.5] hover:saturate-100 hover:scale-[1.04] transition-all duration-[900ms] ease-[var(--ease-spring)] object-cover" />
                 </div>
                 <div className="w-full md:w-1/2">
-                  <span className="font-label text-primary text-5xl font-bold mb-4 block">1879</span>
-                  <h4 className="font-headline text-2xl mb-4">The Lamp That Banished Night</h4>
-                  <p className="text-slate-400 leading-relaxed">Edison&apos;s carbon-filament bulb finally burned long enough to be practical. It was not the first electric light, but it was the first anyone could sell — the cornerstone of an empire built on direct current.</p>
+                  <span className="font-headline italic text-primary text-6xl md:text-8xl tracking-[-0.04em] mb-4 block">1879</span>
+                  <h4 className="font-headline text-3xl md:text-4xl tracking-[-0.025em] mb-5">The Lamp That Banished Night</h4>
+                  <p className="text-on-surface/60 text-lg leading-relaxed">Edison&apos;s carbon-filament bulb finally burned long enough to be practical. It was not the first electric light, but it was the first anyone could sell — the cornerstone of an empire built on direct current.</p>
                 </div>
               </div>
 
-              <div className="flex flex-col md:flex-row-reverse items-center gap-12 group">
-                <div className="w-full md:w-1/2 overflow-hidden bg-surface relative aspect-video">
-                  <Image src="/ep1-tesla-ac-1888.jpg" alt="Nikola Tesla with his alternating-current equipment" fill className="grayscale hover:grayscale-0 transition-all duration-700 object-cover" />
+              <div className="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-16 group" data-reveal>
+                <div className="w-full md:w-1/2 overflow-hidden bg-surface relative aspect-video rounded-[1.75rem] md:rounded-[2.25rem] ring-1 ring-white/10 shadow-[0_40px_90px_-40px_rgba(0,0,0,1)]">
+                  <Image src="/ep1-tesla-ac-1888.jpg" alt="Nikola Tesla with his alternating-current equipment" fill className="saturate-[.5] hover:saturate-100 hover:scale-[1.04] transition-all duration-[900ms] ease-[var(--ease-spring)] object-cover" />
                 </div>
                 <div className="w-full md:w-1/2 text-right">
-                  <span className="font-label text-secondary text-5xl font-bold mb-4 block">1888</span>
-                  <h4 className="font-headline text-2xl mb-4">The Polyphase System</h4>
-                  <p className="text-slate-400 leading-relaxed">Tesla&apos;s alternating-current motor and polyphase patents proved electricity could travel hundreds of miles at high voltage. Westinghouse bought the rights — and the War of Currents turned existential for Edison.</p>
+                  <span className="font-headline italic text-secondary text-6xl md:text-8xl tracking-[-0.04em] mb-4 block">1888</span>
+                  <h4 className="font-headline text-3xl md:text-4xl tracking-[-0.025em] mb-5">The Polyphase System</h4>
+                  <p className="text-on-surface/60 text-lg leading-relaxed">Tesla&apos;s alternating-current motor and polyphase patents proved electricity could travel hundreds of miles at high voltage. Westinghouse bought the rights — and the War of Currents turned existential for Edison.</p>
                 </div>
               </div>
 
-              <div className="flex flex-col md:flex-row items-center gap-12 group">
-                <div className="w-full md:w-1/2 overflow-hidden bg-surface relative aspect-video">
-                  <Image src="/ep1-niagara-1893.jpg" alt="Westinghouse alternating-current generators at Niagara Falls" fill className="grayscale hover:grayscale-0 transition-all duration-700 object-cover" />
+              <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16 group" data-reveal>
+                <div className="w-full md:w-1/2 overflow-hidden bg-surface relative aspect-video rounded-[1.75rem] md:rounded-[2.25rem] ring-1 ring-white/10 shadow-[0_40px_90px_-40px_rgba(0,0,0,1)]">
+                  <Image src="/ep1-niagara-1893.jpg" alt="Westinghouse alternating-current generators at Niagara Falls" fill className="saturate-[.5] hover:saturate-100 hover:scale-[1.04] transition-all duration-[900ms] ease-[var(--ease-spring)] object-cover" />
                 </div>
                 <div className="w-full md:w-1/2">
-                  <span className="font-label text-primary text-5xl font-bold mb-4 block">1893</span>
-                  <h4 className="font-headline text-2xl mb-4">The World&apos;s Fair Showdown</h4>
-                  <p className="text-slate-400 leading-relaxed">Westinghouse and Tesla lit the Chicago World&apos;s Columbian Exposition with AC, dazzling 27 million visitors. Within two years their current would harness Niagara Falls — settling the war for good.</p>
+                  <span className="font-headline italic text-primary text-6xl md:text-8xl tracking-[-0.04em] mb-4 block">1893</span>
+                  <h4 className="font-headline text-3xl md:text-4xl tracking-[-0.025em] mb-5">The World&apos;s Fair Showdown</h4>
+                  <p className="text-on-surface/60 text-lg leading-relaxed">Westinghouse and Tesla lit the Chicago World&apos;s Columbian Exposition with AC, dazzling 27 million visitors. Within two years their current would harness Niagara Falls — settling the war for good.</p>
                 </div>
               </div>
             </div>
@@ -307,40 +317,40 @@ export default function EdisonVsTeslaEpisode() {
         <section className="px-6 md:px-12 py-32 bg-surface">
           <div className="max-w-7xl mx-auto">
             <div className="mb-20">
-              <h3 className="font-headline text-4xl mb-4">The Combatants</h3>
-              <div className="h-1 w-24 bg-primary"></div>
+              <h3 className="font-headline text-4xl md:text-6xl tracking-[-0.03em] mb-4">The Combatants</h3>
+              <div className="h-[3px] w-16 rounded-full bg-gradient-to-r from-primary to-transparent"></div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-              <div className="bg-surface-container p-12 flex flex-col gap-8 hover:bg-surface-container-high transition-colors">
-                <div className="w-32 h-32 relative flex-shrink-0 bg-slate-800 rounded-lg overflow-hidden grayscale">
+              <div className="card-glass rounded-[2rem] p-8 md:p-10 flex flex-col gap-8" data-reveal>
+                <div className="w-32 h-32 relative flex-shrink-0 bg-surface-container-high rounded-3xl overflow-hidden saturate-[.6] ring-1 ring-white/10">
                   <Image src="/ep1-edison.jpg" alt="Thomas Edison" fill className="object-cover" />
                 </div>
                 <div>
-                  <h5 className="font-headline text-xl text-primary mb-2">Thomas Edison</h5>
-                  <p className="font-label text-[10px] tracking-widest text-slate-500 uppercase mb-4">The Wizard of Menlo Park</p>
-                  <p className="text-slate-400 text-sm leading-relaxed">Champion of direct current and the world&apos;s first electrical empire. A relentless inventor and showman who would wage a ruthless campaign to defend the system he built.</p>
+                  <h5 className="font-headline text-2xl tracking-[-0.02em] text-primary mb-2">Thomas Edison</h5>
+                  <p className="eyebrow !text-on-surface/50 !text-[10px] mb-4">The Wizard of Menlo Park</p>
+                  <p className="text-on-surface/60 text-[15px] leading-relaxed">Champion of direct current and the world&apos;s first electrical empire. A relentless inventor and showman who would wage a ruthless campaign to defend the system he built.</p>
                 </div>
               </div>
 
-              <div className="bg-surface-container p-12 flex flex-col gap-8 hover:bg-surface-container-high transition-colors">
-                <div className="w-32 h-32 relative flex-shrink-0 bg-slate-800 rounded-lg overflow-hidden grayscale">
+              <div className="card-glass rounded-[2rem] p-8 md:p-10 flex flex-col gap-8" data-reveal>
+                <div className="w-32 h-32 relative flex-shrink-0 bg-surface-container-high rounded-3xl overflow-hidden saturate-[.6] ring-1 ring-white/10">
                   <Image src="/ep1-tesla.jpg" alt="Nikola Tesla" fill className="object-cover" />
                 </div>
                 <div>
-                  <h5 className="font-headline text-xl text-primary mb-2">Nikola Tesla</h5>
-                  <p className="font-label text-[10px] tracking-widest text-slate-500 uppercase mb-4">The Master of Lightning</p>
-                  <p className="text-slate-400 text-sm leading-relaxed">The visionary behind the alternating-current system that powers the world today. He won the technological war but died nearly penniless, his genius vindicated only in hindsight.</p>
+                  <h5 className="font-headline text-2xl tracking-[-0.02em] text-primary mb-2">Nikola Tesla</h5>
+                  <p className="eyebrow !text-on-surface/50 !text-[10px] mb-4">The Master of Lightning</p>
+                  <p className="text-on-surface/60 text-[15px] leading-relaxed">The visionary behind the alternating-current system that powers the world today. He won the technological war but died nearly penniless, his genius vindicated only in hindsight.</p>
                 </div>
               </div>
 
-              <div className="bg-surface-container p-12 flex flex-col gap-8 hover:bg-surface-container-high transition-colors">
-                <div className="w-32 h-32 relative flex-shrink-0 bg-slate-800 rounded-lg overflow-hidden grayscale">
+              <div className="card-glass rounded-[2rem] p-8 md:p-10 flex flex-col gap-8" data-reveal>
+                <div className="w-32 h-32 relative flex-shrink-0 bg-surface-container-high rounded-3xl overflow-hidden saturate-[.6] ring-1 ring-white/10">
                   <Image src="/ep1-westinghouse.jpg" alt="George Westinghouse" fill className="object-cover" />
                 </div>
                 <div>
-                  <h5 className="font-headline text-xl text-primary mb-2">George Westinghouse</h5>
-                  <p className="font-label text-[10px] tracking-widest text-slate-500 uppercase mb-4">The Industrialist Backer</p>
-                  <p className="text-slate-400 text-sm leading-relaxed">The engineer-financier who bet his fortune on Tesla&apos;s AC patents. His capital and conviction turned one immigrant&apos;s equations into the grid that lit a continent.</p>
+                  <h5 className="font-headline text-2xl tracking-[-0.02em] text-primary mb-2">George Westinghouse</h5>
+                  <p className="eyebrow !text-on-surface/50 !text-[10px] mb-4">The Industrialist Backer</p>
+                  <p className="text-on-surface/60 text-[15px] leading-relaxed">The engineer-financier who bet his fortune on Tesla&apos;s AC patents. His capital and conviction turned one immigrant&apos;s equations into the grid that lit a continent.</p>
                 </div>
               </div>
             </div>
@@ -351,21 +361,21 @@ export default function EdisonVsTeslaEpisode() {
         <section className="px-6 md:px-12 py-32 bg-surface-container-low">
           <div className="max-w-5xl mx-auto">
             <div className="mb-16 text-center">
-              <span className="font-label text-xs uppercase tracking-[0.4em] text-secondary mb-4 block">Inside the Feature</span>
-              <h3 className="font-headline text-4xl">Chapter <span className="text-primary italic">Breakdown</span></h3>
+              <span className="eyebrow mb-4 block">Inside the Feature</span>
+              <h3 className="font-headline text-4xl">Chapter <span className="text-gradient-gold italic pr-1">Breakdown</span></h3>
             </div>
-            <ol className="divide-y divide-outline-variant/15">
+            <ol className="divide-y divide-white/[0.07]">
               {chapters.map((chapter, index) => (
                 <li key={chapter.time}>
                   <a
                     href={`${WATCH_URL}&t=${chapter.start}s`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-6 py-5 group"
+                    className="flex items-center gap-6 py-5 px-4 -mx-4 rounded-2xl group transition-colors hover:bg-white/[0.05]"
                   >
                     <span className="font-label text-primary serif-display italic text-lg w-10 flex-shrink-0">{String(index + 1).padStart(2, "0")}</span>
                     <span className="font-body text-on-surface text-base md:text-lg group-hover:text-primary transition-colors flex-1">{chapter.title}</span>
-                    <span className="font-label text-[10px] tracking-widest text-slate-500 uppercase tabular-nums flex-shrink-0 group-hover:text-primary transition-colors">{chapter.time}</span>
+                    <span className="font-label text-[10px] tracking-widest text-on-surface/50 uppercase tabular-nums flex-shrink-0 group-hover:text-primary transition-colors">{chapter.time}</span>
                   </a>
                 </li>
               ))}
@@ -374,23 +384,20 @@ export default function EdisonVsTeslaEpisode() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-40 bg-surface">
-          <div className="max-w-4xl mx-auto px-6 text-center">
-            <h3 className="font-headline text-5xl mb-8">Continue the Journey</h3>
-            <p className="text-slate-400 mb-12 text-lg">Watch the full documentary on YouTube or engage with our community of historians and engineers.</p>
-            <div className="flex flex-col md:flex-row justify-center gap-6">
-              <Link href={WATCH_URL} target="_blank">
-                <button className="bg-primary text-on-primary px-10 py-4 font-bold tracking-[0.2em] uppercase text-xs flex items-center justify-center gap-3 hover:opacity-90 transition-all w-full md:w-auto cursor-pointer">
+        <section className="relative py-40 bg-surface overflow-hidden">
+          <div className="absolute inset-0 spotlight-gold pointer-events-none" aria-hidden="true"></div>
+          <div className="relative max-w-4xl mx-auto px-6 text-center" data-reveal>
+            <h3 className="font-headline text-5xl md:text-7xl tracking-[-0.035em] mb-8">Continue the Journey</h3>
+            <p className="text-on-surface/60 mb-12 text-lg md:text-xl">Watch the full documentary on YouTube or engage with our community of historians and engineers.</p>
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+              <Link href={WATCH_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary !px-8 !py-4 !text-[14px]">
                   <span className="material-symbols-outlined">play_circle</span>
                   Watch on YouTube
-                </button>
-              </Link>
-              <a href="https://www.youtube.com/channel/UCKU6JFP0__kQ12KSgvtroLQ/community" target="_blank" rel="noopener noreferrer">
-                <button className="border border-outline-variant/40 text-secondary px-10 py-4 font-bold tracking-[0.2em] uppercase text-xs flex items-center justify-center gap-3 hover:bg-secondary/10 transition-all w-full md:w-auto cursor-pointer">
+                </Link>
+              <a href="https://www.youtube.com/channel/UCKU6JFP0__kQ12KSgvtroLQ/community" target="_blank" rel="noopener noreferrer" className="btn btn-glass !px-8 !py-4 !text-[14px]">
                   <span className="material-symbols-outlined">forum</span>
                   Join the Discussion
-                </button>
-              </a>
+                </a>
             </div>
           </div>
         </section>

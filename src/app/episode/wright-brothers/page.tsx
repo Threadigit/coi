@@ -161,7 +161,7 @@ export default function WrightBrothersEpisode() {
       />
       <main className="pt-24">
         {/* Hero Section */}
-        <header className="relative w-full h-[600px] md:h-[870px] overflow-hidden flex items-end px-6 md:px-12 pb-24 md:pb-48">
+        <header className="relative isolate w-full min-h-[86svh] md:min-h-[100svh] overflow-hidden flex items-end px-6 md:px-12 pb-20 md:pb-28 pt-40">
           <div className="absolute inset-0 z-0">
             <Image
               src="/wright-hero.jpg"
@@ -170,42 +170,51 @@ export default function WrightBrothersEpisode() {
               priority
               className="object-cover opacity-50"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-surface via-surface/70 to-surface/40"></div>
+            <div className="absolute inset-0 scrim-side"></div>
+            <div className="absolute inset-x-0 top-0 h-40 scrim-top"></div>
+            <div className="absolute inset-x-0 bottom-0 h-[75%] scrim-bottom"></div>
           </div>
-          <div className="relative z-10 max-w-5xl">
+          <div className="relative z-10 w-full max-w-[1400px] mx-auto">
+          <div className="max-w-5xl">
             <div className="flex items-center gap-3 mb-6">
-              <span className="bg-surface-container-highest px-4 py-1 rounded-full text-[10px] tracking-[0.2em] uppercase font-semibold text-secondary">Episode 003</span>
-              <span className="text-slate-500 text-[10px] tracking-[0.2em] uppercase font-semibold">1899 - 1927</span>
+              <span className="glass rounded-full px-4 py-1.5 text-[10px] tracking-[0.2em] uppercase font-semibold text-secondary">Episode 003</span>
+              <span className="text-on-surface/60 text-[11px] tracking-[0.18em] uppercase font-semibold">1899 - 1927</span>
             </div>
-            <h1 className="font-headline text-5xl md:text-8xl leading-[1.1] text-on-surface tracking-tight mb-8">
-              The Wright Brothers: <br/><span className="text-primary italic">The Invention of Flight</span>
+            <h1 className="font-headline text-[2.75rem] sm:text-6xl md:text-7xl lg:text-[5.75rem] leading-[1.02] text-on-surface tracking-[-0.035em] mb-10">
+              The Wright Brothers: <br/><span className="text-gradient-gold italic pr-2">The Invention of Flight</span>
             </h1>
-            <div className="flex items-center gap-8 text-slate-400">
-              <div className="flex items-center gap-2">
-                <span className="material-symbols-outlined text-primary" style={{fontVariationSettings: "'FILL' 1"}}>timer</span>
-                <span className="text-xs uppercase tracking-widest font-medium">20 Minute Feature</span>
+            <div className="flex flex-wrap items-center gap-3 text-on-surface/85">
+              <div className="flex items-center gap-2 glass rounded-full pl-3 pr-4 py-2">
+                <span className="material-symbols-outlined text-primary !text-[20px]" style={{fontVariationSettings: "'FILL' 1"}}>timer</span>
+                <span className="text-[11px] uppercase tracking-[0.14em] font-semibold">20 Minute Feature</span>
               </div>
-              <div className="flex items-center gap-2">
-                <span className="material-symbols-outlined text-primary" style={{fontVariationSettings: "'FILL' 1"}}>flight</span>
-                <span className="text-xs uppercase tracking-widest font-medium">The Birth of Flight</span>
+              <div className="flex items-center gap-2 glass rounded-full pl-3 pr-4 py-2">
+                <span className="material-symbols-outlined text-primary !text-[20px]" style={{fontVariationSettings: "'FILL' 1"}}>flight</span>
+                <span className="text-[11px] uppercase tracking-[0.14em] font-semibold">The Birth of Flight</span>
               </div>
             </div>
-            <div className="mt-6">
-              <Link href="/about" className="font-label text-[10px] uppercase tracking-widest text-slate-500 hover:text-primary transition-colors">
+            <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-5">
+              <a href="#watch" className="btn btn-primary !px-8 !py-4 !text-[14px]">
+                <span className="material-symbols-outlined" style={{fontVariationSettings: "'FILL' 1", fontSize: 22}}>play_arrow</span>
+                Watch the Feature
+              </a>
+              <Link href="/about" className="font-label text-[12px] tracking-[0.04em] text-on-surface/55 hover:text-primary transition-colors">
                 Curated by <span className="text-secondary">Tolu Adetuyi</span>
               </Link>
             </div>
           </div>
+          </div>
         </header>
 
         {/* Watch Section */}
-        <section className="px-6 md:px-12 py-24 bg-surface-container-lowest">
-          <div className="max-w-5xl mx-auto">
-            <div className="mb-10 text-center">
-              <span className="font-label text-xs uppercase tracking-[0.4em] text-secondary mb-4 block">The Full Documentary</span>
-              <h2 className="font-headline text-4xl md:text-5xl">Watch the <span className="text-primary italic">Feature</span></h2>
+        <section id="watch" className="relative scroll-mt-4 px-6 md:px-12 py-28 md:py-36 bg-surface-container-lowest overflow-hidden">
+          <div className="absolute inset-0 spotlight-gold pointer-events-none" aria-hidden="true"></div>
+          <div className="relative max-w-5xl mx-auto" data-reveal>
+            <div className="mb-12 text-center">
+              <span className="eyebrow mb-4 block">The Full Documentary</span>
+              <h2 className="font-headline text-4xl md:text-6xl tracking-[-0.03em]">Watch the <span className="text-gradient-gold italic pr-1">Feature</span></h2>
             </div>
-            <div className="relative aspect-video overflow-hidden rounded-sm shadow-2xl border border-outline-variant/20">
+            <div className="relative aspect-video overflow-hidden rounded-[1.5rem] md:rounded-[2.25rem] ring-1 ring-white/12 shadow-[0_60px_140px_-40px_rgba(0,0,0,1),0_0_120px_-50px_var(--gold-glow)]">
               <iframe
                 className="absolute inset-0 h-full w-full"
                 src={`${EMBED_URL}?rel=0`}
@@ -222,17 +231,17 @@ export default function WrightBrothersEpisode() {
         {/* Narrative Section */}
         <section className="px-6 md:px-12 py-32 bg-surface">
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-24">
-            <div className="w-full md:w-1/3">
-              <h2 className="font-label text-xs uppercase tracking-[0.4em] text-secondary mb-6">The Genesis</h2>
+            <div className="w-full md:w-1/3" data-reveal>
+              <h2 className="eyebrow mb-6">The Genesis</h2>
               <p className="font-headline text-2xl text-on-surface-variant leading-relaxed italic">
                 &ldquo;Everyone else was chasing lift and horsepower. The Wrights asked the question no one could answer: once you are in the air, how do you stay in control?&rdquo;
               </p>
             </div>
-            <div className="w-full md:w-2/3">
-              <p className="drop-cap font-body text-xl text-on-surface/80 leading-relaxed mb-8">
+            <div className="w-full md:w-2/3" data-reveal style={{ ["--d" as string]: 1 }}>
+              <p className="drop-cap font-body text-lg md:text-xl text-on-surface/75 leading-[1.7] mb-8">
                 They had no university degrees, no government laboratory, and no team of professional scientists — only a bicycle shop in Dayton, Ohio, a hand-built engine, and a problem that had defeated generations of inventors. While rivals poured money into ever more powerful engines, Wilbur and Orville Wright became convinced that the real obstacle to flight was not power but control. A pilot, they reasoned, had to be able to balance and steer a machine in three dimensions, the way a cyclist balances a bicycle.
               </p>
-              <p className="font-body text-xl text-on-surface/80 leading-relaxed">
+              <p className="font-body text-lg md:text-xl text-on-surface/75 leading-[1.7]">
                 So they built their own wind tunnel, corrected the flawed data the field had relied on, and tested glider after glider on the windswept dunes of Kitty Hawk. On December 17, 1903, that patient engineering paid off: the Wright Flyer became the first powered, heavier-than-air machine to achieve controlled flight — twelve seconds that ended millennia of earthbound history. Within a generation their invention would cross the Atlantic, transform in war, carry passengers across the world, and, a century later, send a fragment of the original Flyer to the surface of Mars.
               </p>
             </div>
@@ -242,38 +251,38 @@ export default function WrightBrothersEpisode() {
         {/* Historical Milestones */}
         <section className="py-32 bg-surface-container-low px-6 md:px-12">
           <div className="max-w-7xl mx-auto">
-            <h3 className="font-headline text-4xl mb-24 text-center">Historical <span className="text-primary italic">Milestones</span></h3>
-            <div className="space-y-40">
-              <div className="flex flex-col md:flex-row items-center gap-12 group">
-                <div className="w-full md:w-1/2 overflow-hidden bg-surface relative aspect-video">
-                  <Image src="/ep3-glider-1902.jpg" alt="A Wright glider soaring over the dunes at Kitty Hawk, 1902" fill className="grayscale hover:grayscale-0 transition-all duration-700 object-cover" />
+            <h3 className="font-headline text-4xl md:text-6xl tracking-[-0.03em] mb-20 md:mb-28 text-center">Historical <span className="text-gradient-gold italic pr-1">Milestones</span></h3>
+            <div className="space-y-28 md:space-y-44">
+              <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16 group" data-reveal>
+                <div className="w-full md:w-1/2 overflow-hidden bg-surface relative aspect-video rounded-[1.75rem] md:rounded-[2.25rem] ring-1 ring-white/10 shadow-[0_40px_90px_-40px_rgba(0,0,0,1)]">
+                  <Image src="/ep3-glider-1902.jpg" alt="A Wright glider soaring over the dunes at Kitty Hawk, 1902" fill className="saturate-[.5] hover:saturate-100 hover:scale-[1.04] transition-all duration-[900ms] ease-[var(--ease-spring)] object-cover" />
                 </div>
                 <div className="w-full md:w-1/2">
-                  <span className="font-label text-primary text-5xl font-bold mb-4 block">1902</span>
-                  <h4 className="font-headline text-2xl mb-4">The Glider Years</h4>
-                  <p className="text-slate-400 leading-relaxed">After a homemade wind tunnel rewrote the science of lift, the brothers made hundreds of glides at Kitty Hawk — perfecting the three-axis control system, wing-warping, and rudder that would make true flight possible.</p>
+                  <span className="font-headline italic text-primary text-6xl md:text-8xl tracking-[-0.04em] mb-4 block">1902</span>
+                  <h4 className="font-headline text-3xl md:text-4xl tracking-[-0.025em] mb-5">The Glider Years</h4>
+                  <p className="text-on-surface/60 text-lg leading-relaxed">After a homemade wind tunnel rewrote the science of lift, the brothers made hundreds of glides at Kitty Hawk — perfecting the three-axis control system, wing-warping, and rudder that would make true flight possible.</p>
                 </div>
               </div>
 
-              <div className="flex flex-col md:flex-row-reverse items-center gap-12 group">
-                <div className="w-full md:w-1/2 overflow-hidden bg-surface relative aspect-video">
-                  <Image src="/ep3-kittyhawk-1903.jpg" alt="The Wright Flyer on its launching rail at Kitty Hawk, December 1903" fill className="grayscale hover:grayscale-0 transition-all duration-700 object-cover" />
+              <div className="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-16 group" data-reveal>
+                <div className="w-full md:w-1/2 overflow-hidden bg-surface relative aspect-video rounded-[1.75rem] md:rounded-[2.25rem] ring-1 ring-white/10 shadow-[0_40px_90px_-40px_rgba(0,0,0,1)]">
+                  <Image src="/ep3-kittyhawk-1903.jpg" alt="The Wright Flyer on its launching rail at Kitty Hawk, December 1903" fill className="saturate-[.5] hover:saturate-100 hover:scale-[1.04] transition-all duration-[900ms] ease-[var(--ease-spring)] object-cover" />
                 </div>
                 <div className="w-full md:w-1/2 text-right">
-                  <span className="font-label text-secondary text-5xl font-bold mb-4 block">1903</span>
-                  <h4 className="font-headline text-2xl mb-4">Twelve Seconds at Kitty Hawk</h4>
-                  <p className="text-slate-400 leading-relaxed">On December 17, with Orville at the controls and Wilbur running alongside, the Flyer rose from its rail and travelled 120 feet in twelve seconds — the first powered, controlled, sustained flight of a heavier-than-air machine.</p>
+                  <span className="font-headline italic text-secondary text-6xl md:text-8xl tracking-[-0.04em] mb-4 block">1903</span>
+                  <h4 className="font-headline text-3xl md:text-4xl tracking-[-0.025em] mb-5">Twelve Seconds at Kitty Hawk</h4>
+                  <p className="text-on-surface/60 text-lg leading-relaxed">On December 17, with Orville at the controls and Wilbur running alongside, the Flyer rose from its rail and travelled 120 feet in twelve seconds — the first powered, controlled, sustained flight of a heavier-than-air machine.</p>
                 </div>
               </div>
 
-              <div className="flex flex-col md:flex-row items-center gap-12 group">
-                <div className="w-full md:w-1/2 overflow-hidden bg-surface relative aspect-video">
-                  <Image src="/ep3-fortmyer-1909.jpg" alt="A Wright Flyer demonstration flight over Fort Myer, Virginia, 1909" fill className="grayscale hover:grayscale-0 transition-all duration-700 object-cover" />
+              <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16 group" data-reveal>
+                <div className="w-full md:w-1/2 overflow-hidden bg-surface relative aspect-video rounded-[1.75rem] md:rounded-[2.25rem] ring-1 ring-white/10 shadow-[0_40px_90px_-40px_rgba(0,0,0,1)]">
+                  <Image src="/ep3-fortmyer-1909.jpg" alt="A Wright Flyer demonstration flight over Fort Myer, Virginia, 1909" fill className="saturate-[.5] hover:saturate-100 hover:scale-[1.04] transition-all duration-[900ms] ease-[var(--ease-spring)] object-cover" />
                 </div>
                 <div className="w-full md:w-1/2">
-                  <span className="font-label text-primary text-5xl font-bold mb-4 block">1908–09</span>
-                  <h4 className="font-headline text-2xl mb-4">Proving It to the World</h4>
-                  <p className="text-slate-400 leading-relaxed">Public demonstrations in France and military trials at Fort Myer silenced the doubters. The aerial age had begun — and the airplane would soon reshape travel, warfare, and humanity&apos;s sense of what was possible.</p>
+                  <span className="font-headline italic text-primary text-6xl md:text-8xl tracking-[-0.04em] mb-4 block">1908–09</span>
+                  <h4 className="font-headline text-3xl md:text-4xl tracking-[-0.025em] mb-5">Proving It to the World</h4>
+                  <p className="text-on-surface/60 text-lg leading-relaxed">Public demonstrations in France and military trials at Fort Myer silenced the doubters. The aerial age had begun — and the airplane would soon reshape travel, warfare, and humanity&apos;s sense of what was possible.</p>
                 </div>
               </div>
             </div>
@@ -284,40 +293,40 @@ export default function WrightBrothersEpisode() {
         <section className="px-6 md:px-12 py-32 bg-surface">
           <div className="max-w-7xl mx-auto">
             <div className="mb-20">
-              <h3 className="font-headline text-4xl mb-4">The Pioneers</h3>
-              <div className="h-1 w-24 bg-primary"></div>
+              <h3 className="font-headline text-4xl md:text-6xl tracking-[-0.03em] mb-4">The Pioneers</h3>
+              <div className="h-[3px] w-16 rounded-full bg-gradient-to-r from-primary to-transparent"></div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-              <div className="bg-surface-container p-12 flex flex-col gap-8 hover:bg-surface-container-high transition-colors">
-                <div className="w-32 h-32 relative flex-shrink-0 bg-slate-800 rounded-lg overflow-hidden grayscale">
+              <div className="card-glass rounded-[2rem] p-8 md:p-10 flex flex-col gap-8" data-reveal>
+                <div className="w-32 h-32 relative flex-shrink-0 bg-surface-container-high rounded-3xl overflow-hidden saturate-[.6] ring-1 ring-white/10">
                   <Image src="/ep3-wilbur.jpg" alt="Wilbur Wright" fill className="object-cover object-top" />
                 </div>
                 <div>
-                  <h5 className="font-headline text-xl text-primary mb-2">Wilbur Wright</h5>
-                  <p className="font-label text-[10px] tracking-widest text-slate-500 uppercase mb-4">The Strategist</p>
-                  <p className="text-slate-400 text-sm leading-relaxed">The elder brother and driving intellect, who framed flight as a problem of control and led the theoretical work — then carried the Flyer to Europe and made the world believe.</p>
+                  <h5 className="font-headline text-2xl tracking-[-0.02em] text-primary mb-2">Wilbur Wright</h5>
+                  <p className="eyebrow !text-on-surface/50 !text-[10px] mb-4">The Strategist</p>
+                  <p className="text-on-surface/60 text-[15px] leading-relaxed">The elder brother and driving intellect, who framed flight as a problem of control and led the theoretical work — then carried the Flyer to Europe and made the world believe.</p>
                 </div>
               </div>
 
-              <div className="bg-surface-container p-12 flex flex-col gap-8 hover:bg-surface-container-high transition-colors">
-                <div className="w-32 h-32 relative flex-shrink-0 bg-slate-800 rounded-lg overflow-hidden grayscale">
+              <div className="card-glass rounded-[2rem] p-8 md:p-10 flex flex-col gap-8" data-reveal>
+                <div className="w-32 h-32 relative flex-shrink-0 bg-surface-container-high rounded-3xl overflow-hidden saturate-[.6] ring-1 ring-white/10">
                   <Image src="/ep3-orville.jpg" alt="Orville Wright" fill className="object-cover object-top" />
                 </div>
                 <div>
-                  <h5 className="font-headline text-xl text-primary mb-2">Orville Wright</h5>
-                  <p className="font-label text-[10px] tracking-widest text-slate-500 uppercase mb-4">The Builder</p>
-                  <p className="text-slate-400 text-sm leading-relaxed">The hands-on engineer and mechanic who piloted the first flight at Kitty Hawk, and who lived long enough to see aircraft break the sound barrier.</p>
+                  <h5 className="font-headline text-2xl tracking-[-0.02em] text-primary mb-2">Orville Wright</h5>
+                  <p className="eyebrow !text-on-surface/50 !text-[10px] mb-4">The Builder</p>
+                  <p className="text-on-surface/60 text-[15px] leading-relaxed">The hands-on engineer and mechanic who piloted the first flight at Kitty Hawk, and who lived long enough to see aircraft break the sound barrier.</p>
                 </div>
               </div>
 
-              <div className="bg-surface-container p-12 flex flex-col gap-8 hover:bg-surface-container-high transition-colors">
-                <div className="w-32 h-32 relative flex-shrink-0 bg-slate-800 rounded-lg overflow-hidden grayscale">
+              <div className="card-glass rounded-[2rem] p-8 md:p-10 flex flex-col gap-8" data-reveal>
+                <div className="w-32 h-32 relative flex-shrink-0 bg-surface-container-high rounded-3xl overflow-hidden saturate-[.6] ring-1 ring-white/10">
                   <Image src="/ep3-lilienthal.jpg" alt="Otto Lilienthal" fill className="object-cover object-top" />
                 </div>
                 <div>
-                  <h5 className="font-headline text-xl text-primary mb-2">Otto Lilienthal</h5>
-                  <p className="font-label text-[10px] tracking-widest text-slate-500 uppercase mb-4">The Glider Pioneer</p>
-                  <p className="text-slate-400 text-sm leading-relaxed">The German &ldquo;flying man&rdquo; whose gliding experiments — and fatal 1896 crash — inspired the Wrights and proved that mastering control, not just lift, was the key to flight.</p>
+                  <h5 className="font-headline text-2xl tracking-[-0.02em] text-primary mb-2">Otto Lilienthal</h5>
+                  <p className="eyebrow !text-on-surface/50 !text-[10px] mb-4">The Glider Pioneer</p>
+                  <p className="text-on-surface/60 text-[15px] leading-relaxed">The German &ldquo;flying man&rdquo; whose gliding experiments — and fatal 1896 crash — inspired the Wrights and proved that mastering control, not just lift, was the key to flight.</p>
                 </div>
               </div>
             </div>
@@ -325,23 +334,20 @@ export default function WrightBrothersEpisode() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-40 bg-surface">
-          <div className="max-w-4xl mx-auto px-6 text-center">
-            <h3 className="font-headline text-5xl mb-8">Continue the Journey</h3>
-            <p className="text-slate-400 mb-12 text-lg">Watch the full documentary on YouTube or engage with our community of historians and engineers.</p>
-            <div className="flex flex-col md:flex-row justify-center gap-6">
-              <Link href={WATCH_URL} target="_blank">
-                <button className="bg-primary text-on-primary px-10 py-4 font-bold tracking-[0.2em] uppercase text-xs flex items-center justify-center gap-3 hover:opacity-90 transition-all w-full md:w-auto cursor-pointer">
+        <section className="relative py-40 bg-surface overflow-hidden">
+          <div className="absolute inset-0 spotlight-gold pointer-events-none" aria-hidden="true"></div>
+          <div className="relative max-w-4xl mx-auto px-6 text-center" data-reveal>
+            <h3 className="font-headline text-5xl md:text-7xl tracking-[-0.035em] mb-8">Continue the Journey</h3>
+            <p className="text-on-surface/60 mb-12 text-lg md:text-xl">Watch the full documentary on YouTube or engage with our community of historians and engineers.</p>
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+              <Link href={WATCH_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary !px-8 !py-4 !text-[14px]">
                   <span className="material-symbols-outlined">play_circle</span>
                   Watch on YouTube
-                </button>
-              </Link>
-              <a href="https://www.youtube.com/channel/UCKU6JFP0__kQ12KSgvtroLQ/community" target="_blank" rel="noopener noreferrer">
-                <button className="border border-outline-variant/40 text-secondary px-10 py-4 font-bold tracking-[0.2em] uppercase text-xs flex items-center justify-center gap-3 hover:bg-secondary/10 transition-all w-full md:w-auto cursor-pointer">
+                </Link>
+              <a href="https://www.youtube.com/channel/UCKU6JFP0__kQ12KSgvtroLQ/community" target="_blank" rel="noopener noreferrer" className="btn btn-glass !px-8 !py-4 !text-[14px]">
                   <span className="material-symbols-outlined">forum</span>
                   Join the Discussion
-                </button>
-              </a>
+                </a>
             </div>
           </div>
         </section>

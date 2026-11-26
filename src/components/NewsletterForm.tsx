@@ -33,22 +33,22 @@ export default function NewsletterForm() {
   if (status === 'success' || status === 'already_subscribed') {
     return (
       <div className="flex flex-col items-center justify-center py-6 animate-in fade-in duration-700">
-        <div className="w-16 h-16 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center mb-6">
+        <div className="w-16 h-16 rounded-full bg-primary/10 ring-1 ring-primary/30 flex items-center justify-center mb-6">
           <span className="material-symbols-outlined text-primary text-3xl font-light">
             {status === 'already_subscribed' ? 'verified_user' : 'check_circle'}
           </span>
         </div>
-        <h3 className="font-headline text-3xl text-primary mb-2 italic">
+        <h3 className="font-headline text-3xl md:text-4xl text-primary mb-3 italic tracking-[-0.02em]">
           {status === 'already_subscribed' ? 'You are already in the Vanguard.' : 'Welcome to the Vanguard.'}
         </h3>
-        <p className="font-body text-slate-400">
+        <p className="text-on-surface/60">
           {status === 'already_subscribed' 
             ? 'Your email is already securely recorded in our ledger.' 
             : 'Your email has been securely added to the ledger.'}
         </p>
         <button 
           onClick={() => setStatus('idle')}
-          className="mt-8 text-[10px] font-label uppercase tracking-widest text-slate-500 hover:text-primary transition-colors"
+          className="mt-8 text-xs text-on-surface/45 hover:text-primary transition-colors"
         >
           {status === 'already_subscribed' ? 'Subscribe a different email' : 'Subscribe another'}
         </button>
@@ -57,32 +57,33 @@ export default function NewsletterForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-4 justify-center relative">
-      <div className="flex flex-col items-center md:items-start w-full md:w-auto relative">
-        <input 
-          className="w-full md:w-96 bg-surface-container-high border-none text-on-surface font-label text-xs tracking-widest px-8 py-5 focus:ring-1 focus:ring-primary outline-none rounded-sm placeholder:text-slate-500 disabled:opacity-50 transition-all" 
-          placeholder="ENTER YOUR EMAIL ADDRESS" 
-          type="email" 
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          disabled={status === 'loading'}
-          required
-        />
-        {status === 'error' && (
-          <span className="text-red-400 text-[10px] font-label uppercase tracking-widest mt-2 absolute -bottom-6 w-full text-center md:text-left">{errorMessage}</span>
-        )}
-      </div>
-      <button 
+    <form onSubmit={handleSubmit} className="relative mx-auto flex w-full max-w-xl flex-col gap-3 sm:flex-row sm:items-center sm:rounded-full sm:bg-white/[0.07] sm:p-1.5 sm:ring-1 sm:ring-white/10 sm:focus-within:ring-primary/50 transition-shadow">
+      <label htmlFor="newsletter-email" className="sr-only">Email address</label>
+      <input
+        id="newsletter-email"
+        className="h-14 w-full flex-1 rounded-full bg-white/[0.07] px-7 text-[15px] text-on-surface outline-none ring-1 ring-white/10 placeholder:text-on-surface/40 transition-shadow focus:ring-primary/50 disabled:opacity-50 sm:h-12 sm:bg-transparent sm:ring-0 sm:focus:ring-0"
+        placeholder="Enter your email address"
+        type="email"
+        autoComplete="email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        disabled={status === 'loading'}
+        required
+      />
+      <button
         type="submit"
         disabled={status === 'loading'}
-        className="bg-gradient-to-br from-primary to-primary-container text-on-primary px-10 py-5 text-xs font-label font-bold tracking-[0.2em] uppercase rounded-sm hover:brightness-110 transition-all disabled:opacity-50 flex items-center justify-center min-w-[160px]"
+        className="btn btn-primary h-14 sm:h-12 !px-8 disabled:opacity-50 min-w-[9rem]"
       >
         {status === 'loading' ? (
           <span className="material-symbols-outlined animate-spin text-on-primary">sync</span>
         ) : (
-          "INVITE ME"
+          'Invite me'
         )}
       </button>
+      {status === 'error' && (
+        <span role="alert" className="text-red-400 text-xs absolute -bottom-7 inset-x-0 text-center">{errorMessage}</span>
+      )}
     </form>
   );
 }

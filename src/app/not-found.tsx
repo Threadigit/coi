@@ -2,25 +2,22 @@ import Link from 'next/link';
 
 export default function NotFound() {
   return (
-    <div className="w-full min-h-[80vh] flex flex-col items-center justify-center pt-32 px-6 md:px-12 relative overflow-hidden text-center">
-      {/* Background blueprint grid for cinematic texture */}
-      <div className="blueprint-grid-radial absolute inset-0 -z-10 opacity-30"></div>
-      
-      <span className="font-label text-secondary uppercase tracking-[0.3em] text-xs mb-6 block">Error 404</span>
-      
-      <h1 className="font-headline text-6xl md:text-8xl lg:text-9xl text-on-surface mb-6 leading-none">
-        Record <span className="italic text-primary">Not Found</span>
+    <div className="w-full min-h-[90svh] flex flex-col items-center justify-center pt-32 pb-20 px-6 md:px-12 relative overflow-hidden text-center">
+      <div className="absolute inset-0 spotlight-gold pointer-events-none" aria-hidden="true" />
+      <div className="blueprint-grid-radial absolute inset-0 -z-10 opacity-60" aria-hidden="true" />
+
+      <span className="eyebrow rise block mb-8" style={{ ['--d' as string]: 0 }}>Error 404</span>
+
+      <h1 className="rise font-headline text-6xl md:text-8xl lg:text-[9rem] text-on-surface mb-8 leading-[0.95] tracking-[-0.04em]" style={{ ['--d' as string]: 1 }}>
+        Record <span className="italic text-gradient-gold pr-2">Not Found</span>
       </h1>
-      
-      <p className="font-body text-slate-400 max-w-xl mx-auto mb-12 text-lg leading-relaxed">
+
+      <p className="rise text-on-surface/60 max-w-xl mx-auto mb-12 text-lg md:text-xl leading-relaxed" style={{ ['--d' as string]: 2 }}>
         You have ventured beyond the known perimeter. The artifact you are actively searching for has either been redacted, lost to time, or never existed in the first place.
       </p>
-      
-      <Link 
-        href="/"
-        className="inline-flex items-center gap-3 bg-gradient-to-br from-primary to-primary-container text-on-primary font-label text-xs font-bold tracking-[0.2em] px-10 py-5 rounded-sm uppercase hover:scale-105 hover:brightness-110 transition-all duration-300 shadow-[0_0_40px_rgba(229,208,167,0.15)] hover:shadow-[0_0_60px_rgba(229,208,167,0.3)]"
-      >
-        <span className="material-symbols-outlined text-sm font-light">undo</span>
+
+      <Link href="/" className="rise btn btn-primary !px-8 !py-4 !text-[14px]" style={{ ['--d' as string]: 3 }}>
+        <span className="material-symbols-outlined" style={{ fontSize: 20 }}>undo</span>
         Return to Safety
       </Link>
     </div>

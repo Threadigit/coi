@@ -186,7 +186,7 @@ export default function Home() {
               className="parallax object-cover"
             />
           </div>
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/45 to-black/30" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/75 to-black/35 lg:via-black/45 lg:to-black/30" />
           <div className="absolute inset-0 scrim-side" />
           <div className="relative z-10 w-full max-w-[1500px] mx-auto px-5 md:px-12 pb-14 md:pb-24 pt-32">
             <div className="kicker mb-6" data-reveal>Current Spotlight</div>

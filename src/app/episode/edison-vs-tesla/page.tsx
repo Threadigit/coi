@@ -317,44 +317,41 @@ export default function EdisonVsTeslaEpisode() {
         </section>
 
         {/* The Cast */}
-        <section className="px-5 md:px-12 py-24 md:py-40 bg-[#05070a]">
+        <section className="px-5 md:px-12 py-20 md:py-32 bg-[#05070a]">
           <div className="max-w-[1500px] mx-auto">
-            <div className="mb-16 md:mb-24 text-center" data-reveal>
+            <div className="mb-12 md:mb-16 text-center" data-reveal>
               <div className="kicker mb-5">Featuring</div>
-              <h3 className="title-card text-4xl md:text-7xl">The Combatants</h3>
+              <h3 className="title-card text-4xl md:text-6xl">The Combatants</h3>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-14 md:gap-12">
-              <div className="group" data-reveal>
-                <div className="relative aspect-[4/5] overflow-hidden bg-surface-container-high">
-                  <Image src="/ep1-edison.jpg" alt="Thomas Edison" fill sizes="(max-width: 768px) 90vw, 33vw" className="object-cover saturate-[.35] transition-all duration-[1400ms] ease-[var(--ease-spring)] group-hover:saturate-100 group-hover:scale-[1.04]" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-x-12 md:gap-y-12 mx-auto">
+              <div className="group flex items-start gap-5" data-reveal>
+                <div className="relative h-28 w-28 md:h-32 md:w-32 shrink-0 overflow-hidden bg-surface-container-high">
+                  <Image src="/ep1-edison.jpg" alt="Thomas Edison" fill sizes="128px" className="object-cover saturate-[.4] transition-all duration-[900ms] group-hover:saturate-100" />
                 </div>
-                <div className="mt-6 text-center">
-                  <h5 className="title-card text-2xl md:text-3xl text-primary mb-2">Thomas Edison</h5>
-                  <p className="kicker !tracking-[0.3em] mb-4">The Wizard of Menlo Park</p>
-                  <p className="text-on-surface/60 text-[15px] leading-relaxed max-w-sm mx-auto">Champion of direct current and the world&apos;s first electrical empire. A relentless inventor and showman who would wage a ruthless campaign to defend the system he built.</p>
-                </div>
-              </div>
-              <div className="group" data-reveal>
-                <div className="relative aspect-[4/5] overflow-hidden bg-surface-container-high">
-                  <Image src="/ep1-tesla.jpg" alt="Nikola Tesla" fill sizes="(max-width: 768px) 90vw, 33vw" className="object-cover saturate-[.35] transition-all duration-[1400ms] ease-[var(--ease-spring)] group-hover:saturate-100 group-hover:scale-[1.04]" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-                </div>
-                <div className="mt-6 text-center">
-                  <h5 className="title-card text-2xl md:text-3xl text-primary mb-2">Nikola Tesla</h5>
-                  <p className="kicker !tracking-[0.3em] mb-4">The Master of Lightning</p>
-                  <p className="text-on-surface/60 text-[15px] leading-relaxed max-w-sm mx-auto">The visionary behind the alternating-current system that powers the world today. He won the technological war but died nearly penniless, his genius vindicated only in hindsight.</p>
+                <div className="min-w-0">
+                  <h5 className="title-card text-xl md:text-2xl text-primary mb-1.5">Thomas Edison</h5>
+                  <p className="kicker !tracking-[0.25em] !text-[10px] mb-3">The Wizard of Menlo Park</p>
+                  <p className="text-on-surface/60 text-[14px] leading-relaxed">Champion of direct current and the world&apos;s first electrical empire. A relentless inventor and showman who would wage a ruthless campaign to defend the system he built.</p>
                 </div>
               </div>
-              <div className="group" data-reveal>
-                <div className="relative aspect-[4/5] overflow-hidden bg-surface-container-high">
-                  <Image src="/ep1-westinghouse.jpg" alt="George Westinghouse" fill sizes="(max-width: 768px) 90vw, 33vw" className="object-cover saturate-[.35] transition-all duration-[1400ms] ease-[var(--ease-spring)] group-hover:saturate-100 group-hover:scale-[1.04]" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+              <div className="group flex items-start gap-5" data-reveal>
+                <div className="relative h-28 w-28 md:h-32 md:w-32 shrink-0 overflow-hidden bg-surface-container-high">
+                  <Image src="/ep1-tesla.jpg" alt="Nikola Tesla" fill sizes="128px" className="object-cover saturate-[.4] transition-all duration-[900ms] group-hover:saturate-100" />
                 </div>
-                <div className="mt-6 text-center">
-                  <h5 className="title-card text-2xl md:text-3xl text-primary mb-2">George Westinghouse</h5>
-                  <p className="kicker !tracking-[0.3em] mb-4">The Industrialist Backer</p>
-                  <p className="text-on-surface/60 text-[15px] leading-relaxed max-w-sm mx-auto">The engineer-financier who bet his fortune on Tesla&apos;s AC patents. His capital and conviction turned one immigrant&apos;s equations into the grid that lit a continent.</p>
+                <div className="min-w-0">
+                  <h5 className="title-card text-xl md:text-2xl text-primary mb-1.5">Nikola Tesla</h5>
+                  <p className="kicker !tracking-[0.25em] !text-[10px] mb-3">The Master of Lightning</p>
+                  <p className="text-on-surface/60 text-[14px] leading-relaxed">The visionary behind the alternating-current system that powers the world today. He won the technological war but died nearly penniless, his genius vindicated only in hindsight.</p>
+                </div>
+              </div>
+              <div className="group flex items-start gap-5" data-reveal>
+                <div className="relative h-28 w-28 md:h-32 md:w-32 shrink-0 overflow-hidden bg-surface-container-high">
+                  <Image src="/ep1-westinghouse.jpg" alt="George Westinghouse" fill sizes="128px" className="object-cover saturate-[.4] transition-all duration-[900ms] group-hover:saturate-100" />
+                </div>
+                <div className="min-w-0">
+                  <h5 className="title-card text-xl md:text-2xl text-primary mb-1.5">George Westinghouse</h5>
+                  <p className="kicker !tracking-[0.25em] !text-[10px] mb-3">The Industrialist Backer</p>
+                  <p className="text-on-surface/60 text-[14px] leading-relaxed">The engineer-financier who bet his fortune on Tesla&apos;s AC patents. His capital and conviction turned one immigrant&apos;s equations into the grid that lit a continent.</p>
                 </div>
               </div>
             </div>

@@ -293,44 +293,41 @@ export default function PenicillinEpisode() {
         </section>
 
         {/* The Cast */}
-        <section className="px-5 md:px-12 py-24 md:py-40 bg-[#05070a]">
+        <section className="px-5 md:px-12 py-20 md:py-32 bg-[#05070a]">
           <div className="max-w-[1500px] mx-auto">
-            <div className="mb-16 md:mb-24 text-center" data-reveal>
+            <div className="mb-12 md:mb-16 text-center" data-reveal>
               <div className="kicker mb-5">Featuring</div>
-              <h3 className="title-card text-4xl md:text-7xl">The Pioneers</h3>
+              <h3 className="title-card text-4xl md:text-6xl">The Pioneers</h3>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-14 md:gap-12">
-              <div className="group" data-reveal>
-                <div className="relative aspect-[4/5] overflow-hidden bg-surface-container-high">
-                  <Image src="/ep2-fleming.jpg" alt="Alexander Fleming" fill sizes="(max-width: 768px) 90vw, 33vw" className="object-cover saturate-[.35] transition-all duration-[1400ms] ease-[var(--ease-spring)] group-hover:saturate-100 group-hover:scale-[1.04]" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-x-12 md:gap-y-12 mx-auto">
+              <div className="group flex items-start gap-5" data-reveal>
+                <div className="relative h-28 w-28 md:h-32 md:w-32 shrink-0 overflow-hidden bg-surface-container-high">
+                  <Image src="/ep2-fleming.jpg" alt="Alexander Fleming" fill sizes="128px" className="object-cover saturate-[.4] transition-all duration-[900ms] group-hover:saturate-100" />
                 </div>
-                <div className="mt-6 text-center">
-                  <h5 className="title-card text-2xl md:text-3xl text-primary mb-2">Alexander Fleming</h5>
-                  <p className="kicker !tracking-[0.3em] mb-4">The Accidental Discoverer</p>
-                  <p className="text-on-surface/60 text-[15px] leading-relaxed max-w-sm mx-auto">The bacteriologist whose sharp eye turned a contaminated dish into a discovery. He named penicillin but could never make it in a usable form, a problem that would wait a decade for its answer.</p>
-                </div>
-              </div>
-              <div className="group" data-reveal>
-                <div className="relative aspect-[4/5] overflow-hidden bg-surface-container-high">
-                  <Image src="/ep2-florey.jpg" alt="Howard Florey" fill sizes="(max-width: 768px) 90vw, 33vw" className="object-cover saturate-[.35] transition-all duration-[1400ms] ease-[var(--ease-spring)] group-hover:saturate-100 group-hover:scale-[1.04]" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-                </div>
-                <div className="mt-6 text-center">
-                  <h5 className="title-card text-2xl md:text-3xl text-primary mb-2">Howard Florey</h5>
-                  <p className="kicker !tracking-[0.3em] mb-4">The Man Who Made It Real</p>
-                  <p className="text-on-surface/60 text-[15px] leading-relaxed max-w-sm mx-auto">The Oxford pathologist who led the team that rescued penicillin from obscurity, proved it could cure in patients, and drove the effort to produce it at scale.</p>
+                <div className="min-w-0">
+                  <h5 className="title-card text-xl md:text-2xl text-primary mb-1.5">Alexander Fleming</h5>
+                  <p className="kicker !tracking-[0.25em] !text-[10px] mb-3">The Accidental Discoverer</p>
+                  <p className="text-on-surface/60 text-[14px] leading-relaxed">The bacteriologist whose sharp eye turned a contaminated dish into a discovery. He named penicillin but could never make it in a usable form, a problem that would wait a decade for its answer.</p>
                 </div>
               </div>
-              <div className="group" data-reveal>
-                <div className="relative aspect-[4/5] overflow-hidden bg-surface-container-high">
-                  <Image src="/ep2-chain.jpg" alt="Ernst Chain" fill sizes="(max-width: 768px) 90vw, 33vw" className="object-cover saturate-[.35] transition-all duration-[1400ms] ease-[var(--ease-spring)] group-hover:saturate-100 group-hover:scale-[1.04]" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+              <div className="group flex items-start gap-5" data-reveal>
+                <div className="relative h-28 w-28 md:h-32 md:w-32 shrink-0 overflow-hidden bg-surface-container-high">
+                  <Image src="/ep2-florey.jpg" alt="Howard Florey" fill sizes="128px" className="object-cover saturate-[.4] transition-all duration-[900ms] group-hover:saturate-100" />
                 </div>
-                <div className="mt-6 text-center">
-                  <h5 className="title-card text-2xl md:text-3xl text-primary mb-2">Ernst Chain</h5>
-                  <p className="kicker !tracking-[0.3em] mb-4">The Chemist</p>
-                  <p className="text-on-surface/60 text-[15px] leading-relaxed max-w-sm mx-auto">The biochemist who cracked the problem of isolating and stabilising penicillin. He shared the 1945 Nobel Prize in Medicine with Fleming and Florey for the breakthrough.</p>
+                <div className="min-w-0">
+                  <h5 className="title-card text-xl md:text-2xl text-primary mb-1.5">Howard Florey</h5>
+                  <p className="kicker !tracking-[0.25em] !text-[10px] mb-3">The Man Who Made It Real</p>
+                  <p className="text-on-surface/60 text-[14px] leading-relaxed">The Oxford pathologist who led the team that rescued penicillin from obscurity, proved it could cure in patients, and drove the effort to produce it at scale.</p>
+                </div>
+              </div>
+              <div className="group flex items-start gap-5" data-reveal>
+                <div className="relative h-28 w-28 md:h-32 md:w-32 shrink-0 overflow-hidden bg-surface-container-high">
+                  <Image src="/ep2-chain.jpg" alt="Ernst Chain" fill sizes="128px" className="object-cover saturate-[.4] transition-all duration-[900ms] group-hover:saturate-100" />
+                </div>
+                <div className="min-w-0">
+                  <h5 className="title-card text-xl md:text-2xl text-primary mb-1.5">Ernst Chain</h5>
+                  <p className="kicker !tracking-[0.25em] !text-[10px] mb-3">The Chemist</p>
+                  <p className="text-on-surface/60 text-[14px] leading-relaxed">The biochemist who cracked the problem of isolating and stabilising penicillin. He shared the 1945 Nobel Prize in Medicine with Fleming and Florey for the breakthrough.</p>
                 </div>
               </div>
             </div>

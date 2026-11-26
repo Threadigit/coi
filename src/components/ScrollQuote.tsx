@@ -11,11 +11,13 @@ export default function ScrollQuote({
   words,
   highlight = [],
   kicker,
+  aside,
   children,
 }: {
   words: string[];
   highlight?: string[];
   kicker?: string;
+  aside?: React.ReactNode;
   children?: React.ReactNode;
 }) {
   const sceneRef = useRef<HTMLDivElement>(null);
@@ -56,7 +58,9 @@ export default function ScrollQuote({
   return (
     <div ref={sceneRef} className="relative h-[210svh] bg-[#05070a]">
       <div className="sticky top-0 flex h-[100svh] items-center overflow-hidden">
-        <div className="mx-auto w-full max-w-[1500px] px-5 md:px-12">
+        <div className={`mx-auto w-full max-w-[1500px] px-5 md:px-12 ${aside ? 'lg:grid lg:grid-cols-[auto_1fr] lg:gap-20 xl:gap-28 lg:items-center' : ''}`}>
+          {aside && <div className="hidden lg:block">{aside}</div>}
+          <div>
           {kicker && <div className="kicker mb-8 !text-primary">{kicker}</div>}
           <p className="title-card text-[1.9rem] sm:text-5xl lg:text-[4.75rem] text-on-surface" aria-label={words.join(' ')}>
             <span aria-hidden="true">
@@ -75,6 +79,7 @@ export default function ScrollQuote({
             </span>
           </p>
           {children}
+          </div>
         </div>
       </div>
     </div>

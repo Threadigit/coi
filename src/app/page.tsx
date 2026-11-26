@@ -211,34 +211,36 @@ export default function Home() {
             data-reveal
             style={{ ['--d' as string]: 1 }}
           >
-            <Link href="/episode/shipping-container" aria-label="Watch The Shipping Container" className="relative block aspect-[4/5] sm:aspect-[16/10] lg:aspect-[21/9] min-h-[32rem] lg:min-h-0">
-              <Image
-                src="/container-hero.jpg"
-                alt="A container ship being loaded by cranes at a port terminal at sunset"
-                fill
-                sizes="(max-width: 1400px) 100vw, 1400px"
-                className="object-cover transition-transform duration-[1400ms] ease-[var(--ease-spring)] group-hover:scale-[1.05]"
-              />
-              <div className="absolute inset-0 scrim-side" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
-              <div className="absolute left-5 top-5 md:left-8 md:top-8 glass rounded-full px-4 py-1.5">
-                <span className="eyebrow !text-secondary !text-[10px]">The Container Revolution | 1956–Present</span>
+            <Link href="/episode/shipping-container" aria-label="Watch The Shipping Container" className="relative flex flex-col lg:block lg:aspect-[21/9]">
+              <div className="relative aspect-[4/3] sm:aspect-[16/9] lg:absolute lg:inset-0 lg:aspect-auto">
+                <Image
+                  src="/container-hero.jpg"
+                  alt="A container ship being loaded by cranes at a port terminal at sunset"
+                  fill
+                  sizes="(max-width: 1400px) 100vw, 1400px"
+                  className="object-cover transition-transform duration-[1400ms] ease-[var(--ease-spring)] group-hover:scale-[1.05]"
+                />
+                <div className="absolute inset-0 hidden lg:block scrim-side" />
+                <div className="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-black/20 lg:from-black/80 lg:via-black/10 lg:to-transparent" />
+                <div className="absolute left-4 top-4 md:left-8 md:top-8 max-w-[calc(100%-2rem)] glass rounded-2xl sm:rounded-full px-4 py-1.5">
+                  <span className="eyebrow !text-secondary !text-[10px] block !tracking-[0.12em] sm:!tracking-[0.2em]">The Container Revolution | 1956–Present</span>
+                </div>
+                <div className="absolute right-6 top-6 md:right-10 md:top-10 hidden lg:grid h-16 w-16 place-items-center rounded-full bg-white/90 text-black opacity-0 scale-75 transition-all duration-500 ease-[var(--ease-spring)] group-hover:opacity-100 group-hover:scale-100">
+                  <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1", fontSize: 32 }}>play_arrow</span>
+                </div>
               </div>
-              <div className="absolute inset-x-0 bottom-0 p-6 md:p-12 grid lg:grid-cols-[1.2fr_1fr] gap-8 items-end">
-                <p className="text-on-surface/85 text-lg md:text-xl leading-relaxed max-w-xl">
+              <div className="relative bg-surface p-6 md:p-10 lg:bg-transparent lg:absolute lg:inset-x-0 lg:bottom-0 lg:p-12 grid lg:grid-cols-[1.2fr_1fr] gap-6 lg:gap-8 items-end">
+                <p className="min-w-0 text-on-surface/85 text-base md:text-lg lg:text-xl leading-relaxed max-w-xl">
                   How a North Carolina trucker turned a simple steel box into the shipping container, the deceptively plain invention that rewired global trade and built the modern economy.
                 </p>
-                <ul className="space-y-0 glass rounded-3xl divide-y divide-white/[0.08] overflow-hidden self-end">
+                <ul className="min-w-0 glass rounded-3xl divide-y divide-white/[0.08] overflow-hidden self-end">
                   {['The Voyage of the Ideal X', 'The Battle for the Standard', 'The World in a Box'].map((t, i) => (
                     <li key={t} className="flex items-center gap-4 px-5 py-4">
-                      <span className="text-primary serif-display italic text-lg w-8">{String(i + 1).padStart(2, '0')}.</span>
+                      <span className="text-primary serif-display italic text-lg w-8 shrink-0">{String(i + 1).padStart(2, '0')}.</span>
                       <span className="text-on-surface text-sm md:text-[15px] tracking-[0.005em]">{t}</span>
                     </li>
                   ))}
                 </ul>
-              </div>
-              <div className="absolute right-6 top-6 md:right-10 md:top-10 grid h-16 w-16 place-items-center rounded-full bg-white/90 text-black opacity-0 scale-75 transition-all duration-500 ease-[var(--ease-spring)] group-hover:opacity-100 group-hover:scale-100">
-                <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1", fontSize: 32 }}>play_arrow</span>
               </div>
             </Link>
           </div>

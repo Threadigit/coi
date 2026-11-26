@@ -2,7 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import NewsletterForm from "@/components/NewsletterForm";
 import HeroCinematicPreview from "@/components/HeroCinematicPreview";
-import InnovationTimeline from "@/components/InnovationTimeline";
+import Shelf from "@/components/Shelf";
+import EpisodeCard from "@/components/EpisodeCard";
 import { episodes } from "@/lib/episodes";
 import type { Metadata } from "next";
 
@@ -92,147 +93,171 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      {/* Hero Section: Cinematic Steam Engine */}
-      <section className="relative min-h-screen flex items-end pt-32 overflow-hidden">
+
+      {/* Hero: full-bleed cinematic feature */}
+      <section className="relative isolate flex min-h-[100svh] items-end overflow-hidden pt-32">
         <div className="absolute inset-0 z-0">
           <HeroCinematicPreview
             videoId="otqgociwb3o"
             image="/edison-machine-shop.jpg"
             alt="Thomas Edison's machine shop, lit by early electric lamps"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent"></div>
+          <div className="absolute inset-0 scrim-side" />
+          <div className="absolute inset-x-0 top-0 h-40 scrim-top" />
+          <div className="absolute inset-x-0 bottom-0 h-[70%] scrim-bottom" />
         </div>
-        <div className="relative z-10 px-6 md:px-12 pb-24 w-full max-w-7xl">
-          <div className="flex flex-col md:flex-row items-baseline gap-4 mb-6">
-            <span className="text-secondary font-label uppercase tracking-[0.3em] text-xs">Era I: The Age of Electricity</span>
-            <div className="h-px w-24 bg-outline-variant/30 hidden md:block"></div>
+        <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 md:px-12 pb-28 md:pb-36">
+          <div className="rise flex items-center gap-4 mb-7" style={{ ['--d' as string]: 0 }}>
+            <span className="glass rounded-full px-4 py-1.5 eyebrow !text-secondary">Era I: The Age of Electricity</span>
           </div>
-          <h1 className="serif-display text-5xl md:text-7xl lg:text-8xl text-on-surface leading-tight tracking-tighter max-w-4xl">
-            Light Bulb & Electricity: <br className="hidden md:block"/>Edison vs Tesla&apos;s <span className="text-primary italic">Hidden Battle</span>
+          <h1
+            className="rise serif-display text-[2.75rem] sm:text-6xl md:text-7xl lg:text-[5.75rem] text-on-surface leading-[1.02] tracking-[-0.035em] max-w-5xl"
+            style={{ ['--d' as string]: 1 }}
+          >
+            Light Bulb &amp; Electricity: <br className="hidden md:block" />Edison vs Tesla&apos;s <span className="text-gradient-gold italic pr-2">Hidden Battle</span>
           </h1>
-          <div className="mt-12 flex flex-col md:flex-row gap-12 items-start">
-            <p className="font-body text-slate-400 max-w-md text-lg leading-relaxed">
-              The current that powers your world was decided by war. Explore the bitter rivalry between Thomas Edison and Nikola Tesla — the battle to light humanity and own the future.
-            </p>
-            <Link href="/episode/edison-vs-tesla" className="flex items-center gap-4 group cursor-pointer mt-4 md:mt-0">
-              <div className="w-16 h-16 rounded-full border border-primary/40 flex items-center justify-center group-hover:bg-primary transition-all duration-500">
-                <span className="material-symbols-outlined text-primary group-hover:text-on-primary transition-colors text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>play_arrow</span>
-              </div>
-              <span className="font-label uppercase tracking-widest text-xs font-bold text-primary">Watch Feature Documentary</span>
+          <p
+            className="rise mt-8 max-w-xl text-lg md:text-xl leading-relaxed text-on-surface/70"
+            style={{ ['--d' as string]: 2 }}
+          >
+            The current that powers your world was decided by war. Explore the bitter rivalry between Thomas Edison and Nikola Tesla — the battle to light humanity and own the future.
+          </p>
+          <div className="rise mt-10 flex flex-wrap items-center gap-4" style={{ ['--d' as string]: 3 }}>
+            <Link href="/episode/edison-vs-tesla" className="btn btn-primary !px-8 !py-4 !text-[14px]">
+              <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1", fontSize: 22 }}>play_arrow</span>
+              Watch Feature Documentary
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Philosophy of Innovation Section */}
-      <section className="py-32 px-6 md:px-12 bg-surface-container-low relative">
-        <div className="absolute inset-0 blueprint-grid pointer-events-none"></div>
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-24 items-center relative z-10">
-          <div className="w-full md:w-1/3">
-            <div className="aspect-[3/4] overflow-hidden rounded-sm grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl relative">
-              <Image 
-                src="/avatar.png"
-                alt="Executive Curator Portrait" 
-                fill
-                className="object-cover" 
-              />
-            </div>
-            <Link href="/about" className="mt-6 inline-block group">
-              <div className="text-primary serif-display italic text-lg group-hover:underline underline-offset-4 decoration-primary/40">Tolu Adetuyi</div>
-              <div className="text-slate-500 font-label uppercase tracking-widest text-[10px]">Executive Curator</div>
-            </Link>
-          </div>
-          <div className="w-full md:w-2/3">
-            <span className="text-secondary font-label uppercase tracking-[0.2em] text-[10px] mb-8 block">Philosophy of Progress</span>
-            <blockquote className="serif-display text-4xl md:text-5xl lg:text-6xl text-on-surface leading-tight mb-12">
-              "Innovation is not merely a sequence of <span className="italic text-primary-container">inventions</span>, but the enduring narrative of human curiosity refusing to stay silent."
-            </blockquote>
-            <p className="font-body text-slate-400 text-lg max-w-xl">
-              Our mission at Chronicles of Innovation is to archive the sparks that ignited entire eras. We don't just show you what was built; we show you why it mattered to the soul of humanity.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Documentary: The Shipping Container */}
-      <section className="py-32 px-6 md:px-12 bg-surface overflow-hidden">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
-            <div>
-              <span className="text-secondary font-label uppercase tracking-[0.2em] text-[10px] mb-4 block">Current Spotlight</span>
-              <h2 className="serif-display text-5xl text-on-surface">The Shipping Container</h2>
-            </div>
-            <Link href="/archive" className="font-label uppercase tracking-widest text-[10px] text-primary border-b border-primary/30 pb-1 hover:border-primary transition-all">
+            <Link href="/archive" className="btn btn-glass !px-8 !py-4 !text-[14px]">
               View Full Series
             </Link>
           </div>
+        </div>
+        <div className="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 hidden md:block" aria-hidden="true">
+          <span className="material-symbols-outlined text-on-surface/40 animate-bounce">keyboard_arrow_down</span>
+        </div>
+      </section>
 
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-            <Link href="/episode/shipping-container" className="md:col-span-8 group relative overflow-hidden rounded-sm shadow-2xl block aspect-video">
+      {/* The Series shelf */}
+      <section className="relative z-10 -mt-10 pb-8 md:pb-12 px-6 md:px-12">
+        <div className="max-w-[1400px] mx-auto">
+          <div className="flex items-end justify-between mb-8" data-reveal>
+            <div>
+              <span className="eyebrow block mb-3">Chronicles of Innovation</span>
+              <h2 className="serif-display text-3xl md:text-5xl tracking-[-0.025em] text-on-surface">The <span className="italic text-primary">Series</span></h2>
+            </div>
+            <Link href="/archive" className="link-arrow hidden sm:inline-flex">
+              View Full Series
+              <span className="material-symbols-outlined" style={{ fontSize: 18 }}>chevron_right</span>
+            </Link>
+          </div>
+          <div data-reveal style={{ ['--d' as string]: 1 }}>
+            <Shelf label="Episodes">
+              {episodes.map((e) => (
+                <EpisodeCard key={e.slug} episode={e} eyebrow={`Episode ${String(episodes.length - episodes.indexOf(e)).padStart(3, '0')}`} className="w-[82vw] sm:w-[26rem] lg:w-[30rem]" />
+              ))}
+            </Shelf>
+          </div>
+        </div>
+      </section>
+
+      {/* Philosophy of Innovation */}
+      <section className="relative py-28 md:py-40 px-6 md:px-12 overflow-hidden">
+        <div className="absolute inset-0 spotlight-gold pointer-events-none" aria-hidden="true" />
+        <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row gap-14 md:gap-24 items-center relative z-10">
+          <div className="w-full md:w-[34%] max-w-sm" data-reveal>
+            <div className="aspect-[3/4] overflow-hidden rounded-[2rem] ring-1 ring-white/10 shadow-[0_40px_100px_-30px_rgba(0,0,0,0.9)] relative group">
+              <Image
+                src="/avatar.png"
+                alt="Executive Curator Portrait"
+                fill
+                sizes="(max-width: 768px) 80vw, 28rem"
+                className="object-cover saturate-[.6] transition-all duration-[1200ms] ease-[var(--ease-spring)] group-hover:saturate-100 group-hover:scale-105"
+              />
+              <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/50 to-transparent" />
+            </div>
+            <Link href="/about" className="mt-7 inline-block group">
+              <div className="text-primary serif-display italic text-xl transition-colors group-hover:text-[#ffe3b0]">Tolu Adetuyi</div>
+              <div className="text-on-surface/50 text-[13px] mt-0.5">Executive Curator</div>
+            </Link>
+          </div>
+          <div className="w-full md:w-2/3" data-reveal style={{ ['--d' as string]: 1 }}>
+            <span className="eyebrow mb-8 block">Philosophy of Progress</span>
+            <blockquote className="serif-display text-[2rem] sm:text-5xl lg:text-[4rem] text-on-surface leading-[1.1] tracking-[-0.03em] mb-12">
+              &ldquo;Innovation is not merely a sequence of <span className="italic text-gradient-gold pr-1">inventions</span>, but the enduring narrative of human curiosity refusing to stay silent.&rdquo;
+            </blockquote>
+            <p className="text-on-surface/60 text-lg md:text-xl leading-relaxed max-w-xl">
+              Our mission at Chronicles of Innovation is to archive the sparks that ignited entire eras. We don&apos;t just show you what was built; we show you why it mattered to the soul of humanity.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Current Spotlight: The Shipping Container */}
+      <section className="relative px-6 md:px-12 py-10 md:py-16">
+        <div className="max-w-[1400px] mx-auto">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 gap-6" data-reveal>
+            <div>
+              <span className="eyebrow mb-4 block">Current Spotlight</span>
+              <h2 className="serif-display text-4xl md:text-6xl tracking-[-0.03em] text-on-surface">The Shipping Container</h2>
+            </div>
+            <Link href="/archive" className="link-arrow">
+              View Full Series
+              <span className="material-symbols-outlined" style={{ fontSize: 18 }}>chevron_right</span>
+            </Link>
+          </div>
+
+          <div
+            className="group relative overflow-hidden rounded-[2rem] md:rounded-[2.5rem] ring-1 ring-white/10 shadow-[0_50px_120px_-40px_rgba(0,0,0,1)]"
+            data-reveal
+            style={{ ['--d' as string]: 1 }}
+          >
+            <Link href="/episode/shipping-container" aria-label="Watch The Shipping Container" className="relative block aspect-[4/5] sm:aspect-[16/10] lg:aspect-[21/9] min-h-[32rem] lg:min-h-0">
               <Image
                 src="/container-hero.jpg"
                 alt="A container ship being loaded by cranes at a port terminal at sunset"
                 fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                sizes="(max-width: 1400px) 100vw, 1400px"
+                className="object-cover transition-transform duration-[1400ms] ease-[var(--ease-spring)] group-hover:scale-[1.05]"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                <span className="material-symbols-outlined text-primary text-6xl" style={{ fontVariationSettings: "'FILL' 1" }}>play_circle</span>
+              <div className="absolute inset-0 scrim-side" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+              <div className="absolute left-5 top-5 md:left-8 md:top-8 glass rounded-full px-4 py-1.5">
+                <span className="eyebrow !text-secondary !text-[10px]">The Container Revolution | 1956–Present</span>
               </div>
-            </Link>
-
-            <div className="md:col-span-4 space-y-8">
-              <div>
-                <div className="bg-surface-container-highest px-3 py-1 inline-block rounded-full mb-4">
-                  <span className="text-secondary font-label uppercase text-[9px] tracking-widest">The Container Revolution | 1956–Present</span>
-                </div>
-                <p className="font-body text-slate-300 leading-relaxed">
+              <div className="absolute inset-x-0 bottom-0 p-6 md:p-12 grid lg:grid-cols-[1.2fr_1fr] gap-8 items-end">
+                <p className="text-on-surface/85 text-lg md:text-xl leading-relaxed max-w-xl">
                   How a North Carolina trucker turned a simple steel box into the shipping container — the deceptively plain invention that rewired global trade and built the modern economy.
                 </p>
+                <ul className="space-y-0 glass rounded-3xl divide-y divide-white/[0.08] overflow-hidden self-end">
+                  {['The Voyage of the Ideal X', 'The Battle for the Standard', 'The World in a Box'].map((t, i) => (
+                    <li key={t} className="flex items-center gap-4 px-5 py-4">
+                      <span className="text-primary serif-display italic text-lg w-8">{String(i + 1).padStart(2, '0')}.</span>
+                      <span className="text-on-surface text-sm md:text-[15px] tracking-[0.005em]">{t}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <ul className="space-y-4">
-                <li className="flex items-center gap-4 group cursor-pointer">
-                  <span className="text-primary serif-display italic">01.</span>
-                  <span className="text-on-surface font-body text-sm tracking-wide group-hover:text-primary transition-colors">The Voyage of the Ideal X</span>
-                </li>
-                <li className="flex items-center gap-4 group cursor-pointer">
-                  <span className="text-primary serif-display italic">02.</span>
-                  <span className="text-on-surface font-body text-sm tracking-wide group-hover:text-primary transition-colors">The Battle for the Standard</span>
-                </li>
-                <li className="flex items-center gap-4 group cursor-pointer">
-                  <span className="text-primary serif-display italic">03.</span>
-                  <span className="text-on-surface font-body text-sm tracking-wide group-hover:text-primary transition-colors">The World in a Box</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* The Chronicle: Innovation Timeline */}
-      <section className="py-32 px-6 md:px-12 bg-surface-container-low relative overflow-hidden">
-        <div className="absolute inset-0 blueprint-grid pointer-events-none opacity-10"></div>
-        <div className="max-w-7xl mx-auto relative z-10">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-6">
-            <div>
-              <span className="text-secondary font-label uppercase tracking-[0.2em] text-[10px] mb-4 block">The Chronicle</span>
-              <h3 className="serif-display text-4xl md:text-6xl text-on-surface leading-tight">A Timeline of <span className="italic text-primary">Innovation</span></h3>
-            </div>
-            <Link href="/timeline" className="font-label uppercase tracking-widest text-[10px] text-primary border-b border-primary/30 pb-1 hover:border-primary transition-all whitespace-nowrap">
-              Open Full Chronicle
+              <div className="absolute right-6 top-6 md:right-10 md:top-10 grid h-16 w-16 place-items-center rounded-full bg-white/90 text-black opacity-0 scale-75 transition-all duration-500 ease-[var(--ease-spring)] group-hover:opacity-100 group-hover:scale-100">
+                <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1", fontSize: 32 }}>play_arrow</span>
+              </div>
             </Link>
           </div>
-          <InnovationTimeline />
         </div>
       </section>
 
       {/* Newsletter Signup */}
-      <section className="py-32 px-6 md:px-12 relative overflow-hidden">
-        <div className="absolute inset-0 blueprint-grid pointer-events-none opacity-10"></div>
-        <div className="max-w-3xl mx-auto text-center relative z-10">
-          <span className="text-primary serif-display italic text-2xl mb-4 block">The Inner Circle</span>
-          <h2 className="serif-display text-4xl md:text-5xl lg:text-6xl text-on-surface mb-8">Join the Vanguard of Thought</h2>
-          <p className="font-body text-slate-400 mb-12 text-lg">Receive exclusive director's cuts, archival scans, and invitations to private screenings. No noise, just pure signal.</p>
-          <NewsletterForm />
+      <section className="px-6 md:px-12 pb-10">
+        <div
+          className="relative max-w-5xl mx-auto overflow-hidden rounded-[2rem] md:rounded-[2.75rem] glass px-6 py-20 md:px-20 md:py-28 text-center"
+          data-reveal
+        >
+          <div className="absolute inset-0 spotlight-gold pointer-events-none" aria-hidden="true" />
+          <div className="relative z-10 max-w-2xl mx-auto">
+            <span className="text-primary serif-display italic text-2xl mb-5 block">The Inner Circle</span>
+            <h2 className="serif-display text-4xl md:text-6xl tracking-[-0.03em] text-on-surface mb-7 leading-[1.05]">Join the Vanguard of Thought</h2>
+            <p className="text-on-surface/60 mb-12 text-lg leading-relaxed">Receive exclusive director&apos;s cuts, archival scans, and invitations to private screenings. No noise, just pure signal.</p>
+            <NewsletterForm />
+          </div>
         </div>
       </section>
     </div>

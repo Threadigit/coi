@@ -71,21 +71,22 @@ export default function TimelinePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <main className="pt-40 pb-32 px-6 md:px-12">
+      <main className="relative pt-40 md:pt-48 pb-32 px-6 md:px-12 overflow-hidden">
+        <div className="absolute inset-x-0 top-0 h-[40rem] spotlight-gold pointer-events-none" aria-hidden="true" />
+        <div className="blueprint-grid-radial absolute inset-x-0 top-0 h-[34rem] opacity-60 pointer-events-none" aria-hidden="true" />
         {/* Intro */}
-        <section className="max-w-7xl mx-auto mb-24 md:mb-32">
-          <div className="blueprint-grid-radial absolute inset-x-0 top-0 h-[500px] -z-10 opacity-30 pointer-events-none"></div>
-          <span className="font-label text-secondary uppercase tracking-[0.3em] text-xs mb-8 block">The Chronicle</span>
-          <h1 className="serif-headline text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-on-surface leading-[1.05] max-w-4xl">
-            A Timeline of <span className="italic text-primary">Innovation</span>
+        <section className="relative max-w-[1400px] mx-auto mb-24 md:mb-36">
+          <span className="eyebrow rise block mb-8" style={{ ['--d' as string]: 0 }}>The Chronicle</span>
+          <h1 className="rise serif-headline text-5xl md:text-7xl lg:text-[7rem] tracking-[-0.04em] text-on-surface leading-[1] max-w-5xl" style={{ ['--d' as string]: 1 }}>
+            A Timeline of <span className="italic text-gradient-gold pr-2">Innovation</span>
           </h1>
-          <p className="font-body text-slate-400 text-lg md:text-xl leading-relaxed max-w-2xl mt-10">
+          <p className="rise text-on-surface/60 text-lg md:text-2xl leading-relaxed max-w-2xl mt-10" style={{ ['--d' as string]: 2 }}>
             Every breakthrough has a place in time. Follow the thread of human ingenuity — from the first current to the box that moved the world — across the ages that built the modern era.
           </p>
         </section>
 
         {/* Timeline */}
-        <section className="max-w-7xl mx-auto">
+        <section className="relative max-w-[1400px] mx-auto">
           <InnovationTimeline />
         </section>
       </main>

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import EpisodeCard from "@/components/EpisodeCard";
 import { episodes } from "@/lib/episodes";
 import type { Metadata } from "next";
 
@@ -69,40 +70,50 @@ export default async function Archive({ searchParams }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <main className="pt-32 pb-24 px-6 md:px-12 w-full">
+      <main className="relative pt-36 md:pt-44 pb-24 px-6 md:px-12 w-full overflow-hidden">
+        <div className="absolute inset-x-0 top-0 h-[36rem] spotlight-gold pointer-events-none" aria-hidden="true" />
+        <div className="blueprint-grid-radial absolute inset-x-0 top-0 h-[32rem] opacity-60 pointer-events-none" aria-hidden="true" />
+
         {/* Hero Search Section */}
-        <section className="max-w-7xl mx-auto mb-20">
-          <h1 className="serif-headline text-5xl md:text-7xl font-bold tracking-tight text-on-surface leading-tight mb-10 max-w-3xl">
-            Search the <span className="italic text-primary">Archive</span> of Progress
+        <section className="relative max-w-[1400px] mx-auto mb-16 md:mb-24">
+          <span className="eyebrow rise block mb-6" style={{ ['--d' as string]: 0 }}>The Archive</span>
+          <h1
+            className="rise serif-headline text-5xl md:text-7xl lg:text-8xl tracking-[-0.035em] text-on-surface leading-[1.02] mb-12 max-w-4xl"
+            style={{ ['--d' as string]: 1 }}
+          >
+            Search the <span className="italic text-gradient-gold pr-2">Archive</span> of Progress
           </h1>
-          <form action="/archive" className="relative group w-full">
+          <form action="/archive" role="search" className="rise relative w-full max-w-3xl" style={{ ['--d' as string]: 2 }}>
             {category !== 'all' && <input type="hidden" name="category" value={category} />}
+            <span className="material-symbols-outlined pointer-events-none absolute left-6 top-1/2 -translate-y-1/2 text-on-surface/50">search</span>
             <input
               name="q"
               defaultValue={q}
-              className="w-full bg-surface-container-low border-b border-outline-variant/30 py-6 px-4 pr-16 text-2xl font-body placeholder:text-slate-700 focus:outline-none focus:border-primary transition-all duration-500 text-on-surface"
+              aria-label="Search the archive"
+              className="h-16 w-full rounded-full glass pl-16 pr-32 text-lg md:text-xl placeholder:text-on-surface/40 focus:outline-none focus:border-primary/50 focus:shadow-[0_0_0_4px_rgba(251,203,126,0.12)] transition-all duration-500 text-on-surface"
               placeholder="Explore historical breakthroughs..."
               type="search"
             />
-            <button type="submit" className="absolute right-4 top-1/2 -translate-y-1/2 bg-transparent border-none cursor-pointer p-0">
-              <span className="material-symbols-outlined text-primary text-4xl">manage_search</span>
+            <button type="submit" className="btn btn-primary absolute right-2 top-1/2 -translate-y-1/2 !py-3 !px-6">
+              Search
             </button>
           </form>
 
           {/* Filter Chips */}
-          <div className="flex flex-wrap gap-3 mt-12">
+          <div className="rise flex flex-wrap gap-2.5 mt-10" style={{ ['--d' as string]: 3 }}>
             {categories.map((cat) => {
               const isActive = category === cat.value;
-              const href = `/archive?category=${cat.value}${q ? `&q=${q}` : ''}`;
-              
+              const href = `/archive?category=${cat.value}${q ? `&q=${encodeURIComponent(q)}` : ''}`;
+
               return (
-                <Link 
-                  key={cat.value} 
+                <Link
+                  key={cat.value}
                   href={href}
-                  className={`px-6 py-2 rounded-full font-label text-xs tracking-widest transition-all ${
-                    isActive 
-                      ? "bg-primary text-on-primary font-bold" 
-                      : "bg-surface-container-highest text-on-surface-variant hover:bg-surface-bright"
+                  aria-current={isActive ? 'true' : undefined}
+                  className={`rounded-full px-5 py-2.5 text-[13px] font-medium transition-all duration-300 ${
+                    isActive
+                      ? "bg-on-surface text-surface font-semibold shadow-[0_8px_30px_-10px_rgba(255,255,255,0.5)]"
+                      : "bg-white/[0.07] text-on-surface/70 ring-1 ring-white/[0.08] hover:bg-white/[0.13] hover:text-on-surface"
                   }`}
                 >
                   {cat.label}
@@ -113,51 +124,68 @@ export default async function Archive({ searchParams }: Props) {
         </section>
 
         {/* Archive Grid */}
-        <section className="max-w-7xl mx-auto">
+        <section className="relative max-w-[1400px] mx-auto">
           {items.length === 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
               {[1, 2, 3, 4].map((idx) => (
-                <article key={`placeholder-${idx}`} className="group cursor-pointer">
-                  <div className="relative aspect-[16/9] overflow-hidden bg-surface-container-low mb-4 border border-outline-variant/20 group-hover:border-primary/50 transition-colors">
-                    <div className="absolute inset-0 flex items-center justify-center flex-col">
-                      <span className="material-symbols-outlined text-primary text-4xl mb-4 opacity-50">satellite_alt</span>
-                      <p className="font-label text-xs tracking-widest text-slate-500 uppercase">Incoming Transmission</p>
-                    </div>
+                <article key={`placeholder-${idx}`} className="group" data-reveal style={{ ['--d' as string]: idx % 3 }}>
+                  <div className="relative aspect-video overflow-hidden rounded-[1.375rem] card-glass flex items-center justify-center flex-col mb-5">
+                    <span className="material-symbols-outlined text-primary text-4xl mb-4 opacity-50">satellite_alt</span>
+                    <p className="text-xs tracking-[0.18em] text-on-surface/45 uppercase">Incoming Transmission</p>
                   </div>
-                  <div className="space-y-2">
-                    <span className="font-label text-[10px] uppercase tracking-[0.2em] text-secondary">AWAITING SIGNAL</span>
-                    <h3 className="serif-headline text-2xl font-bold text-slate-400">Classified</h3>
-                    <p className="font-body text-slate-500 text-sm leading-relaxed">No episodes match this era yet. Check back soon for the next documentary.</p>
+                  <div className="space-y-2 px-1">
+                    <span className="eyebrow !text-[10px]">Awaiting Signal</span>
+                    <h3 className="serif-headline text-2xl text-on-surface/70">Classified</h3>
+                    <p className="text-on-surface/45 text-sm leading-relaxed">No episodes match this era yet. Check back soon for the next documentary.</p>
                   </div>
                 </article>
               ))}
             </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
-              {items.map((episode) => (
-                <Link href={episode.href} key={episode.slug} className="group cursor-pointer block">
-                  <div className="relative aspect-[16/9] overflow-hidden bg-surface-container-low mb-4">
-                    <Image
-                      src={episode.thumbnail}
-                      alt={episode.title}
-                      fill
-                      className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-60"></div>
-                    <div className="absolute top-3 left-3 z-10 flex items-center gap-1.5 bg-surface/80 backdrop-blur-sm border border-outline-variant/30 px-3 py-1.5 rounded-full">
-                      <span className="material-symbols-outlined text-primary text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>{episode.icon}</span>
-                      <span className="font-label text-[10px] uppercase tracking-widest font-bold text-on-surface">{episode.innovation}</span>
+            <>
+              {/* Featured: the newest matching episode, shown as a cinematic hero card */}
+              <Link
+                href={items[0].href}
+                data-reveal
+                className="group relative block overflow-hidden rounded-[2rem] md:rounded-[2.5rem] ring-1 ring-white/10 shadow-[0_50px_120px_-40px_rgba(0,0,0,1)] mb-16 md:mb-24"
+              >
+                <div className="relative aspect-[4/5] sm:aspect-[16/10] lg:aspect-[21/9] min-h-[30rem] lg:min-h-0">
+                  <Image
+                    src={items[0].thumbnail}
+                    alt={items[0].title}
+                    fill
+                    priority
+                    sizes="(max-width: 1400px) 100vw, 1400px"
+                    className="object-cover saturate-[.8] transition-transform duration-[1400ms] ease-[var(--ease-spring)] group-hover:scale-[1.05]"
+                  />
+                  <div className="absolute inset-0 scrim-side" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/15 to-transparent" />
+                  <div className="absolute left-5 top-5 md:left-8 md:top-8 flex items-center gap-2 glass rounded-full px-4 py-1.5">
+                    <span className="material-symbols-outlined text-primary" style={{ fontVariationSettings: "'FILL' 1", fontSize: 16 }}>{items[0].icon}</span>
+                    <span className="eyebrow !text-[10px] !text-on-surface">{items[0].innovation} &middot; {items[0].year}</span>
+                  </div>
+                  <div className="absolute inset-x-0 bottom-0 p-6 md:p-12 max-w-3xl">
+                    <span className="eyebrow !text-primary block mb-4">Latest in the Archive</span>
+                    <h2 className="serif-headline text-3xl md:text-5xl lg:text-6xl tracking-[-0.03em] leading-[1.05] text-on-surface mb-5">{items[0].title}</h2>
+                    <p className="hidden sm:block text-on-surface/70 text-lg leading-relaxed mb-8 max-w-2xl line-clamp-2">{items[0].blurb}</p>
+                    <span className="btn btn-primary !px-7 !py-3.5">
+                      <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1", fontSize: 20 }}>play_arrow</span>
+                      Watch Now
+                    </span>
+                  </div>
+                </div>
+              </Link>
+
+              {items.length > 1 && (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+                  {items.slice(1).map((episode, i) => (
+                    <div key={episode.slug} data-reveal style={{ ['--d' as string]: i % 3 }}>
+                      <EpisodeCard episode={episode} image={episode.thumbnail} eyebrow="Archive" showDate />
                     </div>
-                  </div>
-                  <div className="space-y-2">
-                    <span className="font-label text-[10px] uppercase tracking-[0.2em] text-secondary">ARCHIVE</span>
-                    <h3 className="serif-headline text-2xl font-bold group-hover:text-primary transition-colors line-clamp-2">{episode.title}</h3>
-                    <p className="font-body text-slate-400 text-sm leading-relaxed line-clamp-2">{episode.blurb}</p>
-                    <p className="font-body text-slate-500 text-xs">Published: {new Date(episode.publishedAt).toLocaleDateString()}</p>
-                  </div>
-                </Link>
-              ))}
-            </div>
+                  ))}
+                </div>
+              )}
+            </>
           )}
         </section>
       </main>

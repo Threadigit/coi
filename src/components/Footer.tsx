@@ -28,36 +28,52 @@ const socials = [
   },
 ];
 
+const nav = [
+  { href: '/', label: 'Home' },
+  { href: '/timeline', label: 'Chronicle' },
+  { href: '/archive', label: 'Archive' },
+  { href: '/about', label: 'About' },
+];
+
 export default function Footer() {
   return (
-    <footer className="w-full py-16 px-6 md:px-12 border-t border-outline-variant/20 bg-background flex flex-col md:flex-row justify-between items-center gap-8 mt-20">
-      <div className="flex flex-col items-center md:items-start gap-4">
-        <div className="font-headline italic text-primary text-xl">Chronicles of Innovation</div>
-        <p className="font-label text-[10px] uppercase tracking-widest text-slate-500 text-center md:text-left">
-          © {new Date().getFullYear()} Chronicles of Innovation. Curating the Spark of Progress.
-        </p>
-      </div>
-      <div className="flex flex-col md:flex-row items-center gap-8">
-        <div className="flex flex-wrap justify-center gap-8">
-          <Link href="/terms" className="font-label text-[10px] uppercase tracking-widest text-slate-500 hover:text-on-surface transition-opacity duration-500 hover:underline decoration-primary underline-offset-4">Terms of Service</Link>
-          <Link href="/privacy" className="font-label text-[10px] uppercase tracking-widest text-slate-500 hover:text-on-surface transition-opacity duration-500 hover:underline decoration-primary underline-offset-4">Privacy Policy</Link>
-          <Link href="mailto:hello@chroniclesofinnovation.com" className="font-label text-[10px] uppercase tracking-widest text-slate-500 hover:text-on-surface transition-opacity duration-500 hover:underline decoration-primary underline-offset-4">Contact</Link>
+    <footer className="relative mt-24 border-t border-white/[0.07] bg-surface-container-lowest">
+      <div className="hairline absolute inset-x-0 top-0" aria-hidden="true" />
+      <div className="mx-auto max-w-7xl px-6 md:px-12 pt-16 pb-10">
+        <div className="flex flex-col gap-12 md:flex-row md:items-start md:justify-between">
+          <div className="max-w-sm">
+            <div className="font-headline italic text-primary text-2xl tracking-[-0.01em]">Chronicles of Innovation</div>
+          </div>
+
+          <nav aria-label="Footer" className="grid grid-cols-2 gap-x-16 gap-y-3 text-[13px]">
+            {nav.map((l) => (
+              <Link key={l.href} href={l.href} className="text-on-surface/60 transition-colors hover:text-on-surface">{l.label}</Link>
+            ))}
+            <Link href="/terms" className="text-on-surface/60 transition-colors hover:text-on-surface">Terms of Service</Link>
+            <Link href="/privacy" className="text-on-surface/60 transition-colors hover:text-on-surface">Privacy Policy</Link>
+            <Link href="mailto:hello@chroniclesofinnovation.com" className="text-on-surface/60 transition-colors hover:text-on-surface">Contact</Link>
+          </nav>
+
+          <div className="flex items-center gap-2">
+            {socials.map((social) => (
+              <Link
+                key={social.name}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={social.name}
+                className="grid h-10 w-10 place-items-center rounded-full bg-white/[0.05] text-on-surface/60 ring-1 ring-white/[0.07] transition-all duration-500 hover:bg-primary hover:text-on-primary hover:scale-110"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className="h-[18px] w-[18px]">
+                  <path d={social.path} />
+                </svg>
+              </Link>
+            ))}
+          </div>
         </div>
-        <div className="flex items-center gap-5">
-          {socials.map((social) => (
-            <Link
-              key={social.name}
-              href={social.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={social.name}
-              className="text-slate-500 hover:text-primary transition-colors duration-500"
-            >
-              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className="w-5 h-5">
-                <path d={social.path} />
-              </svg>
-            </Link>
-          ))}
+
+        <div className="mt-14 border-t border-white/[0.06] pt-6 text-[12px] text-on-surface/40">
+          © {new Date().getFullYear()} Chronicles of Innovation. Curating the Spark of Progress.
         </div>
       </div>
     </footer>

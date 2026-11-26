@@ -127,9 +127,7 @@ export default function HeroCinematicPreview({ videoId, image, alt }: Props) {
         fill
         priority
         sizes="100vw"
-        className={`object-cover grayscale hero-kenburns transition-opacity duration-1000 ${
-          videoReady ? 'opacity-0' : 'opacity-60'
-        }`}
+        className="object-cover saturate-[.6] hero-kenburns opacity-75"
       />
       {mountVideo && (
         <iframe
@@ -140,8 +138,8 @@ export default function HeroCinematicPreview({ videoId, image, alt }: Props) {
           aria-hidden="true"
           allow="autoplay; encrypted-media"
           onLoad={() => setVideoReady(true)}
-          className={`pointer-events-none absolute left-1/2 top-1/2 h-[56.25vw] min-h-full w-[177.78vh] min-w-full -translate-x-1/2 -translate-y-1/2 grayscale transition-opacity duration-1000 ${
-            videoReady ? 'opacity-60' : 'opacity-0'
+          className={`pointer-events-none absolute left-1/2 top-1/2 h-[56.25vw] min-h-full w-[177.78vh] min-w-full -translate-x-1/2 -translate-y-1/2 saturate-[.6] transition-opacity duration-1000 ${
+            videoReady ? 'opacity-75' : 'opacity-0'
           }`}
         />
       )}

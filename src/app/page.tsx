@@ -4,7 +4,7 @@ import NewsletterForm from "@/components/NewsletterForm";
 import HeroCinematicPreview from "@/components/HeroCinematicPreview";
 import Shelf from "@/components/Shelf";
 import EpisodeScene from "@/components/EpisodeScene";
-import ScrollQuote from "@/components/ScrollQuote";
+import CuratorQuote from "@/components/CuratorQuote";
 import { episodes, eras } from "@/lib/episodes";
 import type { Metadata } from "next";
 
@@ -167,51 +167,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Scene 3a (phones): the curator, large */}
-      <section className="lg:hidden scene bg-[#05070a]">
-        <div className="relative aspect-[4/5] w-full" data-reveal>
-          <Image src="/avatar.png" alt="Executive Curator Portrait" fill sizes="100vw" className="object-cover object-top saturate-[.85]" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#05070a] via-transparent to-black/20" />
-          <Link href="/about" className="absolute inset-x-0 bottom-0 px-5 pb-8 block">
-            <span className="block text-primary serif-display italic text-3xl">Tolu Adetuyi</span>
-            <span className="kicker !tracking-[0.3em] !text-on-surface/65 mt-2 block">Executive Curator</span>
-          </Link>
-        </div>
-      </section>
-
-      {/* Scene 3: philosophy, lit word by word as you scroll */}
-      <ScrollQuote
-        words={[
-          '\u201CInnovation', 'is', 'not', 'merely', 'a', 'sequence', 'of', 'inventions,', 'but', 'the', 'enduring', 'narrative', 'of', 'human', 'curiosity', 'refusing', 'to', 'stay', 'silent.\u201D',
-        ]}
-        highlight={['inventions']}
-        kicker="Philosophy of Progress"
-        attribution={
-          <Link href="/about" className="group inline-flex items-center gap-5">
-            <span className="h-px w-12 bg-primary" aria-hidden="true" />
-            <span>
-              <span className="block text-primary serif-display italic text-2xl md:text-3xl transition-colors group-hover:text-[#ffe0a8]">Tolu Adetuyi</span>
-              <span className="kicker !tracking-[0.3em] !text-on-surface/60 mt-1.5 block">Executive Curator</span>
-            </span>
-          </Link>
-        }
-        aside={
-          <Link href="/about" className="group block">
-            <div className="relative h-[64svh] max-h-[40rem] aspect-[3/4] overflow-hidden bg-surface-container">
-              <Image src="/avatar.png" alt="Executive Curator Portrait" fill sizes="30rem" className="object-cover object-top saturate-[.85] transition-all duration-[1200ms] ease-[var(--ease-spring)] group-hover:saturate-100 group-hover:scale-[1.03]" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-              <div className="absolute inset-x-0 bottom-0 p-6">
-                <span className="block text-primary serif-display italic text-2xl">Tolu Adetuyi</span>
-                <span className="kicker !tracking-[0.3em] !text-on-surface/65 mt-1.5 block">Executive Curator</span>
-              </div>
-            </div>
-          </Link>
-        }
-      >
-        <p className="mt-8 md:mt-10 max-w-xl text-on-surface/65 text-base md:text-xl leading-relaxed">
-          Our mission at Chronicles of Innovation is to archive the sparks that ignited entire eras. We don&apos;t just show you what was built; we show you why it mattered to the soul of humanity.
-        </p>
-      </ScrollQuote>
+      {/* Scene 3: the curator's statement */}
+      <CuratorQuote />
 
       {/* Scene 4: current spotlight */}
       <section className="scene">
@@ -229,7 +186,7 @@ export default function Home() {
               className="parallax object-cover"
             />
           </div>
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/45 to-black/30" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/75 to-black/35 lg:via-black/45 lg:to-black/30" />
           <div className="absolute inset-0 scrim-side" />
           <div className="relative z-10 w-full max-w-[1500px] mx-auto px-5 md:px-12 pb-14 md:pb-24 pt-32">
             <div className="kicker mb-6" data-reveal>Current Spotlight</div>

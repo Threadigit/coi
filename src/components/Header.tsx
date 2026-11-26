@@ -56,8 +56,9 @@ export default function Header() {
     pathname === path || (path === '/archive' && pathname.startsWith('/episode'));
 
   return (
+    <>
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-[background,border-color,transform] duration-500 ${hidden && !menuOpen ? '-translate-y-full' : 'translate-y-0'} ${
+      className={`fixed inset-x-0 top-0 z-50 transition-[background,border-color,transform] duration-500 ${hidden && !menuOpen ? '-translate-y-full' : ''} ${
         scrolled || menuOpen
           ? 'bg-[#0f1419]/90 backdrop-blur-md border-b border-white/10'
           : 'bg-gradient-to-b from-black/60 to-transparent border-b border-transparent'
@@ -132,40 +133,42 @@ export default function Header() {
         </div>
       </nav>
 
-      {/* Mobile sheet */}
-      <div
-        id="mobile-menu"
-        hidden={!menuOpen}
-        className="fixed inset-0 -z-10 md:hidden bg-[#0a0f14] pt-28 px-6"
-      >
-        <ul className="flex flex-col">
-          {links.map((l, i) => (
-            <li key={l.href} className="border-b border-white/[0.08]">
-              <Link
-                href={l.href}
-                onClick={() => setMenuPath(null)}
-                aria-current={isActive(l.href) ? 'page' : undefined}
-                style={{ animationDelay: `${i * 60}ms` }}
-                className={`rise block py-5 font-headline text-4xl tracking-[-0.02em] ${
-                  isActive(l.href) ? 'text-primary italic' : 'text-on-surface'
-                }`}
-              >
-                {l.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-        <form action="/archive" role="search" className="relative mt-8">
-          <Search aria-hidden="true" className="pointer-events-none absolute left-0 top-1/2 h-4 w-4 -translate-y-1/2 text-on-surface/60" />
-          <input
-            name="q"
-            type="search"
-            aria-label="Search the archive"
-            placeholder="Search the archive"
-            className="h-12 w-full border-b border-white/25 bg-transparent pl-9 pr-4 text-base text-on-surface outline-none placeholder:text-on-surface/50 focus:border-primary"
-          />
-        </form>
-      </div>
     </header>
+
+    {/* Mobile menu: a sibling of the header, so the header's slide transform can never become its containing block */}
+    <div
+      id="mobile-menu"
+      hidden={!menuOpen}
+      className="fixed inset-0 z-40 md:hidden overflow-y-auto bg-[#0a0f14] pt-[calc(6.5rem+env(safe-area-inset-top))] px-6 pb-[max(2rem,env(safe-area-inset-bottom))]"
+    >
+      <ul className="flex flex-col">
+        {links.map((l, i) => (
+          <li key={l.href} className="border-b border-white/[0.08]">
+            <Link
+              href={l.href}
+              onClick={() => setMenuPath(null)}
+              aria-current={isActive(l.href) ? 'page' : undefined}
+              style={{ animationDelay: `${i * 60}ms` }}
+              className={`rise block py-5 font-headline text-4xl tracking-[-0.02em] ${
+                isActive(l.href) ? 'text-primary italic' : 'text-on-surface'
+              }`}
+            >
+              {l.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+      <form action="/archive" role="search" className="relative mt-8">
+        <Search aria-hidden="true" className="pointer-events-none absolute left-0 top-1/2 h-4 w-4 -translate-y-1/2 text-on-surface/60" />
+        <input
+          name="q"
+          type="search"
+          aria-label="Search the archive"
+          placeholder="Search the archive"
+          className="h-12 w-full border-b border-white/25 bg-transparent pl-9 pr-4 text-base text-on-surface outline-none placeholder:text-on-surface/50 focus:border-primary"
+        />
+      </form>
+    </div>
+    </>
   );
 }

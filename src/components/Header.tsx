@@ -117,7 +117,7 @@ export default function Header() {
               type="search"
               aria-label={t.searchLabel}
               placeholder={t.search}
-              className="h-10 w-28 border-b border-white/25 bg-transparent pl-7 pr-2 text-[13px] text-on-surface outline-none transition-all duration-500 placeholder:text-on-surface/50 focus:w-52 focus:border-primary"
+              className="h-10 w-32 border-b border-white/25 bg-transparent pl-7 pr-2 text-[13px] text-on-surface outline-none transition-all duration-500 placeholder:text-on-surface/50 focus:w-52 focus:border-primary"
             />
           </form>
           <div className="hidden md:block"><LanguageMenu /></div>

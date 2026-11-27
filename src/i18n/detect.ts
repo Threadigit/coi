@@ -1,19 +1,21 @@
 import { defaultLocale, isLocale, type Locale } from './config';
 
 /**
- * Countries where a supported language is the clear everyday default. Used
- * only as a fallback when the browser gives no usable language signal.
- * Edit freely: it is data, not logic.
+ * Countries where a language we offer is the clear everyday language. Used when
+ * the visitor's browser is set to English (or says nothing useful), so that
+ * location still gives them their own language. Edit freely: it is data.
  */
 export const COUNTRY_DEFAULTS: Record<string, Locale> = {
   // Spanish
   ES: 'es', MX: 'es', AR: 'es', CO: 'es', CL: 'es', PE: 'es', VE: 'es', EC: 'es',
   GT: 'es', CU: 'es', BO: 'es', DO: 'es', HN: 'es', PY: 'es', SV: 'es', NI: 'es',
   CR: 'es', PA: 'es', UY: 'es', PR: 'es', GQ: 'es',
+  // French
+  FR: 'fr', BE: 'fr', LU: 'fr', MC: 'fr', SN: 'fr', CI: 'fr', CM: 'fr', ML: 'fr',
+  BF: 'fr', NE: 'fr', TG: 'fr', BJ: 'fr', GN: 'fr', CD: 'fr', CG: 'fr', GA: 'fr',
+  TD: 'fr', MG: 'fr', HT: 'fr',
   // Chinese (Simplified)
-  CN: 'zh', SG: 'zh',
-  // Hindi
-  IN: 'hi',
+  CN: 'zh',
 };
 
 type Ranked = { tag: string; q: number };
@@ -42,23 +44,28 @@ function toSupported(tag: string): Locale | 'other' {
 /**
  * Picks the language to show a first-time visitor.
  *
- * 1. The browser's ranked language list. The first language we recognise wins,
- *    which also means someone who ranks English first stays on English.
- * 2. If the browser says nothing useful (no header, or only languages we do not
- *    offer), fall back to the visitor's country.
- * 3. Otherwise English.
+ * 1. If their browser lists a language we offer other than English first, use
+ *    it. They asked for it explicitly.
+ * 2. Otherwise (English, or nothing useful) their country decides: a visitor in
+ *    Mexico, France or China sees their own language even on an English phone.
+ *    The switcher, and the saved choice it sets, always overrides this.
+ * 3. Otherwise the first offered language the browser lists, or English.
  */
 export function detectLocale(
   acceptLanguage: string | null | undefined,
   country: string | null | undefined
 ): Locale {
+  let firstSupported: Locale | undefined;
   for (const { tag } of parseAcceptLanguage(acceptLanguage)) {
     const match = toSupported(tag);
-    if (match !== 'other') return match;
+    if (match === 'other') continue;
+    firstSupported = match;
+    break;
   }
+  if (firstSupported && firstSupported !== defaultLocale) return firstSupported;
   const c = country?.toUpperCase();
   if (c && COUNTRY_DEFAULTS[c]) return COUNTRY_DEFAULTS[c];
-  return defaultLocale;
+  return firstSupported ?? defaultLocale;
 }
 
 export const BOT_PATTERN =

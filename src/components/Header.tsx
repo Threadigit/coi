@@ -2,21 +2,29 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import LocalizedLink from '@/i18n/Link';
+import { useLocale } from '@/i18n/context';
+import { localizedPath, stripLocale } from '@/i18n/config';
+import { LanguageMenu, LanguageList } from './LanguageSwitcher';
 import { usePathname } from 'next/navigation';
 import { Search, Menu, X } from 'lucide-react';
 import Image from 'next/image';
 
-const links = [
-  { href: '/', label: 'Home' },
-  { href: '/timeline', label: 'Chronicle' },
-  { href: '/archive', label: 'Archive' },
-  { href: '/about', label: 'About' },
-];
+const linkDefs = [
+  { href: '/', key: 'home' },
+  { href: '/timeline', key: 'chronicle' },
+  { href: '/archive', key: 'archive' },
+  { href: '/about', key: 'about' },
+] as const;
 
 const SUBSCRIBE_URL = 'https://www.youtube.com/@ChronicleofInnovation?sub_confirmation=1';
 
 export default function Header() {
-  const pathname = usePathname();
+  const { lang, ui } = useLocale();
+  const t = ui.nav;
+  const links = linkDefs.map((l) => ({ href: l.href, label: t[l.key] }));
+  // The pathname without its language prefix, whichever way the router reports it.
+  const pathname = stripLocale(usePathname());
   // The menu counts as open only on the route it was opened from, so any
   // navigation (links, back button) closes it without an effect.
   const [menuPath, setMenuPath] = useState<string | null>(null);
@@ -65,14 +73,14 @@ export default function Header() {
       }`}
     >
       <nav
-        aria-label="Primary"
+        aria-label={t.primary}
         className="mx-auto flex h-[4.25rem] md:h-20 max-w-[1600px] items-center justify-between gap-6 px-5 md:px-12 pt-[env(safe-area-inset-top)] box-content"
       >
-        <Link href="/" className="group flex items-center gap-3.5" aria-label="Chronicles of Innovation, home">
+        <LocalizedLink href="/" className="group flex items-center gap-3.5" aria-label={t.homeLink}>
           <span className="relative block h-10 w-10 overflow-hidden rounded-full ring-1 ring-white/15">
             <Image
               src="/coi_logo_transparent.png"
-              alt="Chronicles of Innovation Logo"
+              alt={ui.common.logoAlt}
               fill
               sizes="40px"
               className="object-cover scale-[1.35]"
@@ -81,12 +89,12 @@ export default function Header() {
           <span className="font-headline italic text-[1.35rem] leading-none text-primary hidden sm:block tracking-[-0.01em]">
             Chronicles of Innovation
           </span>
-        </Link>
+        </LocalizedLink>
 
         <ul className="hidden md:flex items-center gap-9 ml-auto">
           {links.map((l) => (
             <li key={l.href}>
-              <Link
+              <LocalizedLink
                 href={l.href}
                 aria-current={isActive(l.href) ? 'page' : undefined}
                 className={`relative block py-3 text-[12px] font-medium uppercase tracking-[0.16em] transition-colors duration-300 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-left after:bg-primary after:transition-transform after:duration-500 ${
@@ -96,34 +104,35 @@ export default function Header() {
                 }`}
               >
                 {l.label}
-              </Link>
+              </LocalizedLink>
             </li>
           ))}
         </ul>
 
         <div className="flex items-center gap-3 md:gap-5">
-          <form action="/archive" role="search" className="relative hidden lg:block group/search">
+          <form action={localizedPath(lang, '/archive')} role="search" className="relative hidden lg:block group/search">
             <Search aria-hidden="true" className="pointer-events-none absolute left-0 top-1/2 h-4 w-4 -translate-y-1/2 text-on-surface/60 transition-colors group-focus-within/search:text-primary" />
             <input
               name="q"
               type="search"
-              aria-label="Search the archive"
-              placeholder="Search"
+              aria-label={t.searchLabel}
+              placeholder={t.search}
               className="h-10 w-28 border-b border-white/25 bg-transparent pl-7 pr-2 text-[13px] text-on-surface outline-none transition-all duration-500 placeholder:text-on-surface/50 focus:w-52 focus:border-primary"
             />
           </form>
+          <div className="hidden md:block"><LanguageMenu /></div>
           <Link
             href={SUBSCRIBE_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-primary !min-h-[2.75rem] !py-2.5 !px-5 !text-[11px]"
           >
-            Subscribe
+            {t.subscribe}
           </Link>
           <button
             type="button"
             className="md:hidden grid h-11 w-11 place-items-center text-on-surface"
-            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+            aria-label={menuOpen ? t.closeMenu : t.openMenu}
             aria-expanded={menuOpen}
             aria-controls="mobile-menu"
             onClick={() => setMenuPath(menuOpen ? null : pathname)}
@@ -144,7 +153,7 @@ export default function Header() {
       <ul className="flex flex-col">
         {links.map((l, i) => (
           <li key={l.href} className="border-b border-white/[0.08]">
-            <Link
+            <LocalizedLink
               href={l.href}
               onClick={() => setMenuPath(null)}
               aria-current={isActive(l.href) ? 'page' : undefined}
@@ -154,20 +163,21 @@ export default function Header() {
               }`}
             >
               {l.label}
-            </Link>
+            </LocalizedLink>
           </li>
         ))}
       </ul>
-      <form action="/archive" role="search" className="relative mt-8">
+      <form action={localizedPath(lang, '/archive')} role="search" className="relative mt-8">
         <Search aria-hidden="true" className="pointer-events-none absolute left-0 top-1/2 h-4 w-4 -translate-y-1/2 text-on-surface/60" />
         <input
           name="q"
           type="search"
-          aria-label="Search the archive"
-          placeholder="Search the archive"
+          aria-label={t.searchLabel}
+          placeholder={t.searchPlaceholder}
           className="h-12 w-full border-b border-white/25 bg-transparent pl-9 pr-4 text-base text-on-surface outline-none placeholder:text-on-surface/50 focus:border-primary"
         />
       </form>
+      <LanguageList />
     </div>
     </>
   );

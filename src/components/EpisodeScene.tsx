@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { eras, type Episode } from '@/lib/episodes';
+import { localizedPath, type Locale } from '@/i18n/config';
+import type { Episode } from '@/lib/episodes';
 
 /**
  * A full "scene" for an episode: edge to edge artwork, deep vignette, title
@@ -8,17 +9,23 @@ import { eras, type Episode } from '@/lib/episodes';
  */
 export default function EpisodeScene({
   episode,
-  number,
+  lang,
+  eraLabel,
+  episodeLabel,
+  watchLabel,
   className = '',
 }: {
   episode: Episode;
-  number: string;
+  lang: Locale;
+  eraLabel: string;
+  /** Already formatted, e.g. "Episode 004". */
+  episodeLabel: string;
+  watchLabel: string;
   className?: string;
 }) {
-  const era = eras.find((e) => e.id === episode.era)?.label;
   return (
     <Link
-      href={episode.href}
+      href={localizedPath(lang, episode.href)}
       className={`group relative block aspect-[4/5] sm:aspect-[16/10] lg:aspect-[16/9] overflow-hidden bg-black ${className}`}
     >
       <Image
@@ -38,7 +45,7 @@ export default function EpisodeScene({
       </span>
       <div className="absolute inset-x-0 bottom-0 p-5 md:p-10 lg:p-14">
         <div className="kicker mb-4 !text-primary">
-          Episode {number} <span className="mx-2 text-white/40">/</span> {era}
+          {episodeLabel} <span className="mx-2 text-white/40">/</span> {eraLabel}
         </div>
         <h3 className="title-card text-[1.7rem] md:text-5xl lg:text-6xl text-on-surface max-w-3xl mb-4 md:mb-6">{episode.title}</h3>
         <p className="hidden sm:block text-on-surface/70 text-base md:text-lg leading-relaxed max-w-xl mb-6">{episode.blurb}</p>
@@ -46,7 +53,7 @@ export default function EpisodeScene({
           <span className="grid h-11 w-11 place-items-center rounded-full border border-white/60 transition-colors duration-500 group-hover:bg-primary group-hover:border-primary group-hover:text-on-primary">
             <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1", fontSize: 22 }}>play_arrow</span>
           </span>
-          Watch
+          {watchLabel}
         </span>
       </div>
     </Link>

@@ -2,35 +2,50 @@ import Image from "next/image";
 import Link from "next/link";
 import NewsletterForm from "@/components/NewsletterForm";
 import HeroCinematicPreview from "@/components/HeroCinematicPreview";
-import Shelf from "@/components/Shelf";
 import EpisodeScene from "@/components/EpisodeScene";
 import CuratorQuote from "@/components/CuratorQuote";
-import { episodes, eras } from "@/lib/episodes";
+import Shelf from "@/components/Shelf";
+import { getEpisodes, episodeNumber } from "@/lib/episodes";
+import { episodeData } from "@/lib/episode-data";
+import { getMessages, format } from "@/i18n/messages";
+import { localeMeta, localizedPath, locales } from "@/i18n/config";
+import { getLocale, pageAlternates, absoluteUrl, SITE, ogLocales } from "@/i18n/page";
+import { rich } from "@/i18n/rich";
+import { videoIdFor } from "@/i18n/video";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Chronicles of Innovation | The Premium Documentary Series for Innovation Stories",
-  description: "The premium documentary series for innovation stories across the world. From the Industrial Revolution to the Digital Era, we document the groundbreaking innovations that shaped humanity.",
-  alternates: {
-    canonical: "/",
-  },
-};
-export default function Home() {
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const lang = await getLocale(params);
+  const m = getMessages(lang).meta;
+  return {
+    title: { absolute: m.defaultTitle },
+    description: m.homeDescription,
+    alternates: pageAlternates(lang, "/"),
+    openGraph: { ...ogLocales(lang), type: "website", url: localizedPath(lang, "/"), title: m.defaultTitle, description: m.ogDescription, siteName: "Chronicles of Innovation", images: [{ url: "/opengraph-image", width: 1200, height: 630 }] },
+  };
+}
+
+export default async function Home({ params }: { params: Promise<{ lang: string }> }) {
+  const lang = await getLocale(params);
+  const m = getMessages(lang);
+  const t = m.home;
+  const episodes = getEpisodes(lang);
   const spotlight = episodes.find((e) => e.slug === "shipping-container")!;
+  const eraLabel = (id: string) => m.eras[id as keyof typeof m.eras].label;
+  const heroVideo = videoIdFor(episodeData["edison-vs-tesla"], lang);
+
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "Organization",
-        "@id": "https://chroniclesofinnovation.com/#organization",
+        "@id": `${SITE}/#organization`,
         "name": "Chronicles of Innovation",
-        "url": "https://chroniclesofinnovation.com",
-        "logo": "https://chroniclesofinnovation.com/coi_logo_transparent.png",
-        "description": "The premium documentary series for innovation stories across the world. Documenting how groundbreaking innovations shaped humanity across the Industrial, Atomic, and Digital eras.",
+        "url": SITE,
+        "logo": `${SITE}/coi_logo_transparent.png`,
+        "description": m.meta.description,
         "foundingDate": "2026",
-        "founder": {
-          "@id": "https://chroniclesofinnovation.com/#toluadetuyi"
-        },
+        "founder": { "@id": `${SITE}/#toluadetuyi` },
         "sameAs": [
           "https://www.youtube.com/@ChronicleofInnovation",
           "https://www.facebook.com/Chronicleofinnovation/",
@@ -41,13 +56,11 @@ export default function Home() {
       },
       {
         "@type": "Person",
-        "@id": "https://chroniclesofinnovation.com/#toluadetuyi",
+        "@id": `${SITE}/#toluadetuyi`,
         "name": "Tolu Adetuyi",
-        "url": "https://chroniclesofinnovation.com/about",
-        "jobTitle": "Executive Curator & Founder",
-        "worksFor": {
-          "@id": "https://chroniclesofinnovation.com/#organization"
-        },
+        "url": `${SITE}/about`,
+        "jobTitle": m.episodeUi.jobTitle,
+        "worksFor": { "@id": `${SITE}/#organization` },
         "sameAs": [
           "https://www.adetuyi.com",
           "https://www.linkedin.com/in/adetuyitolu/",
@@ -58,31 +71,33 @@ export default function Home() {
       {
         "@type": "WebSite",
         "name": "Chronicles of Innovation",
-        "url": "https://chroniclesofinnovation.com",
-        "description": "The premium documentary series for innovation stories across the world.",
+        "url": SITE,
+        "inLanguage": locales.map((l) => localeMeta[l].htmlLang),
+        "description": m.meta.twitterDescription,
         "potentialAction": {
           "@type": "SearchAction",
-          "target": "https://chroniclesofinnovation.com/archive?q={search_term_string}",
+          "target": `${SITE}${localizedPath(lang, "/archive")}?q={search_term_string}`,
           "query-input": "required name=search_term_string"
         }
       },
       {
         "@type": "CreativeWorkSeries",
-        "@id": "https://chroniclesofinnovation.com/#series",
+        "@id": `${SITE}/#series`,
         "name": "Chronicles of Innovation",
-        "url": "https://chroniclesofinnovation.com",
-        "description": "A premium documentary series exploring the people, ideas, experiments, failures and breakthroughs that changed the world.",
-        "publisher": { "@id": "https://chroniclesofinnovation.com/#organization" },
-        "author": { "@id": "https://chroniclesofinnovation.com/#toluadetuyi" }
+        "url": SITE,
+        "inLanguage": localeMeta[lang].htmlLang,
+        "description": m.meta.description,
+        "publisher": { "@id": `${SITE}/#organization` },
+        "author": { "@id": `${SITE}/#toluadetuyi` }
       },
       {
         "@type": "ItemList",
-        "@id": "https://chroniclesofinnovation.com/#episodes",
-        "name": "Chronicles of Innovation: Episodes",
+        "@id": `${SITE}/#episodes`,
+        "name": `Chronicles of Innovation: ${m.common.episodes}`,
         "itemListElement": episodes.map((episode, index) => ({
           "@type": "ListItem",
           "position": index + 1,
-          "url": `https://chroniclesofinnovation.com${episode.href}`,
+          "url": absoluteUrl(lang, episode.href),
           "name": episode.title
         }))
       }
@@ -100,9 +115,9 @@ export default function Home() {
       <section className="scene cinema flex min-h-[100svh] items-end">
         <div className="absolute inset-0">
           <HeroCinematicPreview
-            videoId="otqgociwb3o"
+            videoId={heroVideo}
             image="/edison-machine-shop.jpg"
-            alt="Thomas Edison's machine shop, lit by early electric lamps"
+            alt={t.heroAlt}
           />
           <div className="absolute inset-0 bg-black/25" />
           <div className="absolute inset-x-0 top-0 h-44 scrim-top" />
@@ -111,27 +126,27 @@ export default function Home() {
         <div className="lb-bar lb-top" aria-hidden="true" />
         <div className="lb-bar lb-bot" aria-hidden="true" />
         <div className="relative z-10 w-full mx-auto max-w-[1600px] px-5 md:px-12 pt-40 pb-[max(2.25rem,env(safe-area-inset-bottom))] md:pb-24 text-center md:text-left">
-          <div className="rise kicker mb-6 md:mb-8" style={{ ['--d' as string]: 0 }}>Era I: The Age of Electricity</div>
+          <div className="rise kicker mb-6 md:mb-8" style={{ ['--d' as string]: 0 }}>{t.heroKicker}</div>
           <h1
             className="rise title-card text-[2.3rem] sm:text-6xl md:text-7xl lg:text-[5.4rem] text-on-surface max-w-6xl mx-auto md:mx-0"
             style={{ ['--d' as string]: 1 }}
           >
-            Light Bulb &amp; Electricity: <br className="hidden md:block" />Edison vs Tesla&apos;s <span className="text-primary italic pr-2">Hidden Battle</span>
+            {rich(t.heroTitle, "text-primary italic pr-2")}
           </h1>
           <div className="mt-6 md:mt-10 grid md:grid-cols-[1fr_auto] gap-8 md:gap-16 items-end">
             <p
               className="rise max-w-xl mx-auto md:mx-0 text-[15px] md:text-xl leading-relaxed text-on-surface/80"
               style={{ ['--d' as string]: 2 }}
             >
-              The current that powers your world was decided by war. Explore the bitter rivalry between Thomas Edison and Nikola Tesla, the battle to light humanity and own the future.
+              {t.heroBlurb}
             </p>
             <div className="rise flex flex-col sm:flex-row gap-3 md:gap-4 md:justify-end" style={{ ['--d' as string]: 3 }}>
-              <Link href="/episode/edison-vs-tesla" className="btn btn-primary w-full sm:w-auto sm:min-w-[17rem]">
+              <Link href={localizedPath(lang, "/episode/edison-vs-tesla")} className="btn btn-primary w-full sm:w-auto sm:min-w-[17rem]">
                 <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1", fontSize: 22 }}>play_arrow</span>
-                Watch Feature Documentary
+                {t.watchFeature}
               </Link>
-              <Link href="/archive" className="btn btn-glass w-full sm:w-auto">
-                View Full Series
+              <Link href={localizedPath(lang, "/archive")} className="btn btn-glass w-full sm:w-auto">
+                {m.common.viewFullSeries}
               </Link>
             </div>
           </div>
@@ -145,22 +160,25 @@ export default function Home() {
       <section className="relative bg-[#05070a] pt-20 md:pt-32 pb-20 md:pb-32">
         <div className="mx-auto max-w-[1600px] px-5 md:px-12">
           <div className="mb-10 md:mb-16 text-center" data-reveal>
-            <div className="kicker mb-5">Chronicles of Innovation</div>
-            <h2 className="title-card text-5xl md:text-8xl text-on-surface">The <span className="italic text-primary">Series</span></h2>
+            <div className="kicker mb-5">{t.seriesKicker}</div>
+            <h2 className="title-card text-5xl md:text-8xl text-on-surface">{rich(t.seriesTitle, "text-primary italic")}</h2>
           </div>
-          <Shelf label="Episodes">
+          <Shelf label={m.common.episodes}>
             {episodes.map((e) => (
               <EpisodeScene
                 key={e.slug}
                 episode={e}
-                number={String(episodes.length - episodes.indexOf(e)).padStart(3, '0')}
+                lang={lang}
+                eraLabel={eraLabel(e.era)}
+                episodeLabel={format(m.common.episode, { n: episodeNumber(e.slug) })}
+                watchLabel={m.common.watch}
                 className="w-[88vw] lg:w-[72vw] max-w-[1200px]"
               />
             ))}
           </Shelf>
           <div className="mt-12 md:mt-16 text-center">
-            <Link href="/archive" className="link-arrow">
-              View Full Series
+            <Link href={localizedPath(lang, "/archive")} className="link-arrow">
+              {m.common.viewFullSeries}
               <span className="material-symbols-outlined" style={{ fontSize: 18 }}>arrow_forward</span>
             </Link>
           </div>
@@ -168,19 +186,28 @@ export default function Home() {
       </section>
 
       {/* Scene 3: the curator's statement */}
-      <CuratorQuote />
+      <CuratorQuote
+        htmlLang={localeMeta[lang].htmlLang}
+        kicker={t.philosophyKicker}
+        quote={t.quote}
+        mission={t.mission}
+        name={t.curatorName}
+        role={t.curatorRole}
+        alt={t.curatorAlt}
+        href={localizedPath(lang, "/about")}
+      />
 
       {/* Scene 4: current spotlight */}
       <section className="scene">
         <Link
-          href="/episode/shipping-container"
-          aria-label="Watch The Shipping Container"
+          href={localizedPath(lang, "/episode/shipping-container")}
+          aria-label={t.spotlightLabel}
           className="group relative flex min-h-[100svh] items-end overflow-hidden"
         >
           <div className="absolute inset-0 overflow-hidden">
             <Image
               src="/container-hero.jpg"
-              alt="A container ship being loaded by cranes at a port terminal at sunset"
+              alt={t.spotlightAlt}
               fill
               sizes="100vw"
               className="parallax object-cover"
@@ -189,33 +216,33 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/75 to-black/35 lg:via-black/45 lg:to-black/30" />
           <div className="absolute inset-0 scrim-side" />
           <div className="relative z-10 w-full max-w-[1600px] mx-auto px-5 md:px-12 pb-14 md:pb-24 pt-32">
-            <div className="kicker mb-6" data-reveal>Current Spotlight</div>
+            <div className="kicker mb-6" data-reveal>{t.spotlightKicker}</div>
             <div className="grid lg:grid-cols-[1.4fr_1fr] gap-10 lg:gap-24 items-end">
               <div data-reveal style={{ ['--d' as string]: 1 }}>
-                <h2 className="title-card text-[2.8rem] md:text-8xl lg:text-[7.5rem] text-on-surface mb-6 md:mb-8">The Shipping Container</h2>
+                <h2 className="title-card text-[2.8rem] md:text-8xl lg:text-[7.5rem] text-on-surface mb-6 md:mb-8">{t.spotlightTitle}</h2>
                 <p className="text-on-surface/85 text-base md:text-xl leading-relaxed max-w-xl mb-8">
-                  How a North Carolina trucker turned a simple steel box into the shipping container, the deceptively plain invention that rewired global trade and built the modern economy.
+                  {t.spotlightBlurb}
                 </p>
                 <span className="btn btn-primary">
                   <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1", fontSize: 22 }}>play_arrow</span>
-                  Watch Now
+                  {m.common.watchNow}
                 </span>
               </div>
               <div data-reveal style={{ ['--d' as string]: 2 }}>
-                <div className="kicker !text-secondary mb-5">The Container Revolution | 1956–Present</div>
+                <div className="kicker !text-secondary mb-5">{t.spotlightTag}</div>
                 <dl className="font-mono-label mb-6 grid grid-cols-[auto_1fr] gap-x-6 gap-y-3 border-t border-white/[0.2] pt-5 text-[11px] uppercase tracking-[0.14em]">
-                  <dt className="text-on-surface/50">Era</dt>
-                  <dd className="text-right text-on-surface">{eras.find((e) => e.id === spotlight.era)?.label}</dd>
-                  <dt className="text-on-surface/50">Year</dt>
+                  <dt className="text-on-surface/50">{m.common.era}</dt>
+                  <dd className="text-right text-on-surface">{eraLabel(spotlight.era)}</dd>
+                  <dt className="text-on-surface/50">{m.common.year}</dt>
                   <dd className="text-right text-on-surface">{spotlight.year}</dd>
-                  <dt className="text-on-surface/50">Episode</dt>
-                  <dd className="text-right text-on-surface">{String(episodes.length - episodes.indexOf(spotlight)).padStart(3, '0')}</dd>
+                  <dt className="text-on-surface/50">{m.common.episodeWord}</dt>
+                  <dd className="text-right text-on-surface">{episodeNumber(spotlight.slug)}</dd>
                 </dl>
                 <ul className="border-t border-white/[0.2]">
-                  {['The Voyage of the Ideal X', 'The Battle for the Standard', 'The World in a Box'].map((t, i) => (
-                    <li key={t} className="flex items-baseline gap-5 border-b border-white/[0.2] py-4">
+                  {t.spotlightChapters.map((c, i) => (
+                    <li key={c} className="flex items-baseline gap-5 border-b border-white/[0.2] py-4">
                       <span className="text-primary serif-display italic text-lg w-8 shrink-0">{String(i + 1).padStart(2, '0')}.</span>
-                      <span className="text-on-surface text-[15px]">{t}</span>
+                      <span className="text-on-surface text-[15px]">{c}</span>
                     </li>
                   ))}
                 </ul>
@@ -228,9 +255,9 @@ export default function Home() {
       {/* Closing scene: the inner circle */}
       <section className="scene cinema flex min-h-[90svh] items-center justify-center px-5 md:px-12 py-24 text-center">
         <div className="relative z-10 w-full max-w-3xl" data-reveal>
-          <div className="kicker mb-8 !text-primary">The Inner Circle</div>
-          <h2 className="title-card text-[2.5rem] md:text-7xl lg:text-8xl text-on-surface mb-8">Join the Vanguard of Thought</h2>
-          <p className="text-on-surface/65 mb-10 text-base md:text-xl leading-relaxed max-w-xl mx-auto">Receive exclusive director&apos;s cuts, archival scans, and invitations to private screenings. No noise, just pure signal.</p>
+          <div className="kicker mb-8 !text-primary">{t.newsletterKicker}</div>
+          <h2 className="title-card text-[2.5rem] md:text-7xl lg:text-8xl text-on-surface mb-8">{t.newsletterTitle}</h2>
+          <p className="text-on-surface/65 mb-10 text-base md:text-xl leading-relaxed max-w-xl mx-auto">{t.newsletterBlurb}</p>
           <div className="flex justify-center"><NewsletterForm /></div>
         </div>
       </section>

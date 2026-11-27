@@ -26,7 +26,7 @@
   --color-outline: #9b8f7f;
   --color-outline-variant: #4f4538;
 
-  --font-headline: var(--font-noto-serif), serif;
+  --font-headline: var(--font-noto-serif), var(--font-noto-serif-sc), var(--font-noto-serif-deva), serif;
   --font-body: var(--font-inter), system-ui, sans-serif;
   --font-label: var(--font-inter), system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, "SF Mono", Menlo, monospace;
@@ -96,7 +96,7 @@
   }
   .serif-display,
   .serif-headline {
-    font-family: var(--font-noto-serif), Georgia, serif;
+    font-family: var(--font-noto-serif), var(--font-noto-serif-sc), var(--font-noto-serif-deva), Georgia, serif;
   }
 
   /* ── Surfaces ────────────────────────────────────────────────────────── */
@@ -312,7 +312,7 @@
     color: rgba(222, 227, 234, 0.75);
   }
   .title-card {
-    font-family: var(--font-noto-serif), Georgia, serif;
+    font-family: var(--font-noto-serif), var(--font-noto-serif-sc), var(--font-noto-serif-deva), Georgia, serif;
     letter-spacing: -0.03em;
     line-height: 1.02;
     text-wrap: balance;
@@ -368,7 +368,7 @@
     line-height: 0.8;
     padding-top: 0.5rem;
     padding-right: 0.75rem;
-    font-family: var(--font-noto-serif), Georgia, serif;
+    font-family: var(--font-noto-serif), var(--font-noto-serif-sc), var(--font-noto-serif-deva), Georgia, serif;
     color: var(--color-primary);
   }
 
@@ -434,4 +434,96 @@
       transform: none;
     }
   }
+}
+
+@layer utilities {
+/* ── Languages without italics, with their own line and letter spacing ───── */
+html:lang(zh-Hans) .italic,
+html:lang(zh-Hans) .italic *,
+html:lang(hi) .italic,
+html:lang(hi) .italic *,
+html:lang(zh-Hans) i,
+html:lang(hi) i {
+  font-style: normal !important;
+}
+/* Negative tracking is a Latin display habit; it crowds CJK. */
+html:lang(zh-Hans) [class*="tracking-\[-"],
+html:lang(zh-Hans) .title-card {
+  letter-spacing: 0 !important;
+}
+html:lang(zh-Hans) h1,
+html:lang(zh-Hans) h2,
+html:lang(zh-Hans) h3,
+html:lang(zh-Hans) h4,
+html:lang(zh-Hans) h5,
+html:lang(zh-Hans) .title-card {
+  line-height: 1.22 !important;
+}
+html:lang(zh-Hans) .kicker,
+html:lang(zh-Hans) .eyebrow {
+  letter-spacing: 0.22em;
+  text-transform: none;
+}
+/* Devanagari joins letters; any letter spacing breaks the joins. */
+html:lang(hi) *,
+html:lang(hi) *::before,
+html:lang(hi) *::after {
+  letter-spacing: normal !important;
+}
+html:lang(hi) h1,
+html:lang(hi) h2,
+html:lang(hi) h3,
+html:lang(hi) h4,
+html:lang(hi) h5,
+html:lang(hi) .title-card {
+  line-height: 1.32 !important;
+}
+html:lang(hi) p,
+html:lang(hi) li {
+  line-height: 1.75;
+}
+html:lang(hi) .kicker,
+html:lang(hi) .eyebrow,
+html:lang(hi) .btn {
+  text-transform: none;
+}
+/* Devanagari has a smaller x-height; the Latin-sized 11px labels are unreadable. */
+html:lang(hi) .kicker,
+html:lang(hi) .eyebrow {
+  font-size: 0.875rem;
+}
+html:lang(hi) .btn {
+  font-size: 0.9375rem;
+}
+html:lang(hi) header .btn {
+  font-size: 0.8125rem !important;
+}
+html:lang(hi) header nav a,
+html:lang(hi) header nav button,
+html:lang(hi) header nav input,
+html:lang(hi) footer a {
+  font-size: 0.9375rem;
+}
+html:lang(hi) dt,
+html:lang(hi) dd {
+  font-size: 0.8125rem;
+}
+html:lang(zh-Hans) .kicker,
+html:lang(zh-Hans) .eyebrow {
+  font-size: 0.8125rem;
+}
+html:lang(zh-Hans) header nav a,
+html:lang(zh-Hans) .btn {
+  font-size: 0.875rem;
+  letter-spacing: 0.06em;
+}
+/* A Latin drop cap does not suit CJK or Devanagari. */
+html:lang(zh-Hans) .drop-cap::first-letter,
+html:lang(hi) .drop-cap::first-letter {
+  float: none;
+  font-size: inherit;
+  line-height: inherit;
+  padding: 0;
+  color: inherit;
+}
 }

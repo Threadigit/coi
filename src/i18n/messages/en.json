@@ -1,0 +1,492 @@
+{
+  "meta": {
+    "siteName": "Chronicles of Innovation",
+    "defaultTitle": "Chronicles of Innovation | The Premium Documentary Series for Innovation Stories",
+    "titleTemplate": "%s | Chronicles of Innovation",
+    "description": "The premium documentary series for innovation stories across the world. Exploring groundbreaking innovations that shaped humanity from the Industrial Revolution to the Digital Age.",
+    "ogDescription": "The premium documentary series for innovation stories across the world. Exploring the breakthroughs that shaped humanity.",
+    "twitterTitle": "Chronicles of Innovation | Innovation Documentary Series",
+    "twitterDescription": "The premium documentary series for innovation stories across the world.",
+    "homeDescription": "The premium documentary series for innovation stories across the world. From the Industrial Revolution to the Digital Era, we document the groundbreaking innovations that shaped humanity.",
+    "archiveTitle": "The Archive",
+    "archiveDescription": "Search and explore our curated archive of human progress, spanning the Industrial, Atomic, and Digital eras.",
+    "timelineTitle": "The Chronicle: A Timeline of Innovation",
+    "timelineDescription": "A journey through the breakthroughs that built the modern world: electricity, flight, penicillin, the shipping container and more, plotted across the Industrial, Atomic, and Digital ages.",
+    "timelineShortDescription": "A journey through the breakthroughs that built the modern world, across the Industrial, Atomic, and Digital ages.",
+    "aboutTitle": "Tolu Adetuyi, Executive Curator & Founder | Chronicles of Innovation",
+    "aboutDescription": "Meet Tolu Adetuyi, Executive Curator and founder of Chronicles of Innovation, the premium documentary series chronicling the innovations that shaped the modern world.",
+    "privacyTitle": "Privacy Policy",
+    "privacyDescription": "How Chronicles of Innovation collects, uses, and protects your information.",
+    "termsTitle": "Terms of Service",
+    "termsDescription": "The terms that govern your use of Chronicles of Innovation."
+  },
+  "nav": {
+    "home": "Home",
+    "chronicle": "Chronicle",
+    "archive": "Archive",
+    "about": "About",
+    "subscribe": "Subscribe",
+    "search": "Search",
+    "searchLabel": "Search the archive",
+    "searchPlaceholder": "Search the archive",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "primary": "Primary",
+    "homeLink": "Chronicles of Innovation, home",
+    "language": "Language",
+    "footerNav": "Footer"
+  },
+  "footer": {
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy",
+    "contact": "Contact",
+    "copyright": "© {year} Chronicles of Innovation. Curating the Spark of Progress."
+  },
+  "common": {
+    "viewFullSeries": "View Full Series",
+    "watchNow": "Watch Now",
+    "watch": "Watch",
+    "episode": "Episode {n}",
+    "published": "Published",
+    "era": "Era",
+    "year": "Year",
+    "scrollBack": "Scroll back",
+    "scrollForward": "Scroll forward",
+    "episodes": "Episodes",
+    "goBack": "Go Back",
+    "logoAlt": "Chronicles of Innovation Logo",
+    "soundOn": "Turn sound on",
+    "mute": "Mute",
+    "pauseVideo": "Pause background video",
+    "playVideo": "Play background video",
+    "episodeWord": "Episode"
+  },
+  "eras": {
+    "industrial": {
+      "label": "The Industrial Age",
+      "range": "1760 – 1945"
+    },
+    "atomic": {
+      "label": "The Atomic Age",
+      "range": "1945 – 1991"
+    },
+    "digital": {
+      "label": "The Digital Age",
+      "range": "1991 – Present"
+    }
+  },
+  "categories": {
+    "all": "All Eras",
+    "industrial": "Industrial Age",
+    "digital": "Digital Revolution",
+    "space": "Space Exploration",
+    "biotech": "Biotech"
+  },
+  "home": {
+    "heroKicker": "Era I: The Age of Electricity",
+    "heroTitle": "Light Bulb & Electricity:|Edison vs Tesla's <em>Hidden Battle</em>",
+    "heroBlurb": "The current that powers your world was decided by war. Explore the bitter rivalry between Thomas Edison and Nikola Tesla, the battle to light humanity and own the future.",
+    "heroAlt": "Thomas Edison's machine shop, lit by early electric lamps",
+    "watchFeature": "Watch Feature Documentary",
+    "seriesKicker": "Chronicles of Innovation",
+    "seriesTitle": "The <em>Series</em>",
+    "philosophyKicker": "Philosophy of Progress",
+    "quote": "“Innovation is not merely a sequence of <em>inventions,</em> but the enduring narrative of human curiosity refusing to stay silent.”",
+    "mission": "Our mission at Chronicles of Innovation is to archive the sparks that ignited entire eras. We don't just show you what was built; we show you why it mattered to the soul of humanity.",
+    "curatorAlt": "Executive Curator Portrait",
+    "curatorName": "Tolu Adetuyi",
+    "curatorRole": "Executive Curator",
+    "spotlightKicker": "Current Spotlight",
+    "spotlightTitle": "The Shipping Container",
+    "spotlightAlt": "A container ship being loaded by cranes at a port terminal at sunset",
+    "spotlightBlurb": "How a North Carolina trucker turned a simple steel box into the shipping container, the deceptively plain invention that rewired global trade and built the modern economy.",
+    "spotlightTag": "The Container Revolution | 1956–Present",
+    "spotlightLabel": "Watch The Shipping Container",
+    "spotlightChapters": [
+      "The Voyage of the Ideal X",
+      "The Battle for the Standard",
+      "The World in a Box"
+    ],
+    "newsletterKicker": "The Inner Circle",
+    "newsletterTitle": "Join the Vanguard of Thought",
+    "newsletterBlurb": "Receive exclusive director's cuts, archival scans, and invitations to private screenings. No noise, just pure signal."
+  },
+  "newsletter": {
+    "label": "Email address",
+    "placeholder": "Enter your email address",
+    "submit": "Invite me",
+    "successTitle": "Welcome to the Vanguard.",
+    "alreadyTitle": "You are already in the Vanguard.",
+    "successText": "Your email has been securely added to the ledger.",
+    "alreadyText": "Your email is already securely recorded in our ledger.",
+    "another": "Subscribe another",
+    "different": "Subscribe a different email",
+    "error": "Something went wrong. Please try again."
+  },
+  "archive": {
+    "kicker": "The Archive",
+    "title": "Search the <em>Archive</em> of Progress",
+    "placeholder": "Explore historical breakthroughs...",
+    "search": "Search",
+    "searchLabel": "Search the archive",
+    "allEpisodes": "All Episodes",
+    "latest": "Latest in the Archive",
+    "incoming": "Incoming Transmission",
+    "awaiting": "Awaiting Signal",
+    "classified": "Classified",
+    "empty": "No episodes match this era yet. Check back soon for the next documentary.",
+    "episodeLabel": "Archive"
+  },
+  "timeline": {
+    "kicker": "The Chronicle",
+    "title": "A Timeline of <em>Innovation</em>",
+    "intro": "Every breakthrough has a place in time. Follow the thread of human ingenuity, from the first current to the box that moved the world, across the ages that built the modern era.",
+    "watchStory": "Watch the story",
+    "continues": "The Chronicle Continues",
+    "continuesText": "New chapters are being written. The next breakthrough is already waiting to be told.",
+    "exploreArchive": "Explore the full archive"
+  },
+  "about": {
+    "volume": "Volume I: The Manifesto",
+    "title": "Documenting the <em>Sparks</em> of Human Progress",
+    "imageAlt": "Data particles",
+    "missionLabel": "01. Our Mission",
+    "missionLead": "Innovation is not a destination, but a sequence of whispers, failures, and sudden illuminations.",
+    "missionP1": "At Chronicles of Innovation, we serve as the modern archivists of the human spirit, so the next generation knows what it is capable of. Our purpose transcends mere reporting; we exist to deconstruct the anatomy of progress. Every monumental shift in technology, culture, and science begins with a singular spark, an idea that defies the gravity of the status quo.",
+    "missionP2": "Because here is what we know to be true: human ingenuity has never belonged to one place, one century, or one kind of person. It never did. The breakthroughs that built the modern world came from everywhere. Some you already know. Many you don't. Yet.",
+    "missionP3": "We treat these stories with the gravity of a historical artifact. By blending rigorous technical verification with cinematic storytelling, we create a record that doesn't just inform the present, but inspires the future.",
+    "methodKicker": "Methodology",
+    "methodTitle": "The Research Process",
+    "stage": "Stage {n}",
+    "stages": [
+      {
+        "title": "Archival Excavation",
+        "text": "We dig through blueprints, early patents, and forgotten journals to find the raw DNA of an invention."
+      },
+      {
+        "title": "Innovation Verification",
+        "text": "Our team of researchers validates the feasibility and impact of the technology through rigorous peer review."
+      },
+      {
+        "title": "Cinematic Rendering",
+        "text": "Translating dry data into a visual narrative that captures the emotional weight of the breakthrough."
+      }
+    ],
+    "teamTitle": "The Minds Behind the Archive",
+    "teamKicker": "Curators of Human Potential",
+    "team": [
+      {
+        "tag": "The Visionary",
+        "name": "Tolu Adetuyi",
+        "role": "Executive Curator",
+        "alt": "Portrait of Tolu Adetuyi, Executive Curator"
+      },
+      {
+        "tag": "The Scribe",
+        "name": "Isaiah Emmanuel",
+        "role": "Editorial Lead",
+        "alt": "Portrait of Isaiah Emmanuel, Editorial Lead"
+      },
+      {
+        "tag": "The Lens",
+        "name": "John Bassey",
+        "role": "Visual Director",
+        "alt": "Portrait of John Bassey, Visual Director"
+      }
+    ],
+    "ctaTitle": "Witness the evolution of the future.",
+    "ctaText": "Be among the first inside the archive receiving our deep-dive dossiers on the world's most critical innovations."
+  },
+  "notFound": {
+    "kicker": "Error 404",
+    "title": "Record <em>Not Found</em>",
+    "text": "You have ventured beyond the known perimeter. The artifact you are actively searching for has either been redacted, lost to time, or never existed in the first place.",
+    "back": "Return to Safety"
+  },
+  "legal": {
+    "notice": "This document is provided in English. If a translation differs from the English text, the English text prevails.",
+    "lastUpdated": "Last Updated"
+  },
+  "episodeUi": {
+    "watchTheFeature": "Watch the Feature",
+    "fullDocumentary": "The Full Documentary",
+    "watchHeading": "Watch the <em>Feature</em>",
+    "curatedBy": "Curated by",
+    "genesis": "The Genesis",
+    "scenes": "The Story in Three Scenes",
+    "milestones": "Historical <em>Milestones</em>",
+    "featuring": "Featuring",
+    "insideFeature": "Inside the Feature",
+    "chapterBreakdown": "Chapter <em>Breakdown</em>",
+    "continueTitle": "Continue the Journey",
+    "continueText": "Watch the full documentary on YouTube or engage with our community of historians and engineers.",
+    "watchOnYouTube": "Watch on YouTube",
+    "joinDiscussion": "Join the Discussion",
+    "jobTitle": "Executive Curator & Founder",
+    "home": "Home",
+    "archive": "Archive"
+  },
+  "episodes": {
+    "edison-vs-tesla": {
+      "listTitle": "Edison vs. Tesla: The Ruthless War That Lit the World",
+      "innovation": "Electricity",
+      "blurb": "The War of Currents between Edison and Tesla that decided how the world would be powered.",
+      "metaTitle": "Edison vs Tesla: The War of Currents | Chronicles of Innovation",
+      "pageTitle": "Light Bulb & Electricity: Edison vs Tesla's Hidden Battle",
+      "pageDescription": "Inside the War of Currents: how Thomas Edison's light bulb empire and Nikola Tesla's alternating current fought a hidden battle to decide how the world would be powered.",
+      "videoName": "Edison vs. Tesla: The Ruthless War That Lit the World",
+      "videoDescription": "The War of Currents was never just science, it was war. Discover how Thomas Edison's direct current empire collided with Nikola Tesla's alternating current, a rivalry that electrified the modern world and broke the men who waged it.",
+      "breadcrumb": "Edison vs Tesla",
+      "heroAlt": "Thomas Edison's machine shop, lit by early electric lamps",
+      "episodeLabel": "Episode 001",
+      "range": "1879 - 1893",
+      "title": "Light Bulb & Electricity:|<em>Edison vs Tesla's Hidden Battle</em>",
+      "chips": [
+        "19 Minute Feature",
+        "The War of Currents"
+      ],
+      "quote": "This wasn't a contest of ideas. It was a war for the right to power the world, and only one current could win.",
+      "p1": "For all of human history, when the sun went down, the world went dark. Then, in 1879, Thomas Edison perfected the incandescent light bulb and set out to do something no one had attempted: to wire entire cities and sell electricity itself. His system ran on direct current, reliable over a few blocks, but fatally limited. DC could not travel far without bleeding away, demanding a power station on nearly every corner.",
+      "p2": "Into that flaw walked Nikola Tesla, a Serbian immigrant with a head full of alternating-current machines Edison dismissed. When Tesla's vision collided with Edison's empire, and George Westinghouse's capital, it ignited the War of Currents: a brutal campaign of public demonstrations, propaganda, and electrocutions that would decide how humanity would be powered for the next century. One man would win the war. The other would win the future.",
+      "castTitle": "The Combatants",
+      "milestones": [
+        {
+          "alt": "Edison carbon filament light bulb",
+          "year": "1879",
+          "title": "The Lamp That Banished Night",
+          "text": "Edison's carbon-filament bulb finally burned long enough to be practical. It was not the first electric light, but it was the first anyone could sell, the cornerstone of an empire built on direct current."
+        },
+        {
+          "alt": "Nikola Tesla with his alternating-current equipment",
+          "year": "1888",
+          "title": "The Polyphase System",
+          "text": "Tesla's alternating-current motor and polyphase patents proved electricity could travel hundreds of miles at high voltage. Westinghouse bought the rights, and the War of Currents turned existential for Edison."
+        },
+        {
+          "alt": "Westinghouse alternating-current generators at Niagara Falls",
+          "year": "1893",
+          "title": "The World's Fair Showdown",
+          "text": "Westinghouse and Tesla lit the Chicago World's Columbian Exposition with AC, dazzling 27 million visitors. Within two years their current would harness Niagara Falls, settling the war for good."
+        }
+      ],
+      "people": [
+        {
+          "alt": "Thomas Edison",
+          "name": "Thomas Edison",
+          "role": "The Wizard of Menlo Park",
+          "text": "Champion of direct current and the world's first electrical empire. A relentless inventor and showman who would wage a ruthless campaign to defend the system he built."
+        },
+        {
+          "alt": "Nikola Tesla",
+          "name": "Nikola Tesla",
+          "role": "The Master of Lightning",
+          "text": "The visionary behind the alternating-current system that powers the world today. He won the technological war but died nearly penniless, his genius vindicated only in hindsight."
+        },
+        {
+          "alt": "George Westinghouse",
+          "name": "George Westinghouse",
+          "role": "The Industrialist Backer",
+          "text": "The engineer-financier who bet his fortune on Tesla's AC patents. His capital and conviction turned one immigrant's equations into the grid that lit a continent."
+        }
+      ],
+      "chapterTitles": [
+        "The Dark Truth Behind Edison",
+        "The World Before Electricity",
+        "The Rise of Thomas Edison",
+        "The Fatal Flaw in Edison's System",
+        "The Arrival of Nikola Tesla",
+        "Genius vs Power",
+        "The Betrayal That Started It All",
+        "The War of Currents Begins",
+        "Edison's Ruthless Campaign",
+        "Tesla Fights Back With Lightning",
+        "The World's Fair Showdown",
+        "The Man Who Won… But Lost Everything",
+        "Who Really Won the War?"
+      ]
+    },
+    "penicillin": {
+      "listTitle": "The Miracle Drug That Shouldn't Exist: Penicillin",
+      "innovation": "Penicillin",
+      "blurb": "A contaminated petri dish, a patch of mould, and the accident that became the world's first antibiotic.",
+      "metaTitle": "Penicillin: The Accident That Changed Medicine | Chronicles of Innovation",
+      "pageTitle": "Penicillin: The Miracle Drug That Shouldn't Exist",
+      "pageDescription": "How a contaminated petri dish became penicillin: Alexander Fleming's accidental 1928 discovery, and the Oxford team that turned a patch of mould into the world's first antibiotic.",
+      "videoName": "The Miracle Drug That Shouldn't Exist: Penicillin",
+      "videoDescription": "A dirty petri dish, a patch of mould, and an accident that changed medicine forever. The story of how Alexander Fleming's 1928 discovery, ignored for a decade, was transformed by Oxford scientists and American industry into penicillin, the antibiotic that saved millions.",
+      "breadcrumb": "Penicillin",
+      "heroAlt": "Alexander Fleming examining a culture dish in his laboratory at St Mary's Hospital",
+      "episodeLabel": "Episode 002",
+      "range": "1928 - 1945",
+      "title": "Penicillin:|<em>The Accident That Changed Medicine</em>",
+      "chips": [
+        "16 Minute Feature",
+        "The First Antibiotic"
+      ],
+      "quote": "A dirty petri dish. A patch of mould. And an accident that would go on to save more lives than any invention in history.",
+      "p1": "In September 1928, the Scottish bacteriologist Alexander Fleming returned from holiday to a cluttered London laboratory and a stack of forgotten culture dishes. One had been colonised by a stray blue-green mould, and in a clear ring around it, the staphylococcus bacteria had simply vanished. Where others would have washed the dish out, Fleming paused. That contaminated plate held the first clue to penicillin, the substance the mould was quietly producing.",
+      "p2": "But Fleming could not purify it, and his 1929 paper was largely ignored for more than a decade. It took a second act, Howard Florey, Ernst Chain, and the quietly brilliant Norman Heatley at Oxford, to turn a laboratory curiosity into a medicine, and American scientists and manufacturers to make it by the ton. Within a few years, penicillin was saving wounded soldiers in the Second World War, opening the age of antibiotics and rewriting what medicine could promise.",
+      "castTitle": "The Pioneers",
+      "milestones": [
+        {
+          "alt": "A sample of Alexander Fleming's original penicillin mould",
+          "year": "1928",
+          "title": "The Contaminated Dish",
+          "text": "A patch of <i>Penicillium notatum</i> drifted onto a discarded culture plate and killed the bacteria around it. Fleming noticed what almost anyone else would have thrown away, the accident at the heart of modern medicine."
+        },
+        {
+          "alt": "Alexander Fleming at his laboratory bench",
+          "year": "1929",
+          "title": "The Discovery No One Wanted",
+          "text": "Fleming published his findings, but without a way to purify the fragile compound, penicillin was dismissed as a curiosity. For more than ten years, the most important antibacterial agent ever found sat unused in the scientific literature."
+        },
+        {
+          "alt": "A wartime advertisement describing the mass production of penicillin",
+          "year": "1944",
+          "title": "The War Machine",
+          "text": "Oxford proved it could cure, and American industry proved it could scale. Glass flasks gave way to deep-tank fermentation, production times collapsed from weeks to days, and penicillin reached the front lines in time for D-Day."
+        }
+      ],
+      "people": [
+        {
+          "alt": "Alexander Fleming",
+          "name": "Alexander Fleming",
+          "role": "The Accidental Discoverer",
+          "text": "The bacteriologist whose sharp eye turned a contaminated dish into a discovery. He named penicillin but could never make it in a usable form, a problem that would wait a decade for its answer."
+        },
+        {
+          "alt": "Howard Florey",
+          "name": "Howard Florey",
+          "role": "The Man Who Made It Real",
+          "text": "The Oxford pathologist who led the team that rescued penicillin from obscurity, proved it could cure in patients, and drove the effort to produce it at scale."
+        },
+        {
+          "alt": "Ernst Chain",
+          "name": "Ernst Chain",
+          "role": "The Chemist",
+          "text": "The biochemist who cracked the problem of isolating and stabilising penicillin. He shared the 1945 Nobel Prize in Medicine with Fleming and Florey for the breakthrough."
+        }
+      ]
+    },
+    "wright-brothers": {
+      "listTitle": "How Two Bicycle Mechanics Taught The World To Fly",
+      "innovation": "Flight",
+      "blurb": "Two bicycle mechanics from Dayton solved the problem of controlled flight, and launched the aerial age at Kitty Hawk.",
+      "metaTitle": "The Wright Brothers: The Invention of Flight | Chronicles of Innovation",
+      "pageTitle": "The Wright Brothers: The Invention of Flight",
+      "pageDescription": "How two bicycle mechanics from Dayton, Ohio solved the problem of controlled flight, the Wright brothers' road to Kitty Hawk in 1903 and the aerial age they launched.",
+      "videoName": "How Two Bicycle Mechanics Taught The World To Fly",
+      "videoDescription": "For thousands of years humanity accepted the limits of the sky. Then two bicycle mechanics from Dayton, Ohio asked a different question, not how to lift a machine, but how to control it. This is the story of the Wright brothers, the twelve seconds at Kitty Hawk in 1903, and the aerial age they set in motion.",
+      "breadcrumb": "The Wright Brothers",
+      "heroAlt": "The Wright Flyer lifting off at Kitty Hawk on December 17, 1903",
+      "episodeLabel": "Episode 003",
+      "range": "1899 - 1927",
+      "title": "The Wright Brothers:|<em>The Invention of Flight</em>",
+      "chips": [
+        "20 Minute Feature",
+        "The Birth of Flight"
+      ],
+      "quote": "Everyone else was chasing lift and horsepower. The Wrights asked the question no one could answer: once you are in the air, how do you stay in control?",
+      "p1": "They had no university degrees, no government laboratory, and no team of professional scientists, only a bicycle shop in Dayton, Ohio, a hand-built engine, and a problem that had defeated generations of inventors. While rivals poured money into ever more powerful engines, Wilbur and Orville Wright became convinced that the real obstacle to flight was not power but control. A pilot, they reasoned, had to be able to balance and steer a machine in three dimensions, the way a cyclist balances a bicycle.",
+      "p2": "So they built their own wind tunnel, corrected the flawed data the field had relied on, and tested glider after glider on the windswept dunes of Kitty Hawk. On December 17, 1903, that patient engineering paid off: the Wright Flyer became the first powered, heavier-than-air machine to achieve controlled flight, twelve seconds that ended millennia of earthbound history. Within a generation their invention would cross the Atlantic, transform in war, carry passengers across the world, and, a century later, send a fragment of the original Flyer to the surface of Mars.",
+      "castTitle": "The Pioneers",
+      "milestones": [
+        {
+          "alt": "A Wright glider soaring over the dunes at Kitty Hawk, 1902",
+          "year": "1902",
+          "title": "The Glider Years",
+          "text": "After a homemade wind tunnel rewrote the science of lift, the brothers made hundreds of glides at Kitty Hawk, perfecting the three-axis control system, wing-warping, and rudder that would make true flight possible."
+        },
+        {
+          "alt": "The Wright Flyer on its launching rail at Kitty Hawk, December 1903",
+          "year": "1903",
+          "title": "Twelve Seconds at Kitty Hawk",
+          "text": "On December 17, with Orville at the controls and Wilbur running alongside, the Flyer rose from its rail and travelled 120 feet in twelve seconds, the first powered, controlled, sustained flight of a heavier-than-air machine."
+        },
+        {
+          "alt": "A Wright Flyer demonstration flight over Fort Myer, Virginia, 1909",
+          "year": "1908–09",
+          "title": "Proving It to the World",
+          "text": "Public demonstrations in France and military trials at Fort Myer silenced the doubters. The aerial age had begun, and the airplane would soon reshape travel, warfare, and humanity's sense of what was possible."
+        }
+      ],
+      "people": [
+        {
+          "alt": "Wilbur Wright",
+          "name": "Wilbur Wright",
+          "role": "The Strategist",
+          "text": "The elder brother and driving intellect, who framed flight as a problem of control and led the theoretical work, then carried the Flyer to Europe and made the world believe."
+        },
+        {
+          "alt": "Orville Wright",
+          "name": "Orville Wright",
+          "role": "The Builder",
+          "text": "The hands-on engineer and mechanic who piloted the first flight at Kitty Hawk, and who lived long enough to see aircraft break the sound barrier."
+        },
+        {
+          "alt": "Otto Lilienthal",
+          "name": "Otto Lilienthal",
+          "role": "The Glider Pioneer",
+          "text": "The German “flying man” whose gliding experiments, and fatal 1896 crash, inspired the Wrights and proved that mastering control, not just lift, was the key to flight."
+        }
+      ]
+    },
+    "shipping-container": {
+      "listTitle": "How a Simple Box Changed Global Trade: The Shipping Container",
+      "innovation": "Shipping Container",
+      "blurb": "A trucker named Malcom McLean turned a simple steel box into the invention that rewired global trade and built the modern economy.",
+      "metaTitle": "The Shipping Container: The Box That Changed Global Trade | Chronicles of Innovation",
+      "pageTitle": "The Shipping Container: The Box That Changed Global Trade",
+      "pageDescription": "How a North Carolina trucker named Malcom McLean turned a simple steel box into the shipping container, the invention that rewired global trade and built the modern economy.",
+      "videoName": "How a Simple Box Changed Global Trade: The Shipping Container",
+      "videoDescription": "A single steel box changed the way the world does business. The story of how Malcom McLean, a trucker from North Carolina, and engineer Keith Tantlinger turned the shipping container from a simple idea into the system that rewired global trade, from the first voyage of the Ideal X in 1956 to the modern global supply chain.",
+      "breadcrumb": "The Shipping Container",
+      "heroAlt": "A container ship being loaded by cranes at a port terminal at sunset",
+      "episodeLabel": "Episode 004",
+      "range": "1956 - Present",
+      "title": "The Shipping Container:|<em>The Box That Built Global Trade</em>",
+      "chips": [
+        "18 Minute Feature",
+        "The Container Revolution"
+      ],
+      "quote": "It was not a new engine or a new material. It was a box, and it quietly rebuilt the entire economy of the planet.",
+      "p1": "Before the container, moving goods across an ocean was slow, costly, and chaotic. Cargo was loaded piece by piece by armies of dockworkers, and a ship could spend more time sitting in port being filled and emptied than it spent at sea. In 1937, a young North Carolina trucker named Malcom McLean sat for hours waiting to unload his cargo onto a ship and wondered why the whole trailer could not simply be lifted aboard. Decades later, he set out to prove it could.",
+      "p2": "Working with the engineer Keith Tantlinger, McLean turned that idea into a standardised steel box that could move seamlessly between truck, train, and ship. On April 26, 1956, his converted tanker, the Ideal X, carried fifty-eight containers from Newark to Houston, and the economics of global trade began to change forever. Shipping costs collapsed, Asian factories were wired to Western shelves, and the modern supply chain was born. But the revolution had a human cost: the great dock labour forces that had loaded ships for centuries all but vanished.",
+      "castTitle": "The Pioneers",
+      "milestones": [
+        {
+          "alt": "Profile drawing of the Ideal X, the first container ship",
+          "year": "1956",
+          "title": "The Voyage of the Ideal X",
+          "text": "On April 26, McLean's converted T2 tanker carried fifty-eight containers from Newark to Houston. It cost a fraction of loading loose cargo by hand, the first voyage of the container age."
+        },
+        {
+          "alt": "The corner casting of a steel shipping container",
+          "year": "1960s",
+          "title": "The Battle for the Standard",
+          "text": "A box is only useful if every ship, crane, and truck in the world agrees on its size. Tantlinger's corner castings and twistlocks, released patent-free, became the global ISO standard that let any container stack anywhere."
+        },
+        {
+          "alt": "Cranes loading a modern container ship at the Port of Los Angeles",
+          "year": "Today",
+          "title": "The World in a Box",
+          "text": "Containerisation gutted the cost of moving goods, emptied the old docks, and stitched together the factories of Asia with the shelves of the West, building the global supply chain the modern world now runs on."
+        }
+      ],
+      "people": [
+        {
+          "alt": "Malcom McLean",
+          "name": "Malcom McLean",
+          "role": "The Visionary",
+          "text": "The trucker-turned-shipping-magnate who refused to accept that loading a ship had to be slow. He risked his fortune to prove that a standard box, not the cargo inside it, was the thing worth moving."
+        },
+        {
+          "alt": "Keith Tantlinger",
+          "name": "Keith Tantlinger",
+          "role": "The Engineer",
+          "text": "The engineer who solved the hard part: the corner castings and twistlocks that let containers lock together, stack high, and lift fast. His employer gave the patents away so the whole world could adopt them."
+        }
+      ]
+    }
+  }
+}

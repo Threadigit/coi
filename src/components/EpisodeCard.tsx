@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { eras, type Episode } from '@/lib/episodes';
+import { localizedPath, type Locale } from '@/i18n/config';
+import type { Episode } from '@/lib/episodes';
 
 const fill = { fontVariationSettings: "'FILL' 1" } as const;
 
@@ -10,19 +11,24 @@ const fill = { fontVariationSettings: "'FILL' 1" } as const;
  */
 export default function EpisodeCard({
   episode,
+  lang,
+  eraLabel,
   image,
-  eyebrow = 'Archive',
-  showDate = false,
+  eyebrow,
+  publishedText,
   className = '',
 }: {
   episode: Episode;
+  lang: Locale;
+  eraLabel: string;
   image?: string;
-  eyebrow?: string;
-  showDate?: boolean;
+  eyebrow: string;
+  /** Already formatted, e.g. "Published: 9/26/2026". Omit to hide. */
+  publishedText?: string;
   className?: string;
 }) {
   return (
-    <Link href={episode.href} className={`group block ${className}`}>
+    <Link href={localizedPath(lang, episode.href)} className={`group block ${className}`}>
       <div className="relative aspect-video overflow-hidden bg-surface-container">
         <Image
           src={image ?? episode.heroImage}
@@ -41,13 +47,11 @@ export default function EpisodeCard({
       <div className="mt-5 space-y-2.5">
         <div className="eyebrow !text-[10px] flex items-center justify-between gap-4">
           <span>{eyebrow}</span>
-          <span className="!text-on-surface/45 truncate">{eras.find((e) => e.id === episode.era)?.label} &middot; {episode.year}</span>
+          <span className="!text-on-surface/45 truncate">{eraLabel} &middot; {episode.year}</span>
         </div>
         <h3 className="font-headline text-[1.4rem] leading-snug tracking-[-0.01em] text-on-surface transition-colors duration-300 group-hover:text-primary line-clamp-2">{episode.title}</h3>
         <p className="text-[15px] leading-relaxed text-on-surface/55 line-clamp-2">{episode.blurb}</p>
-        {showDate && (
-          <p className="text-xs text-on-surface/40">Published: {new Date(episode.publishedAt).toLocaleDateString()}</p>
-        )}
+        {publishedText && <p className="text-xs text-on-surface/40">{publishedText}</p>}
       </div>
     </Link>
   );

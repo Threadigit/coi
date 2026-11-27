@@ -1,19 +1,26 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
+import { useLocale } from '@/i18n/context';
+import { localeMeta } from '@/i18n/config';
 
 export default function TermsOfService() {
   const router = useRouter();
+  const { lang, ui } = useLocale();
 
   return (
     <div className="w-full pt-40 md:pt-48 px-6 md:px-12 max-w-3xl mx-auto mb-40">
       <button onClick={() => router.back()} className="link-arrow !text-on-surface/60 hover:!text-primary mb-10 -ml-1 px-1 py-3">
         <span className="material-symbols-outlined text-sm">arrow_back</span>
-        Go Back
+        {ui.common.goBack}
       </button>
       
-      <h1 className="font-headline text-5xl md:text-7xl tracking-[-0.035em] mb-5 text-on-surface">Terms of Service</h1>
-      <p className="eyebrow mb-16">Last Updated: {new Date().toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}</p>
+      <h1 className="font-headline text-5xl md:text-7xl tracking-[-0.035em] mb-5 text-on-surface">{ui.legal.termsTitle}</h1>
+      <p className="eyebrow mb-6">{ui.legal.lastUpdated}: {new Date().toLocaleDateString(localeMeta[lang].htmlLang, { month: 'long', year: 'numeric' })}</p>
+      {lang !== 'en' && (
+        <p className="mb-16 border border-white/15 bg-white/[0.04] p-5 text-[15px] leading-relaxed text-on-surface/80" role="note">{ui.legal.notice}</p>
+      )}
+      {lang === 'en' && <div className="mb-10" />}
       
       <div className="prose prose-invert prose-slate max-w-none text-on-surface/65 text-[17px] leading-[1.75] space-y-8">
         <p>Welcome to Chronicles of Innovation. By accessing or using our website, subscribing to our newsletter, or viewing our content, you agree to comply with and be bound by the following Terms of Service ("Terms"). Please review them carefully.</p>

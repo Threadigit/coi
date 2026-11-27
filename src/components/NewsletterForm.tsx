@@ -1,9 +1,11 @@
 'use client';
 
 import { useState } from 'react';
-import { subscribeToNewsletter } from '@/app/actions/subscribe';
+import { useLocale } from '@/i18n/context';
 
 export default function NewsletterForm() {
+  const { ui } = useLocale();
+  const t = ui.newsletter;
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'already_subscribed' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
@@ -15,8 +17,18 @@ export default function NewsletterForm() {
     setStatus('loading');
     setErrorMessage('');
 
-    const result = await subscribeToNewsletter(email);
-    
+    let result: { success?: boolean; alreadySubscribed?: boolean } = {};
+    try {
+      const res = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      });
+      result = await res.json();
+    } catch {
+      result = { success: false };
+    }
+
     if (result.success) {
       if (result.alreadySubscribed) {
         setStatus('already_subscribed');
@@ -26,7 +38,7 @@ export default function NewsletterForm() {
       setEmail('');
     } else {
       setStatus('error');
-      setErrorMessage(result.error || 'Failed to subscribe.');
+      setErrorMessage(t.error);
     }
   };
 
@@ -39,18 +51,16 @@ export default function NewsletterForm() {
           </span>
         </div>
         <h3 className="font-headline text-3xl md:text-4xl text-primary mb-3 italic tracking-[-0.02em]">
-          {status === 'already_subscribed' ? 'You are already in the Vanguard.' : 'Welcome to the Vanguard.'}
+          {status === 'already_subscribed' ? t.alreadyTitle : t.successTitle}
         </h3>
         <p className="text-on-surface/60">
-          {status === 'already_subscribed' 
-            ? 'Your email is already securely recorded in our ledger.' 
-            : 'Your email has been securely added to the ledger.'}
+          {status === 'already_subscribed' ? t.alreadyText : t.successText}
         </p>
         <button 
           onClick={() => setStatus('idle')}
           className="mt-6 eyebrow !text-on-surface/50 hover:!text-primary transition-colors"
         >
-          {status === 'already_subscribed' ? 'Subscribe a different email' : 'Subscribe another'}
+          {status === 'already_subscribed' ? t.different : t.another}
         </button>
       </div>
     );
@@ -58,11 +68,11 @@ export default function NewsletterForm() {
 
   return (
     <form onSubmit={handleSubmit} className="relative mx-auto flex w-full max-w-xl flex-col gap-3 sm:flex-row sm:items-stretch sm:gap-0 mb-6">
-      <label htmlFor="newsletter-email" className="sr-only">Email address</label>
+      <label htmlFor="newsletter-email" className="sr-only">{t.label}</label>
       <input
         id="newsletter-email"
         className="h-14 w-full min-w-0 sm:flex-1 border border-white/25 bg-transparent px-5 text-base text-on-surface outline-none placeholder:text-on-surface/45 transition-colors focus:border-primary disabled:opacity-50 sm:border-r-0"
-        placeholder="Enter your email address"
+        placeholder={t.placeholder}
         type="email"
         autoComplete="email"
         value={email}
@@ -78,7 +88,7 @@ export default function NewsletterForm() {
         {status === 'loading' ? (
           <span className="material-symbols-outlined animate-spin text-on-primary">sync</span>
         ) : (
-          'Invite me'
+          t.submit
         )}
       </button>
       {status === 'error' && (

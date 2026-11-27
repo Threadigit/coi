@@ -2,7 +2,7 @@ import InnovationTimeline from "@/components/InnovationTimeline";
 import { episodesByEra } from "@/lib/episodes";
 import { getMessages } from "@/i18n/messages";
 import { localeMeta, localizedPath } from "@/i18n/config";
-import { getLocale, pageAlternates, absoluteUrl, SITE, ogLocales } from "@/i18n/page";
+import { getLocale, pageAlternates, absoluteUrl, SITE, ogLocales, socialImages } from "@/i18n/page";
 import { rich } from "@/i18n/rich";
 import type { Metadata } from "next";
 
@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     description: m.timelineDescription,
     keywords: ["timeline of innovation", "history of innovation", "innovation timeline", "inventions that changed the world", "Industrial Age", "Atomic Age", "Digital Age", "Chronicles of Innovation"],
     alternates: pageAlternates(lang, "/timeline"),
-    openGraph: { ...ogLocales(lang), type: "website", title: m.timelineTitle, description: m.timelineShortDescription, url: localizedPath(lang, "/timeline"), siteName: "Chronicles of Innovation", images: [{ url: "/opengraph-image", width: 1200, height: 630 }] },
+    openGraph: { ...ogLocales(lang), type: "website", title: m.timelineTitle, description: m.timelineShortDescription, url: localizedPath(lang, "/timeline"), siteName: "Chronicles of Innovation", images: socialImages(lang).openGraph }, twitter: { card: "summary_large_image", images: socialImages(lang).twitter },
   };
 }
 

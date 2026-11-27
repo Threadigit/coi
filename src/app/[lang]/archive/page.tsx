@@ -4,18 +4,28 @@ import EpisodeCard from "@/components/EpisodeCard";
 import { getEpisodes } from "@/lib/episodes";
 import { getMessages, format } from "@/i18n/messages";
 import { localeMeta, localizedPath } from "@/i18n/config";
-import { getLocale, pageAlternates, absoluteUrl, SITE, ogLocales } from "@/i18n/page";
+import { getLocale, pageAlternates, absoluteUrl, SITE, ogLocales, socialImages } from "@/i18n/page";
 import { rich } from "@/i18n/rich";
 import type { Metadata } from "next";
 
-export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+  searchParams,
+}: {
+  params: Promise<{ lang: string }>;
+  searchParams: Promise<{ [key: string]: string | undefined }>;
+}): Promise<Metadata> {
   const lang = await getLocale(params);
   const m = getMessages(lang).meta;
+  const sp = await searchParams;
+  // Search results and filtered lists are thin duplicates of the main archive.
+  const filtered = !!sp.q || (!!(sp.category || sp.era) && (sp.category || sp.era) !== 'all');
   return {
+    robots: filtered ? { index: false, follow: true } : undefined,
     title: m.archiveTitle,
     description: m.archiveDescription,
     alternates: pageAlternates(lang, "/archive"),
-    openGraph: { ...ogLocales(lang), type: "website", url: localizedPath(lang, "/archive"), title: m.archiveTitle, description: m.archiveDescription, siteName: "Chronicles of Innovation", images: [{ url: "/opengraph-image", width: 1200, height: 630 }] },
+    openGraph: { ...ogLocales(lang), type: "website", url: localizedPath(lang, "/archive"), title: m.archiveTitle, description: m.archiveDescription, siteName: "Chronicles of Innovation", images: socialImages(lang).openGraph }, twitter: { card: "summary_large_image", images: socialImages(lang).twitter },
   };
 }
 

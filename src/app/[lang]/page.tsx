@@ -9,7 +9,7 @@ import { getEpisodes, episodeNumber } from "@/lib/episodes";
 import { episodeData } from "@/lib/episode-data";
 import { getMessages, format } from "@/i18n/messages";
 import { localeMeta, localizedPath, locales } from "@/i18n/config";
-import { getLocale, pageAlternates, absoluteUrl, SITE, ogLocales } from "@/i18n/page";
+import { getLocale, pageAlternates, absoluteUrl, SITE, ogLocales, socialImages } from "@/i18n/page";
 import { rich } from "@/i18n/rich";
 import { videoIdFor } from "@/i18n/video";
 import type { Metadata } from "next";
@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     title: { absolute: m.defaultTitle },
     description: m.homeDescription,
     alternates: pageAlternates(lang, "/"),
-    openGraph: { ...ogLocales(lang), type: "website", url: localizedPath(lang, "/"), title: m.defaultTitle, description: m.ogDescription, siteName: "Chronicles of Innovation", images: [{ url: "/opengraph-image", width: 1200, height: 630 }] },
+    openGraph: { ...ogLocales(lang), type: "website", url: localizedPath(lang, "/"), title: m.defaultTitle, description: m.ogDescription, siteName: "Chronicles of Innovation", images: socialImages(lang).openGraph }, twitter: { card: "summary_large_image", images: socialImages(lang).twitter },
   };
 }
 
@@ -45,6 +45,12 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
         "logo": `${SITE}/coi_logo_transparent.png`,
         "description": m.meta.description,
         "foundingDate": "2026",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "email": "hello@chroniclesofinnovation.com",
+          "availableLanguage": ["English", "Spanish", "French", "Chinese"]
+        },
         "founder": { "@id": `${SITE}/#toluadetuyi` },
         "sameAs": [
           "https://www.youtube.com/@ChronicleofInnovation",
@@ -70,7 +76,9 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       },
       {
         "@type": "WebSite",
+        "@id": `${SITE}/#website`,
         "name": "Chronicles of Innovation",
+        "publisher": { "@id": `${SITE}/#organization` },
         "url": SITE,
         "inLanguage": locales.map((l) => localeMeta[l].htmlLang),
         "description": m.meta.twitterDescription,

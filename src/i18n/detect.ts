@@ -69,4 +69,4 @@ export function detectLocale(
 }
 
 export const BOT_PATTERN =
-  /bot|crawl|spider|slurp|facebookexternalhit|embedly|preview|whatsapp|telegram|linkedin|pinterest|lighthouse/i;
+  /bot|crawl|spider|slurp|google|inspectiontool|bing|baidu|yandex|duckduck|sogou|petalbot|bytespider|ia_archiver|facebookexternalhit|embedly|preview|whatsapp|telegram|linkedin|pinterest|lighthouse|pagespeed|gtmetrix/i;

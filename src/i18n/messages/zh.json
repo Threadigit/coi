@@ -9,16 +9,27 @@
     "twitterDescription": "讲述全球创新故事的高端纪录片系列。",
     "homeDescription": "讲述全球创新故事的高端纪录片系列。从工业革命到数字时代，我们记录那些塑造人类的突破性创新。",
     "archiveTitle": "档案库",
-    "archiveDescription": "搜索并探索我们精心策划的人类进步档案，涵盖工业、原子与数字时代。",
+    "archiveDescription": "搜索并探索我们精心策划的人类进步档案，涵盖工业、原子与数字时代的突破性创新与关键人物。",
     "timelineTitle": "编年史：创新时间线",
     "timelineDescription": "一场穿越现代世界奠基突破的旅程：电力、飞行、青霉素、集装箱等，跨越工业、原子与数字时代。",
     "timelineShortDescription": "一场穿越现代世界奠基突破的旅程，跨越工业、原子与数字时代。",
     "aboutTitle": "Tolu Adetuyi，执行策展人兼创始人 | Chronicles of Innovation",
     "aboutDescription": "认识 Tolu Adetuyi，Chronicles of Innovation 的执行策展人兼创始人。这部高端纪录片系列讲述塑造现代世界的创新。",
     "privacyTitle": "隐私政策",
-    "privacyDescription": "Chronicles of Innovation 如何收集、使用和保护您的信息。",
+    "privacyDescription": "了解 Chronicles of Innovation 如何收集、使用和保护您的个人信息，包括订阅邮箱和嵌入视频的相关说明。",
     "termsTitle": "服务条款",
-    "termsDescription": "规范您使用 Chronicles of Innovation 的条款。"
+    "termsDescription": "您使用 Chronicles of Innovation 网站、纪录片内容及订阅服务时所适用的条款与使用规则。",
+    "keywords": [
+      "创新纪录片",
+      "创新史",
+      "纪录片系列",
+      "改变世界的发明",
+      "工业革命",
+      "数字时代",
+      "Chronicles of Innovation",
+      "创新故事"
+    ],
+    "ogImageAlt": "Chronicles of Innovation，讲述塑造现代世界的创新的高端纪录片系列"
   },
   "nav": {
     "home": "首页",
@@ -231,7 +242,7 @@
       "listTitle": "爱迪生对决特斯拉：照亮世界的无情战争",
       "innovation": "电力",
       "blurb": "爱迪生与特斯拉之间的电流战争，决定了世界将如何获得电力。",
-      "metaTitle": "爱迪生对决特斯拉：电流战争 | Chronicles of Innovation",
+      "metaTitle": "爱迪生对决特斯拉：电流战争",
       "pageTitle": "灯泡与电力：爱迪生与特斯拉的隐秘之战",
       "pageDescription": "走进电流战争：托马斯·爱迪生的灯泡帝国与尼古拉·特斯拉的交流电，如何展开一场隐秘的较量，决定世界的供电方式。",
       "videoName": "爱迪生对决特斯拉：照亮世界的无情战争",
@@ -303,13 +314,24 @@
         "世博会对决",
         "赢了战争，却失去一切的人",
         "究竟谁赢得了这场战争？"
+      ],
+      "keywords": [
+        "爱迪生对特斯拉",
+        "电流战争",
+        "谁发明了电灯",
+        "电力的历史",
+        "交流电与直流电",
+        "托马斯·爱迪生",
+        "尼古拉·特斯拉",
+        "乔治·威斯汀豪斯",
+        "电力纪录片"
       ]
     },
     "penicillin": {
       "listTitle": "不该存在的神奇药物：青霉素",
       "innovation": "青霉素",
       "blurb": "一只受污染的培养皿，一团霉菌，以及成为世界上第一种抗生素的那场意外。",
-      "metaTitle": "青霉素：改变医学的意外 | Chronicles of Innovation",
+      "metaTitle": "青霉素：改变医学的意外",
       "pageTitle": "青霉素：不该存在的神奇药物",
       "pageDescription": "一只受污染的培养皿如何变成青霉素：亚历山大·弗莱明 1928 年的意外发现，以及把一团霉菌变成世界上第一种抗生素的牛津团队。",
       "videoName": "不该存在的神奇药物：青霉素",
@@ -366,13 +388,24 @@
           "role": "化学家",
           "text": "这位生物化学家攻克了青霉素的分离与稳定难题。因这一突破，他与弗莱明、弗洛里共同获得 1945 年诺贝尔生理学或医学奖。"
         }
+      ],
+      "keywords": [
+        "青霉素",
+        "亚历山大·弗莱明",
+        "谁发现了青霉素",
+        "青霉素的历史",
+        "第一种抗生素",
+        "霍华德·弗洛里",
+        "恩斯特·钱恩",
+        "青霉素的发现",
+        "医学纪录片"
       ]
     },
     "wright-brothers": {
       "listTitle": "两位自行车修理工如何教会世界飞翔",
       "innovation": "飞行",
       "blurb": "来自代顿的两位自行车修理工解决了受控飞行的难题，并在基蒂霍克开启了航空时代。",
-      "metaTitle": "莱特兄弟：飞行的发明 | Chronicles of Innovation",
+      "metaTitle": "莱特兄弟：飞行的发明",
       "pageTitle": "莱特兄弟：飞行的发明",
       "pageDescription": "俄亥俄州代顿的两位自行车修理工如何解决受控飞行的难题：莱特兄弟 1903 年通往基蒂霍克之路，以及他们开启的航空时代。",
       "videoName": "两位自行车修理工如何教会世界飞翔",
@@ -429,13 +462,25 @@
           "role": "滑翔先驱",
           "text": "这位德国“飞行人”的滑翔实验，以及他 1896 年的致命坠机，激励了莱特兄弟，也证明了飞行的关键不只是升力，更在于掌握控制。"
         }
+      ],
+      "keywords": [
+        "莱特兄弟",
+        "飞机的发明",
+        "谁发明了飞机",
+        "首次飞行",
+        "基蒂霍克",
+        "奥维尔·莱特",
+        "威尔伯·莱特",
+        "莱特飞行者",
+        "航空史",
+        "航空纪录片"
       ]
     },
     "shipping-container": {
       "listTitle": "一只简单的箱子如何改变全球贸易：集装箱",
       "innovation": "集装箱",
       "blurb": "一位名叫马尔科姆·麦克莱恩的卡车司机，把一只普通钢箱变成了重塑全球贸易、造就现代经济的发明。",
-      "metaTitle": "集装箱：改变全球贸易的箱子 | Chronicles of Innovation",
+      "metaTitle": "集装箱：改变全球贸易的箱子",
       "pageTitle": "集装箱：改变全球贸易的箱子",
       "pageDescription": "北卡罗来纳州一位名叫马尔科姆·麦克莱恩的卡车司机，如何把一只简单的钢箱变成集装箱，这项发明重塑了全球贸易，造就了现代经济。",
       "videoName": "一只简单的箱子如何改变全球贸易：集装箱",
@@ -486,6 +531,17 @@
           "role": "工程师",
           "text": "解决了最难部分的工程师：让集装箱能够相互锁定、高高堆叠并快速吊装的角件与扭锁。他的雇主把专利无偿放出，让全世界都能采用。"
         }
+      ],
+      "keywords": [
+        "集装箱",
+        "马尔科姆·麦克莱恩",
+        "集装箱化",
+        "全球贸易史",
+        "理想X号",
+        "基思·坦特林格",
+        "供应链",
+        "集装箱船",
+        "物流纪录片"
       ]
     }
   }

@@ -2,7 +2,7 @@ import Image from "next/image";
 import NewsletterForm from "@/components/NewsletterForm";
 import { getMessages, format } from "@/i18n/messages";
 import { localeMeta, localizedPath } from "@/i18n/config";
-import { getLocale, pageAlternates, absoluteUrl, SITE, ogLocales } from "@/i18n/page";
+import { getLocale, pageAlternates, absoluteUrl, SITE, ogLocales, socialImages } from "@/i18n/page";
 import { rich } from "@/i18n/rich";
 import type { Metadata } from "next";
 
@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     authors: [{ name: "Tolu Adetuyi", url: `${SITE}/about` }],
     creator: "Tolu Adetuyi",
     alternates: pageAlternates(lang, "/about"),
-    openGraph: { ...ogLocales(lang), type: "profile", title: m.aboutTitle, description: m.aboutDescription, url: localizedPath(lang, "/about"), siteName: "Chronicles of Innovation", images: [{ url: "/opengraph-image", width: 1200, height: 630 }] },
+    openGraph: { ...ogLocales(lang), type: "profile", title: m.aboutTitle, description: m.aboutDescription, url: localizedPath(lang, "/about"), siteName: "Chronicles of Innovation", images: socialImages(lang).openGraph }, twitter: { card: "summary_large_image", images: socialImages(lang).twitter },
   };
 }
 
@@ -80,13 +80,13 @@ export default async function About({ params }: { params: Promise<{ lang: string
         dangerouslySetInnerHTML={{ __html: JSON.stringify(profileSchema) }}
       />
       {/* Hero Section: Cinematic Asymmetry */}
-      <section className="px-5 md:px-12 pt-32 md:pt-48 pb-10 md:pb-16 mb-16 md:mb-32 relative overflow-hidden">
-        <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row items-end gap-12 lg:gap-16">
+      <section className="px-5 md:px-12 pt-28 md:pt-36 pb-4 md:pb-8 mb-16 md:mb-24 relative overflow-hidden">
+        <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row md:items-center gap-10 lg:gap-16">
           <div className="md:w-1/2 min-w-0">
             <p className="kicker rise mb-8">{t.volume}</p>
             <h1 className="rise title-card text-[2.6rem] md:text-[clamp(2.4rem,5.2vw,5.5rem)] text-on-surface" style={{ ["--d" as string]: 1 }}>{rich(t.title, "italic text-primary pr-2")}</h1>
           </div>
-          <div className="md:w-1/2 h-[340px] md:h-[560px] overflow-hidden rounded-sm ring-1 ring-white/10 bg-surface-container-low relative w-full">
+          <div className="md:w-1/2 h-[300px] md:h-[460px] lg:h-[500px] overflow-hidden rounded-sm ring-1 ring-white/10 bg-surface-container-low relative w-full">
             <Image
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKj3IxWHcvVkLbHXjkValIk3MmQyXm9SLL_Du7D8CEDtXlnRrZZ19sgUzR-IpI0ACm1PGQ7zTt02I9AFcGXmVbwjL1ebBG2YKFTZR7JNDDevUe5bHxY_TKFYXmyuX8IIjIg9yXDhbSOMElLPEmTE4SNR0xTD8eSZ7edobORptS6OP4LUvXtHuu-8AGW3BDQM1GxGHl-hzufeCGl5RdRx6Xy3w2fSSI3izkIJtkvte5Qb0kAV7Hdck8PcKdb2rRg2pe_0Fyihjcrw"
               alt={t.imageAlt}
@@ -98,16 +98,16 @@ export default async function About({ params }: { params: Promise<{ lang: string
       </section>
 
       {/* Our Mission */}
-      <section className="px-5 md:px-12 mb-24 md:mb-44">
-        <div className="max-w-[1600px] mx-auto grid md:grid-cols-12 gap-10 md:gap-16" data-reveal>
-          <div className="md:col-span-4">
+      <section className="px-5 md:px-12 mb-20 md:mb-32">
+        <div className="max-w-[1600px] mx-auto grid md:grid-cols-12 gap-10 md:gap-16 lg:gap-24" data-reveal>
+          <div className="md:col-span-5 md:sticky md:top-32 md:self-start">
             <h2 className="eyebrow !text-primary mb-5">{t.missionLabel}</h2>
-            <div className="hairline w-full"></div>
-          </div>
-          <div className="md:col-span-8 max-w-3xl">
-            <p className="font-headline text-[1.6rem] md:text-5xl italic leading-[1.25] tracking-[-0.025em] text-on-surface mb-12">
+            <div className="hairline w-full mb-8"></div>
+            <p className="font-headline text-[1.6rem] md:text-4xl lg:text-[2.6rem] italic leading-[1.25] tracking-[-0.025em] text-on-surface">
               {t.missionLead}
             </p>
+          </div>
+          <div className="md:col-span-7 max-w-2xl md:pt-[3.25rem]">
             <div className="font-headline text-lg md:text-xl leading-[1.75] text-on-surface/70 space-y-8">
               <p>{t.missionP1}</p>
               <p>{t.missionP2}</p>
@@ -118,16 +118,16 @@ export default async function About({ params }: { params: Promise<{ lang: string
       </section>
 
       {/* The Research Process */}
-      <section className="px-5 md:px-12 py-20 md:py-40 bg-surface-container-low mb-24 md:mb-44">
+      <section className="px-5 md:px-12 py-16 md:py-28 bg-surface-container-low mb-20 md:mb-32">
         <div className="max-w-[1600px] mx-auto" data-reveal>
-          <div className="mb-20 text-center">
+          <div className="mb-12 md:mb-16 text-center">
             <h2 className="eyebrow mb-5">{t.methodKicker}</h2>
             <h3 className="font-headline text-4xl md:text-7xl tracking-[-0.035em]">{t.methodTitle}</h3>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {t.stages.map((st, i) => (
-              <div key={st.title} className="group p-10 card-glass rounded-sm relative overflow-hidden">
-                <div className="mb-12 flex justify-between items-start">
+              <div key={st.title} className="group p-8 md:p-10 card-glass rounded-sm relative overflow-hidden">
+                <div className="mb-8 flex justify-between items-start">
                   <span className={`material-symbols-outlined text-4xl ${stageIcons[i].color}`} style={{ fontVariationSettings: "'FILL' 0" }}>{stageIcons[i].icon}</span>
                   <span className="font-label text-[11px] tracking-[0.18em] uppercase text-on-surface/40">{format(t.stage, { n: String(i + 1).padStart(2, "0") })}</span>
                 </div>
@@ -140,16 +140,16 @@ export default async function About({ params }: { params: Promise<{ lang: string
       </section>
 
       {/* The Minds Behind */}
-      <section className="px-5 md:px-12 mb-24 md:mb-44">
+      <section className="px-5 md:px-12 mb-20 md:mb-28">
         <div className="max-w-[1600px] mx-auto" data-reveal>
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8">
-            <h2 className="font-headline text-5xl md:text-6xl tracking-[-0.035em] max-w-md leading-[1.05]">{t.teamTitle}</h2>
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 md:mb-14 gap-4 md:gap-8">
+            <h2 className="font-headline text-5xl md:text-6xl tracking-[-0.035em] max-w-2xl leading-[1.05]">{t.teamTitle}</h2>
             <p className="eyebrow !text-on-surface/50 pb-2">{t.teamKicker}</p>
           </div>
-          <div className="grid md:grid-cols-3 gap-12">
+          <div className="grid md:grid-cols-3 gap-10 md:gap-8 lg:gap-12">
             {t.team.map((person, i) => (
               <div key={person.name} className="group">
-                <div className="aspect-[3/4] overflow-hidden rounded-sm mb-6 bg-surface-container-highest relative ring-1 ring-white/10">
+                <div className="aspect-[4/5] overflow-hidden rounded-sm mb-5 bg-surface-container-highest relative ring-1 ring-white/10">
                   <Image src={teamImages[i].src} alt={person.alt} fill className={`object-cover ${teamImages[i].cls} saturate-[.5] group-hover:saturate-100 group-hover:scale-105 transition-all duration-[900ms] ease-[var(--ease-spring)]`} />
                 </div>
                 <span className="eyebrow !text-[10px]">{person.tag}</span>
@@ -162,7 +162,7 @@ export default async function About({ params }: { params: Promise<{ lang: string
       </section>
 
       {/* Final CTA */}
-      <section className="relative px-5 md:px-12 py-32 md:py-44 overflow-hidden">
+      <section className="relative px-5 md:px-12 pt-8 pb-16 md:pb-20 overflow-hidden">
         <div className="relative max-w-4xl mx-auto text-center" data-reveal>
           <h2 className="font-headline text-4xl md:text-6xl tracking-[-0.035em] mb-8 leading-[1.05]">{t.ctaTitle}</h2>
           <p className="text-on-surface/60 mb-12 text-lg md:text-xl">{t.ctaText}</p>

@@ -12,6 +12,8 @@ import Footer from "@/components/Footer";
 import { LocaleProvider } from "@/i18n/context";
 import { isLocale, locales, localeMeta, localizedPath, type Locale } from "@/i18n/config";
 import { getMessages, getUiMessages } from "@/i18n/messages";
+import { SITE_URL } from "@/lib/site";
+import { socialImages } from "@/i18n/page";
 
 const notoSerif = Noto_Serif({
   subsets: ["latin"],
@@ -62,11 +64,11 @@ export async function generateMetadata({
   if (!isLocale(lang)) return {};
   const m = getMessages(lang).meta;
   return {
-    metadataBase: new URL("https://chroniclesofinnovation.com"),
+    metadataBase: new URL(SITE_URL),
     title: { default: m.defaultTitle, template: m.titleTemplate },
     description: m.description,
-    keywords: ["innovation", "innovation stories", "innovation in the world", "world innovation", "innovation documentary", "history of innovation", "technology innovation", "human innovation", "industrial revolution", "digital age", "chronicles of innovation", "innovation series", "documentary series"],
-    authors: [{ name: "Tolu Adetuyi", url: "https://chroniclesofinnovation.com/about" }],
+    keywords: m.keywords,
+    authors: [{ name: "Tolu Adetuyi", url: `${SITE_URL}/about` }],
     creator: "Tolu Adetuyi",
     publisher: "Tolu Adetuyi",
     openGraph: {
@@ -77,14 +79,23 @@ export async function generateMetadata({
       siteName: "Chronicles of Innovation",
       title: m.defaultTitle,
       description: m.ogDescription,
-      images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
+      images: socialImages(lang).openGraph,
     },
     twitter: {
       card: "summary_large_image",
       title: m.twitterTitle,
       description: m.twitterDescription,
       creator: "@AdetuyiTolu",
-      images: ["/twitter-image"],
+      images: socialImages(lang).twitter,
+    },
+    // Set these in the hosting settings after verifying the site in each tool.
+    verification: {
+      google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+      yandex: process.env.NEXT_PUBLIC_YANDEX_VERIFICATION,
+      other: {
+        ...(process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION ? { "msvalidate.01": process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION } : {}),
+        ...(process.env.NEXT_PUBLIC_BAIDU_SITE_VERIFICATION ? { "baidu-site-verification": process.env.NEXT_PUBLIC_BAIDU_SITE_VERIFICATION } : {}),
+      },
     },
   };
 }

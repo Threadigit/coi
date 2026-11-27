@@ -1,8 +1,10 @@
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
-import { isLocale, locales, localeMeta, localizedPath, defaultLocale, type Locale } from './config';
+import { isLocale, localeMeta, localizedPath, hreflangEntries, locales, type Locale } from './config';
+import { getMessages } from './messages';
+import { SITE_URL } from '@/lib/site';
 
-export const SITE = 'https://chroniclesofinnovation.com';
+export const SITE = SITE_URL;
 
 /** Resolves the [lang] route param, or shows a 404 for anything unsupported. */
 export async function getLocale(params: Promise<{ lang: string }>): Promise<Locale> {
@@ -11,14 +13,11 @@ export async function getLocale(params: Promise<{ lang: string }>): Promise<Loca
   return lang;
 }
 
-/** Canonical URL plus hreflang links to every translation of a page. */
+/** Canonical URL plus hreflang links (languages, countries, x-default). */
 export function pageAlternates(lang: Locale, path: string): NonNullable<Metadata['alternates']> {
   return {
     canonical: localizedPath(lang, path),
-    languages: {
-      ...Object.fromEntries(locales.map((l) => [localeMeta[l].htmlLang, localizedPath(l, path)])),
-      'x-default': localizedPath(defaultLocale, path),
-    },
+    languages: Object.fromEntries(hreflangEntries(path)),
   };
 }
 
@@ -30,5 +29,14 @@ export function ogLocales(lang: Locale) {
   return {
     locale: localeMeta[lang].og,
     alternateLocale: locales.filter((l) => l !== lang).map((l) => localeMeta[l].og),
+  };
+}
+
+/** Open Graph and Twitter images with alt text in the page's language. */
+export function socialImages(lang: Locale, alt?: string, imagePath = `/${lang}/opengraph-image`, twitterPath = `/${lang}/twitter-image`) {
+  const text = alt ?? getMessages(lang).meta.ogImageAlt;
+  return {
+    openGraph: [{ url: imagePath, width: 1200, height: 630, alt: text }],
+    twitter: [{ url: twitterPath, alt: text }],
   };
 }

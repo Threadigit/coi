@@ -1,24 +1,35 @@
 {
   "meta": {
     "siteName": "Chronicles of Innovation",
-    "defaultTitle": "Chronicles of Innovation | La série documentaire premium sur les histoires d'innovation",
+    "defaultTitle": "Chronicles of Innovation | Série documentaire premium sur l'innovation",
     "titleTemplate": "%s | Chronicles of Innovation",
-    "description": "La série documentaire premium sur les histoires d'innovation du monde entier. Les avancées qui ont façonné l'humanité, de la révolution industrielle à l'ère numérique.",
+    "description": "Série documentaire premium sur les innovations qui ont façonné l'humanité, de la révolution industrielle à l'ère numérique.",
     "ogDescription": "La série documentaire premium sur les histoires d'innovation du monde entier. À la découverte des avancées qui ont façonné l'humanité.",
     "twitterTitle": "Chronicles of Innovation | Série documentaire sur l'innovation",
     "twitterDescription": "La série documentaire premium sur les histoires d'innovation du monde entier.",
-    "homeDescription": "La série documentaire premium sur les histoires d'innovation du monde entier. De la révolution industrielle à l'ère numérique, nous racontons les innovations révolutionnaires qui ont façonné l'humanité.",
+    "homeDescription": "Des documentaires premium sur les innovations qui ont façonné l'humanité : électricité, vol, pénicilline, conteneur maritime et bien plus.",
     "archiveTitle": "Les Archives",
     "archiveDescription": "Recherchez et explorez nos archives choisies du progrès humain, à travers les ères industrielle, atomique et numérique.",
     "timelineTitle": "La Chronique : une frise de l'innovation",
-    "timelineDescription": "Un voyage à travers les avancées qui ont bâti le monde moderne : l'électricité, le vol, la pénicilline, le conteneur maritime et bien d'autres, des ères industrielle, atomique et numérique.",
+    "timelineDescription": "Une frise des avancées qui ont bâti le monde moderne : électricité, vol, pénicilline et conteneur maritime, à travers trois ères.",
     "timelineShortDescription": "Un voyage à travers les avancées qui ont bâti le monde moderne, des ères industrielle, atomique et numérique.",
     "aboutTitle": "Tolu Adetuyi, curateur exécutif et fondateur | Chronicles of Innovation",
-    "aboutDescription": "Faites la connaissance de Tolu Adetuyi, curateur exécutif et fondateur de Chronicles of Innovation, la série documentaire premium qui raconte les innovations ayant façonné le monde moderne.",
+    "aboutDescription": "Découvrez Tolu Adetuyi, curateur exécutif et fondateur de Chronicles of Innovation, la série documentaire sur les innovations qui ont façonné le monde.",
     "privacyTitle": "Politique de confidentialité",
-    "privacyDescription": "Comment Chronicles of Innovation recueille, utilise et protège vos informations.",
+    "privacyDescription": "Comment Chronicles of Innovation recueille, utilise et protège vos informations, y compris les e-mails de la newsletter et les vidéos intégrées.",
     "termsTitle": "Conditions d'utilisation",
-    "termsDescription": "Les conditions qui régissent votre utilisation de Chronicles of Innovation."
+    "termsDescription": "Les conditions qui régissent l'utilisation du site Chronicles of Innovation, de ses documentaires et de sa newsletter.",
+    "keywords": [
+      "documentaire sur l'innovation",
+      "histoire de l'innovation",
+      "série documentaire",
+      "inventions qui ont changé le monde",
+      "révolution industrielle",
+      "ère numérique",
+      "Chronicles of Innovation",
+      "histoires d'innovation"
+    ],
+    "ogImageAlt": "Chronicles of Innovation, la série documentaire premium sur les innovations qui ont façonné le monde moderne"
   },
   "nav": {
     "home": "Accueil",
@@ -231,9 +242,9 @@
       "listTitle": "Edison contre Tesla : la guerre impitoyable qui a éclairé le monde",
       "innovation": "Électricité",
       "blurb": "La Guerre des courants entre Edison et Tesla, qui a décidé comment le monde serait alimenté.",
-      "metaTitle": "Edison contre Tesla : la Guerre des courants | Chronicles of Innovation",
+      "metaTitle": "Edison contre Tesla : la Guerre des courants",
       "pageTitle": "Ampoule et électricité : la bataille cachée d'Edison contre Tesla",
-      "pageDescription": "Au cœur de la Guerre des courants : comment l'empire de l'ampoule de Thomas Edison et le courant alternatif de Nikola Tesla se sont livré une bataille cachée pour décider comment le monde serait alimenté.",
+      "pageDescription": "Au cœur de la Guerre des courants : le courant continu d'Edison et l'alternatif de Tesla se sont livré une bataille cachée pour alimenter le monde.",
       "videoName": "Edison contre Tesla : la guerre impitoyable qui a éclairé le monde",
       "videoDescription": "La Guerre des courants n'a jamais été qu'une affaire de science, c'était une guerre. Découvrez comment l'empire du courant continu de Thomas Edison est entré en collision avec le courant alternatif de Nikola Tesla, une rivalité qui a électrifié le monde moderne et brisé les hommes qui l'ont menée.",
       "breadcrumb": "Edison contre Tesla",
@@ -303,15 +314,26 @@
         "Le duel de l'Exposition universelle",
         "L'homme qui a gagné… mais tout perdu",
         "Qui a vraiment gagné la guerre ?"
+      ],
+      "keywords": [
+        "Edison contre Tesla",
+        "guerre des courants",
+        "qui a inventé l'ampoule",
+        "histoire de l'électricité",
+        "courant alternatif contre courant continu",
+        "Thomas Edison",
+        "Nikola Tesla",
+        "George Westinghouse",
+        "documentaire électricité"
       ]
     },
     "penicillin": {
       "listTitle": "Le médicament miracle qui n'aurait pas dû exister : la pénicilline",
       "innovation": "Pénicilline",
       "blurb": "Une boîte de Petri contaminée, une tache de moisissure, et l'accident devenu le premier antibiotique du monde.",
-      "metaTitle": "Pénicilline : l'accident qui a changé la médecine | Chronicles of Innovation",
+      "metaTitle": "Pénicilline : l'accident qui a changé la médecine",
       "pageTitle": "Pénicilline : le médicament miracle qui n'aurait pas dû exister",
-      "pageDescription": "Comment une boîte de Petri contaminée est devenue la pénicilline : la découverte accidentelle d'Alexander Fleming en 1928, et l'équipe d'Oxford qui a transformé une tache de moisissure en premier antibiotique du monde.",
+      "pageDescription": "Comment une boîte de Petri contaminée est devenue la pénicilline : la découverte accidentelle de Fleming en 1928 et l'équipe d'Oxford qui l'a produite.",
       "videoName": "Le médicament miracle qui n'aurait pas dû exister : la pénicilline",
       "videoDescription": "Une boîte de Petri sale, une tache de moisissure et un accident qui a changé la médecine pour toujours. L'histoire de la façon dont la découverte d'Alexander Fleming en 1928, ignorée pendant une décennie, a été transformée par des scientifiques d'Oxford et l'industrie américaine en pénicilline, l'antibiotique qui a sauvé des millions de vies.",
       "breadcrumb": "Pénicilline",
@@ -366,15 +388,26 @@
           "role": "Le chimiste",
           "text": "Le biochimiste qui a résolu le problème de l'isolement et de la stabilisation de la pénicilline. Il a partagé le prix Nobel de médecine 1945 avec Fleming et Florey pour cette percée."
         }
+      ],
+      "keywords": [
+        "pénicilline",
+        "Alexander Fleming",
+        "qui a découvert la pénicilline",
+        "histoire de la pénicilline",
+        "premier antibiotique",
+        "Howard Florey",
+        "Ernst Chain",
+        "découverte de la pénicilline",
+        "documentaire médecine"
       ]
     },
     "wright-brothers": {
       "listTitle": "Comment deux mécaniciens de vélos ont appris au monde à voler",
       "innovation": "Vol",
       "blurb": "Deux mécaniciens de vélos de Dayton ont résolu le problème du vol contrôlé et lancé l'ère de l'aviation à Kitty Hawk.",
-      "metaTitle": "Les frères Wright : l'invention du vol | Chronicles of Innovation",
+      "metaTitle": "Les frères Wright : l'invention du vol",
       "pageTitle": "Les frères Wright : l'invention du vol",
-      "pageDescription": "Comment deux mécaniciens de vélos de Dayton, dans l'Ohio, ont résolu le problème du vol contrôlé : la route des frères Wright vers Kitty Hawk en 1903 et l'ère de l'aviation qu'ils ont lancée.",
+      "pageDescription": "Comment deux mécaniciens de vélos de Dayton ont résolu le vol contrôlé : la route des frères Wright vers Kitty Hawk en 1903 et l'ère aérienne qui a suivi.",
       "videoName": "Comment deux mécaniciens de vélos ont appris au monde à voler",
       "videoDescription": "Pendant des milliers d'années, l'humanité a accepté les limites du ciel. Puis deux mécaniciens de vélos de Dayton, dans l'Ohio, ont posé une autre question : non pas comment soulever une machine, mais comment la contrôler. Voici l'histoire des frères Wright, des douze secondes de Kitty Hawk en 1903 et de l'ère de l'aviation qu'ils ont mise en marche.",
       "breadcrumb": "Les frères Wright",
@@ -429,15 +462,27 @@
           "role": "Le pionnier du planeur",
           "text": "L'« homme volant » allemand dont les expériences de vol plané, et l'accident mortel de 1896, ont inspiré les Wright et prouvé que la clé du vol était la maîtrise du contrôle, pas seulement la portance."
         }
+      ],
+      "keywords": [
+        "frères Wright",
+        "invention de l'avion",
+        "qui a inventé l'avion",
+        "premier vol",
+        "Kitty Hawk",
+        "Orville Wright",
+        "Wilbur Wright",
+        "Wright Flyer",
+        "histoire de l'aviation",
+        "documentaire aviation"
       ]
     },
     "shipping-container": {
       "listTitle": "Comment une simple caisse a changé le commerce mondial : le conteneur maritime",
       "innovation": "Conteneur maritime",
       "blurb": "Un routier nommé Malcom McLean a transformé une simple caisse d'acier en l'invention qui a recâblé le commerce mondial et bâti l'économie moderne.",
-      "metaTitle": "Le conteneur maritime : la caisse qui a changé le commerce mondial | Chronicles of Innovation",
+      "metaTitle": "Conteneur maritime : la caisse qui a changé le monde",
       "pageTitle": "Le conteneur maritime : la caisse qui a changé le commerce mondial",
-      "pageDescription": "Comment un routier de Caroline du Nord nommé Malcom McLean a transformé une simple caisse d'acier en conteneur maritime, l'invention qui a recâblé le commerce mondial et bâti l'économie moderne.",
+      "pageDescription": "Comment le routier Malcom McLean a transformé une caisse d'acier en conteneur maritime, qui a recâblé le commerce mondial et bâti l'économie moderne.",
       "videoName": "Comment une simple caisse a changé le commerce mondial : le conteneur maritime",
       "videoDescription": "Une seule caisse d'acier a changé la façon dont le monde fait des affaires. L'histoire de la manière dont Malcom McLean, un routier de Caroline du Nord, et l'ingénieur Keith Tantlinger ont fait du conteneur maritime, d'une idée simple, le système qui a recâblé le commerce mondial, du premier voyage de l'Ideal X en 1956 à la chaîne d'approvisionnement mondiale moderne.",
       "breadcrumb": "Le conteneur maritime",
@@ -486,6 +531,17 @@
           "role": "L'ingénieur",
           "text": "L'ingénieur qui a résolu la partie difficile : les pièces de coin et les verrous tournants qui permettent aux conteneurs de s'enclencher, de s'empiler en hauteur et d'être levés vite. Son employeur a offert les brevets pour que le monde entier puisse les adopter."
         }
+      ],
+      "keywords": [
+        "conteneur maritime",
+        "Malcom McLean",
+        "conteneurisation",
+        "histoire du commerce mondial",
+        "Ideal X",
+        "Keith Tantlinger",
+        "chaîne d'approvisionnement",
+        "porte-conteneurs",
+        "documentaire logistique"
       ]
     }
   }

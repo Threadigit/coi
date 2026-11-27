@@ -1,24 +1,35 @@
 {
   "meta": {
     "siteName": "Chronicles of Innovation",
-    "defaultTitle": "Chronicles of Innovation | The Premium Documentary Series for Innovation Stories",
+    "defaultTitle": "Chronicles of Innovation | Premium Documentary Series on Innovation",
     "titleTemplate": "%s | Chronicles of Innovation",
-    "description": "The premium documentary series for innovation stories across the world. Exploring groundbreaking innovations that shaped humanity from the Industrial Revolution to the Digital Age.",
+    "description": "A premium documentary series on the innovations that shaped humanity, from the Industrial Revolution to the Digital Age.",
     "ogDescription": "The premium documentary series for innovation stories across the world. Exploring the breakthroughs that shaped humanity.",
     "twitterTitle": "Chronicles of Innovation | Innovation Documentary Series",
     "twitterDescription": "The premium documentary series for innovation stories across the world.",
-    "homeDescription": "The premium documentary series for innovation stories across the world. From the Industrial Revolution to the Digital Era, we document the groundbreaking innovations that shaped humanity.",
+    "homeDescription": "Premium documentaries on the innovations that shaped humanity: electricity, flight, penicillin, the shipping container and more.",
     "archiveTitle": "The Archive",
     "archiveDescription": "Search and explore our curated archive of human progress, spanning the Industrial, Atomic, and Digital eras.",
     "timelineTitle": "The Chronicle: A Timeline of Innovation",
-    "timelineDescription": "A journey through the breakthroughs that built the modern world: electricity, flight, penicillin, the shipping container and more, plotted across the Industrial, Atomic, and Digital ages.",
+    "timelineDescription": "A timeline of the breakthroughs that built the modern world: electricity, flight, penicillin and the shipping container, across three ages.",
     "timelineShortDescription": "A journey through the breakthroughs that built the modern world, across the Industrial, Atomic, and Digital ages.",
     "aboutTitle": "Tolu Adetuyi, Executive Curator & Founder | Chronicles of Innovation",
-    "aboutDescription": "Meet Tolu Adetuyi, Executive Curator and founder of Chronicles of Innovation, the premium documentary series chronicling the innovations that shaped the modern world.",
+    "aboutDescription": "Meet Tolu Adetuyi, Executive Curator and founder of Chronicles of Innovation, the documentary series on the innovations that shaped the modern world.",
     "privacyTitle": "Privacy Policy",
-    "privacyDescription": "How Chronicles of Innovation collects, uses, and protects your information.",
+    "privacyDescription": "How Chronicles of Innovation collects, uses and protects your information, including newsletter email addresses and video embeds.",
     "termsTitle": "Terms of Service",
-    "termsDescription": "The terms that govern your use of Chronicles of Innovation."
+    "termsDescription": "The terms governing your use of the Chronicles of Innovation website, its documentaries and its newsletter.",
+    "keywords": [
+      "innovation documentary",
+      "history of innovation",
+      "documentary series",
+      "inventions that changed the world",
+      "industrial revolution",
+      "digital age",
+      "Chronicles of Innovation",
+      "innovation stories"
+    ],
+    "ogImageAlt": "Chronicles of Innovation, the premium documentary series on the innovations that shaped the modern world"
   },
   "nav": {
     "home": "Home",
@@ -231,9 +242,9 @@
       "listTitle": "Edison vs. Tesla: The Ruthless War That Lit the World",
       "innovation": "Electricity",
       "blurb": "The War of Currents between Edison and Tesla that decided how the world would be powered.",
-      "metaTitle": "Edison vs Tesla: The War of Currents | Chronicles of Innovation",
+      "metaTitle": "Edison vs Tesla: The War of Currents",
       "pageTitle": "Light Bulb & Electricity: Edison vs Tesla's Hidden Battle",
-      "pageDescription": "Inside the War of Currents: how Thomas Edison's light bulb empire and Nikola Tesla's alternating current fought a hidden battle to decide how the world would be powered.",
+      "pageDescription": "Inside the War of Currents: how Edison's direct current and Tesla's alternating current fought a hidden battle over how the world would be powered.",
       "videoName": "Edison vs. Tesla: The Ruthless War That Lit the World",
       "videoDescription": "The War of Currents was never just science, it was war. Discover how Thomas Edison's direct current empire collided with Nikola Tesla's alternating current, a rivalry that electrified the modern world and broke the men who waged it.",
       "breadcrumb": "Edison vs Tesla",
@@ -303,15 +314,26 @@
         "The World's Fair Showdown",
         "The Man Who Won… But Lost Everything",
         "Who Really Won the War?"
+      ],
+      "keywords": [
+        "Edison vs Tesla",
+        "war of currents",
+        "who invented the light bulb",
+        "history of electricity",
+        "AC vs DC",
+        "Thomas Edison",
+        "Nikola Tesla",
+        "George Westinghouse",
+        "electricity documentary"
       ]
     },
     "penicillin": {
       "listTitle": "The Miracle Drug That Shouldn't Exist: Penicillin",
       "innovation": "Penicillin",
       "blurb": "A contaminated petri dish, a patch of mould, and the accident that became the world's first antibiotic.",
-      "metaTitle": "Penicillin: The Accident That Changed Medicine | Chronicles of Innovation",
+      "metaTitle": "Penicillin: The Accident That Changed Medicine",
       "pageTitle": "Penicillin: The Miracle Drug That Shouldn't Exist",
-      "pageDescription": "How a contaminated petri dish became penicillin: Alexander Fleming's accidental 1928 discovery, and the Oxford team that turned a patch of mould into the world's first antibiotic.",
+      "pageDescription": "How a contaminated petri dish became penicillin: Fleming's accidental 1928 discovery and the Oxford team that made the first antibiotic.",
       "videoName": "The Miracle Drug That Shouldn't Exist: Penicillin",
       "videoDescription": "A dirty petri dish, a patch of mould, and an accident that changed medicine forever. The story of how Alexander Fleming's 1928 discovery, ignored for a decade, was transformed by Oxford scientists and American industry into penicillin, the antibiotic that saved millions.",
       "breadcrumb": "Penicillin",
@@ -366,15 +388,26 @@
           "role": "The Chemist",
           "text": "The biochemist who cracked the problem of isolating and stabilising penicillin. He shared the 1945 Nobel Prize in Medicine with Fleming and Florey for the breakthrough."
         }
+      ],
+      "keywords": [
+        "penicillin",
+        "Alexander Fleming",
+        "who discovered penicillin",
+        "history of penicillin",
+        "first antibiotic",
+        "Howard Florey",
+        "Ernst Chain",
+        "penicillin discovery",
+        "medical history documentary"
       ]
     },
     "wright-brothers": {
       "listTitle": "How Two Bicycle Mechanics Taught The World To Fly",
       "innovation": "Flight",
       "blurb": "Two bicycle mechanics from Dayton solved the problem of controlled flight, and launched the aerial age at Kitty Hawk.",
-      "metaTitle": "The Wright Brothers: The Invention of Flight | Chronicles of Innovation",
+      "metaTitle": "The Wright Brothers: The Invention of Flight",
       "pageTitle": "The Wright Brothers: The Invention of Flight",
-      "pageDescription": "How two bicycle mechanics from Dayton, Ohio solved the problem of controlled flight, the Wright brothers' road to Kitty Hawk in 1903 and the aerial age they launched.",
+      "pageDescription": "How two bicycle mechanics from Dayton solved controlled flight: the Wright brothers' road to Kitty Hawk in 1903 and the aerial age that followed.",
       "videoName": "How Two Bicycle Mechanics Taught The World To Fly",
       "videoDescription": "For thousands of years humanity accepted the limits of the sky. Then two bicycle mechanics from Dayton, Ohio asked a different question, not how to lift a machine, but how to control it. This is the story of the Wright brothers, the twelve seconds at Kitty Hawk in 1903, and the aerial age they set in motion.",
       "breadcrumb": "The Wright Brothers",
@@ -429,15 +462,27 @@
           "role": "The Glider Pioneer",
           "text": "The German “flying man” whose gliding experiments, and fatal 1896 crash, inspired the Wrights and proved that mastering control, not just lift, was the key to flight."
         }
+      ],
+      "keywords": [
+        "Wright brothers",
+        "invention of the airplane",
+        "who invented the airplane",
+        "first flight",
+        "Kitty Hawk",
+        "Orville Wright",
+        "Wilbur Wright",
+        "Wright Flyer",
+        "history of aviation",
+        "aviation documentary"
       ]
     },
     "shipping-container": {
       "listTitle": "How a Simple Box Changed Global Trade: The Shipping Container",
       "innovation": "Shipping Container",
       "blurb": "A trucker named Malcom McLean turned a simple steel box into the invention that rewired global trade and built the modern economy.",
-      "metaTitle": "The Shipping Container: The Box That Changed Global Trade | Chronicles of Innovation",
+      "metaTitle": "The Shipping Container: The Box That Changed Trade",
       "pageTitle": "The Shipping Container: The Box That Changed Global Trade",
-      "pageDescription": "How a North Carolina trucker named Malcom McLean turned a simple steel box into the shipping container, the invention that rewired global trade and built the modern economy.",
+      "pageDescription": "How trucker Malcom McLean turned a steel box into the shipping container that rewired global trade and built the modern economy.",
       "videoName": "How a Simple Box Changed Global Trade: The Shipping Container",
       "videoDescription": "A single steel box changed the way the world does business. The story of how Malcom McLean, a trucker from North Carolina, and engineer Keith Tantlinger turned the shipping container from a simple idea into the system that rewired global trade, from the first voyage of the Ideal X in 1956 to the modern global supply chain.",
       "breadcrumb": "The Shipping Container",
@@ -486,6 +531,17 @@
           "role": "The Engineer",
           "text": "The engineer who solved the hard part: the corner castings and twistlocks that let containers lock together, stack high, and lift fast. His employer gave the patents away so the whole world could adopt them."
         }
+      ],
+      "keywords": [
+        "shipping container",
+        "Malcom McLean",
+        "containerization",
+        "history of global trade",
+        "Ideal X",
+        "Keith Tantlinger",
+        "global supply chain",
+        "container ship",
+        "logistics documentary"
       ]
     }
   }

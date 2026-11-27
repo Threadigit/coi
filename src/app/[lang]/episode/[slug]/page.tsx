@@ -6,7 +6,7 @@ import { episodeData } from "@/lib/episode-data";
 import { episodeBases } from "@/lib/episodes";
 import { getMessages } from "@/i18n/messages";
 import { locales, localeMeta, localizedPath, type Locale } from "@/i18n/config";
-import { getLocale, pageAlternates, absoluteUrl, SITE, ogLocales } from "@/i18n/page";
+import { getLocale, pageAlternates, absoluteUrl, SITE, ogLocales, socialImages } from "@/i18n/page";
 import { rich, plain } from "@/i18n/rich";
 import { embedUrl, hasDedicatedVideo, videoIdFor, watchUrl } from "@/i18n/video";
 
@@ -17,6 +17,7 @@ type EpisodeText = {
   milestones: { alt: string; year: string; title: string; text: string }[];
   people: { alt: string; name: string; role: string; text: string }[];
   chapterTitles?: string[];
+  keywords: string[];
 };
 
 type Params = { lang: string; slug: string };
@@ -39,9 +40,9 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   const { d, e } = load(lang, slug);
   const path = `/episode/${slug}`;
   return {
-    title: { absolute: e.metaTitle },
+    title: e.metaTitle,
     description: e.pageDescription,
-    keywords: [...d.keywords, "innovation documentary", "Chronicles of Innovation"],
+    keywords: [...e.keywords, "Chronicles of Innovation"],
     authors: [{ name: "Tolu Adetuyi", url: `${SITE}/about` }],
     creator: "Tolu Adetuyi",
     category: "Documentary",
@@ -57,14 +58,14 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
       duration: d.durationSeconds,
       series: "Chronicles of Innovation",
       tags: d.keywords,
-      images: [{ url: `${path}/opengraph-image`, width: 1200, height: 630 }],
+      images: socialImages(lang, e.heroAlt, `/${lang}${path}/opengraph-image`).openGraph,
       videos: [{ url: `https://www.youtube.com/embed/${videoIdFor(d, lang)}`, type: "text/html", width: 1280, height: 720 }],
     },
     twitter: {
       card: "summary_large_image",
       title: e.pageTitle,
       description: e.pageDescription,
-      images: [`${path}/twitter-image`],
+      images: socialImages(lang, e.heroAlt, undefined, `/${lang}${path}/twitter-image`).twitter,
     },
   };
 }
@@ -81,7 +82,7 @@ export default async function EpisodePage({ params }: { params: Promise<Params> 
   const embed = embedUrl(d, lang);
   const plainWatch = `https://www.youtube.com/watch?v=${videoIdFor(d, lang)}`;
   const videoLang = hasDedicatedVideo(d, lang) ? localeMeta[lang].htmlLang : "en";
-  const KEYWORDS = [...d.keywords, "innovation documentary", "Chronicles of Innovation"];
+  const KEYWORDS = [...e.keywords, "Chronicles of Innovation"];
 
   const structuredData = {
     "@context": "https://schema.org",

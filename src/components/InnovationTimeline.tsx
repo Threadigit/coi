@@ -1,14 +1,16 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
+import LocalizedLink from '@/i18n/Link';
 import { useEffect, useRef } from 'react';
-import { episodesByEra } from '@/lib/episodes';
+import type { Episode } from '@/lib/episodes';
+
+type Group = { id: string; label: string; range: string; items: Episode[] };
+type Labels = { watchStory: string; continues: string; continuesText: string; exploreArchive: string };
 
 const fill = { fontVariationSettings: "'FILL' 1" } as const;
 
-export default function InnovationTimeline() {
-  const groups = episodesByEra();
+export default function InnovationTimeline({ groups, labels }: { groups: Group[]; labels: Labels }) {
   const wrapRef = useRef<HTMLDivElement>(null);
   const fillRef = useRef<HTMLDivElement>(null);
 
@@ -77,7 +79,7 @@ export default function InnovationTimeline() {
               </div>
 
               {/* Card */}
-              <Link
+              <LocalizedLink
                 href={e.href}
                 className="group/card block max-w-xl card-glass rounded-sm overflow-hidden"
               >
@@ -99,11 +101,11 @@ export default function InnovationTimeline() {
                   <span className="serif-display text-primary text-4xl italic block mb-3 tracking-[-0.02em]">{e.year}</span>
                   <p className="text-on-surface/70 leading-relaxed mb-5">{e.blurb}</p>
                   <span className="link-arrow">
-                    Watch the story
+                    {labels.watchStory}
                     <span className="material-symbols-outlined" style={{ fontSize: 18 }}>arrow_forward</span>
                   </span>
                 </div>
-              </Link>
+              </LocalizedLink>
             </div>
           ))}
         </section>
@@ -112,17 +114,17 @@ export default function InnovationTimeline() {
       {/* The story continues */}
       <div className="relative pl-14 md:pl-24 mt-20" data-reveal>
         <div className="absolute left-[22px] md:left-[30px] top-1 -translate-x-1/2 w-5 h-5 rounded-full border-2 border-dashed border-primary/40 animate-pulse" aria-hidden="true" />
-        <span className="eyebrow block mb-3">The Chronicle Continues</span>
+        <span className="eyebrow block mb-3">{labels.continues}</span>
         <h3 className="serif-display text-2xl md:text-3xl text-on-surface/70 italic max-w-xl tracking-[-0.02em]">
-          New chapters are being written. The next breakthrough is already waiting to be told.
+          {labels.continuesText}
         </h3>
-        <Link
+        <LocalizedLink
           href="/archive"
           className="link-arrow mt-6"
         >
-          Explore the full archive
+          {labels.exploreArchive}
           <span className="material-symbols-outlined" style={{ fontSize: 18 }}>arrow_forward</span>
-        </Link>
+        </LocalizedLink>
       </div>
     </div>
   );

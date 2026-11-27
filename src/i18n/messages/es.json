@@ -1,0 +1,492 @@
+{
+  "meta": {
+    "siteName": "Chronicles of Innovation",
+    "defaultTitle": "Chronicles of Innovation | La serie documental premium sobre historias de innovación",
+    "titleTemplate": "%s | Chronicles of Innovation",
+    "description": "La serie documental premium sobre historias de innovación de todo el mundo. Un recorrido por los avances que dieron forma a la humanidad, desde la Revolución Industrial hasta la Era Digital.",
+    "ogDescription": "La serie documental premium sobre historias de innovación de todo el mundo. Explorando los avances que dieron forma a la humanidad.",
+    "twitterTitle": "Chronicles of Innovation | Serie documental sobre innovación",
+    "twitterDescription": "La serie documental premium sobre historias de innovación de todo el mundo.",
+    "homeDescription": "La serie documental premium sobre historias de innovación de todo el mundo. De la Revolución Industrial a la Era Digital, documentamos las innovaciones revolucionarias que dieron forma a la humanidad.",
+    "archiveTitle": "El Archivo",
+    "archiveDescription": "Busca y explora nuestro archivo curado del progreso humano, a lo largo de las eras Industrial, Atómica y Digital.",
+    "timelineTitle": "La Crónica: una línea de tiempo de la innovación",
+    "timelineDescription": "Un viaje por los avances que construyeron el mundo moderno: la electricidad, el vuelo, la penicilina, el contenedor marítimo y más, a lo largo de las eras Industrial, Atómica y Digital.",
+    "timelineShortDescription": "Un viaje por los avances que construyeron el mundo moderno, a lo largo de las eras Industrial, Atómica y Digital.",
+    "aboutTitle": "Tolu Adetuyi, curador ejecutivo y fundador | Chronicles of Innovation",
+    "aboutDescription": "Conoce a Tolu Adetuyi, curador ejecutivo y fundador de Chronicles of Innovation, la serie documental premium que narra las innovaciones que dieron forma al mundo moderno.",
+    "privacyTitle": "Política de privacidad",
+    "privacyDescription": "Cómo Chronicles of Innovation recopila, usa y protege tu información.",
+    "termsTitle": "Términos del servicio",
+    "termsDescription": "Los términos que rigen el uso de Chronicles of Innovation."
+  },
+  "nav": {
+    "home": "Inicio",
+    "chronicle": "Crónica",
+    "archive": "Archivo",
+    "about": "Acerca de",
+    "subscribe": "Suscribirse",
+    "search": "Buscar",
+    "searchLabel": "Buscar en el archivo",
+    "searchPlaceholder": "Buscar en el archivo",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "primary": "Principal",
+    "homeLink": "Chronicles of Innovation, inicio",
+    "language": "Idioma",
+    "footerNav": "Pie de página"
+  },
+  "footer": {
+    "terms": "Términos del servicio",
+    "privacy": "Política de privacidad",
+    "contact": "Contacto",
+    "copyright": "© {year} Chronicles of Innovation. Cultivando la chispa del progreso."
+  },
+  "common": {
+    "viewFullSeries": "Ver toda la serie",
+    "watchNow": "Ver ahora",
+    "watch": "Ver",
+    "episode": "Episodio {n}",
+    "published": "Publicado",
+    "era": "Era",
+    "year": "Año",
+    "scrollBack": "Desplazar hacia atrás",
+    "scrollForward": "Desplazar hacia adelante",
+    "episodes": "Episodios",
+    "goBack": "Volver",
+    "logoAlt": "Logotipo de Chronicles of Innovation",
+    "soundOn": "Activar el sonido",
+    "mute": "Silenciar",
+    "pauseVideo": "Pausar el video de fondo",
+    "playVideo": "Reproducir el video de fondo",
+    "episodeWord": "Episodio"
+  },
+  "eras": {
+    "industrial": {
+      "label": "La Era Industrial",
+      "range": "1760 – 1945"
+    },
+    "atomic": {
+      "label": "La Era Atómica",
+      "range": "1945 – 1991"
+    },
+    "digital": {
+      "label": "La Era Digital",
+      "range": "1991 – Presente"
+    }
+  },
+  "categories": {
+    "all": "Todas las eras",
+    "industrial": "Era Industrial",
+    "digital": "Revolución Digital",
+    "space": "Exploración espacial",
+    "biotech": "Biotecnología"
+  },
+  "home": {
+    "heroKicker": "Era I: La Era de la Electricidad",
+    "heroTitle": "Bombilla y electricidad:|La <em>batalla oculta</em> entre Edison y Tesla",
+    "heroBlurb": "La corriente que alimenta tu mundo se decidió en una guerra. Descubre la feroz rivalidad entre Thomas Edison y Nikola Tesla, la batalla por iluminar a la humanidad y adueñarse del futuro.",
+    "heroAlt": "El taller de máquinas de Thomas Edison, iluminado por las primeras lámparas eléctricas",
+    "watchFeature": "Ver el documental principal",
+    "seriesKicker": "Chronicles of Innovation",
+    "seriesTitle": "La <em>Serie</em>",
+    "philosophyKicker": "Filosofía del progreso",
+    "quote": "“La innovación no es solo una sucesión de <em>inventos,</em> sino la narrativa perdurable de la curiosidad humana que se niega a guardar silencio.”",
+    "mission": "Nuestra misión en Chronicles of Innovation es archivar las chispas que encendieron eras enteras. No solo te mostramos qué se construyó; te mostramos por qué importó para el alma de la humanidad.",
+    "curatorAlt": "Retrato del curador ejecutivo",
+    "curatorName": "Tolu Adetuyi",
+    "curatorRole": "Curador ejecutivo",
+    "spotlightKicker": "En el centro de atención",
+    "spotlightTitle": "El contenedor marítimo",
+    "spotlightAlt": "Un buque portacontenedores cargado por grúas en una terminal portuaria al atardecer",
+    "spotlightBlurb": "Cómo un camionero de Carolina del Norte convirtió una simple caja de acero en el contenedor marítimo, la invención engañosamente sencilla que reconectó el comercio mundial y construyó la economía moderna.",
+    "spotlightTag": "La revolución del contenedor | 1956–Presente",
+    "spotlightLabel": "Ver El contenedor marítimo",
+    "spotlightChapters": [
+      "El viaje del Ideal X",
+      "La batalla por el estándar",
+      "El mundo en una caja"
+    ],
+    "newsletterKicker": "El círculo íntimo",
+    "newsletterTitle": "Únete a la vanguardia del pensamiento",
+    "newsletterBlurb": "Recibe versiones del director exclusivas, escaneos de archivo e invitaciones a proyecciones privadas. Sin ruido, solo señal pura."
+  },
+  "newsletter": {
+    "label": "Correo electrónico",
+    "placeholder": "Introduce tu correo electrónico",
+    "submit": "Invítame",
+    "successTitle": "Bienvenido a la vanguardia.",
+    "alreadyTitle": "Ya estás en la vanguardia.",
+    "successText": "Tu correo se ha añadido de forma segura al registro.",
+    "alreadyText": "Tu correo ya está registrado de forma segura en nuestro registro.",
+    "another": "Suscribir otro",
+    "different": "Suscribir otro correo",
+    "error": "Algo salió mal. Inténtalo de nuevo."
+  },
+  "archive": {
+    "kicker": "El Archivo",
+    "title": "Busca en el <em>Archivo</em> del progreso",
+    "placeholder": "Explora avances históricos...",
+    "search": "Buscar",
+    "searchLabel": "Buscar en el archivo",
+    "allEpisodes": "Todos los episodios",
+    "latest": "Lo último del archivo",
+    "incoming": "Transmisión entrante",
+    "awaiting": "Esperando señal",
+    "classified": "Clasificado",
+    "empty": "Aún no hay episodios para esta era. Vuelve pronto para el próximo documental.",
+    "episodeLabel": "Archivo"
+  },
+  "timeline": {
+    "kicker": "La Crónica",
+    "title": "Una línea de tiempo de la <em>innovación</em>",
+    "intro": "Cada avance tiene su lugar en el tiempo. Sigue el hilo del ingenio humano, desde la primera corriente hasta la caja que movió al mundo, a través de las eras que construyeron la época moderna.",
+    "watchStory": "Ver la historia",
+    "continues": "La Crónica continúa",
+    "continuesText": "Se están escribiendo nuevos capítulos. El próximo avance ya espera ser contado.",
+    "exploreArchive": "Explora el archivo completo"
+  },
+  "about": {
+    "volume": "Volumen I: El Manifiesto",
+    "title": "Documentando las <em>chispas</em> del progreso humano",
+    "imageAlt": "Partículas de datos",
+    "missionLabel": "01. Nuestra misión",
+    "missionLead": "La innovación no es un destino, sino una sucesión de susurros, fracasos e iluminaciones repentinas.",
+    "missionP1": "En Chronicles of Innovation actuamos como los archivistas modernos del espíritu humano, para que la próxima generación sepa de qué es capaz. Nuestro propósito va más allá de informar; existimos para descifrar la anatomía del progreso. Todo cambio monumental en la tecnología, la cultura y la ciencia comienza con una chispa singular, una idea que desafía la gravedad del statu quo.",
+    "missionP2": "Porque esto es lo que sabemos que es verdad: el ingenio humano nunca ha pertenecido a un solo lugar, a un solo siglo ni a un solo tipo de persona. Nunca fue así. Los avances que construyeron el mundo moderno vinieron de todas partes. Algunos ya los conoces. Muchos no. Todavía.",
+    "missionP3": "Tratamos estas historias con la solemnidad de un artefacto histórico. Al combinar una rigurosa verificación técnica con una narración cinematográfica, creamos un registro que no solo informa al presente, sino que inspira el futuro.",
+    "methodKicker": "Metodología",
+    "methodTitle": "El proceso de investigación",
+    "stage": "Etapa {n}",
+    "stages": [
+      {
+        "title": "Excavación de archivo",
+        "text": "Revisamos planos, patentes tempranas y diarios olvidados para encontrar el ADN original de un invento."
+      },
+      {
+        "title": "Verificación de la innovación",
+        "text": "Nuestro equipo de investigadores valida la viabilidad y el impacto de la tecnología mediante una rigurosa revisión por pares."
+      },
+      {
+        "title": "Representación cinematográfica",
+        "text": "Convertimos datos áridos en una narrativa visual que captura el peso emocional del avance."
+      }
+    ],
+    "teamTitle": "Las mentes detrás del archivo",
+    "teamKicker": "Curadores del potencial humano",
+    "team": [
+      {
+        "tag": "El visionario",
+        "name": "Tolu Adetuyi",
+        "role": "Curador ejecutivo",
+        "alt": "Retrato de Tolu Adetuyi, curador ejecutivo"
+      },
+      {
+        "tag": "El escriba",
+        "name": "Isaiah Emmanuel",
+        "role": "Responsable editorial",
+        "alt": "Retrato de Isaiah Emmanuel, responsable editorial"
+      },
+      {
+        "tag": "La lente",
+        "name": "John Bassey",
+        "role": "Director visual",
+        "alt": "Retrato de John Bassey, director visual"
+      }
+    ],
+    "ctaTitle": "Sé testigo de la evolución del futuro.",
+    "ctaText": "Sé de los primeros en el archivo en recibir nuestros dosieres a fondo sobre las innovaciones más trascendentales del mundo."
+  },
+  "notFound": {
+    "kicker": "Error 404",
+    "title": "Registro <em>no encontrado</em>",
+    "text": "Te has aventurado más allá del perímetro conocido. El artefacto que buscas ha sido censurado, se ha perdido en el tiempo o nunca existió.",
+    "back": "Volver a un lugar seguro"
+  },
+  "legal": {
+    "notice": "Este documento se ofrece en inglés. Si una traducción difiere del texto en inglés, prevalece el texto en inglés.",
+    "lastUpdated": "Última actualización"
+  },
+  "episodeUi": {
+    "watchTheFeature": "Ver el documental",
+    "fullDocumentary": "El documental completo",
+    "watchHeading": "Ver el <em>documental</em>",
+    "curatedBy": "Curado por",
+    "genesis": "El génesis",
+    "scenes": "La historia en tres escenas",
+    "milestones": "Hitos <em>históricos</em>",
+    "featuring": "Protagonistas",
+    "insideFeature": "Dentro del documental",
+    "chapterBreakdown": "Desglose por <em>capítulos</em>",
+    "continueTitle": "Continúa el viaje",
+    "continueText": "Mira el documental completo en YouTube o súmate a nuestra comunidad de historiadores e ingenieros.",
+    "watchOnYouTube": "Ver en YouTube",
+    "joinDiscussion": "Únete a la conversación",
+    "jobTitle": "Curador ejecutivo y fundador",
+    "home": "Inicio",
+    "archive": "Archivo"
+  },
+  "episodes": {
+    "edison-vs-tesla": {
+      "listTitle": "Edison contra Tesla: la guerra despiadada que iluminó el mundo",
+      "innovation": "Electricidad",
+      "blurb": "La Guerra de las Corrientes entre Edison y Tesla que decidió cómo se alimentaría el mundo.",
+      "metaTitle": "Edison contra Tesla: la Guerra de las Corrientes | Chronicles of Innovation",
+      "pageTitle": "Bombilla y electricidad: la batalla oculta de Edison contra Tesla",
+      "pageDescription": "Dentro de la Guerra de las Corrientes: cómo el imperio de la bombilla de Thomas Edison y la corriente alterna de Nikola Tesla libraron una batalla oculta para decidir cómo se alimentaría el mundo.",
+      "videoName": "Edison contra Tesla: la guerra despiadada que iluminó el mundo",
+      "videoDescription": "La Guerra de las Corrientes nunca fue solo ciencia, fue una guerra. Descubre cómo el imperio de corriente continua de Thomas Edison chocó con la corriente alterna de Nikola Tesla, una rivalidad que electrificó el mundo moderno y quebró a los hombres que la libraron.",
+      "breadcrumb": "Edison contra Tesla",
+      "heroAlt": "El taller de máquinas de Thomas Edison, iluminado por las primeras lámparas eléctricas",
+      "episodeLabel": "Episodio 001",
+      "range": "1879 - 1893",
+      "title": "Bombilla y electricidad:|<em>La batalla oculta de Edison contra Tesla</em>",
+      "chips": [
+        "19 minutos de documental",
+        "La Guerra de las Corrientes"
+      ],
+      "quote": "No fue un choque de ideas. Fue una guerra por el derecho a dar energía al mundo, y solo una corriente podía ganar.",
+      "p1": "Durante toda la historia de la humanidad, cuando el sol se ponía, el mundo se quedaba a oscuras. Entonces, en 1879, Thomas Edison perfeccionó la bombilla incandescente y se propuso algo que nadie había intentado: cablear ciudades enteras y vender la electricidad misma. Su sistema funcionaba con corriente continua, fiable en unas pocas manzanas, pero con un límite fatal. La corriente continua no podía viajar lejos sin perderse, y exigía una central eléctrica en casi cada esquina.",
+      "p2": "En ese defecto irrumpió Nikola Tesla, un inmigrante serbio con la cabeza llena de máquinas de corriente alterna que Edison despreciaba. Cuando la visión de Tesla chocó con el imperio de Edison y con el capital de George Westinghouse, estalló la Guerra de las Corrientes: una brutal campaña de demostraciones públicas, propaganda y electrocuciones que decidiría cómo se alimentaría la humanidad durante el siglo siguiente. Un hombre ganaría la guerra. El otro ganaría el futuro.",
+      "castTitle": "Los contendientes",
+      "milestones": [
+        {
+          "alt": "Bombilla de filamento de carbono de Edison",
+          "year": "1879",
+          "title": "La lámpara que desterró la noche",
+          "text": "La bombilla de filamento de carbono de Edison por fin duró lo suficiente para ser práctica. No fue la primera luz eléctrica, pero sí la primera que alguien pudo vender, la piedra angular de un imperio construido sobre la corriente continua."
+        },
+        {
+          "alt": "Nikola Tesla con su equipo de corriente alterna",
+          "year": "1888",
+          "title": "El sistema polifásico",
+          "text": "El motor de corriente alterna y las patentes polifásicas de Tesla demostraron que la electricidad podía viajar cientos de kilómetros a alta tensión. Westinghouse compró los derechos, y la Guerra de las Corrientes se volvió una cuestión de vida o muerte para Edison."
+        },
+        {
+          "alt": "Generadores de corriente alterna de Westinghouse en las cataratas del Niágara",
+          "year": "1893",
+          "title": "El duelo de la Feria Mundial",
+          "text": "Westinghouse y Tesla iluminaron la Exposición Colombina Mundial de Chicago con corriente alterna, deslumbrando a 27 millones de visitantes. En dos años, su corriente aprovecharía las cataratas del Niágara, zanjando la guerra para siempre."
+        }
+      ],
+      "people": [
+        {
+          "alt": "Thomas Edison",
+          "name": "Thomas Edison",
+          "role": "El Mago de Menlo Park",
+          "text": "Campeón de la corriente continua y del primer imperio eléctrico del mundo. Un inventor incansable y showman que libraría una campaña despiadada para defender el sistema que construyó."
+        },
+        {
+          "alt": "Nikola Tesla",
+          "name": "Nikola Tesla",
+          "role": "El maestro del rayo",
+          "text": "El visionario detrás del sistema de corriente alterna que alimenta el mundo hoy. Ganó la guerra tecnológica, pero murió casi en la ruina; su genio solo fue reconocido con el tiempo."
+        },
+        {
+          "alt": "George Westinghouse",
+          "name": "George Westinghouse",
+          "role": "El respaldo industrial",
+          "text": "El ingeniero y financiero que apostó su fortuna por las patentes de corriente alterna de Tesla. Su capital y su convicción convirtieron las ecuaciones de un inmigrante en la red que iluminó un continente."
+        }
+      ],
+      "chapterTitles": [
+        "La oscura verdad sobre Edison",
+        "El mundo antes de la electricidad",
+        "El ascenso de Thomas Edison",
+        "El defecto fatal del sistema de Edison",
+        "La llegada de Nikola Tesla",
+        "El genio contra el poder",
+        "La traición que lo empezó todo",
+        "Comienza la Guerra de las Corrientes",
+        "La campaña despiadada de Edison",
+        "Tesla contraataca con rayos",
+        "El duelo de la Feria Mundial",
+        "El hombre que ganó… pero lo perdió todo",
+        "¿Quién ganó realmente la guerra?"
+      ]
+    },
+    "penicillin": {
+      "listTitle": "El fármaco milagroso que no debería existir: la penicilina",
+      "innovation": "Penicilina",
+      "blurb": "Una placa de Petri contaminada, una mancha de moho y el accidente que se convirtió en el primer antibiótico del mundo.",
+      "metaTitle": "Penicilina: el accidente que cambió la medicina | Chronicles of Innovation",
+      "pageTitle": "Penicilina: el fármaco milagroso que no debería existir",
+      "pageDescription": "Cómo una placa de Petri contaminada se convirtió en penicilina: el descubrimiento accidental de Alexander Fleming en 1928 y el equipo de Oxford que transformó una mancha de moho en el primer antibiótico del mundo.",
+      "videoName": "El fármaco milagroso que no debería existir: la penicilina",
+      "videoDescription": "Una placa de Petri sucia, una mancha de moho y un accidente que cambió la medicina para siempre. La historia de cómo el descubrimiento de Alexander Fleming en 1928, ignorado durante una década, fue transformado por científicos de Oxford y la industria estadounidense en la penicilina, el antibiótico que salvó a millones.",
+      "breadcrumb": "Penicilina",
+      "heroAlt": "Alexander Fleming examinando una placa de cultivo en su laboratorio del Hospital St Mary's",
+      "episodeLabel": "Episodio 002",
+      "range": "1928 - 1945",
+      "title": "Penicilina:|<em>El accidente que cambió la medicina</em>",
+      "chips": [
+        "16 minutos de documental",
+        "El primer antibiótico"
+      ],
+      "quote": "Una placa de Petri sucia. Una mancha de moho. Y un accidente que acabaría salvando más vidas que ningún otro invento en la historia.",
+      "p1": "En septiembre de 1928, el bacteriólogo escocés Alexander Fleming regresó de las vacaciones a un laboratorio londinense desordenado y a una pila de placas de cultivo olvidadas. Una había sido colonizada por un moho verdeazulado, y en un círculo limpio a su alrededor, las bacterias del estafilococo simplemente habían desaparecido. Donde otros habrían lavado la placa, Fleming se detuvo. Aquella placa contaminada guardaba la primera pista sobre la penicilina, la sustancia que el moho producía en silencio.",
+      "p2": "Pero Fleming no pudo purificarla, y su artículo de 1929 fue ignorado en gran medida durante más de una década. Hizo falta un segundo acto, con Howard Florey, Ernst Chain y el discretamente brillante Norman Heatley en Oxford, para convertir una curiosidad de laboratorio en un medicamento, y con científicos y fabricantes estadounidenses para producirla por toneladas. En pocos años, la penicilina salvaba a soldados heridos en la Segunda Guerra Mundial, inauguraba la era de los antibióticos y reescribía lo que la medicina podía prometer.",
+      "castTitle": "Los pioneros",
+      "milestones": [
+        {
+          "alt": "Una muestra del moho original de penicilina de Alexander Fleming",
+          "year": "1928",
+          "title": "La placa contaminada",
+          "text": "Una mancha de <i>Penicillium notatum</i> cayó sobre una placa de cultivo desechada y mató a las bacterias a su alrededor. Fleming notó lo que casi cualquier otra persona habría tirado: el accidente que está en el corazón de la medicina moderna."
+        },
+        {
+          "alt": "Alexander Fleming en su mesa de laboratorio",
+          "year": "1929",
+          "title": "El descubrimiento que nadie quiso",
+          "text": "Fleming publicó sus hallazgos, pero sin una forma de purificar el frágil compuesto, la penicilina fue descartada como una curiosidad. Durante más de diez años, el agente antibacteriano más importante jamás encontrado quedó sin usar en la literatura científica."
+        },
+        {
+          "alt": "Un anuncio de la época de guerra sobre la producción en masa de penicilina",
+          "year": "1944",
+          "title": "La máquina de guerra",
+          "text": "Oxford demostró que podía curar, y la industria estadounidense demostró que podía producirse a gran escala. Los matraces de vidrio dieron paso a la fermentación en tanques profundos, los tiempos de producción pasaron de semanas a días y la penicilina llegó al frente a tiempo para el Día D."
+        }
+      ],
+      "people": [
+        {
+          "alt": "Alexander Fleming",
+          "name": "Alexander Fleming",
+          "role": "El descubridor accidental",
+          "text": "El bacteriólogo cuyo ojo agudo convirtió una placa contaminada en un descubrimiento. Bautizó la penicilina, pero nunca pudo fabricarla en una forma utilizable, un problema cuya respuesta tardaría una década."
+        },
+        {
+          "alt": "Howard Florey",
+          "name": "Howard Florey",
+          "role": "El hombre que la hizo realidad",
+          "text": "El patólogo de Oxford que dirigió el equipo que rescató la penicilina del olvido, demostró que curaba a pacientes e impulsó el esfuerzo para producirla a gran escala."
+        },
+        {
+          "alt": "Ernst Chain",
+          "name": "Ernst Chain",
+          "role": "El químico",
+          "text": "El bioquímico que resolvió el problema de aislar y estabilizar la penicilina. Compartió con Fleming y Florey el Premio Nobel de Medicina de 1945 por el avance."
+        }
+      ]
+    },
+    "wright-brothers": {
+      "listTitle": "Cómo dos mecánicos de bicicletas enseñaron al mundo a volar",
+      "innovation": "Vuelo",
+      "blurb": "Dos mecánicos de bicicletas de Dayton resolvieron el problema del vuelo controlado y lanzaron la era aérea en Kitty Hawk.",
+      "metaTitle": "Los hermanos Wright: la invención del vuelo | Chronicles of Innovation",
+      "pageTitle": "Los hermanos Wright: la invención del vuelo",
+      "pageDescription": "Cómo dos mecánicos de bicicletas de Dayton, Ohio, resolvieron el problema del vuelo controlado: el camino de los hermanos Wright hasta Kitty Hawk en 1903 y la era aérea que inauguraron.",
+      "videoName": "Cómo dos mecánicos de bicicletas enseñaron al mundo a volar",
+      "videoDescription": "Durante miles de años la humanidad aceptó los límites del cielo. Entonces dos mecánicos de bicicletas de Dayton, Ohio, se hicieron una pregunta distinta: no cómo elevar una máquina, sino cómo controlarla. Esta es la historia de los hermanos Wright, los doce segundos en Kitty Hawk en 1903 y la era aérea que pusieron en marcha.",
+      "breadcrumb": "Los hermanos Wright",
+      "heroAlt": "El Wright Flyer despegando en Kitty Hawk el 17 de diciembre de 1903",
+      "episodeLabel": "Episodio 003",
+      "range": "1899 - 1927",
+      "title": "Los hermanos Wright:|<em>La invención del vuelo</em>",
+      "chips": [
+        "20 minutos de documental",
+        "El nacimiento del vuelo"
+      ],
+      "quote": "Todos los demás perseguían la sustentación y la potencia. Los Wright se hicieron la pregunta que nadie sabía responder: una vez en el aire, ¿cómo se mantiene el control?",
+      "p1": "No tenían títulos universitarios, ni un laboratorio del gobierno, ni un equipo de científicos profesionales, solo un taller de bicicletas en Dayton, Ohio, un motor hecho a mano y un problema que había derrotado a generaciones de inventores. Mientras sus rivales invertían fortunas en motores cada vez más potentes, Wilbur y Orville Wright se convencieron de que el verdadero obstáculo para volar no era la potencia, sino el control. Un piloto, razonaron, debía poder equilibrar y dirigir una máquina en tres dimensiones, igual que un ciclista equilibra una bicicleta.",
+      "p2": "Así que construyeron su propio túnel de viento, corrigieron los datos erróneos en los que se había apoyado el campo y probaron planeador tras planeador en las dunas azotadas por el viento de Kitty Hawk. El 17 de diciembre de 1903, aquella paciente ingeniería dio frutos: el Wright Flyer se convirtió en la primera máquina más pesada que el aire, con motor, en lograr un vuelo controlado, doce segundos que pusieron fin a milenios de historia pegada a la tierra. En una generación, su invento cruzaría el Atlántico, se transformaría en la guerra, llevaría pasajeros por todo el mundo y, un siglo después, enviaría un fragmento del Flyer original a la superficie de Marte.",
+      "castTitle": "Los pioneros",
+      "milestones": [
+        {
+          "alt": "Un planeador Wright elevándose sobre las dunas de Kitty Hawk, 1902",
+          "year": "1902",
+          "title": "Los años del planeador",
+          "text": "Después de que un túnel de viento casero reescribiera la ciencia de la sustentación, los hermanos realizaron cientos de planeos en Kitty Hawk y perfeccionaron el sistema de control en tres ejes, la torsión de las alas y el timón que harían posible el verdadero vuelo."
+        },
+        {
+          "alt": "El Wright Flyer en su riel de lanzamiento en Kitty Hawk, diciembre de 1903",
+          "year": "1903",
+          "title": "Doce segundos en Kitty Hawk",
+          "text": "El 17 de diciembre, con Orville a los mandos y Wilbur corriendo a su lado, el Flyer se elevó de su riel y recorrió 120 pies en doce segundos, el primer vuelo con motor, controlado y sostenido de una máquina más pesada que el aire."
+        },
+        {
+          "alt": "Un vuelo de demostración de un Wright Flyer sobre Fort Myer, Virginia, 1909",
+          "year": "1908–09",
+          "title": "Demostrarlo al mundo",
+          "text": "Las demostraciones públicas en Francia y las pruebas militares en Fort Myer silenciaron a los escépticos. La era aérea había comenzado, y el avión pronto transformaría los viajes, la guerra y la idea que tiene la humanidad de lo posible."
+        }
+      ],
+      "people": [
+        {
+          "alt": "Wilbur Wright",
+          "name": "Wilbur Wright",
+          "role": "El estratega",
+          "text": "El hermano mayor y mente impulsora, que planteó el vuelo como un problema de control y dirigió el trabajo teórico, y luego llevó el Flyer a Europa e hizo creer al mundo."
+        },
+        {
+          "alt": "Orville Wright",
+          "name": "Orville Wright",
+          "role": "El constructor",
+          "text": "El ingeniero y mecánico práctico que pilotó el primer vuelo en Kitty Hawk, y que vivió lo suficiente para ver a las aeronaves romper la barrera del sonido."
+        },
+        {
+          "alt": "Otto Lilienthal",
+          "name": "Otto Lilienthal",
+          "role": "El pionero del planeador",
+          "text": "El «hombre volador» alemán cuyos experimentos de planeo, y cuyo fatal accidente de 1896, inspiraron a los Wright y demostraron que dominar el control, y no solo la sustentación, era la clave del vuelo."
+        }
+      ]
+    },
+    "shipping-container": {
+      "listTitle": "Cómo una simple caja cambió el comercio mundial: el contenedor marítimo",
+      "innovation": "Contenedor marítimo",
+      "blurb": "Un camionero llamado Malcom McLean convirtió una simple caja de acero en el invento que reconectó el comercio mundial y construyó la economía moderna.",
+      "metaTitle": "El contenedor marítimo: la caja que cambió el comercio mundial | Chronicles of Innovation",
+      "pageTitle": "El contenedor marítimo: la caja que cambió el comercio mundial",
+      "pageDescription": "Cómo un camionero de Carolina del Norte llamado Malcom McLean convirtió una simple caja de acero en el contenedor marítimo, el invento que reconectó el comercio mundial y construyó la economía moderna.",
+      "videoName": "Cómo una simple caja cambió el comercio mundial: el contenedor marítimo",
+      "videoDescription": "Una sola caja de acero cambió la forma en que el mundo hace negocios. La historia de cómo Malcom McLean, un camionero de Carolina del Norte, y el ingeniero Keith Tantlinger convirtieron el contenedor marítimo de una idea sencilla en el sistema que reconectó el comercio mundial, desde el primer viaje del Ideal X en 1956 hasta la cadena de suministro global moderna.",
+      "breadcrumb": "El contenedor marítimo",
+      "heroAlt": "Un buque portacontenedores cargado por grúas en una terminal portuaria al atardecer",
+      "episodeLabel": "Episodio 004",
+      "range": "1956 - Presente",
+      "title": "El contenedor marítimo:|<em>La caja que construyó el comercio mundial</em>",
+      "chips": [
+        "18 minutos de documental",
+        "La revolución del contenedor"
+      ],
+      "quote": "No era un motor nuevo ni un material nuevo. Era una caja, y reconstruyó en silencio toda la economía del planeta.",
+      "p1": "Antes del contenedor, mover mercancías a través de un océano era lento, caro y caótico. La carga se estibaba pieza por pieza por ejércitos de estibadores, y un barco podía pasar más tiempo en puerto, llenándose y vaciándose, que en el mar. En 1937, un joven camionero de Carolina del Norte llamado Malcom McLean esperó horas para descargar su cargamento en un barco y se preguntó por qué no se podía simplemente subir a bordo todo el remolque. Décadas después, se propuso demostrar que se podía.",
+      "p2": "Trabajando con el ingeniero Keith Tantlinger, McLean convirtió esa idea en una caja de acero estandarizada que podía pasar sin esfuerzo del camión al tren y al barco. El 26 de abril de 1956, su petrolero reconvertido, el Ideal X, transportó cincuenta y ocho contenedores de Newark a Houston, y la economía del comercio mundial empezó a cambiar para siempre. Los costos de envío se desplomaron, las fábricas asiáticas se conectaron con los estantes occidentales y nació la cadena de suministro moderna. Pero la revolución tuvo un costo humano: las grandes fuerzas laborales de los muelles que habían cargado barcos durante siglos casi desaparecieron.",
+      "castTitle": "Los pioneros",
+      "milestones": [
+        {
+          "alt": "Dibujo de perfil del Ideal X, el primer buque portacontenedores",
+          "year": "1956",
+          "title": "El viaje del Ideal X",
+          "text": "El 26 de abril, el petrolero T2 reconvertido de McLean transportó cincuenta y ocho contenedores de Newark a Houston. Costó una fracción de cargar a mano mercancía suelta, el primer viaje de la era del contenedor."
+        },
+        {
+          "alt": "La esquinera de un contenedor marítimo de acero",
+          "year": "Década de 1960",
+          "title": "La batalla por el estándar",
+          "text": "Una caja solo es útil si todos los barcos, grúas y camiones del mundo coinciden en su tamaño. Las esquineras y los cierres giratorios de Tantlinger, liberados sin patente, se convirtieron en el estándar ISO mundial que permitió apilar cualquier contenedor en cualquier lugar."
+        },
+        {
+          "alt": "Grúas cargando un buque portacontenedores moderno en el Puerto de Los Ángeles",
+          "year": "Hoy",
+          "title": "El mundo en una caja",
+          "text": "La contenerización desplomó el costo de mover mercancías, vació los antiguos muelles y unió las fábricas de Asia con los estantes de Occidente, construyendo la cadena de suministro global sobre la que hoy funciona el mundo moderno."
+        }
+      ],
+      "people": [
+        {
+          "alt": "Malcom McLean",
+          "name": "Malcom McLean",
+          "role": "El visionario",
+          "text": "El camionero convertido en magnate naviero que se negó a aceptar que cargar un barco tuviera que ser lento. Arriesgó su fortuna para demostrar que lo que valía la pena mover era una caja estándar, y no la carga que llevaba dentro."
+        },
+        {
+          "alt": "Keith Tantlinger",
+          "name": "Keith Tantlinger",
+          "role": "El ingeniero",
+          "text": "El ingeniero que resolvió la parte difícil: las esquineras y los cierres giratorios que permiten que los contenedores se enganchen, se apilen en altura y se levanten rápido. Su empleador regaló las patentes para que todo el mundo pudiera adoptarlas."
+        }
+      ]
+    }
+  }
+}

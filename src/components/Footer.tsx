@@ -1,4 +1,7 @@
 import Link from 'next/link';
+import { localizedPath, type Locale } from '@/i18n/config';
+import { format } from '@/i18n/messages';
+import type { Messages } from '@/i18n/messages';
 
 const socials = [
   {
@@ -28,14 +31,16 @@ const socials = [
   },
 ];
 
-const nav = [
-  { href: '/', label: 'Home' },
-  { href: '/timeline', label: 'Chronicle' },
-  { href: '/archive', label: 'Archive' },
-  { href: '/about', label: 'About' },
-];
+type FooterText = Pick<Messages, 'nav' | 'footer' | 'common'>;
 
-export default function Footer() {
+export default function Footer({ lang, t }: { lang: Locale; t: FooterText }) {
+  const nav = [
+    { href: '/', label: t.nav.home },
+    { href: '/timeline', label: t.nav.chronicle },
+    { href: '/archive', label: t.nav.archive },
+    { href: '/about', label: t.nav.about },
+  ];
+  const link = 'py-1 text-on-surface/60 transition-colors hover:text-on-surface';
   return (
     <footer className="relative mt-24 border-t border-white/[0.07] bg-surface-container-lowest">
       <div className="hairline absolute inset-x-0 top-0" aria-hidden="true" />
@@ -45,13 +50,13 @@ export default function Footer() {
             <div className="font-headline italic text-primary text-2xl tracking-[-0.01em]">Chronicles of Innovation</div>
           </div>
 
-          <nav aria-label="Footer" className="grid grid-cols-2 gap-x-12 md:gap-x-16 gap-y-2 text-[14px]">
+          <nav aria-label={t.nav.footerNav} className="grid grid-cols-2 gap-x-12 md:gap-x-16 gap-y-2 text-[14px]">
             {nav.map((l) => (
-              <Link key={l.href} href={l.href} className="py-1 text-on-surface/60 transition-colors hover:text-on-surface">{l.label}</Link>
+              <Link key={l.href} href={localizedPath(lang, l.href)} className={link}>{l.label}</Link>
             ))}
-            <Link href="/terms" className="py-1 text-on-surface/60 transition-colors hover:text-on-surface">Terms of Service</Link>
-            <Link href="/privacy" className="py-1 text-on-surface/60 transition-colors hover:text-on-surface">Privacy Policy</Link>
-            <Link href="mailto:hello@chroniclesofinnovation.com" className="py-1 text-on-surface/60 transition-colors hover:text-on-surface">Contact</Link>
+            <Link href={localizedPath(lang, '/terms')} className={link}>{t.footer.terms}</Link>
+            <Link href={localizedPath(lang, '/privacy')} className={link}>{t.footer.privacy}</Link>
+            <Link href="mailto:hello@chroniclesofinnovation.com" className={link}>{t.footer.contact}</Link>
           </nav>
 
           <div className="flex items-center gap-2">
@@ -62,7 +67,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={social.name}
-                className="grid h-11 w-11 place-items-center rounded-sm bg-white/[0.05] text-on-surface/60 ring-1 ring-white/[0.07] transition-all duration-500 hover:bg-primary hover:text-on-primary hover:scale-110"
+                className="grid h-11 w-11 place-items-center rounded-sm bg-white/[0.05] text-on-surface/60 ring-1 ring-white/[0.07] transition-all duration-500 hover:bg-primary hover:text-on-primary"
               >
                 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className="h-[18px] w-[18px]">
                   <path d={social.path} />
@@ -73,7 +78,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-14 border-t border-white/[0.06] pt-6 text-[12px] text-on-surface/40">
-          © {new Date().getFullYear()} Chronicles of Innovation. Curating the Spark of Progress.
+          {format(t.footer.copyright, { year: new Date().getFullYear() })}
         </div>
       </div>
     </footer>

@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
+import { useLocale } from '@/i18n/context';
 
 type Props = {
   /** YouTube video id used for the muted background preview. */
@@ -28,6 +29,7 @@ const START_SECONDS = 872;
  * controls let visitors pause it or turn the sound on.
  */
 export default function HeroCinematicPreview({ videoId, image, alt }: Props) {
+  const { ui } = useLocale();
   const [mountVideo, setMountVideo] = useState(false);
   const [playing, setPlaying] = useState(false);
   const [muted, setMuted] = useState(true);
@@ -200,10 +202,10 @@ export default function HeroCinematicPreview({ videoId, image, alt }: Props) {
             playing || userPaused ? 'opacity-100' : 'opacity-0 pointer-events-none'
           }`}
         >
-          <button type="button" onClick={toggleMute} aria-label={muted ? 'Turn sound on' : 'Mute'} aria-pressed={!muted} className={control}>
+          <button type="button" onClick={toggleMute} aria-label={muted ? ui.common.soundOn : ui.common.mute} aria-pressed={!muted} className={control}>
             <span className="material-symbols-outlined" style={{ fontSize: 20 }}>{muted ? 'volume_off' : 'volume_up'}</span>
           </button>
-          <button type="button" onClick={togglePlay} aria-label={userPaused ? 'Play background video' : 'Pause background video'} className={control}>
+          <button type="button" onClick={togglePlay} aria-label={userPaused ? ui.common.playVideo : ui.common.pauseVideo} className={control}>
             <span className="material-symbols-outlined" style={{ fontSize: 22, fontVariationSettings: "'FILL' 1" }}>{userPaused ? 'play_arrow' : 'pause'}</span>
           </button>
         </div>

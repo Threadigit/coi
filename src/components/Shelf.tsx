@@ -1,5 +1,6 @@
 'use client';
 
+import { useLocale } from '@/i18n/context';
 import { Children, useCallback, useEffect, useRef, useState } from 'react';
 
 /**
@@ -13,6 +14,7 @@ export default function Shelf({
   children: React.ReactNode;
   label: string;
 }) {
+  const { ui } = useLocale();
   const ref = useRef<HTMLDivElement>(null);
   const [edge, setEdge] = useState({ start: true, end: false });
   const [index, setIndex] = useState(0);
@@ -60,7 +62,7 @@ export default function Shelf({
       </div>
       <button
         type="button"
-        aria-label="Scroll back"
+        aria-label={ui.common.scrollBack}
         onClick={() => page(-1)}
         className={`${paddle} left-2 ${edge.start ? 'opacity-0 pointer-events-none' : 'opacity-0 group-hover/shelf:opacity-100 focus-visible:opacity-100'}`}
       >
@@ -68,7 +70,7 @@ export default function Shelf({
       </button>
       <button
         type="button"
-        aria-label="Scroll forward"
+        aria-label={ui.common.scrollForward}
         onClick={() => page(1)}
         className={`${paddle} right-2 ${edge.end ? 'opacity-0 pointer-events-none' : 'opacity-0 group-hover/shelf:opacity-100 focus-visible:opacity-100'}`}
       >

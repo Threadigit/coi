@@ -67,12 +67,12 @@ export default async function TimelinePage({ params }: { params: Promise<{ lang:
         <div className="absolute inset-x-0 top-0 h-[40rem] spotlight-gold pointer-events-none" aria-hidden="true" />
         <div className="blueprint-grid-radial absolute inset-x-0 top-0 h-[34rem] opacity-60 pointer-events-none" aria-hidden="true" />
         {/* Intro */}
-        <section className="relative max-w-[1600px] mx-auto mb-24 md:mb-36">
+        <section className="relative max-w-[1600px] mx-auto mb-24 md:mb-40 lg:text-center">
           <span className="kicker rise block mb-8" style={{ ['--d' as string]: 0 }}>{t.kicker}</span>
-          <h1 className="rise title-card text-[2.7rem] md:text-7xl lg:text-[7rem] text-on-surface max-w-5xl" style={{ ['--d' as string]: 1 }}>
+          <h1 className="rise title-card text-[2.7rem] md:text-7xl lg:text-[7rem] text-on-surface max-w-5xl lg:mx-auto" style={{ ['--d' as string]: 1 }}>
             {rich(t.title, "italic text-primary pr-2")}
           </h1>
-          <p className="rise text-on-surface/60 text-base md:text-2xl leading-relaxed max-w-2xl mt-10" style={{ ['--d' as string]: 2 }}>
+          <p className="rise text-on-surface/60 text-base md:text-2xl leading-relaxed max-w-2xl mt-10 lg:mx-auto" style={{ ['--d' as string]: 2 }}>
             {t.intro}
           </p>
         </section>

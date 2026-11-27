@@ -3,7 +3,6 @@ import { notFound } from "next/navigation";
 import {
   Noto_Serif,
   Noto_Serif_SC,
-  Noto_Serif_Devanagari,
   Inter,
   Geist_Mono,
 } from "next/font/google";
@@ -21,18 +20,13 @@ const notoSerif = Noto_Serif({
   variable: "--font-noto-serif",
 });
 
-// Chinese and Devanagari headlines. They sit after Noto Serif in the font
+// Chinese headlines. They sit after Noto Serif in the font
 // stack, so each glyph picks the first font that has it. The browser only
 // downloads the slices a page actually uses, so English pages pay nothing.
 const notoSerifSC = Noto_Serif_SC({
   weight: ["400", "700"],
   preload: false,
   variable: "--font-noto-serif-sc",
-});
-const notoSerifDeva = Noto_Serif_Devanagari({
-  weight: ["400", "700"],
-  preload: false,
-  variable: "--font-noto-serif-deva",
 });
 
 const geistMono = Geist_Mono({
@@ -112,7 +106,7 @@ export default async function RootLayout({
       <head>
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
       </head>
-      <body className={`${notoSerif.variable} ${notoSerifSC.variable} ${notoSerifDeva.variable} ${inter.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}>
+      <body className={`${notoSerif.variable} ${notoSerifSC.variable} ${inter.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}>
         <LocaleProvider lang={locale} ui={getUiMessages(locale)}>
           <Header />
           <main className="flex-1">{children}</main>

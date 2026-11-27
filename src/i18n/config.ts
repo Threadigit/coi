@@ -1,7 +1,7 @@
 // Single source of truth for the languages the site supports.
 // Pure module: safe to import from the proxy, server and client code.
 
-export const locales = ['en', 'es', 'zh', 'hi'] as const;
+export const locales = ['en', 'es', 'fr', 'zh'] as const;
 export type Locale = (typeof locales)[number];
 export const defaultLocale: Locale = 'en';
 
@@ -24,8 +24,8 @@ export const localeMeta: Record<
 > = {
   en: { name: 'English', short: 'EN', htmlLang: 'en', og: 'en_US', ytHl: 'en', ytCaption: 'en' },
   es: { name: 'Español', short: 'ES', htmlLang: 'es', og: 'es_ES', ytHl: 'es', ytCaption: 'es' },
+  fr: { name: 'Français', short: 'FR', htmlLang: 'fr', og: 'fr_FR', ytHl: 'fr', ytCaption: 'fr' },
   zh: { name: '中文', short: '中文', htmlLang: 'zh-Hans', og: 'zh_CN', ytHl: 'zh-CN', ytCaption: 'zh-Hans' },
-  hi: { name: 'हिन्दी', short: 'हि', htmlLang: 'hi', og: 'hi_IN', ytHl: 'hi', ytCaption: 'hi' },
 };
 
 export const LOCALE_COOKIE = 'coi-lang';
